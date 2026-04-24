@@ -64,6 +64,7 @@ See [`docs/INSTALL.md`](docs/INSTALL.md) for tool-by-tool detail, including fall
 | Skill | Description | Version |
 |---|---|---|
 | [institutional-ai-operating-principles](skills/institutional-ai-operating-principles/) | Operating principles that turn any AI assistant into an institutional agent. Enforces signal over noise, revenue over time savings, anti-sycophancy, skills-first reusability. | 1.0.0 |
+| [design-methodology](skills/design-methodology/) | Applies a structured design process (Discovery → Diagnosis → Principles → Exploration → Critique → Lock → Propagate) to logo, brand identity, web, and app design. Encodes correct scope of golden ratio, eight award-criterion test, and a self-critique honesty protocol. | 1.0.0 |
 
 ## Contributing a new skill
 
