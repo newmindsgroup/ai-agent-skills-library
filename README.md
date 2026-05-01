@@ -1,21 +1,77 @@
 # AI Agent Skills Library
 
-A shared, versioned library of AI agent skills for the team. Every skill follows the open [Agent Skills specification](https://agentskills.io) — a single `SKILL.md` plus optional `references/`, `scripts/`, and `assets/` — and works across Claude Code, Cursor, Codex, Windsurf, OpenCode, and Google Antigravity.
+A versioned, code-reviewed library of agentic AI skills for the team. Works across Claude Code, Cursor, Codex, Windsurf, OpenCode, and Google Antigravity.
+
+Every skill follows the open [Agent Skills specification](https://agentskills.io) — a single `SKILL.md` plus optional `references/`, `scripts/`, and `assets/` — and stays portable across organizations through a project-local `brand-config.yml`.
 
 ## Why this exists
 
-AI models are commodity. The harness — the skills, the memory, the coordination — is the moat. This repo is our Dojo: a code-reviewed, versioned marketplace of skills so one person's breakthrough becomes everyone's baseline.
+AI models are commodity. The harness (skills, memory, runbooks, coordination) is the moat. This repo is our Dojo: a code-reviewed, versioned marketplace of skills + patterns + installers so one person's breakthrough becomes everyone's baseline.
+
+## What's inside
+
+```
+.
+├── .claude-plugin/marketplace.json   ← Claude Code plugin marketplace manifest
+├── skills/                            ← individual Agent Skills (cross-IDE)
+│   ├── institutional-ai-operating-principles/
+│   ├── design-methodology/
+│   ├── human-voice/
+│   ├── newsletter-drafter/
+│   ├── social-content-drafter/
+│   ├── voice-drift-scanner/
+│   ├── inbound-triage/
+│   ├── calendar-scheduler/
+│   ├── pipeline-reporter/
+│   ├── competitive-monitor/
+│   └── self-improvement-review/
+├── runbooks/                          ← non-loadable patterns + lessons
+│   ├── gate-pattern.md
+│   ├── systemd-watchdog-patterns.md
+│   ├── drive-clone-handoff.md
+│   ├── defensive-api-bindings.md
+│   ├── read-before-escalating.md
+│   └── agent-operating-principles.md
+├── installers/                        ← bootable kits
+│   └── superpowers-stack/             ← Superpowers + 5 Tier-1 MCPs on a VPS
+├── prompts/                           ← reusable system-prompt templates
+│   ├── voice-dna-template.md
+│   ├── agent-skills-spec-summary.md
+│   └── institutional-ai-stance.md
+├── docs/
+│   ├── INSTALL.md                     ← per-IDE install detail
+│   ├── AUTHORING.md                   ← how to write a new skill
+│   └── PLACEHOLDERS.md                ← brand-config.yml placeholder system
+├── brand-config.example.yml           ← copy to your project root
+├── install.sh / install.ps1           ← cross-IDE one-liner installer
+└── scripts/                           ← validation + scaffolding helpers
+```
 
 ## Quick install
 
-### One-liner (macOS / Linux)
+### Option A — Claude Code plugin marketplace (recommended for Claude Code users)
 
+```bash
+# In Claude Code:
+/plugin marketplace add newmindsgroup/ai-agent-skills-library
+/plugin install agent-foundation@ai-agent-skills-library
+```
+
+The marketplace exposes four bundles:
+
+- **`agent-foundation`** — operating principles + design methodology + human-voice. Load on every project.
+- **`content-engine`** — newsletter, social, brand-drift.
+- **`ops-pipeline`** — inbox triage, calendar, pipeline, competitive intel.
+- **`agent-self-improvement`** — weekly meta-review that improves your CLAUDE.md.
+
+### Option B — Cross-IDE one-liner (Cursor, Codex, Windsurf, OpenCode, Antigravity)
+
+**macOS / Linux:**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash
 ```
 
-### One-liner (Windows PowerShell)
-
+**Windows PowerShell:**
 ```powershell
 iwr -useb https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.ps1 | iex
 ```
@@ -29,56 +85,68 @@ The installer auto-detects your IDE and installs every skill into the right loca
 - **OpenCode** → `.opencode/skills/` or `~/.config/opencode/skills/`
 - **Google Antigravity** → `.agent/skills/` or `~/.gemini/antigravity/skills/`
 
-### Install a single skill
+### Option C — Install a single skill
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- institutional-ai-operating-principles
+curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- newsletter-drafter
 ```
 
-### Scope: project or global?
+### Option D — Manual
 
-By default the installer installs **project-scoped** (inside the current folder) if it detects a project-level config folder (`.claude/`, `.cursor/`, `.agent/`, etc.). Otherwise it falls back to global. Override with:
+Each skill lives at `skills/<skill-name>/`. Copy the folder into your tool's skill directory. See [`docs/INSTALL.md`](docs/INSTALL.md) for the full per-tool path table.
 
-```bash
-curl -fsSL .../install.sh | bash -s -- --scope global
-curl -fsSL .../install.sh | bash -s -- --scope project
-```
+## Configure brand context
 
-## Manual install
+Some skills (newsletter, social, triage, drift-scan, pipeline) need brand-specific context — voice rules, content pillars, entity-separation rules, schedules. Drop a `brand-config.yml` at the root of your project. Start from `brand-config.example.yml` and fill in your values.
 
-If you'd rather not pipe a remote script to `bash`, every skill lives under `skills/<skill-name>/`. Copy the folder into your tool's skill directory:
+Without `brand-config.yml`, those skills will surface a "missing config" message rather than guessing or using personal data from a previous user.
 
-| Tool | Project-scoped path | Global-scoped path |
+Full placeholder reference: [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
+
+## Currently shipped
+
+### Skills
+
+| Skill | What it does | Brand-config? |
 |---|---|---|
-| Claude Code | `.claude/skills/<skill-name>/` | `~/.claude/skills/<skill-name>/` |
-| Cursor | `.cursor/skills/<skill-name>/` | — |
-| Codex / AGENTS.md | reference from `AGENTS.md` | — |
-| Windsurf | `.windsurf/skills/<skill-name>/` | — |
-| OpenCode | `.opencode/skills/<skill-name>/` | `~/.config/opencode/skills/<skill-name>/` |
-| Google Antigravity | `.agent/skills/<skill-name>/` | `~/.gemini/antigravity/skills/<skill-name>/` |
+| [institutional-ai-operating-principles](skills/institutional-ai-operating-principles/) | Operating principles that turn any AI assistant into an institutional agent | No |
+| [design-methodology](skills/design-methodology/) | Discovery → Diagnosis → Principles → Exploration → Critique → Lock → Propagate, for logo / brand / web / app design | No |
+| [human-voice](skills/human-voice/) | Anti-AI-tell writing rules: zero em-dashes by default, banned-phrase list, read-aloud test, self-check | Optional (banned phrases) |
+| [newsletter-drafter](skills/newsletter-drafter/) | Drafts newsletter from RSS + voice playbook, stages as draft in email platform, pings review channel | Yes |
+| [social-content-drafter](skills/social-content-drafter/) | Drafts day-themed LinkedIn / X / IG posts, stages as platform drafts, never auto-publishes | Yes |
+| [voice-drift-scanner](skills/voice-drift-scanner/) | Daily scan of published / scheduled content for banned phrases, entity violations, off-pillar drift | Yes |
+| [inbound-triage](skills/inbound-triage/) | Polls inbox + CRM, classifies intent, drafts replies (never sends), pings review channel for HIGH | Yes |
+| [calendar-scheduler](skills/calendar-scheduler/) | Find time, propose slots, book meetings on confirmation, respect working-hours rules | Yes |
+| [pipeline-reporter](skills/pipeline-reporter/) | Weekly state-of-pipeline from CRM, flags stalled deals, internal-only summary | Yes |
+| [competitive-monitor](skills/competitive-monitor/) | Daily scan of competitor sites, diffs against snapshot, surfaces material changes | Yes |
+| [self-improvement-review](skills/self-improvement-review/) | Weekly meta-review proposing updates to CLAUDE.md based on observed corrections | Optional |
 
-See [`docs/INSTALL.md`](docs/INSTALL.md) for tool-by-tool detail, including fallback patterns (Cursor rules, ChatGPT / Claude Projects / Gemini Gems) for tools that don't natively support the Agent Skills format.
+### Runbooks
 
-## Current skills
+See [`runbooks/README.md`](runbooks/README.md) for the full table. Six patterns covering deploy gates, watchdog discipline, drive-handoff, defensive bindings, escalation hygiene, and operating principles.
 
-| Skill | Description | Version |
-|---|---|---|
-| [institutional-ai-operating-principles](skills/institutional-ai-operating-principles/) | Operating principles that turn any AI assistant into an institutional agent. Enforces signal over noise, revenue over time savings, anti-sycophancy, skills-first reusability. | 1.0.0 |
-| [design-methodology](skills/design-methodology/) | Applies a structured design process (Discovery → Diagnosis → Principles → Exploration → Critique → Lock → Propagate) to logo, brand identity, web, and app design. Encodes correct scope of golden ratio, eight award-criterion test, and a self-critique honesty protocol. | 1.0.0 |
+### Installers
+
+See [`installers/README.md`](installers/README.md). Currently one: `superpowers-stack`, which installs Superpowers + 5 Tier-1 MCPs on a Linux VPS via a single `client.env`.
+
+### Prompts
+
+See [`prompts/README.md`](prompts/README.md). Three reusable system-prompt templates for non-skills environments (ChatGPT custom GPT, Gemini Gem, Claude Project, Cursor rule).
 
 ## Contributing a new skill
 
 1. Read [`docs/AUTHORING.md`](docs/AUTHORING.md) — the full authoring guide.
 2. Copy `skills/institutional-ai-operating-principles/` as a starting template, or use the scaffold script: `./scripts/new-skill.sh drafting-proposals`.
 3. Write your `SKILL.md` following the Agent Skills spec (under 500 lines, gerund naming, third-person description, examples at the bottom).
-4. Validate locally: `./scripts/validate-all.sh`.
-5. Open a pull request. CI will re-validate every skill on push.
+4. If your skill needs brand context, document the required `brand-config.yml` keys at the top of SKILL.md and use `{{PLACEHOLDERS}}` in the body. See [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
+5. Validate locally: `./scripts/validate-all.sh`.
+6. Open a pull request. CI will re-validate every skill on push.
 
 ## What this repo does not do
 
-**There is no true "universal auto-installer" protocol today.** No spec exists in April 2026 that lets an IDE take a Git URL and automatically figure out which adapter to use. This repo's `install.sh` is the closest practical equivalent: it reads the environment, detects the IDE, and installs the right files. If a new IDE or adapter format emerges, we add it to the installer.
+**There is no true "universal auto-installer" protocol today.** No spec exists in 2026 that lets every IDE take a Git URL and automatically figure out which adapter to use. This repo's `install.sh` is the closest practical equivalent: it reads the environment, detects the IDE, and installs the right files. The Claude Code marketplace path (Option A above) is the supported native path for Claude Code specifically.
 
-Every skill itself is portable — the canonical `SKILL.md` is the Agent Skills standard, and all "adapters" are thin pointers to that canonical file, not parallel copies.
+Every skill is portable — the canonical `SKILL.md` is the Agent Skills standard, and adapters are thin pointers to it, not parallel copies.
 
 ## License
 

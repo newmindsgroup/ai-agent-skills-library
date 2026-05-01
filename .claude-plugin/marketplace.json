@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "ai-agent-skills-library",
+  "displayName": "AI Agent Skills Library",
+  "description": "A versioned, code-reviewed library of agentic AI skills, runbooks, prompts, and installers. Works in Claude Code, Cursor, Codex, Windsurf, OpenCode, and Antigravity. Skills follow the open Agent Skills specification and stay portable across organizations via brand-config.yml.",
+  "version": "1.0.0",
+  "owner": {
+    "name": "New Minds Group",
+    "url": "https://github.com/newmindsgroup"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/newmindsgroup/ai-agent-skills-library",
+  "plugins": [
+    {
+      "name": "agent-foundation",
+      "displayName": "Agent Foundation",
+      "description": "Operating principles + design methodology + human-voice. Load these on every project. Together they make any AI tool act as an institutional agent rather than a chat toy: signal over noise, anti-sycophancy, on-brand voice, multi-disciplinary design discipline.",
+      "version": "1.0.0",
+      "skills": [
+        "skills/institutional-ai-operating-principles",
+        "skills/design-methodology",
+        "skills/human-voice"
+      ]
+    },
+    {
+      "name": "content-engine",
+      "displayName": "Content Engine",
+      "description": "Newsletter, social, and brand-drift skills. Drafts content from RSS + voice playbook, scans recently-shipped content for voice drift, never publishes without review-channel approval. Configure via brand-config.yml.",
+      "version": "1.0.0",
+      "skills": [
+        "skills/newsletter-drafter",
+        "skills/social-content-drafter",
+        "skills/voice-drift-scanner"
+      ]
+    },
+    {
+      "name": "ops-pipeline",
+      "displayName": "Ops Pipeline",
+      "description": "Inbound triage, calendar scheduling, pipeline reporting, competitive monitoring. Reads your CRM / calendar / inbox, drafts what humans should review, never auto-actions. Configure via brand-config.yml.",
+      "version": "1.0.0",
+      "skills": [
+        "skills/inbound-triage",
+        "skills/calendar-scheduler",
+        "skills/pipeline-reporter",
+        "skills/competitive-monitor"
+      ]
+    },
+    {
+      "name": "agent-self-improvement",
+      "displayName": "Agent Self-Improvement",
+      "description": "Weekly meta-review where the agent proposes updates to its own system prompt based on observed patterns + your corrections. Compounds voice fidelity over time.",
+      "version": "1.0.0",
+      "skills": [
+        "skills/self-improvement-review"
+      ]
+    }
+  ]
+}

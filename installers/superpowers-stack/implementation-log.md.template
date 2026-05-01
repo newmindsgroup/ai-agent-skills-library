@@ -1,0 +1,48 @@
+# Implementation Log — TEMPLATE
+
+Copy this to `implementation-log.md` (which is .gitignored) when deploying to a new VPS. The install scripts will append entries automatically.
+
+## Deployment metadata
+
+- **Client:** [CLIENT_NAME from client.env]
+- **VPS provider:** [Vultr / DigitalOcean / Hetzner / etc.]
+- **VPS specs:** [vCPU / RAM / disk]
+- **OS:** [output of `lsb_release -d`]
+- **Initial deploy date:** [YYYY-MM-DD]
+- **Deployer:** [your name]
+- **agent-stack git commit at deploy time:** [output of `git rev-parse HEAD`]
+
+## Deviations from baseline
+
+Document any places where this VPS deviates from a vanilla install:
+
+- [None at initial deploy]
+
+## Install history
+
+(Auto-appended by install scripts.)
+
+## Smoke test results
+
+After install, document the smoke test:
+
+- [ ] `99-verify-all.sh` exits 0
+- [ ] Memory MCP round-trips an entity
+- [ ] Fetch MCP retrieves https://example.com
+- [ ] Filesystem MCP lists configured roots
+- [ ] Playwright MCP navigates and screenshots
+- [ ] Chroma MCP creates a collection and queries it
+- [ ] CLAUDE.md.template added to at least one project; Superpowers fires on a low-stakes task
+
+## Backup configuration
+
+- Memory store at: [path]
+  Backup cron: [yes/no]
+- Chroma DB at: [path]
+  Backup cron: [yes/no]
+- Backup retention: [N days]
+- Last verified restore: [date]
+
+## Notes
+
+[Free-form notes about this specific deployment]

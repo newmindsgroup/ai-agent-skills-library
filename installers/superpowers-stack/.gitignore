@@ -1,0 +1,26 @@
+# Per-VPS, per-client configuration — never commit
+config/client.env
+
+# Per-VPS implementation log — local only
+implementation-log.md
+
+# Install runtime artifacts
+install.log
+*.log
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Local data stores (paths set in client.env, but if they happen to land inside repo, ignore)
+memory.json
+chroma_db/
+.cache/
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/

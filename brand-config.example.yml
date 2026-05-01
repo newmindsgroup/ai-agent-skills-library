@@ -1,0 +1,82 @@
+# brand-config.example.yml
+#
+# Drop this at the root of any project where you've installed skills from
+# this library. Skills that need brand-specific context (voice playbook, content
+# strategy, entity-separation rules, scheduled-task cadences) will read this
+# file and substitute placeholders into their instructions.
+#
+# Rename to `brand-config.yml` and fill in your values. Anything you leave
+# blank, the skill will surface as "missing config" rather than guessing.
+#
+# Full placeholder reference: docs/PLACEHOLDERS.md
+
+owner:
+  name: "{{OWNER_NAME}}"            # e.g. "Jane Doe" or "Acme Corp"
+  handle: "{{OWNER_HANDLE}}"        # short handle, e.g. "janedoe"
+  timezone: "America/New_York"      # IANA TZ — used for scheduled tasks
+
+brand:
+  # Customer-facing identity. For personal brands this is the person's name.
+  # For corporate brands this is the company name.
+  primary: "{{PRIMARY_BRAND}}"
+
+  # Other entities you own / are affiliated with that should NOT appear in
+  # public, client-facing output. Skills that draft content will filter these
+  # out and refuse to mention them. Leave empty if you don't have any.
+  excluded_entities: []
+  # Example:
+  # excluded_entities:
+  #   - "Side Project LLC"
+  #   - "Spinoff Brand"
+
+paths:
+  # Paths are relative to your project root.
+  # Adjust to match where your docs actually live.
+  brand_playbook: "brand-playbook.md"
+  content_strategy: "content-strategy.md"
+  newsletter_template: "templates/newsletter.html"
+  rss_sources: "rss-sources.md"
+
+newsletter:
+  name: "{{NEWSLETTER_NAME}}"       # e.g. "The Weekly Memo"
+  cadence: "weekly"                 # "weekly" | "biweekly" | "monthly"
+  send_day: "Tuesday"               # day of week to send
+  draft_day: "Monday"               # day to generate drafts
+  draft_time: "09:00"               # local time (TZ above)
+
+social:
+  # Per-day theme map. Skills like social-content-drafter use this to pick
+  # the right angle for the right day.
+  day_themes:
+    monday: "Strategy"
+    tuesday: "AI / Automation"
+    wednesday: "Craft / UX"
+    thursday: "Process"
+    friday: "Thought leadership"
+  platforms:
+    - linkedin
+    - x
+    - instagram
+
+mcp:
+  # MCP server prefixes the skills will use. Replace with whatever's connected
+  # in your Claude Code / Cursor / etc. environment. The skills check
+  # tools-available and gracefully degrade if a prefix isn't connected.
+  crm_prefix: "mcp__ghl-mcp__"                # GoHighLevel default
+  email_prefix: "mcp__gmail__"
+  calendar_prefix: "mcp__google-calendar__"
+  social_prefix: "mcp__ghl-mcp__"             # social drafts via GHL by default
+
+review:
+  # Where the agent sends drafts for human approval before anything ships.
+  channel: "Telegram"               # "Telegram" | "Slack" | "email"
+  approval_required: true           # never auto-publish
+  auto_publish: false
+
+discipline:
+  # Hard rules every skill enforces. Leave at defaults unless you know why
+  # you are changing them.
+  drafts_only: true                 # never auto-send / auto-publish
+  no_invented_facts: true           # require evidence for any specific claim
+  source_of_truth: "git"            # treat the repo as canon, not local copies
+  no_secrets_in_commits: true
