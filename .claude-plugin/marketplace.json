@@ -3,7 +3,7 @@
   "name": "ai-agent-skills-library",
   "displayName": "AI Agent Skills Library",
   "description": "A versioned, code-reviewed library of agentic AI skills, runbooks, prompts, and installers. Works in Claude Code, Cursor, Codex, Windsurf, OpenCode, and Antigravity. Skills follow the open Agent Skills specification and stay portable across organizations via brand-config.yml.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "owner": {
     "name": "New Minds Group",
     "url": "https://github.com/newmindsgroup"
@@ -15,11 +15,12 @@
       "name": "agent-foundation",
       "displayName": "Agent Foundation",
       "description": "Operating principles + design methodology + human-voice. Load these on every project. Together they make any AI tool act as an institutional agent rather than a chat toy: signal over noise, anti-sycophancy, on-brand voice, multi-disciplinary design discipline.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "skills": [
         "skills/institutional-ai-operating-principles",
         "skills/design-methodology",
-        "skills/human-voice"
+        "skills/human-voice",
+        "skills/brand-blueprint-builder"
       ]
     },
     {

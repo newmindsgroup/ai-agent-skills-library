@@ -16,6 +16,7 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 ├── skills/                            ← individual Agent Skills (cross-IDE)
 │   ├── institutional-ai-operating-principles/
 │   ├── design-methodology/
+│   ├── brand-blueprint-builder/
 │   ├── human-voice/
 │   ├── newsletter-drafter/
 │   ├── social-content-drafter/
@@ -111,6 +112,7 @@ Full placeholder reference: [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
 |---|---|---|
 | [institutional-ai-operating-principles](skills/institutional-ai-operating-principles/) | Operating principles that turn any AI assistant into an institutional agent | No |
 | [design-methodology](skills/design-methodology/) | Discovery → Diagnosis → Principles → Exploration → Critique → Lock → Propagate, for logo / brand / web / app design | No |
+| [brand-blueprint-builder](skills/brand-blueprint-builder/) | Walks any brand (personal or commercial) through producing a comprehensive 8-section brand blueprint with supporting docs and a master synthesis. Includes StoryBrand SB7, archetype canon, narrative core, visual identity system, messaging framework, revenue architecture | Optional |
 | [human-voice](skills/human-voice/) | Anti-AI-tell writing rules: zero em-dashes by default, banned-phrase list, read-aloud test, self-check | Optional (banned phrases) |
 | [newsletter-drafter](skills/newsletter-drafter/) | Drafts newsletter from RSS + voice playbook, stages as draft in email platform, pings review channel | Yes |
 | [social-content-drafter](skills/social-content-drafter/) | Drafts day-themed LinkedIn / X / IG posts, stages as platform drafts, never auto-publishes | Yes |
