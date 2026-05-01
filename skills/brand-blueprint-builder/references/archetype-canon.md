@@ -137,7 +137,7 @@ For each: the core motivation, the voice, the gift to the customer, common pitfa
 
 ## Common combinations and what they say
 
-- **Sage + Creator** — practitioner-craftsman. *"I learned this by building it."* (Daniel Gonell example.)
+- **Sage + Creator** — practitioner-craftsman. *"I learned this by building it."* — fits a senior consultant who designs and ships, not just designs.
 - **Hero + Caregiver** — the protector who fights for you. (Volvo, Mayo Clinic.)
 - **Sage + Magician** — the visionary expert. (Anthropic, Stratechery in places.)
 - **Rebel + Jester** — the disruptive trickster. (MSCHF, Liquid Death.)

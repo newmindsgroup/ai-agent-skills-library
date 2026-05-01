@@ -47,7 +47,7 @@ Format per entry:
 The brand mark + product surfaces. 3–5 colors max. Per color:
 
 ```yaml
-- name: "Daniel Black"
+- name: "Brand Black"
   hex: "#0A0A0A"
   rgb: "10, 10, 10"
   cmyk: "0, 0, 0, 96"
