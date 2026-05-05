@@ -2,6 +2,16 @@
 
 All notable changes to this library are documented here. The library follows [semver](https://semver.org/): MAJOR.MINOR.PATCH where MAJOR breaks compatibility with installed skills, MINOR adds skills/installers/runbooks without breaking existing ones, PATCH is bug fixes + docs.
 
+## [1.3.0] — 2026-05-05
+
+### Added
+- **`agents/`** (NEW top-level folder) — 16 specialist sub-agents cherry-picked from [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) (MIT). Tenant-agnostic — installed without inline brand-voice injection so they defer to the `brand-ssot-precedence` skill or user-level voice rules. Drop into `~/.claude/agents/` (or any IDE's equivalent) and they auto-route on natural-language triggers via "Use PROACTIVELY when..." phrases in their `description` frontmatter. Coverage: 6 engineering, 4 orchestration, 4 content (voice-aware), 1 visual, 1 production gate.
+- **`agents/README.md`** — comprehensive guide: install commands per IDE, the 16-agent table grouped by purpose, how auto-routing works, two ways to wire up brand voice, how to update the cherry-pick.
+- **`agency-agents` bundle** in `.claude-plugin/marketplace.json` — installs all 16 sub-agents in one shot. Companion to the existing `agent-foundation` / `content-engine` / `ops-pipeline` / `agent-self-improvement` skill bundles.
+
+### Changed
+- **`.claude-plugin/marketplace.json`**: library version 1.2.0 → 1.3.0; description now mentions sub-agents + Cowork support; new `agency-agents` bundle added (5 bundles total).
+
 ## [1.2.0] — 2026-05-05
 
 ### Added

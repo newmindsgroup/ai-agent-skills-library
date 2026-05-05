@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "ai-agent-skills-library",
   "displayName": "AI Agent Skills Library",
-  "description": "A versioned, code-reviewed library of agentic AI skills, runbooks, prompts, and installers. Works in Claude Code, Cursor, Codex, Windsurf, OpenCode, and Antigravity. Skills follow the open Agent Skills specification and stay portable across organizations via brand-config.yml.",
-  "version": "1.2.0",
+  "description": "A versioned, code-reviewed library of agentic AI skills, sub-agents, runbooks, prompts, and installers. Works in Claude Code, Cursor, Codex, Windsurf, OpenCode, Cowork, and Antigravity. Skills follow the open Agent Skills specification and stay portable across organizations via brand-config.yml.",
+  "version": "1.3.0",
   "owner": {
     "name": "New Minds Group",
     "url": "https://github.com/newmindsgroup"
@@ -55,6 +55,30 @@
       "version": "1.0.0",
       "skills": [
         "skills/self-improvement-review"
+      ]
+    },
+    {
+      "name": "agency-agents",
+      "displayName": "Agency Agents (16 specialist sub-agents)",
+      "description": "16 specialist sub-agents cherry-picked from msitarzewski/agency-agents (MIT). Auto-route on natural-language triggers via 'Use PROACTIVELY when...' phrases. Coverage: engineering (ai-engineer, sre, code-reviewer, incident-response-commander, database-optimizer, autonomous-optimization-architect), orchestration (agents-orchestrator, workflow-architect, agentic-identity-trust, identity-graph-operator), content (linkedin-content-creator, carousel-growth-engine, ai-citation-strategist, document-generator), visual + production gate (image-prompt-engineer, reality-checker). Voice-aware agents defer to project brand voice playbook via the brand-ssot-precedence skill.",
+      "version": "1.0.0",
+      "agents": [
+        "agents/ai-engineer.md",
+        "agents/autonomous-optimization-architect.md",
+        "agents/incident-response-commander.md",
+        "agents/sre.md",
+        "agents/code-reviewer.md",
+        "agents/database-optimizer.md",
+        "agents/agents-orchestrator.md",
+        "agents/workflow-architect.md",
+        "agents/agentic-identity-trust.md",
+        "agents/identity-graph-operator.md",
+        "agents/linkedin-content-creator.md",
+        "agents/carousel-growth-engine.md",
+        "agents/ai-citation-strategist.md",
+        "agents/document-generator.md",
+        "agents/image-prompt-engineer.md",
+        "agents/reality-checker.md"
       ]
     }
   ]

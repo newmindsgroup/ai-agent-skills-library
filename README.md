@@ -13,6 +13,9 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 ```
 .
 ├── .claude-plugin/marketplace.json   ← Claude Code plugin marketplace manifest
+├── agents/                            ← 16 sub-agents (cherry-picked from msitarzewski/agency-agents, MIT)
+│   ├── ai-engineer.md, sre.md, code-reviewer.md, incident-response-commander.md, ...
+│   └── README.md                       ← install + auto-routing guide
 ├── skills/                            ← individual Agent Skills (cross-IDE)
 │   ├── institutional-ai-operating-principles/
 │   ├── design-methodology/
@@ -71,6 +74,7 @@ The marketplace exposes four bundles:
 - **`content-engine`** — newsletter, social, brand-drift.
 - **`ops-pipeline`** — inbox triage, calendar, pipeline, competitive intel.
 - **`agent-self-improvement`** — weekly meta-review that improves your CLAUDE.md.
+- **`agency-agents`** — 16 specialist sub-agents (engineering, orchestration, content, visual). Auto-route on natural-language triggers. Tenant-agnostic when installed via this bundle (defers to `brand-ssot-precedence` for voice).
 
 For the full catalog with dependencies + install priority + decision tree, see [`docs/SKILLS-CATALOG.md`](docs/SKILLS-CATALOG.md).
 
