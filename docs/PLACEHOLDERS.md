@@ -8,15 +8,15 @@ If `brand-config.yml` is not present, the skill falls back to generic behavior a
 
 | Placeholder | Description | Example |
 |---|---|---|
-| `{{OWNER_NAME}}` | The person or org the brand belongs to | `Daniel Gonell`, `Acme Corp` |
-| `{{OWNER_HANDLE}}` | Short handle used across surfaces | `danielgonell`, `acme` |
-| `{{PRIMARY_BRAND}}` | The customer-facing brand identity | `Daniel Gonell` (personal), `Acme` (corporate) |
-| `{{EXCLUDED_ENTITIES}}` | Comma-separated entities NOT to mention in client-facing output | `New Minds Group, CreateMomento` |
-| `{{BRAND_PLAYBOOK_PATH}}` | Path to the brand voice playbook | `15_Brand_Behavior_Playbook.md` |
-| `{{CONTENT_STRATEGY_PATH}}` | Path to the content strategy doc | `06_Content_Strategy.md` |
+| `{{OWNER_NAME}}` | The person or org the brand belongs to | `Jane Doe`, `Acme Corp` |
+| `{{OWNER_HANDLE}}` | Short handle used across surfaces | `janedoe`, `acme` |
+| `{{PRIMARY_BRAND}}` | The customer-facing brand identity | `Jane Doe` (personal), `Acme` (corporate) |
+| `{{EXCLUDED_ENTITIES}}` | Comma-separated entities NOT to mention in client-facing output | `Holding Co LLC, SisterBrand` |
+| `{{BRAND_PLAYBOOK_PATH}}` | Path to the brand voice playbook | `brand-voice-playbook.md` |
+| `{{CONTENT_STRATEGY_PATH}}` | Path to the content strategy doc | `content-strategy.md` |
 | `{{NEWSLETTER_TEMPLATE_PATH}}` | Path to the newsletter master HTML | `templates/newsletter.html` |
-| `{{NEWSLETTER_NAME}}` | Newsletter publication name | `Future Fluent` |
-| `{{TIMEZONE}}` | IANA timezone for the user | `America/New_York`, `America/Halifax` |
+| `{{NEWSLETTER_NAME}}` | Newsletter publication name | `The Weekly Memo` |
+| `{{TIMEZONE}}` | IANA timezone for the user | `America/New_York`, `Europe/London` |
 | `{{CRM_MCP_PREFIX}}` | MCP server prefix for the user's CRM | `mcp__ghl-mcp__`, `mcp__hubspot__` |
 | `{{EMAIL_MCP_PREFIX}}` | MCP server prefix for email inbox | `mcp__gmail__`, `mcp__outlook__` |
 | `{{CALENDAR_MCP_PREFIX}}` | MCP server prefix for calendar | `mcp__google-calendar__` |
