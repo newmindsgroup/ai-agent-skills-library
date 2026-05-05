@@ -1,0 +1,101 @@
+{
+  "_comment": "Cherry-picked agents from msitarzewski/agency-agents (MIT). Voice-DNA paths are NOT hardcoded here — they come from --voice-paths-file at install time so the same manifest works on Mac, VPS, or any future client install.",
+  "agents": [
+    {
+      "src": "engineering/engineering-ai-engineer.md",
+      "name": "ai-engineer",
+      "triggers": "Use PROACTIVELY when the user discusses ML model selection, LLM integration, RAG, embeddings, vector databases, fine-tuning, prompt engineering for production systems, AI feature design, or autonomous-agent reliability. Trigger on: 'AI feature', 'LLM', 'RAG', 'embedding', 'vector DB', 'fine-tune', 'model selection', 'autonomous agent reliability'.",
+      "voice_aware": false
+    },
+    {
+      "src": "engineering/engineering-autonomous-optimization-architect.md",
+      "name": "autonomous-optimization-architect",
+      "triggers": "Use PROACTIVELY when the user discusses LLM cost optimization, model routing, shadow testing, autonomous agent guardrails, multi-model orchestration, cost-per-task budgets, or token-spend analysis. Trigger on: 'LLM cost', 'model routing', 'shadow test', 'cost guardrail', 'optimize agent', 'autonomous stack', 'mission control'.",
+      "voice_aware": false
+    },
+    {
+      "src": "engineering/engineering-incident-response-commander.md",
+      "name": "incident-response-commander",
+      "triggers": "Use PROACTIVELY when production is broken, a service is down, a hotfix is being chained, or the user is debugging a recurring runtime crash. Trigger on: 'incident', 'production down', 'hotfix', 'post-mortem', 'on-call', 'service crashed', 'bun-death', 'watchdog', 'recurring crash'.",
+      "voice_aware": false
+    },
+    {
+      "src": "engineering/engineering-sre.md",
+      "name": "sre",
+      "triggers": "Use PROACTIVELY when the user discusses SLOs, error budgets, observability, alerting, capacity planning, toil reduction, or chaos engineering for the agent stack. Trigger on: 'SLO', 'error budget', 'observability', 'alerting', 'reliability', 'uptime', 'monitoring', 'health check'.",
+      "voice_aware": false
+    },
+    {
+      "src": "engineering/engineering-code-reviewer.md",
+      "name": "code-reviewer",
+      "triggers": "Use PROACTIVELY before any merge to a deployed branch, when reviewing a PR, or when the user asks to check code quality, security, or maintainability. Trigger on: 'review this', 'check this code', 'PR review', 'before merge', 'security check', 'code quality'.",
+      "voice_aware": false
+    },
+    {
+      "src": "engineering/engineering-database-optimizer.md",
+      "name": "database-optimizer",
+      "triggers": "Use PROACTIVELY when the user discusses slow queries, database tuning, schema design, indexing, migration planning, or PostgreSQL/MySQL performance. Trigger on: 'slow query', 'index', 'schema', 'database performance', 'migration', 'postgres', 'mysql', 'EXPLAIN'.",
+      "voice_aware": false
+    },
+    {
+      "src": "specialized/agents-orchestrator.md",
+      "name": "agents-orchestrator",
+      "triggers": "Use PROACTIVELY when the user describes a multi-agent workflow, asks to coordinate several specialists, or talks about delegation patterns across agents. Trigger on: 'multi-agent', 'coordinate agents', 'orchestrate', 'delegate to', 'agent workflow', 'pipeline of agents'.",
+      "voice_aware": false
+    },
+    {
+      "src": "specialized/specialized-workflow-architect.md",
+      "name": "workflow-architect",
+      "triggers": "Use PROACTIVELY when the user wants to map a system end-to-end before coding, document every path through a flow, or design a new automation. Trigger on: 'map this workflow', 'every path', 'workflow design', 'before we code', 'system map', 'automation design'.",
+      "voice_aware": false
+    },
+    {
+      "src": "specialized/specialized-document-generator.md",
+      "name": "document-generator",
+      "triggers": "Use PROACTIVELY when the user asks to generate a PDF, PPTX, DOCX, or XLSX programmatically — proposals, reports, decks, exports. Trigger on: 'generate PDF', 'create deck', 'export report', 'build a proposal', 'docx', 'pptx', 'xlsx', 'one-pager'.",
+      "voice_aware": true
+    },
+    {
+      "src": "specialized/agentic-identity-trust.md",
+      "name": "agentic-identity-trust",
+      "triggers": "Use PROACTIVELY when the user discusses agent authentication, multi-agent authorization, audit trails for autonomous systems, or trust boundaries between agents. Trigger on: 'agent auth', 'agent identity', 'audit trail', 'agent permissions', 'trust boundary', 'agent verification'.",
+      "voice_aware": false
+    },
+    {
+      "src": "specialized/identity-graph-operator.md",
+      "name": "identity-graph-operator",
+      "triggers": "Use PROACTIVELY when the user discusses entity deduplication across data sources, identity resolution, contact merge logic, or shared identity across agents. Trigger on: 'dedupe', 'entity resolution', 'merge contacts', 'identity graph', 'cross-source identity'.",
+      "voice_aware": false
+    },
+    {
+      "src": "marketing/marketing-linkedin-content-creator.md",
+      "name": "linkedin-content-creator",
+      "triggers": "Use PROACTIVELY when the user wants to write a LinkedIn post, build a LinkedIn content calendar, draft thought-leadership content, or grow a personal LinkedIn presence. Trigger on: 'LinkedIn post', 'LinkedIn content', 'thought leadership', 'personal brand post', 'professional content'.",
+      "voice_aware": true
+    },
+    {
+      "src": "marketing/marketing-carousel-growth-engine.md",
+      "name": "carousel-growth-engine",
+      "triggers": "Use PROACTIVELY when the user wants to generate Instagram or TikTok carousels, batch-publish carousel content, or design carousel narratives for autonomous publishing. Trigger on: 'carousel', 'IG carousel', 'TikTok carousel', 'batch publish', 'slide deck for social'.",
+      "voice_aware": true
+    },
+    {
+      "src": "marketing/marketing-ai-citation-strategist.md",
+      "name": "ai-citation-strategist",
+      "triggers": "Use PROACTIVELY when the user discusses AEO, GEO, AI search visibility, getting cited by ChatGPT/Claude/Gemini/Perplexity, or auditing brand presence in AI answers. Trigger on: 'AEO', 'GEO', 'AI citation', 'cited by ChatGPT', 'AI search visibility', 'LLM SEO', 'Perplexity ranking'.",
+      "voice_aware": true
+    },
+    {
+      "src": "design/design-image-prompt-engineer.md",
+      "name": "image-prompt-engineer",
+      "triggers": "Use PROACTIVELY when the user wants to generate AI imagery — Midjourney, DALL-E, Stable Diffusion, Imagen — or asks for prompt engineering for visual generation. Trigger on: 'image prompt', 'Midjourney', 'DALL-E', 'Stable Diffusion', 'generate image', 'visual prompt', 'photo prompt'.",
+      "voice_aware": true
+    },
+    {
+      "src": "testing/testing-reality-checker.md",
+      "name": "reality-checker",
+      "triggers": "Use PROACTIVELY before declaring any production-bound work complete — feature ready, deploy approved, release certified. Acts as the final evidence-based quality gate. Trigger on: 'ready to ship', 'production ready', 'final check', 'release approval', 'is this done', 'certify this'.",
+      "voice_aware": false
+    }
+  ]
+}

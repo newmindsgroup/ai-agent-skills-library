@@ -14,6 +14,7 @@ Skills in `skills/` are *behaviors* the agent picks up and applies. Runbooks her
 | [`defensive-api-bindings.md`](defensive-api-bindings.md) | UI helpers must tolerate multiple shapes, render missing fields as `—`. Substitute for TypeScript in single-file vanilla-JS dashboards. |
 | [`read-before-escalating.md`](read-before-escalating.md) | When an agent flags an "architectural question," check if the answer is already in the codebase first. Most "decisions" are unread code. |
 | [`agent-operating-principles.md`](agent-operating-principles.md) | The 7 non-negotiable discipline commitments captured from a multi-hotfix deploy chain. Production-runtime context, dry-run before start, no force-push, etc. |
+| [`tool-leverage-heuristics.md`](tool-leverage-heuristics.md) | The autonomy playbook. Maps natural-language triggers ("AI-search visibility", "production is down", "ready to ship?") to specific tool/agent combos that should fire together. Drop the table into your project's CLAUDE.md so the agent reaches for the right tools without being told. |
 
 ## How to use
 

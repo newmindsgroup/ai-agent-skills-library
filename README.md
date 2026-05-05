@@ -32,9 +32,10 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 │   ├── drive-clone-handoff.md
 │   ├── defensive-api-bindings.md
 │   ├── read-before-escalating.md
-│   └── agent-operating-principles.md
+│   ├── agent-operating-principles.md
+│   └── tool-leverage-heuristics.md   ← when to fire which tool (the autonomy playbook)
 ├── installers/                        ← bootable kits
-│   └── superpowers-stack/             ← Superpowers + 5 Tier-1 MCPs on a VPS
+│   └── superpowers-stack/             ← Superpowers + 5 official MCPs + agency-agents (16) + Firecrawl + Graphify
 ├── prompts/                           ← reusable system-prompt templates
 │   ├── voice-dna-template.md
 │   ├── agent-skills-spec-summary.md
@@ -43,7 +44,9 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 │   ├── INSTALL.md                     ← per-IDE install detail
 │   ├── AUTHORING.md                   ← how to write a new skill
 │   └── PLACEHOLDERS.md                ← brand-config.yml placeholder system
-├── brand-config.example.yml           ← copy to your project root
+├── brand-config.example.yml           ← copy to project root: tenant config, voice/visual paths
+├── DESIGN.example.md                  ← copy to project root: visual SSOT (Stitch 9-section format)
+├── AGENTS.example.md                  ← copy to project root: brand-context for any AI tool (open standard)
 ├── install.sh / install.ps1           ← cross-IDE one-liner installer
 └── scripts/                           ← validation + scaffolding helpers
 ```
@@ -129,7 +132,25 @@ See [`runbooks/README.md`](runbooks/README.md) for the full table. Six patterns 
 
 ### Installers
 
-See [`installers/README.md`](installers/README.md). Currently one: `superpowers-stack`, which installs Superpowers + 5 Tier-1 MCPs on a Linux VPS via a single `client.env`.
+See [`installers/README.md`](installers/README.md). Currently one: `superpowers-stack`, which installs the full agent baseline on a Linux VPS via a single `client.env`:
+
+- **Superpowers plugin** (engineering rituals: planning, TDD, systematic debugging, verification, code review)
+- **5 official MCP servers** (Memory, Fetch, Filesystem, Playwright, Chroma) — Tier-1 always-on
+- **agency-agents cherry-pick** (16 sub-agents from [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) MIT) — auto-route via "Use PROACTIVELY when..." description triggers
+- **Firecrawl MCP** — 14 tools for web scraping, search, structured extract, persistent browser sessions
+- **Graphify** — turns any folder of code/docs/PDFs/images into a queryable knowledge graph (`/graphify` slash command)
+
+Run with `bash installers/superpowers-stack/scripts/install-all.sh` (idempotent — safe to re-run). Configure once via `installers/superpowers-stack/config/client.env`.
+
+### Brand-context drop-ins
+
+Three top-level templates you copy to the root of any project where you want consistent agent behavior:
+
+- [`brand-config.example.yml`](brand-config.example.yml) — tenant config (owner, brand, paths, schedules, social themes)
+- [`DESIGN.example.md`](DESIGN.example.md) — visual SSOT in [Stitch 9-section format](https://stitch.withgoogle.com/docs/design-md/format/) (the format AI tools like Cursor, v0, Lovable, Claude Code parse most reliably)
+- [`AGENTS.example.md`](AGENTS.example.md) — brand-context for any AI tool, [open standard](https://agents.md/)
+
+Together: voice rules + visual rules + agent context, version-controlled, agent-readable, deliverable to clients.
 
 ### Prompts
 

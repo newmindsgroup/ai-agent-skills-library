@@ -14,6 +14,9 @@ In sequence:
 4. **MCP: Filesystem** (Anthropic official) — secure file operations within scoped directory roots
 5. **MCP: Playwright** (Microsoft official) — headless browser automation
 6. **MCP: Chroma** — local vector RAG over a knowledge library
+7. **agency-agents cherry-pick** ([msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents), MIT) — 16 specialist sub-agents (engineering, marketing, design, testing) auto-routed via "Use PROACTIVELY when..." description triggers. Voice-aware ones inject brand-voice DNA paths from client config.
+8. **MCP: Firecrawl** ([mendableai/firecrawl-mcp-server](https://github.com/mendableai/firecrawl-mcp-server)) — 14 tools: scrape, search, crawl, structured extract, persistent browser sessions. Optional; skipped gracefully if `FIRECRAWL_API_KEY` is empty.
+9. **Graphify** ([safishamsi/graphify](https://github.com/safishamsi/graphify)) — turns any folder into a queryable knowledge graph the agent reads instead of grepping. CLI + Claude Code skill (registers `/graphify` slash command).
 
 Each install is its own script. Run all in sequence with `scripts/install-all.sh`, or run individually.
 

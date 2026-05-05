@@ -44,6 +44,54 @@ Do NOT fire engineering rituals on:
 - **Filesystem** — scoped file operations within configured directory roots.
 - **Playwright** — headless browser; use for sites that need JS rendering or unattended scrapes.
 - **Chroma** — local vector RAG over the project's knowledge library.
+- **Firecrawl** (if configured) — 14 tools: scrape, search, crawl, structured extract, persistent browser sessions. Use for JS-heavy sites, bulk crawls, or AI-search visibility audits.
+
+### Sub-agents available (via agency-agents cherry-pick)
+
+16 specialist sub-agents from `msitarzewski/agency-agents` (MIT) installed in `~/.claude/agents/` by `07-install-agency-agents.sh`. They auto-route via "Use PROACTIVELY when..." triggers in their description — you don't need to remember names, just describe what's needed. Coverage:
+
+- **Engineering / autonomous-stack:** ai-engineer, autonomous-optimization-architect, incident-response-commander, sre, code-reviewer, database-optimizer
+- **Multi-agent / orchestration:** agents-orchestrator, workflow-architect, agentic-identity-trust, identity-graph-operator
+- **Content production (voice-aware — defer to brand voice playbook):** linkedin-content-creator, carousel-growth-engine, ai-citation-strategist, document-generator
+- **Visual / production gate:** image-prompt-engineer, reality-checker
+
+Five voice-aware agents have inline brand-voice-lock blocks at the top of their system prompt pointing at `BRAND_VOICE_PATHS_FILE` from `client.env`.
+
+### Knowledge-graph navigation
+
+If `graphify-out/` exists in this repo, prefer querying the graph (`/graphify query "..."`) over grepping. Build the graph with `/graphify .` if it doesn't exist yet. Re-extract code-only changes with `graphify update .` (free, no API cost). Graphify is registered as a Claude Code skill by `09-install-graphify.sh`.
+
+### Brand Voice — Single Source of Truth
+
+For ANY human-facing copy (LinkedIn posts, newsletters, landing-page text, social posts, emails, decks, captions, even chat replies that will be sent to a person), the canonical voice spec lives in this exact order of precedence:
+
+1. **`<your voice playbook>`** — voice DNA spec, banned phrases, tone rules
+2. **`AGENTS.md`** (project root) — brand context, ground rules
+3. **`brand-config.yml`** — entity separation, channel themes, scheduled-task cadences
+
+If a sub-agent or skill provides its own tone/personality guidance that conflicts with the playbook, the playbook wins.
+
+### Brand Visual — Single Source of Truth
+
+For ANY visual artifact (UI generation, landing pages, decks, social images, AI image prompts, illustrations):
+
+1. **`DESIGN.md`** (project root) — agent-facing visual SSOT in Stitch 9-section format. Read first.
+2. **`design-system/tokens/tokens.json`** (if you maintain one) — machine-canonical token values. When `DESIGN.md` and tokens.json disagree, tokens.json wins.
+
+### Tool-leverage heuristics (autonomy playbook)
+
+Reach for these combos strategically — don't wait to be told. Full table in `runbooks/tool-leverage-heuristics.md`:
+
+| Trigger | Tools/agents to fire |
+|---|---|
+| "AI-search visibility" / "are we cited?" | `firecrawl_search` + `ai-citation-strategist` |
+| "Write a LinkedIn post" / "thought leadership" | Read voice playbook → `linkedin-content-creator` |
+| "Generate a Midjourney/DALL-E/SD prompt" | Read `DESIGN.md` → `image-prompt-engineer` |
+| "Production is down" / "service crashed" | `incident-response-commander` |
+| "Ready to ship?" / "is this done?" | `reality-checker` |
+| "Map this codebase" / "before I work on it" | `/graphify <path>` |
+| "Optimize the agent stack costs" | `autonomous-optimization-architect` |
+| "Dedupe contacts" / "entity resolution" | `identity-graph-operator` |
 
 ### Project-specific quality bar
 

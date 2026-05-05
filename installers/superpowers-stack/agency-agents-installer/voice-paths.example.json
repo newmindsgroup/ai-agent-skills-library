@@ -1,0 +1,10 @@
+{
+  "_comment": "Voice-DNA paths used by 07-install-agency-agents.sh to inject inline brand-voice rules into voice-aware sub-agents (linkedin-content-creator, carousel-growth-engine, ai-citation-strategist, image-prompt-engineer, document-generator). Copy to voice-paths.json and edit with absolute paths to the brand-voice / messaging-framework / AI-tells / brand-identity files in your project. Per-VPS / per-client. Leave the file out entirely (or set BRAND_VOICE_PATHS_FILE='' in client.env) to defer to user-level CLAUDE.md voice precedence instead.",
+  "voice_dna_paths": [
+    "/absolute/path/to/your/Brand_Behavior_Playbook.md",
+    "/absolute/path/to/your/Brand_Identity.md",
+    "/absolute/path/to/your/Messaging_Framework.md",
+    "/absolute/path/to/your/AI_Tell_Guidelines.md",
+    "/absolute/path/to/your/AGENTS.md"
+  ]
+}
