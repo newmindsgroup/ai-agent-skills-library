@@ -1,9 +1,9 @@
 ---
 name: human-voice
-description: "Apply this skill whenever generating content that will be read by humans on a public surface. Includes website copy, marketing emails, sales decks, blog posts, social posts, ad copy, video scripts, podcast intros, landing pages, case studies, and any first-person content that should not read as AI-generated. Triggers on any request that involves writing, drafting, editing, or rewriting content for public consumption. Specifically active when the user asks to 'write a', 'draft a', 'create copy for', 'rewrite', 'punch up', 'edit for voice', or names a content surface (homepage, email, ad, post, landing page, etc.)."
+description: "Apply this skill whenever generating content that will be read by humans on a public surface. Includes website copy, marketing emails, sales decks, blog posts, social posts, ad copy, video scripts, podcast intros, landing pages, case studies, and any first-person content that should not read as AI-generated. Triggers on any request that involves writing, drafting, editing, or rewriting content for public consumption. Specifically active when the user asks to 'write a', 'draft a', 'create copy for', 'rewrite', 'punch up', 'edit for voice', or names a content surface (homepage, email, ad, post, landing page, etc.). IMPORTANT: This skill is universal anti-AI-tell rules. If the project root has a brand-specific voice playbook (look for `brand-voice-playbook.md`, `15_Brand_Behavior_Playbook.md`, `voice-playbook.md`, or paths declared in `brand-config.yml` / user-level CLAUDE.md), READ THAT FIRST and apply its rules + banned phrases ON TOP of the universal rules below. The project's voice playbook always overrides this skill on conflicts."
 license: MIT
 metadata:
-  version: '1.1.0'
+  version: '1.2.0'
   author: New Minds Group
   sources: 2024-2025 AI-tell research; OpenAI's Nov 2025 em-dash setting; field-tested rewrites against ChatGPT/Claude/Gemini outputs
 ---
@@ -11,6 +11,17 @@ metadata:
 # Human Voice — Anti-AI-Tell Writing Skill
 
 The single rule: written content should sound like a sharp human wrote it, not an AI. Frequency is what gives AI away. Apply this skill to every word you write for public consumption.
+
+## How this skill layers with project-specific brand voice
+
+This skill provides **universal** anti-AI-tell rules that apply to every brand. If the project has its own voice playbook, the layering is:
+
+1. **READ the project voice playbook first.** Look at the project root for `brand-voice-playbook.md`, `15_Brand_Behavior_Playbook.md`, `voice-playbook.md`, or any path declared in `brand-config.yml` / user-level `~/.claude/CLAUDE.md` precedence.
+2. **Apply the project's banned phrases first.** Those override and extend the universal banned-phrase set below.
+3. **Apply the project's signature phrases.** Those phrases the brand reuses on purpose — don't strip them as "AI tells" just because the patterns look frequent.
+4. **Then layer the universal rules** (em-dash ban, frequency-based detection, read-aloud test). Where this skill says "default to X" but the project playbook says "default to Y," the playbook wins.
+
+If no project voice playbook exists, this skill is the voice spec. Apply its rules wholesale.
 
 ---
 
