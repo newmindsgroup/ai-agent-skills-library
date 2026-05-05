@@ -18,6 +18,8 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 │   ├── design-methodology/
 │   ├── brand-blueprint-builder/
 │   ├── human-voice/
+│   ├── tool-leverage-heuristics/      ← autonomy playbook: when to fire which tool
+│   ├── brand-ssot-precedence/         ← read AGENTS.md → DESIGN.md → voice playbook chain
 │   ├── newsletter-drafter/
 │   ├── social-content-drafter/
 │   ├── voice-drift-scanner/
@@ -43,7 +45,9 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 ├── docs/
 │   ├── INSTALL.md                     ← per-IDE install detail
 │   ├── AUTHORING.md                   ← how to write a new skill
-│   └── PLACEHOLDERS.md                ← brand-config.yml placeholder system
+│   ├── PLACEHOLDERS.md                ← brand-config.yml placeholder system
+│   └── SKILLS-CATALOG.md              ← full index w/ dependencies + decision tree
+├── CHANGELOG.md                       ← versioned history of every release
 ├── brand-config.example.yml           ← copy to project root: tenant config, voice/visual paths
 ├── DESIGN.example.md                  ← copy to project root: visual SSOT (Stitch 9-section format)
 ├── AGENTS.example.md                  ← copy to project root: brand-context for any AI tool (open standard)
@@ -63,10 +67,12 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 
 The marketplace exposes four bundles:
 
-- **`agent-foundation`** — operating principles + design methodology + human-voice. Load on every project.
+- **`agent-foundation`** — operating principles + design methodology + human-voice + brand-blueprint-builder + tool-leverage-heuristics + brand-ssot-precedence. Load on every project. Six skills make any AI tool act as an institutional agent: signal over noise, on-brand voice, strategic tool-fire decisions, brand canon precedence.
 - **`content-engine`** — newsletter, social, brand-drift.
 - **`ops-pipeline`** — inbox triage, calendar, pipeline, competitive intel.
 - **`agent-self-improvement`** — weekly meta-review that improves your CLAUDE.md.
+
+For the full catalog with dependencies + install priority + decision tree, see [`docs/SKILLS-CATALOG.md`](docs/SKILLS-CATALOG.md).
 
 ### Option B — Cross-IDE one-liner (Cursor, Codex, Windsurf, OpenCode, Antigravity)
 
@@ -116,7 +122,9 @@ Full placeholder reference: [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
 | [institutional-ai-operating-principles](skills/institutional-ai-operating-principles/) | Operating principles that turn any AI assistant into an institutional agent | No |
 | [design-methodology](skills/design-methodology/) | Discovery → Diagnosis → Principles → Exploration → Critique → Lock → Propagate, for logo / brand / web / app design | No |
 | [brand-blueprint-builder](skills/brand-blueprint-builder/) | Walks any brand (personal or commercial) through producing a comprehensive 8-section brand blueprint with supporting docs and a master synthesis. Includes StoryBrand SB7, archetype canon, narrative core, visual identity system, messaging framework, revenue architecture | Optional |
-| [human-voice](skills/human-voice/) | Anti-AI-tell writing rules: zero em-dashes by default, banned-phrase list, read-aloud test, self-check | Optional (banned phrases) |
+| [human-voice](skills/human-voice/) | Anti-AI-tell writing rules: zero em-dashes by default, banned-phrase list, read-aloud test, self-check. Layers under any project-specific voice playbook | Optional (banned phrases) |
+| [tool-leverage-heuristics](skills/tool-leverage-heuristics/) | Autonomy playbook. Maps natural-language triggers ("AI-search visibility", "production is down", "ready to ship?") to specific tool/agent combos that should fire together. The agent reaches for the right tool without being told | No |
+| [brand-ssot-precedence](skills/brand-ssot-precedence/) | Reads brand canon (AGENTS.md → DESIGN.md → voice playbook → tokens.json) in the right order before producing any human-facing copy or visual artifact. Project-agnostic | Optional |
 | [newsletter-drafter](skills/newsletter-drafter/) | Drafts newsletter from RSS + voice playbook, stages as draft in email platform, pings review channel | Yes |
 | [social-content-drafter](skills/social-content-drafter/) | Drafts day-themed LinkedIn / X / IG posts, stages as platform drafts, never auto-publishes | Yes |
 | [voice-drift-scanner](skills/voice-drift-scanner/) | Daily scan of published / scheduled content for banned phrases, entity violations, off-pillar drift | Yes |
