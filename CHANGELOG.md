@@ -7,6 +7,8 @@
 - Normalized imported skill frontmatter with matching `name`, portable `description`, `license: MIT`, and import metadata so repository validation can scan the complete library.
 - Compacted the 200 long `SKILL.md` files that triggered validator warnings by moving deep guidance into `references/full-guidance.md` while keeping compact progressive-loading entrypoints in each skill.
 - Added `scripts/compact-long-skills.rb` so future long-skill warning cleanup can be repeated from validator logs.
+- Added `sources/` as a repo-named provenance index, including `sources/original/` for New Minds-created skills, while preserving the canonical loadable `skills/<skill-name>/` layout.
+- Added `scripts/generate-source-index.rb` and expanded `manifests/skills-manifest.json` with `source_slug`, `source_label`, `source_type`, and `source_path` fields.
 
 All notable changes to this library are documented here. The library follows [semver](https://semver.org/): MAJOR.MINOR.PATCH where MAJOR breaks compatibility with installed skills, MINOR adds skills/installers/runbooks without breaking existing ones, PATCH is bug fixes + docs.
 

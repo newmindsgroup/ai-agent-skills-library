@@ -31,6 +31,7 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 │   ├── pipeline-reporter/
 │   ├── competitive-monitor/
 │   └── self-improvement-review/
+├── sources/                           ← provenance index grouped by source repo
 ├── runbooks/                          ← non-loadable patterns + lessons
 │   ├── gate-pattern.md
 │   ├── systemd-watchdog-patterns.md
@@ -124,6 +125,12 @@ Full placeholder reference: [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
 This repository now ships **1513 skills** in `skills/`. The original curated New Minds bundles are preserved, and the broader Codex/agent skill corpus has been imported as portable Agent Skills folders.
 
 For the complete generated index with descriptions, use [`docs/SKILLS-CATALOG.md`](docs/SKILLS-CATALOG.md). For provenance and duplicate-resolution details, use [`docs/SKILL-SOURCES.md`](docs/SKILL-SOURCES.md).
+
+### Source organization
+
+The canonical loadable layout stays flat at `skills/<skill-name>/` so every supported agent tool can install and validate the library normally.
+
+For human browsing by origin, use [`sources/`](sources/). It groups the same skills into repo-named provenance folders such as `sources/sickn33-antigravity-awesome-skills/`, `sources/menkesu-awesome-pm-skills/`, and `sources/original/` for New Minds-created skills.
 
 | Category | Count |
 |---|---:|

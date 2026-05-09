@@ -1,34 +1,39 @@
-# Skill Sources and Import Report
+# Skill Sources
 
-This report records how the repository skill library was reconciled with the local Codex and agent skill roots.
+Generated source map for every skill in the repository.
 
-- Sync date: 2026-05-09
-- Total repository skills after sync: 1513
-- Added this sync: 1499
-- Preserved existing repo skills: 14
-- Duplicate source names resolved: 11
+Canonical loadable skills remain in `skills/<skill-name>/`. Source-organized provenance folders live in [`../sources/`](../sources/).
 
-## Import Priority
+## Source Groups
 
-1. Existing repository skills were preserved and never overwritten.
-2. `~/.codex/skills` was used as the canonical imported source for Codex-ready skills.
-3. `~/.codex/skills/.system` filled runtime/system skills that were not already present.
-4. `~/.agents/skills` filled agent-side PM/business skills that were not already mirrored into Codex.
+| Source folder | Source | Type | Skills |
+|---|---|---|---:|
+| [`sickn33-antigravity-awesome-skills`](../sources/sickn33-antigravity-awesome-skills/) | [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) | github | 1457 |
+| [`menkesu-awesome-pm-skills`](../sources/menkesu-awesome-pm-skills/) | [menkesu/awesome-pm-skills](https://github.com/menkesu/awesome-pm-skills) | github | 29 |
+| [`original`](../sources/original/) | Original New Minds Group | original | 14 |
+| [`mxyhi-ok-skills`](../sources/mxyhi-ok-skills/) | [mxyhi/ok-skills](https://github.com/mxyhi/ok-skills) | github | 6 |
+| [`openai-codex-bundled-system-skills`](../sources/openai-codex-bundled-system-skills/) | OpenAI Codex bundled system skills | runtime | 3 |
+| [`ailabs-393-ai-labs-claude-skills`](../sources/ailabs-393-ai-labs-claude-skills/) | [ailabs-393/ai-labs-claude-skills](https://github.com/ailabs-393/ai-labs-claude-skills) | github | 1 |
+| [`maigentic-stratarts`](../sources/maigentic-stratarts/) | [maigentic/stratarts](https://github.com/maigentic/stratarts) | github | 1 |
+| [`refoundai-lenny-skills`](../sources/refoundai-lenny-skills/) | [refoundai/lenny-skills](https://github.com/refoundai/lenny-skills) | github | 1 |
+| [`scientiacapital-skills`](../sources/scientiacapital-skills/) | [scientiacapital/skills](https://github.com/scientiacapital/skills) | github | 1 |
 
-## Duplicate Source Names
+## Duplicate Source Names Resolved
 
-- `ai-startup-building` kept from `codex-regular` at `~/.codex/skills/ai-startup-building/SKILL.md`. Other copies: `agents:~/.agents/skills/ai-startup-building/SKILL.md`
-- `business-model-canvas` kept from `codex-regular` at `~/.codex/skills/business-model-canvas/SKILL.md`. Other copies: `agents:~/.agents/skills/business-model-canvas/SKILL.md`
-- `graphify` kept from `codex-regular` at `~/.codex/skills/graphify/SKILL.md`. Other copies: `agents:~/.agents/skills/graphify/SKILL.md`
-- `metrics-frameworks` kept from `codex-regular` at `~/.codex/skills/metrics-frameworks/SKILL.md`. Other copies: `agents:~/.agents/skills/metrics-frameworks/SKILL.md`
-- `okr-frameworks` kept from `codex-regular` at `~/.codex/skills/okr-frameworks/SKILL.md`. Other copies: `agents:~/.agents/skills/okr-frameworks/SKILL.md`
-- `setting-okrs-goals` kept from `codex-regular` at `~/.codex/skills/setting-okrs-goals/SKILL.md`. Other copies: `agents:~/.agents/skills/setting-okrs-goals/SKILL.md`
-- `skill-creator` kept from `codex-regular` at `~/.codex/skills/skill-creator/SKILL.md`. Other copies: `codex-system:~/.codex/skills/.system/skill-creator/SKILL.md`
-- `skill-installer` kept from `codex-regular` at `~/.codex/skills/skill-installer/SKILL.md`. Other copies: `codex-system:~/.codex/skills/.system/skill-installer/SKILL.md`
-- `startup-validator` kept from `codex-regular` at `~/.codex/skills/startup-validator/SKILL.md`. Other copies: `agents:~/.agents/skills/startup-validator/SKILL.md`
-- `strategy-frameworks` kept from `codex-regular` at `~/.codex/skills/strategy-frameworks/SKILL.md`. Other copies: `agents:~/.agents/skills/strategy-frameworks/SKILL.md`
-- `zero-to-launch` kept from `codex-regular` at `~/.codex/skills/zero-to-launch/SKILL.md`. Other copies: `agents:~/.agents/skills/zero-to-launch/SKILL.md`
+When the same skill name appeared in multiple local source roots, the canonical `skills/<name>/` copy was kept and the other copies are listed below.
+
+- `ai-startup-building`: agents:`~/.agents/skills/ai-startup-building/SKILL.md`
+- `business-model-canvas`: agents:`~/.agents/skills/business-model-canvas/SKILL.md`
+- `graphify`: agents:`~/.agents/skills/graphify/SKILL.md`
+- `metrics-frameworks`: agents:`~/.agents/skills/metrics-frameworks/SKILL.md`
+- `okr-frameworks`: agents:`~/.agents/skills/okr-frameworks/SKILL.md`
+- `setting-okrs-goals`: agents:`~/.agents/skills/setting-okrs-goals/SKILL.md`
+- `skill-creator`: codex-system:`~/.codex/skills/.system/skill-creator/SKILL.md`
+- `skill-installer`: codex-system:`~/.codex/skills/.system/skill-installer/SKILL.md`
+- `startup-validator`: agents:`~/.agents/skills/startup-validator/SKILL.md`
+- `strategy-frameworks`: agents:`~/.agents/skills/strategy-frameworks/SKILL.md`
+- `zero-to-launch`: agents:`~/.agents/skills/zero-to-launch/SKILL.md`
 
 ## Machine-Readable Manifest
 
-See [`../manifests/skills-manifest.json`](../manifests/skills-manifest.json).
+See [`../manifests/skills-manifest.json`](../manifests/skills-manifest.json). Each skill entry now includes `source_slug`, `source_label`, `source_type`, and `source_path` when available.
