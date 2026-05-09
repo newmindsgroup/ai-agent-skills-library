@@ -2804,7 +2804,7 @@
     },
     {
       "name": "computer-use-agents",
-      "description": "Build AI agents that interact with computers like humans do -",
+      "description": "Use when building, reviewing, or hardening AI agents that observe screens and control mouse, keyboard, browser, or desktop environments.",
       "category": "AI, Agents, LLMs, Data",
       "path": "skills/computer-use-agents/",
       "source_repository": "New Minds Group / local library"
@@ -4344,7 +4344,7 @@
     },
     {
       "name": "fp-data-transforms",
-      "description": "Everyday data transformations using functional patterns - arrays, objects, grouping, aggregation, and null-safe access",
+      "description": "Use when transforming TypeScript arrays, objects, grouped data, API responses, aggregations, or nested nullable values with practical functional patterns.",
       "category": "AI, Agents, LLMs, Data",
       "path": "skills/fp-data-transforms/",
       "source_repository": "New Minds Group / local library"
@@ -4393,7 +4393,7 @@
     },
     {
       "name": "fp-refactor",
-      "description": "Comprehensive guide for refactoring imperative TypeScript code to fp-ts functional patterns",
+      "description": "Use when refactoring imperative TypeScript into fp-ts patterns such as Either, TaskEither, Option, Reader, traversal, and composable pipelines.",
       "category": "Frontend, UI, UX, Design",
       "path": "skills/fp-refactor/",
       "source_repository": "New Minds Group / local library"
@@ -8726,7 +8726,7 @@
     },
     {
       "name": "shopify-apps",
-      "description": "Expert patterns for Shopify app development including Remix/React",
+      "description": "Use when building or auditing Shopify apps with React Router/Remix, App Bridge, Admin GraphQL, Polaris, webhooks, billing, or app extensions.",
       "category": "Automation, Integrations, Productivity",
       "path": "skills/shopify-apps/",
       "source_repository": "New Minds Group / local library"
@@ -9769,7 +9769,7 @@
     },
     {
       "name": "twilio-communications",
-      "description": "Build communication features with Twilio: SMS messaging, voice",
+      "description": "Use when building Twilio SMS, voice, WhatsApp, webhook, retry, rate-limit, or Verify/OTP communication features with production safeguards.",
       "category": "Business, Strategy, Product, Growth",
       "path": "skills/twilio-communications/",
       "source_repository": "New Minds Group / local library"

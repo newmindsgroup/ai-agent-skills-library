@@ -184,7 +184,8 @@ See [`prompts/README.md`](prompts/README.md). Three reusable system-prompt templ
 3. Write your `SKILL.md` following the Agent Skills spec (under 500 lines, gerund naming, third-person description, examples at the bottom).
 4. If your skill needs brand context, document the required `brand-config.yml` keys at the top of SKILL.md and use `{{PLACEHOLDERS}}` in the body. See [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
 5. Validate locally: `./scripts/validate-all.sh`.
-6. Open a pull request. CI will re-validate every skill on push.
+6. If validation warns about long `SKILL.md` files, move deep material into `references/` or run `ruby scripts/compact-long-skills.rb /tmp/validation.log 501 10000` against a saved validation log.
+7. Open a pull request. CI will re-validate every skill on push.
 
 ## What this repo does not do
 

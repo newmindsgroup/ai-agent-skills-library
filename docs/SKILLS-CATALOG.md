@@ -284,7 +284,7 @@ Complete generated index of every skill currently shipped in this repository.
 | [`cold-email`](../skills/cold-email/) | Write B2B cold emails and follow-up sequences that earn replies. Use when creating outbound prospecting emails, SDR outreach, personalized opening lines, subject lines, CTAs, and multi-touch follow-up sequences. |
 | [`competitive-monitor`](../skills/competitive-monitor/) | Daily scan of curated competitor / peer / inspiration sites for new posts, pricing changes, positioning shifts, and hiring signals. Diffs each fetch against the previous snapshot and surfaces material changes via the review channel. Compounds intel without manual checking. Triggers on 'competitive scan', 'check competitor changes', 'monitor [domain]', or as a scheduled daily run. |
 | [`comprehensive-review-pr-enhance`](../skills/comprehensive-review-pr-enhance/) | Generate structured PR descriptions from diffs, add review checklists, risk assessments, and test coverage summaries. Use when the user says "write a PR description", "improve this PR", "summarize my changes", "PR review", "pull request", or asks to document a diff for reviewers. |
-| [`computer-use-agents`](../skills/computer-use-agents/) | Build AI agents that interact with computers like humans do - |
+| [`computer-use-agents`](../skills/computer-use-agents/) | Use when building, reviewing, or hardening AI agents that observe screens and control mouse, keyboard, browser, or desktop environments. |
 | [`computer-vision-expert`](../skills/computer-vision-expert/) | SOTA Computer Vision Expert (2026). Specialized in YOLO26, Segment Anything 3 (SAM 3), Vision Language Models, and real-time spatial analysis. |
 | [`conductor-setup`](../skills/conductor-setup/) | Configure a Rails project to work with Conductor (parallel coding agents) |
 | [`confident-speaking`](../skills/confident-speaking/) | Structures presentations and verbal pitches using Matt Abrahams'' WHAT-SO WHAT-NOW WHAT framework and impromptu speaking techniques. Use when preparing presentations, creating talking points, or practicing difficult conversations. |
@@ -395,7 +395,7 @@ Complete generated index of every skill currently shipped in this repository.
 | [`fixing-accessibility`](../skills/fixing-accessibility/) | Audit and fix HTML accessibility issues including ARIA labels, keyboard navigation, focus management, color contrast, and form errors. Use when adding interactive controls, forms, dialogs, or reviewing WCAG compliance. |
 | [`fixing-metadata`](../skills/fixing-metadata/) | Audit and fix HTML metadata including page titles, meta descriptions, canonical URLs, Open Graph tags, Twitter cards, favicons, JSON-LD structured data, and robots directives. Use when adding or reviewing SEO and social metadata. |
 | [`food-database-query`](../skills/food-database-query/) | Provides the food-database-query workflow for agent-assisted work. Use when the user''s request matches this skill''s domain or trigger language. |
-| [`fp-data-transforms`](../skills/fp-data-transforms/) | Everyday data transformations using functional patterns - arrays, objects, grouping, aggregation, and null-safe access |
+| [`fp-data-transforms`](../skills/fp-data-transforms/) | Use when transforming TypeScript arrays, objects, grouped data, API responses, aggregations, or nested nullable values with practical functional patterns. |
 | [`fp-either-ref`](../skills/fp-either-ref/) | Quick reference for Either type. Use when user needs error handling, validation, or operations that can fail with typed errors. |
 | [`fp-option-ref`](../skills/fp-option-ref/) | Quick reference for Option type. Use when user needs to handle nullable values, optional data, or wants to avoid null checks. |
 | [`fp-pipe-ref`](../skills/fp-pipe-ref/) | Quick reference for pipe and flow. Use when user needs to chain functions, compose operations, or build data pipelines in fp-ts. |
@@ -953,7 +953,7 @@ Complete generated index of every skill currently shipped in this repository.
 | [`segment-automation`](../skills/segment-automation/) | Automate Segment tasks via Rube MCP (Composio): track events, identify users, manage groups, page views, aliases, batch operations. Always search tools first for current schemas. |
 | [`sentry-automation`](../skills/sentry-automation/) | Automate Sentry tasks via Rube MCP (Composio): manage issues/events, configure alerts, track releases, monitor projects and teams. Always search tools first for current schemas. |
 | [`seo-image-gen`](../skills/seo-image-gen/) | Generate SEO-focused images such as OG cards, hero images, schema assets, product visuals, and infographics. Use when image generation is part of an SEO workflow or content publishing task. |
-| [`shopify-apps`](../skills/shopify-apps/) | Expert patterns for Shopify app development including Remix/React |
+| [`shopify-apps`](../skills/shopify-apps/) | Use when building or auditing Shopify apps with React Router/Remix, App Bridge, Admin GraphQL, Polaris, webhooks, billing, or app extensions. |
 | [`shopify-automation`](../skills/shopify-automation/) | Automate Shopify tasks via Rube MCP (Composio): products, orders, customers, inventory, collections. Always search tools first for current schemas. |
 | [`shopify-development`](../skills/shopify-development/) | Build Shopify apps, extensions, themes using GraphQL Admin API, Shopify CLI, Polaris UI, and Liquid. |
 | [`slack-automation`](../skills/slack-automation/) | Automate Slack workspace operations including messaging, search, channel management, and reaction workflows through Composio''s Slack toolkit. |
@@ -1214,7 +1214,7 @@ Complete generated index of every skill currently shipped in this repository.
 | [`terraform-module-library`](../skills/terraform-module-library/) | Production-ready Terraform module patterns for AWS, Azure, and GCP infrastructure. |
 | [`test-driven-development`](../skills/test-driven-development/) | Use when implementing any feature or bugfix, before writing implementation code |
 | [`turborepo-caching`](../skills/turborepo-caching/) | Configure Turborepo for efficient monorepo builds with local and remote caching. Use when setting up Turborepo, optimizing build pipelines, or implementing distributed caching. |
-| [`twilio-communications`](../skills/twilio-communications/) | Build communication features with Twilio: SMS messaging, voice |
+| [`twilio-communications`](../skills/twilio-communications/) | Use when building Twilio SMS, voice, WhatsApp, webhook, retry, rate-limit, or Verify/OTP communication features with production safeguards. |
 | [`ui-setup`](../skills/ui-setup/) | Interactive StyleSeed setup wizard for choosing app type, brand color, visual style, typography, and the first screen scaffold. |
 | [`unity-developer`](../skills/unity-developer/) | Build Unity games with optimized C# scripts, efficient rendering, and proper asset management. Masters Unity 6 LTS, URP/HDRP pipelines, and cross-platform deployment. |
 | [`unreal-engine-cpp-pro`](../skills/unreal-engine-cpp-pro/) | Expert guide for Unreal Engine 5.x C++ development, covering UObject hygiene, performance patterns, and best practices. |
@@ -1381,7 +1381,7 @@ Complete generated index of every skill currently shipped in this repository.
 | [`design-taste-frontend`](../skills/design-taste-frontend/) | Use when building high-agency frontend interfaces with strict design taste, calibrated color, responsive layout, and motion rules. |
 | [`emotional-arc-designer`](../skills/emotional-arc-designer/) | One sentence - what this skill does and when to invoke it |
 | [`fixing-motion-performance`](../skills/fixing-motion-performance/) | Audit and fix animation performance issues including layout thrashing, compositor properties, scroll-linked motion, and blur effects. Use when animations stutter, transitions jank, or reviewing CSS/JS animation performance. |
-| [`fp-refactor`](../skills/fp-refactor/) | Comprehensive guide for refactoring imperative TypeScript code to fp-ts functional patterns |
+| [`fp-refactor`](../skills/fp-refactor/) | Use when refactoring imperative TypeScript into fp-ts patterns such as Either, TaskEither, Option, Reader, traversal, and composable pipelines. |
 | [`fp-types-ref`](../skills/fp-types-ref/) | Quick reference for fp-ts types. Use when user asks which type to use, needs Option/Either/Task decision help, or wants fp-ts imports. |
 | [`frontend-design`](../skills/frontend-design/) | You are a frontend designer-engineer, not a layout generator. |
 | [`frontend-developer`](../skills/frontend-developer/) | Build React components, implement responsive layouts, and handle client-side state management. Masters React 19, Next.js 15, and modern frontend architecture. |

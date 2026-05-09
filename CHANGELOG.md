@@ -5,6 +5,8 @@
 - Imported the local Codex and agent skill corpus into `skills/`, preserving existing New Minds skills and flattening nested local skill paths into the standard `skills/<skill-name>/SKILL.md` layout.
 - Added generated catalog and provenance files: `docs/SKILLS-CATALOG.md`, `docs/SKILL-SOURCES.md`, and `manifests/skills-manifest.json`.
 - Normalized imported skill frontmatter with matching `name`, portable `description`, `license: MIT`, and import metadata so repository validation can scan the complete library.
+- Compacted the 200 long `SKILL.md` files that triggered validator warnings by moving deep guidance into `references/full-guidance.md` while keeping compact progressive-loading entrypoints in each skill.
+- Added `scripts/compact-long-skills.rb` so future long-skill warning cleanup can be repeated from validator logs.
 
 All notable changes to this library are documented here. The library follows [semver](https://semver.org/): MAJOR.MINOR.PATCH where MAJOR breaks compatibility with installed skills, MINOR adds skills/installers/runbooks without breaking existing ones, PATCH is bug fixes + docs.
 
