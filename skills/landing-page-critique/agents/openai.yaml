@@ -1,0 +1,4 @@
+interface:
+  display_name: "Landing Page Critique"
+  short_description: "Audit conversion pages with StoryBrand, UX, and visual review"
+  default_prompt: "Use $landing-page-critique to review this page and explain what is hurting conversion."

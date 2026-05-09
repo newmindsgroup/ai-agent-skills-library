@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brand Brain"
+  short_description: "Ground messaging in StoryBrand and brand context"
+  default_prompt: "Use $brand-brain to build a brand context packet before writing this homepage or landing page."

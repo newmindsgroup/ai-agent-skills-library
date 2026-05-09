@@ -121,22 +121,31 @@ Full placeholder reference: [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
 
 ### Skills
 
-| Skill | What it does | Brand-config? |
-|---|---|---|
-| [institutional-ai-operating-principles](skills/institutional-ai-operating-principles/) | Operating principles that turn any AI assistant into an institutional agent | No |
-| [design-methodology](skills/design-methodology/) | Discovery → Diagnosis → Principles → Exploration → Critique → Lock → Propagate, for logo / brand / web / app design | No |
-| [brand-blueprint-builder](skills/brand-blueprint-builder/) | Walks any brand (personal or commercial) through producing a comprehensive 8-section brand blueprint with supporting docs and a master synthesis. Includes StoryBrand SB7, archetype canon, narrative core, visual identity system, messaging framework, revenue architecture | Optional |
-| [human-voice](skills/human-voice/) | Anti-AI-tell writing rules: zero em-dashes by default, banned-phrase list, read-aloud test, self-check. Layers under any project-specific voice playbook | Optional (banned phrases) |
-| [tool-leverage-heuristics](skills/tool-leverage-heuristics/) | Autonomy playbook. Maps natural-language triggers ("AI-search visibility", "production is down", "ready to ship?") to specific tool/agent combos that should fire together. The agent reaches for the right tool without being told | No |
-| [brand-ssot-precedence](skills/brand-ssot-precedence/) | Reads brand canon (AGENTS.md → DESIGN.md → voice playbook → tokens.json) in the right order before producing any human-facing copy or visual artifact. Project-agnostic | Optional |
-| [newsletter-drafter](skills/newsletter-drafter/) | Drafts newsletter from RSS + voice playbook, stages as draft in email platform, pings review channel | Yes |
-| [social-content-drafter](skills/social-content-drafter/) | Drafts day-themed LinkedIn / X / IG posts, stages as platform drafts, never auto-publishes | Yes |
-| [voice-drift-scanner](skills/voice-drift-scanner/) | Daily scan of published / scheduled content for banned phrases, entity violations, off-pillar drift | Yes |
-| [inbound-triage](skills/inbound-triage/) | Polls inbox + CRM, classifies intent, drafts replies (never sends), pings review channel for HIGH | Yes |
-| [calendar-scheduler](skills/calendar-scheduler/) | Find time, propose slots, book meetings on confirmation, respect working-hours rules | Yes |
-| [pipeline-reporter](skills/pipeline-reporter/) | Weekly state-of-pipeline from CRM, flags stalled deals, internal-only summary | Yes |
-| [competitive-monitor](skills/competitive-monitor/) | Daily scan of competitor sites, diffs against snapshot, surfaces material changes | Yes |
-| [self-improvement-review](skills/self-improvement-review/) | Weekly meta-review proposing updates to CLAUDE.md based on observed corrections | Optional |
+This repository now ships **1513 skills** in `skills/`. The original curated New Minds bundles are preserved, and the broader Codex/agent skill corpus has been imported as portable Agent Skills folders.
+
+For the complete generated index with descriptions, use [`docs/SKILLS-CATALOG.md`](docs/SKILLS-CATALOG.md). For provenance and duplicate-resolution details, use [`docs/SKILL-SOURCES.md`](docs/SKILL-SOURCES.md).
+
+| Category | Count |
+|---|---:|
+| AI, Agents, LLMs, Data | 735 |
+| Automation, Integrations, Productivity | 188 |
+| Backend, APIs, Databases | 97 |
+| Business, Strategy, Product, Growth | 121 |
+| Content, SEO, Writing, Docs | 56 |
+| DevOps, Cloud, Infrastructure | 59 |
+| Frontend, UI, UX, Design | 111 |
+| General, Workflow, Research, Miscellaneous | 62 |
+| Languages, Frameworks, Specialist Tools | 25 |
+| Media, Documents, Office, Creative | 5 |
+| Security, Compliance, Risk | 19 |
+| Testing, QA, Debugging, Review | 35 |
+
+Curated marketplace bundles remain intentionally small and high-signal:
+
+- `agent-foundation`: `institutional-ai-operating-principles`, `design-methodology`, `human-voice`, `brand-blueprint-builder`, `tool-leverage-heuristics`, `brand-ssot-precedence`
+- `content-engine`: `newsletter-drafter`, `social-content-drafter`, `voice-drift-scanner`
+- `ops-pipeline`: `inbound-triage`, `calendar-scheduler`, `pipeline-reporter`, `competitive-monitor`
+- `agent-self-improvement`: `self-improvement-review`
 
 ### Runbooks
 

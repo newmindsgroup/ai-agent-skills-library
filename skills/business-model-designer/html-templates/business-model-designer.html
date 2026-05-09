@@ -1,0 +1,1032 @@
+<!--
+═══════════════════════════════════════════════════════════════════════════════
+STRATARTS HTML SKELETON TEMPLATE
+Skill: business-model-designer
+Version: 1.0.0
+
+INSTRUCTIONS:
+1. Read base-template.html first for shared CSS/JS structure
+2. Replace all {{PLACEHOLDER}} markers with actual data
+3. This template defines skill-specific content sections and charts
+═══════════════════════════════════════════════════════════════════════════════
+-->
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     TEMPLATE VARIABLES (Replace with actual data)
+     ════════════════════════════════════════════════════════════════════════════
+
+     HEADER:
+     {{PAGE_TITLE}}          = "Business Model Canvas"
+     {{KICKER}}              = "StratArts Business Model"
+     {{TITLE}}               = "Business Model Canvas"
+     {{SUBTITLE}}            = "{BUSINESS_NAME} - {BUSINESS_DESCRIPTION}"
+     {{DATE}}                = "November 27, 2025"
+     {{ANALYSIS_TYPE}}       = "Foundation Strategy"
+     {{VERSION}}             = "1.0"
+
+     SCORE BANNER:
+     {{PRIMARY_SCORE}}       = "7.6:1" (LTV:CAC ratio)
+     {{SCORE_LABEL}}         = "LTV:CAC Ratio"
+     {{SCORE_INTERPRETATION}}= "This LTV:CAC ratio indicates exceptional unit economics..."
+     {{VERDICT}}             = "✓ PROCEED TO LAUNCH" | "⚠️ REFINE MODEL" | "✗ RETHINK FUNDAMENTALS"
+
+     UNIT ECONOMICS:
+     {{LTV_VALUE}}           = "$228"
+     {{CAC_VALUE}}           = "$30"
+     {{BREAK_EVEN}}          = "2 customers"
+     {{GROSS_MARGIN}}        = "95%"
+     {{ARPU}}                = "$30/mo"
+
+     FOOTER:
+     {{PROJECT_NAME}}        = "{PROJECT_FOLDER_NAME}"
+     {{SKILL_NAME}}          = "business-model-designer"
+     {{CONTEXT_SIGNATURE}}   = "business-model-designer-v1.0.0"
+     {{ITERATIONS}}          = "1"
+     {{ITERATIONS_PLURAL}}   = "" or "s"
+
+     ════════════════════════════════════════════════════════════════════════════ -->
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     SKILL-SPECIFIC CSS (Add to {{SKILL_SPECIFIC_CSS}} in base-template)
+     ════════════════════════════════════════════════════════════════════════════ -->
+<style>
+/* Business Model Canvas Grid */
+.bmc-section {
+    margin-bottom: 3rem;
+}
+
+.bmc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0.75rem;
+}
+
+.bmc-block {
+    background: #1a1a1a;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 12px;
+    padding: 1.25rem;
+    min-height: 160px;
+}
+
+.bmc-block h3 {
+    color: #10b981;
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.bmc-block ul {
+    list-style: none;
+    font-size: 0.85rem;
+    color: #d4d4d4;
+    line-height: 1.6;
+}
+
+.bmc-block li {
+    margin-bottom: 0.4rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.bmc-block li::before {
+    content: "•";
+    color: #10b981;
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+/* BMC Grid Layout Positions */
+.bmc-partners { grid-column: 1; grid-row: 1 / 3; }
+.bmc-activities { grid-column: 2; grid-row: 1; }
+.bmc-resources { grid-column: 2; grid-row: 2; }
+.bmc-value { grid-column: 3; grid-row: 1 / 3; border-color: #10b981; border-width: 2px; }
+.bmc-relationships { grid-column: 4; grid-row: 1; }
+.bmc-channels { grid-column: 4; grid-row: 2; }
+.bmc-segments { grid-column: 5; grid-row: 1 / 3; }
+.bmc-costs { grid-column: 1 / 3; grid-row: 3; }
+.bmc-revenue { grid-column: 4 / 6; grid-row: 3; }
+
+/* Pricing Tier Cards */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.pricing-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+}
+
+.pricing-card.featured {
+    border-color: #10b981;
+    border-width: 2px;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
+}
+
+.pricing-card .tier-name {
+    color: #a3a3a3;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-card .price {
+    color: #10b981;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    line-height: 1;
+}
+
+.pricing-card .price span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #a3a3a3;
+}
+
+.pricing-card .target {
+    font-size: 0.85rem;
+    color: #d4d4d4;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.pricing-card ul {
+    list-style: none;
+    text-align: left;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.pricing-card li {
+    padding: 0.35rem 0;
+    color: #d4d4d4;
+}
+
+.pricing-card li.included::before {
+    content: "✓ ";
+    color: #10b981;
+    font-weight: 700;
+}
+
+.pricing-card li.excluded {
+    opacity: 0.4;
+}
+
+.pricing-card li.excluded::before {
+    content: "— ";
+}
+
+/* Unit Economics Metric Cards */
+.economics-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.economics-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.economics-card .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a3a3a3;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.economics-card .value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #10b981;
+    line-height: 1.2;
+}
+
+.economics-card .sublabel {
+    font-size: 0.8rem;
+    color: #d4d4d4;
+    margin-top: 0.25rem;
+}
+
+/* Coherence Score Card */
+.coherence-card {
+    background: #1a1a1a;
+    border: 2px solid #10b981;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.coherence-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.coherence-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f5f5f5;
+}
+
+.coherence-score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #10b981;
+}
+
+.coherence-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.coherence-item {
+    text-align: center;
+    padding: 1rem;
+    background: #0a0a0a;
+    border-radius: 8px;
+}
+
+.coherence-item .check-label {
+    font-size: 0.8rem;
+    color: #d4d4d4;
+    margin-bottom: 0.5rem;
+}
+
+.coherence-item .check-status {
+    font-size: 1.25rem;
+}
+
+.coherence-item .check-status.aligned { color: #10b981; }
+.coherence-item .check-status.partial { color: #f6ad55; }
+.coherence-item .check-status.misaligned { color: #e53e3e; }
+
+/* Responsive */
+@media (max-width: 1400px) {
+    .bmc-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .bmc-partners { grid-column: 1; grid-row: 1; }
+    .bmc-activities { grid-column: 2; grid-row: 1; }
+    .bmc-resources { grid-column: 3; grid-row: 1; }
+    .bmc-value { grid-column: 1; grid-row: 2; }
+    .bmc-relationships { grid-column: 2; grid-row: 2; }
+    .bmc-channels { grid-column: 3; grid-row: 2; }
+    .bmc-segments { grid-column: 1; grid-row: 3; }
+    .bmc-costs { grid-column: 2; grid-row: 3; }
+    .bmc-revenue { grid-column: 3; grid-row: 3; }
+    .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+    .economics-grid { grid-template-columns: repeat(3, 1fr); }
+    .coherence-items { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 1024px) {
+    .economics-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .bmc-grid { grid-template-columns: 1fr; }
+    .bmc-partners, .bmc-activities, .bmc-resources, .bmc-value,
+    .bmc-relationships, .bmc-channels, .bmc-segments, .bmc-costs, .bmc-revenue {
+        grid-column: 1; grid-row: auto;
+    }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .economics-grid { grid-template-columns: 1fr; }
+    .coherence-items { grid-template-columns: 1fr; }
+}
+
+/* Print */
+@media print {
+    .bmc-block, .pricing-card, .economics-card, .coherence-card {
+        background: white;
+        border: 2px solid #10b981;
+        page-break-inside: avoid;
+    }
+    .bmc-block h3, .pricing-card .tier-name, .economics-card .label {
+        color: #10b981;
+        font-weight: 900;
+    }
+}
+</style>
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     CONTENT SECTIONS (Replace {{CONTENT_SECTIONS}} in base-template)
+     ════════════════════════════════════════════════════════════════════════════ -->
+
+<!-- Section 1: Unit Economics Overview -->
+<section class="section">
+    <div class="section-header">
+        <h2 class="section-title">Unit Economics</h2>
+        <p class="section-description">
+            Key financial metrics demonstrating business model viability and path to profitability.
+        </p>
+    </div>
+
+    <div class="economics-grid">
+        <div class="economics-card">
+            <div class="label">LTV</div>
+            <div class="value">{{LTV_VALUE}}</div>
+            <div class="sublabel">Customer Lifetime Value</div>
+        </div>
+
+        <div class="economics-card">
+            <div class="label">CAC</div>
+            <div class="value">{{CAC_VALUE}}</div>
+            <div class="sublabel">Acquisition Cost</div>
+        </div>
+
+        <div class="economics-card">
+            <div class="label">LTV:CAC</div>
+            <div class="value">{{PRIMARY_SCORE}}</div>
+            <div class="sublabel">Target: 3:1+</div>
+        </div>
+
+        <div class="economics-card">
+            <div class="label">Break-Even</div>
+            <div class="value">{{BREAK_EVEN_NUMBER}}</div>
+            <div class="sublabel">Customers</div>
+        </div>
+
+        <div class="economics-card">
+            <div class="label">Gross Margin</div>
+            <div class="value">{{GROSS_MARGIN}}</div>
+            <div class="sublabel">After variable costs</div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Business Model Canvas -->
+<section class="section bmc-section">
+    <div class="section-header">
+        <h2 class="section-title">Business Model Canvas</h2>
+        <p class="section-description">
+            Osterwalder's Business Model Canvas - a strategic management template for developing
+            new or documenting existing business models.
+        </p>
+    </div>
+
+    <div class="bmc-grid">
+        <div class="bmc-block bmc-partners">
+            <h3>Key Partners</h3>
+            <ul>
+                <li>{{PARTNER_1}}</li>
+                <li>{{PARTNER_2}}</li>
+                <li>{{PARTNER_3}}</li>
+                <li>{{PARTNER_4}}</li>
+                <li>{{PARTNER_5}}</li>
+            </ul>
+        </div>
+
+        <div class="bmc-block bmc-activities">
+            <h3>Key Activities</h3>
+            <ul>
+                <li>{{ACTIVITY_1}}</li>
+                <li>{{ACTIVITY_2}}</li>
+                <li>{{ACTIVITY_3}}</li>
+                <li>{{ACTIVITY_4}}</li>
+            </ul>
+        </div>
+
+        <div class="bmc-block bmc-resources">
+            <h3>Key Resources</h3>
+            <ul>
+                <li>{{RESOURCE_1}}</li>
+                <li>{{RESOURCE_2}}</li>
+                <li>{{RESOURCE_3}}</li>
+                <li>{{RESOURCE_4}}</li>
+            </ul>
+        </div>
+
+        <div class="bmc-block bmc-value">
+            <h3>Value Propositions</h3>
+            <ul>
+                <li>{{VALUE_1}}</li>
+                <li>{{VALUE_2}}</li>
+                <li>{{VALUE_3}}</li>
+                <li>{{VALUE_4}}</li>
+                <li>{{VALUE_5}}</li>
+            </ul>
+        </div>
+
+        <div class="bmc-block bmc-relationships">
+            <h3>Customer Relationships</h3>
+            <ul>
+                <li>{{RELATIONSHIP_1}}</li>
+                <li>{{RELATIONSHIP_2}}</li>
+                <li>{{RELATIONSHIP_3}}</li>
+            </ul>
+        </div>
+
+        <div class="bmc-block bmc-channels">
+            <h3>Channels</h3>
+            <ul>
+                <li>{{CHANNEL_1}}</li>
+                <li>{{CHANNEL_2}}</li>
+                <li>{{CHANNEL_3}}</li>
+                <li>{{CHANNEL_4}}</li>
+                <li>{{CHANNEL_5}}</li>
+            </ul>
+        </div>
+
+        <div class="bmc-block bmc-segments">
+            <h3>Customer Segments</h3>
+            <ul>
+                <li><strong>Primary:</strong> {{SEGMENT_PRIMARY}}</li>
+                <li><strong>Secondary:</strong> {{SEGMENT_SECONDARY}}</li>
+                <li><strong>Tertiary:</strong> {{SEGMENT_TERTIARY}}</li>
+            </ul>
+        </div>
+
+        <div class="bmc-block bmc-costs">
+            <h3>Cost Structure</h3>
+            <ul>
+                <li>{{COST_FIXED}}</li>
+                <li>{{COST_VARIABLE}}</li>
+                <li>{{COST_DETAILS}}</li>
+                <li>Gross Margin: {{GROSS_MARGIN}}</li>
+            </ul>
+        </div>
+
+        <div class="bmc-block bmc-revenue">
+            <h3>Revenue Streams</h3>
+            <ul>
+                <li>{{REVENUE_1}}</li>
+                <li>{{REVENUE_2}}</li>
+                <li>{{REVENUE_3}}</li>
+                <li>{{REVENUE_4}}</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Revenue Model / Pricing Tiers -->
+<section class="section">
+    <div class="section-header">
+        <h2 class="section-title">Revenue Model</h2>
+        <p class="section-description">
+            Pricing tiers designed to maximize customer lifetime value while maintaining
+            accessible entry points for new users.
+        </p>
+    </div>
+
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <div class="tier-name">{{TIER_1_NAME}}</div>
+            <div class="price">{{TIER_1_PRICE}}<span>/mo</span></div>
+            <div class="target">{{TIER_1_TARGET}}</div>
+            <ul>
+                <li class="{{TIER_1_FEATURE_1_STATUS}}">{{TIER_1_FEATURE_1}}</li>
+                <li class="{{TIER_1_FEATURE_2_STATUS}}">{{TIER_1_FEATURE_2}}</li>
+                <li class="{{TIER_1_FEATURE_3_STATUS}}">{{TIER_1_FEATURE_3}}</li>
+                <li class="{{TIER_1_FEATURE_4_STATUS}}">{{TIER_1_FEATURE_4}}</li>
+                <li class="{{TIER_1_FEATURE_5_STATUS}}">{{TIER_1_FEATURE_5}}</li>
+                <li class="{{TIER_1_FEATURE_6_STATUS}}">{{TIER_1_FEATURE_6}}</li>
+            </ul>
+        </div>
+
+        <div class="pricing-card">
+            <div class="tier-name">{{TIER_2_NAME}}</div>
+            <div class="price">{{TIER_2_PRICE}}<span>/mo</span></div>
+            <div class="target">{{TIER_2_TARGET}}</div>
+            <ul>
+                <li class="{{TIER_2_FEATURE_1_STATUS}}">{{TIER_2_FEATURE_1}}</li>
+                <li class="{{TIER_2_FEATURE_2_STATUS}}">{{TIER_2_FEATURE_2}}</li>
+                <li class="{{TIER_2_FEATURE_3_STATUS}}">{{TIER_2_FEATURE_3}}</li>
+                <li class="{{TIER_2_FEATURE_4_STATUS}}">{{TIER_2_FEATURE_4}}</li>
+                <li class="{{TIER_2_FEATURE_5_STATUS}}">{{TIER_2_FEATURE_5}}</li>
+                <li class="{{TIER_2_FEATURE_6_STATUS}}">{{TIER_2_FEATURE_6}}</li>
+            </ul>
+        </div>
+
+        <div class="pricing-card featured">
+            <div class="tier-name">{{TIER_3_NAME}}</div>
+            <div class="price">{{TIER_3_PRICE}}<span>/mo</span></div>
+            <div class="target">{{TIER_3_TARGET}}</div>
+            <ul>
+                <li class="{{TIER_3_FEATURE_1_STATUS}}">{{TIER_3_FEATURE_1}}</li>
+                <li class="{{TIER_3_FEATURE_2_STATUS}}">{{TIER_3_FEATURE_2}}</li>
+                <li class="{{TIER_3_FEATURE_3_STATUS}}">{{TIER_3_FEATURE_3}}</li>
+                <li class="{{TIER_3_FEATURE_4_STATUS}}">{{TIER_3_FEATURE_4}}</li>
+                <li class="{{TIER_3_FEATURE_5_STATUS}}">{{TIER_3_FEATURE_5}}</li>
+                <li class="{{TIER_3_FEATURE_6_STATUS}}">{{TIER_3_FEATURE_6}}</li>
+            </ul>
+        </div>
+
+        <div class="pricing-card">
+            <div class="tier-name">{{TIER_4_NAME}}</div>
+            <div class="price">{{TIER_4_PRICE}}<span>/mo</span></div>
+            <div class="target">{{TIER_4_TARGET}}</div>
+            <ul>
+                <li class="{{TIER_4_FEATURE_1_STATUS}}">{{TIER_4_FEATURE_1}}</li>
+                <li class="{{TIER_4_FEATURE_2_STATUS}}">{{TIER_4_FEATURE_2}}</li>
+                <li class="{{TIER_4_FEATURE_3_STATUS}}">{{TIER_4_FEATURE_3}}</li>
+                <li class="{{TIER_4_FEATURE_4_STATUS}}">{{TIER_4_FEATURE_4}}</li>
+                <li class="{{TIER_4_FEATURE_5_STATUS}}">{{TIER_4_FEATURE_5}}</li>
+                <li class="{{TIER_4_FEATURE_6_STATUS}}">{{TIER_4_FEATURE_6}}</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Visual Analysis -->
+<section class="section">
+    <div class="section-header">
+        <h2 class="section-title">Visual Analysis</h2>
+        <p class="section-description">
+            Data visualizations revealing unit economics, cost structure, revenue projections,
+            and strategic coherence across the business model.
+        </p>
+    </div>
+
+    <div class="chart-grid">
+        <!-- Chart 1: Unit Economics (Bar) -->
+        <div class="chart-card">
+            <div class="chart-title">Unit Economics</div>
+            <div class="chart-subtitle">
+                LTV vs CAC comparison showing customer value ratio
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="unitEconomicsChart"></canvas>
+            </div>
+            <div class="insights-panel">
+                <div class="insight-title">Key Insight</div>
+                <ul class="insight-list">
+                    <li><strong>LTV:CAC Ratio:</strong> {{PRIMARY_SCORE}} is {{LTV_CAC_ASSESSMENT}}</li>
+                    <li><strong>CAC Payback:</strong> {{CAC_PAYBACK}} (Target: &lt;12 months)</li>
+                    <li><strong>Implication:</strong> {{UNIT_ECONOMICS_IMPLICATION}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Chart 2: Cost Structure (Doughnut) -->
+        <div class="chart-card">
+            <div class="chart-title">Cost Structure</div>
+            <div class="chart-subtitle">
+                Fixed vs Variable cost breakdown at scale
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="costStructureChart"></canvas>
+            </div>
+            <div class="insights-panel">
+                <div class="insight-title">Key Insight</div>
+                <ul class="insight-list">
+                    <li><strong>Gross Margin:</strong> {{GROSS_MARGIN}} after variable costs</li>
+                    <li><strong>Largest Expense:</strong> {{LARGEST_EXPENSE}}</li>
+                    <li><strong>Implication:</strong> {{COST_STRUCTURE_IMPLICATION}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Chart 3: Revenue Projections (Line) -->
+        <div class="chart-card">
+            <div class="chart-title">Revenue Projections</div>
+            <div class="chart-subtitle">
+                5-year growth trajectory
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="revenueProjectionChart"></canvas>
+            </div>
+            <div class="insights-panel">
+                <div class="insight-title">Growth Milestones</div>
+                <ul class="insight-list">
+                    <li><strong>Year 1:</strong> {{YEAR_1_REVENUE}} ({{YEAR_1_USERS}} paid users)</li>
+                    <li><strong>Year 3:</strong> {{YEAR_3_REVENUE}} ({{YEAR_3_USERS}} paid users)</li>
+                    <li><strong>Year 5:</strong> {{YEAR_5_REVENUE}} ({{YEAR_5_USERS}} paid users)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Chart 4: Strategic Coherence (Radar) -->
+        <div class="chart-card">
+            <div class="chart-title">Strategic Coherence</div>
+            <div class="chart-subtitle">
+                Alignment across Business Model Canvas blocks
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="coherenceRadarChart"></canvas>
+            </div>
+            <div class="insights-panel">
+                <div class="insight-title">Alignment Assessment</div>
+                <ul class="insight-list">
+                    <li><strong>Overall:</strong> {{COHERENCE_OVERALL}} ({{COHERENCE_SCORE}}/5 aligned)</li>
+                    <li><strong>Strength:</strong> {{COHERENCE_STRENGTH}}</li>
+                    <li><strong>Gap:</strong> {{COHERENCE_GAP}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Chart 5: Revenue by Tier (Doughnut) -->
+        <div class="chart-card">
+            <div class="chart-title">Revenue by Tier</div>
+            <div class="chart-subtitle">
+                Projected distribution at scale
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="revenueBreakdownChart"></canvas>
+            </div>
+            <div class="insights-panel">
+                <div class="insight-title">Tier Analysis</div>
+                <ul class="insight-list">
+                    <li><strong>Primary Driver:</strong> {{PRIMARY_REVENUE_TIER}} expected to drive {{PRIMARY_REVENUE_PERCENT}}% of revenue</li>
+                    <li><strong>Blended ARPU:</strong> {{ARPU}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Chart 6: Break-Even Analysis (Line) -->
+        <div class="chart-card">
+            <div class="chart-title">Break-Even Analysis</div>
+            <div class="chart-subtitle">
+                Path to profitability by customer count
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="breakEvenChart"></canvas>
+            </div>
+            <div class="insights-panel">
+                <div class="insight-title">Profitability Path</div>
+                <ul class="insight-list">
+                    <li><strong>Break-Even Point:</strong> {{BREAK_EVEN}} customers</li>
+                    <li><strong>$5K/mo Profit:</strong> Requires ~{{PROFIT_5K_CUSTOMERS}} customers</li>
+                    <li><strong>Monthly Burn:</strong> {{MONTHLY_BURN}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: Strategic Coherence Summary -->
+<section class="section">
+    <div class="section-header">
+        <h2 class="section-title">Strategic Coherence Assessment</h2>
+        <p class="section-description">
+            Validation that all nine Business Model Canvas blocks align and reinforce each other.
+        </p>
+    </div>
+
+    <div class="coherence-card">
+        <div class="coherence-header">
+            <div class="coherence-title">Overall Coherence</div>
+            <div class="coherence-score">{{COHERENCE_SCORE}}/5 Aligned</div>
+        </div>
+        <div class="coherence-items">
+            <div class="coherence-item">
+                <div class="check-label">Value ↔ Revenue</div>
+                <div class="check-status {{COHERENCE_1_CLASS}}">{{COHERENCE_1_ICON}}</div>
+            </div>
+            <div class="coherence-item">
+                <div class="check-label">Channels ↔ Segments</div>
+                <div class="check-status {{COHERENCE_2_CLASS}}">{{COHERENCE_2_ICON}}</div>
+            </div>
+            <div class="coherence-item">
+                <div class="check-label">Activities ↔ Value</div>
+                <div class="check-status {{COHERENCE_3_CLASS}}">{{COHERENCE_3_ICON}}</div>
+            </div>
+            <div class="coherence-item">
+                <div class="check-label">Resources ↔ Activities</div>
+                <div class="check-status {{COHERENCE_4_CLASS}}">{{COHERENCE_4_ICON}}</div>
+            </div>
+            <div class="coherence-item">
+                <div class="check-label">Revenue ↔ Cost</div>
+                <div class="check-status {{COHERENCE_5_CLASS}}">{{COHERENCE_5_ICON}}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     CHART SCRIPTS (Replace {{CHART_SCRIPTS}} in base-template)
+     ════════════════════════════════════════════════════════════════════════════ -->
+<script>
+// Data object (populated from analysis)
+const data = {
+    unitEconomics: {
+        ltv: {{LTV_NUMBER}},
+        cac: {{CAC_NUMBER}}
+    },
+    costStructure: {
+        labels: ['Gross Margin', 'Payment Processing', 'API Costs', 'Infrastructure'],
+        values: [{{COST_MARGIN}}, {{COST_PAYMENTS}}, {{COST_API}}, {{COST_INFRA}}]
+    },
+    revenue: {
+        years: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
+        values: [{{REV_Y1}}, {{REV_Y2}}, {{REV_Y3}}, {{REV_Y4}}, {{REV_Y5}}]
+    },
+    coherence: {
+        labels: ['Value↔Revenue', 'Channels↔Segments', 'Activities↔Value', 'Resources↔Activities', 'Revenue↔Cost'],
+        values: [{{COH_1}}, {{COH_2}}, {{COH_3}}, {{COH_4}}, {{COH_5}}]
+    },
+    tierBreakdown: {
+        labels: ['{{TIER_1_NAME}} ({{TIER_1_PRICE}})', '{{TIER_2_NAME}} ({{TIER_2_PRICE}})', '{{TIER_3_NAME}} ({{TIER_3_PRICE}})', '{{TIER_4_NAME}} ({{TIER_4_PRICE}})'],
+        values: [{{TIER_1_PERCENT}}, {{TIER_2_PERCENT}}, {{TIER_3_PERCENT}}, {{TIER_4_PERCENT}}]
+    },
+    breakEven: {
+        customers: [0, 1, 2, 3, 5, 10, 20, 50, 100, 180],
+        revenue: [0, {{BE_REV_1}}, {{BE_REV_2}}, {{BE_REV_3}}, {{BE_REV_5}}, {{BE_REV_10}}, {{BE_REV_20}}, {{BE_REV_50}}, {{BE_REV_100}}, {{BE_REV_180}}],
+        fixedCosts: {{FIXED_COSTS}}
+    }
+};
+
+// Chart 1: Unit Economics (Horizontal Bar)
+const unitEconomicsCtx = document.getElementById('unitEconomicsChart').getContext('2d');
+new Chart(unitEconomicsCtx, {
+    type: 'bar',
+    data: {
+        labels: ['LTV', 'CAC'],
+        datasets: [{
+            data: [data.unitEconomics.ltv, data.unitEconomics.cac],
+            backgroundColor: [COLORS.backgrounds[0], COLORS.backgrounds[2]],
+            borderColor: [COLORS.borders[0], COLORS.borders[2]],
+            borderWidth: 2,
+            borderRadius: 6
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+        plugins: {
+            legend: { display: false },
+            tooltip: {
+                ...tooltipConfig,
+                callbacks: {
+                    label: function(context) { return '$' + context.parsed.x; }
+                }
+            }
+        },
+        scales: {
+            x: {
+                beginAtZero: true,
+                grid: { color: 'rgba(16, 185, 129, 0.1)' },
+                ticks: { color: '#a3a3a3', callback: v => '$' + v }
+            },
+            y: {
+                grid: { display: false },
+                ticks: { color: '#f5f5f5', font: { weight: '600' } }
+            }
+        }
+    }
+});
+
+// Chart 2: Cost Structure (Doughnut)
+const costStructureCtx = document.getElementById('costStructureChart').getContext('2d');
+new Chart(costStructureCtx, {
+    type: 'doughnut',
+    data: {
+        labels: data.costStructure.labels,
+        datasets: [{
+            data: data.costStructure.values,
+            backgroundColor: COLORS.backgrounds,
+            borderColor: COLORS.borders,
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'right',
+                labels: { color: '#f5f5f5', boxWidth: 12, padding: 15 }
+            },
+            tooltip: {
+                ...tooltipConfig,
+                callbacks: {
+                    label: function(context) { return context.label + ': ' + context.parsed + '%'; }
+                }
+            }
+        }
+    }
+});
+
+// Chart 3: Revenue Projections (Line)
+const revenueProjectionCtx = document.getElementById('revenueProjectionChart').getContext('2d');
+new Chart(revenueProjectionCtx, {
+    type: 'line',
+    data: {
+        labels: data.revenue.years,
+        datasets: [{
+            label: 'Revenue',
+            data: data.revenue.values,
+            borderColor: COLORS.primary,
+            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 6,
+            pointBackgroundColor: COLORS.primary,
+            borderWidth: 3
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false },
+            tooltip: {
+                ...tooltipConfig,
+                callbacks: {
+                    label: function(context) {
+                        const v = context.parsed.y;
+                        return v >= 1000000 ? '$' + (v/1000000).toFixed(1) + 'M' : '$' + (v/1000) + 'K';
+                    }
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                grid: { color: 'rgba(16, 185, 129, 0.1)' },
+                ticks: {
+                    color: '#a3a3a3',
+                    callback: function(v) {
+                        return v >= 1000000 ? '$' + (v/1000000) + 'M' : '$' + (v/1000) + 'K';
+                    }
+                }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { color: '#a3a3a3' }
+            }
+        }
+    }
+});
+
+// Chart 4: Strategic Coherence (Radar)
+const coherenceRadarCtx = document.getElementById('coherenceRadarChart').getContext('2d');
+new Chart(coherenceRadarCtx, {
+    type: 'radar',
+    data: {
+        labels: data.coherence.labels,
+        datasets: [{
+            label: 'Alignment Score',
+            data: data.coherence.values,
+            backgroundColor: 'rgba(16, 185, 129, 0.3)',
+            borderColor: COLORS.primary,
+            borderWidth: 2,
+            pointBackgroundColor: COLORS.primary,
+            pointRadius: 4
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false },
+            tooltip: tooltipConfig
+        },
+        scales: {
+            r: {
+                beginAtZero: true,
+                max: 10,
+                ticks: { stepSize: 2, display: false },
+                grid: { color: 'rgba(16, 185, 129, 0.1)' },
+                pointLabels: { color: '#f5f5f5', font: { size: 10 } }
+            }
+        }
+    }
+});
+
+// Chart 5: Revenue by Tier (Doughnut)
+const revenueBreakdownCtx = document.getElementById('revenueBreakdownChart').getContext('2d');
+new Chart(revenueBreakdownCtx, {
+    type: 'doughnut',
+    data: {
+        labels: data.tierBreakdown.labels,
+        datasets: [{
+            data: data.tierBreakdown.values,
+            backgroundColor: COLORS.backgrounds.slice(0, 4),
+            borderColor: COLORS.borders.slice(0, 4),
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'right',
+                labels: { color: '#f5f5f5', boxWidth: 12, padding: 15 }
+            },
+            tooltip: {
+                ...tooltipConfig,
+                callbacks: {
+                    label: function(context) { return context.label + ': ' + context.parsed + '%'; }
+                }
+            }
+        }
+    }
+});
+
+// Chart 6: Break-Even Analysis (Line)
+const breakEvenCtx = document.getElementById('breakEvenChart').getContext('2d');
+new Chart(breakEvenCtx, {
+    type: 'line',
+    data: {
+        labels: data.breakEven.customers.map(String),
+        datasets: [
+            {
+                label: 'Revenue',
+                data: data.breakEven.revenue,
+                borderColor: COLORS.primary,
+                backgroundColor: 'transparent',
+                tension: 0,
+                borderWidth: 2
+            },
+            {
+                label: 'Fixed Costs',
+                data: Array(data.breakEven.customers.length).fill(data.breakEven.fixedCosts),
+                borderColor: '#ef4444',
+                backgroundColor: 'transparent',
+                borderDash: [5, 5],
+                tension: 0,
+                borderWidth: 2
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'top',
+                labels: { color: '#f5f5f5', boxWidth: 12 }
+            },
+            tooltip: {
+                ...tooltipConfig,
+                callbacks: {
+                    label: function(context) { return context.dataset.label + ': $' + context.parsed.y; }
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                grid: { color: 'rgba(16, 185, 129, 0.1)' },
+                ticks: { color: '#a3a3a3', callback: v => '$' + v }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { color: '#a3a3a3' },
+                title: { display: true, text: 'Customers', color: '#a3a3a3' }
+            }
+        }
+    }
+});
+</script>
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     REQUIRED CHARTS SUMMARY
+     ════════════════════════════════════════════════════════════════════════════
+
+     1. unitEconomicsChart (Bar, horizontal)
+        - LTV vs CAC comparison
+        - Shows customer value ratio
+
+     2. costStructureChart (Doughnut)
+        - Cost breakdown by category
+        - Shows gross margin vs expenses
+
+     3. revenueProjectionChart (Line)
+        - 5-year revenue trajectory
+        - Single line with fill
+
+     4. coherenceRadarChart (Radar)
+        - 5 alignment checks
+        - Shows strategic coherence
+
+     5. revenueBreakdownChart (Doughnut)
+        - Revenue by pricing tier
+        - Shows tier distribution
+
+     6. breakEvenChart (Line)
+        - Revenue vs Fixed Costs
+        - Shows break-even point
+
+     ════════════════════════════════════════════════════════════════════════════ -->
