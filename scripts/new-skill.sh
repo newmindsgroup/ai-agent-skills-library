@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Scaffold a new skill folder.
+# Scaffold a new original skill folder.
 # Usage: ./scripts/new-skill.sh <skill-name> ["one-line description"]
 
 set -euo pipefail
@@ -18,9 +18,9 @@ if ! [[ "$name" =~ ^[a-z0-9]([a-z0-9-]*[a-z0-9])?$ ]]; then
   exit 1
 fi
 
-dest="skills/$name"
+dest="sources/original/skills/$name"
 if [[ -d "$dest" ]]; then
-  echo "[err] skills/$name already exists." >&2
+  echo "[err] $dest already exists." >&2
   exit 1
 fi
 
@@ -61,4 +61,5 @@ EOF
 
 echo "[ ok ] Created $dest/"
 echo "       Edit $dest/SKILL.md to fill in the content."
+echo "       Regenerate exports with: ruby scripts/sync-skill-library.rb"
 echo "       Validate with: ./scripts/validate-all.sh"

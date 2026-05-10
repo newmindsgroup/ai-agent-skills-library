@@ -44,4 +44,4 @@ When you write a new skill that needs brand context:
 - Document every placeholder you reference in the skill's `SKILL.md` under a `## Brand-config requirements` section.
 - Provide a sensible fallback for each placeholder (or surface an explicit "missing config" message) — the skill must remain functional in a fresh repo.
 
-See `skills/newsletter-drafter/SKILL.md` for a worked example.
+See `sources/original/skills/newsletter-drafter/SKILL.md` for a worked example.

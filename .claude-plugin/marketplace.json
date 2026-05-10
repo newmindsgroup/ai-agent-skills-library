@@ -17,12 +17,12 @@
       "description": "Operating principles + design methodology + voice + autonomy playbook + brand SSOT precedence. Load these on every project. Together they make any AI tool act as an institutional agent rather than a chat toy: signal over noise, anti-sycophancy, on-brand voice, multi-disciplinary design discipline, strategic tool-fire decisions, brand canon precedence.",
       "version": "1.2.0",
       "skills": [
-        "skills/institutional-ai-operating-principles",
-        "skills/design-methodology",
-        "skills/human-voice",
-        "skills/brand-blueprint-builder",
-        "skills/tool-leverage-heuristics",
-        "skills/brand-ssot-precedence"
+        "dist/skills/institutional-ai-operating-principles",
+        "dist/skills/design-methodology",
+        "dist/skills/human-voice",
+        "dist/skills/brand-blueprint-builder",
+        "dist/skills/tool-leverage-heuristics",
+        "dist/skills/brand-ssot-precedence"
       ]
     },
     {
@@ -31,9 +31,9 @@
       "description": "Newsletter, social, and brand-drift skills. Drafts content from RSS + voice playbook, scans recently-shipped content for voice drift, never publishes without review-channel approval. Configure via brand-config.yml.",
       "version": "1.0.0",
       "skills": [
-        "skills/newsletter-drafter",
-        "skills/social-content-drafter",
-        "skills/voice-drift-scanner"
+        "dist/skills/newsletter-drafter",
+        "dist/skills/social-content-drafter",
+        "dist/skills/voice-drift-scanner"
       ]
     },
     {
@@ -42,10 +42,10 @@
       "description": "Inbound triage, calendar scheduling, pipeline reporting, competitive monitoring. Reads your CRM / calendar / inbox, drafts what humans should review, never auto-actions. Configure via brand-config.yml.",
       "version": "1.0.0",
       "skills": [
-        "skills/inbound-triage",
-        "skills/calendar-scheduler",
-        "skills/pipeline-reporter",
-        "skills/competitive-monitor"
+        "dist/skills/inbound-triage",
+        "dist/skills/calendar-scheduler",
+        "dist/skills/pipeline-reporter",
+        "dist/skills/competitive-monitor"
       ]
     },
     {
@@ -54,7 +54,7 @@
       "description": "Weekly meta-review where the agent proposes updates to its own system prompt based on observed patterns + your corrections. Compounds voice fidelity over time.",
       "version": "1.0.0",
       "skills": [
-        "skills/self-improvement-review"
+        "dist/skills/self-improvement-review"
       ]
     },
     {

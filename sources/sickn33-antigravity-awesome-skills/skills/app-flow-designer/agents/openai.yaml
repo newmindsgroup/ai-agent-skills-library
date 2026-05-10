@@ -1,0 +1,4 @@
+interface:
+  display_name: "App Flow Designer"
+  short_description: "Plan app flows before screen implementation"
+  default_prompt: "Use $app-flow-designer to design the onboarding or app flow before building screens."

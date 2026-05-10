@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Validate every skill in skills/.
+# Validate every exported skill in dist/skills/.
 #
 # Strategy:
 #   1. Always run the lightweight frontmatter validator (no external deps,
@@ -16,15 +16,20 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
+SKILLS_ROOT="${SKILLS_ROOT:-dist/skills}"
+if [[ ! -d "$SKILLS_ROOT" && -d "skills" ]]; then
+  SKILLS_ROOT="skills"
+fi
+
 # Always run the lightweight pass first — covers frontmatter integrity for every skill
-bash scripts/validate-frontmatter.sh
+bash scripts/validate-frontmatter.sh "$SKILLS_ROOT"
 
 # Optional second pass with the agentskills CLI if it's installed
 if command -v agentskills >/dev/null 2>&1; then
   echo ""
   echo "agentskills CLI detected — running full spec validation..."
   fail=0
-  for skill in skills/*/; do
+  for skill in "$SKILLS_ROOT"/*/; do
     name="$(basename "$skill")"
     if agentskills validate "$skill" >/dev/null 2>&1; then
       echo "[ ok ] $name (full spec)"

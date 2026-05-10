@@ -1,8 +1,8 @@
 # Skills by Source
 
-This directory organizes the library by where each skill came from.
+This directory is the organized source of truth for the skill library.
 
-The folders here are human-readable provenance indexes. The canonical loadable skills stay in `../skills/<skill-name>/SKILL.md` because the Agent Skills spec, validators, installers, and IDE adapters expect that flat layout.
+Canonical skill folders live under `sources/<source-folder>/skills/<skill-name>/`. The generated flat compatibility export lives in `../dist/skills/` for installers and agent tools that expect a flat Agent Skills layout.
 
 | Source folder | Source | Type | Skills |
 |---|---|---|---:|

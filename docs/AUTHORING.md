@@ -9,7 +9,10 @@ Every skill in this library follows the open [Agent Skills specification](https:
 ./scripts/new-skill.sh drafting-proposals
 
 # Edit the generated files
-$EDITOR skills/drafting-proposals/SKILL.md
+$EDITOR sources/original/skills/drafting-proposals/SKILL.md
+
+# Regenerate the flat export and indexes
+ruby scripts/sync-skill-library.rb
 
 # Validate before committing
 ./scripts/validate-all.sh
@@ -18,14 +21,28 @@ $EDITOR skills/drafting-proposals/SKILL.md
 ## Folder structure
 
 ```
-skills/
-└── your-skill-name/
-    ├── SKILL.md              # required
-    ├── references/           # optional — deep-dive content loaded on demand
-    │   └── *.md
-    ├── scripts/              # optional — executables the agent runs
-    │   └── *.py, *.sh
-    └── assets/               # optional — templates, schemas, examples
+sources/
+└── original/
+    └── skills/
+        └── your-skill-name/
+            ├── SKILL.md              # required
+            ├── references/           # optional — deep-dive content loaded on demand
+            │   └── *.md
+            ├── scripts/              # optional — executables the agent runs
+            │   └── *.py, *.sh
+            └── assets/               # optional — templates, schemas, examples
+```
+
+The generated install/export copy is created at:
+
+```
+dist/
+└── skills/
+    └── your-skill-name/
+        ├── SKILL.md
+        ├── references/
+        ├── scripts/
+        └── assets/
 ```
 
 ## SKILL.md rules
@@ -91,7 +108,7 @@ Run before every commit:
 ./scripts/validate-all.sh
 ```
 
-This runs the `agentskills` validator on every skill in `skills/`. PRs fail CI if validation fails.
+This runs the validator on every exported skill in `dist/skills/`. PRs fail CI if validation fails.
 
 If you don't have `agentskills` installed:
 
@@ -113,8 +130,9 @@ npm install -g @agentskills/cli
 - [ ] Body is under 500 lines
 - [ ] Examples section exists
 - [ ] All referenced files exist at the paths named
+- [ ] `ruby scripts/sync-skill-library.rb` has regenerated `dist/skills/`, `sources/README.md`, and manifest/source docs
 - [ ] `./scripts/validate-all.sh` passes locally
-- [ ] Added an entry to the "Current skills" table in the root `README.md`
+- [ ] Added or updated source/catalog docs when the source group changed
 
 ## Versioning
 

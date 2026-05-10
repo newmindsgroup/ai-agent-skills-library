@@ -6,10 +6,19 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
+SKILLS_ROOT="${1:-${SKILLS_ROOT:-dist/skills}}"
+if [[ ! -d "$SKILLS_ROOT" && -d "skills" ]]; then
+  SKILLS_ROOT="skills"
+fi
+if [[ ! -d "$SKILLS_ROOT" ]]; then
+  echo "[fail] skills root not found: $SKILLS_ROOT"
+  exit 1
+fi
+
 fail=0
 warn=0
 
-for skill in skills/*/; do
+for skill in "$SKILLS_ROOT"/*/; do
   name="$(basename "$skill")"
   skillmd="${skill}SKILL.md"
 

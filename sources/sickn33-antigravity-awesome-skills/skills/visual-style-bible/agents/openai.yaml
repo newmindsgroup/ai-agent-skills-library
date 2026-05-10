@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Style Bible"
+  short_description: "Apply the house visual system to UI and web work"
+  default_prompt: "Use $visual-style-bible to set the visual direction for this page or app surface."

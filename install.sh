@@ -12,9 +12,9 @@
 
 set -euo pipefail
 
-REPO_URL="https://github.com/newmindsgroup/ai-agent-skills-library"
-REPO_RAW="https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main"
-TARBALL_URL="https://github.com/newmindsgroup/ai-agent-skills-library/archive/refs/heads/main.tar.gz"
+REPO_URL="${REPO_URL:-https://github.com/newmindsgroup/ai-agent-skills-library}"
+REPO_RAW="${REPO_RAW:-https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main}"
+TARBALL_URL="${TARBALL_URL:-https://github.com/newmindsgroup/ai-agent-skills-library/archive/refs/heads/main.tar.gz}"
 
 SCOPE=""
 SKILL_FILTER=""
@@ -54,9 +54,12 @@ if ! curl -fsSL "$TARBALL_URL" | tar -xz -C "$TMPDIR"; then
   err "Failed to download skills archive."
   exit 1
 fi
-SRC_DIR="$(find "$TMPDIR" -maxdepth 2 -type d -name 'skills' | head -1)"
+SRC_DIR="$(find "$TMPDIR" -maxdepth 4 -type d -path '*/dist/skills' | head -1)"
 if [[ -z "$SRC_DIR" ]]; then
-  err "Could not locate skills/ directory in archive."
+  SRC_DIR="$(find "$TMPDIR" -maxdepth 2 -type d -name 'skills' | head -1)"
+fi
+if [[ -z "$SRC_DIR" ]]; then
+  err "Could not locate dist/skills/ directory in archive."
   exit 1
 fi
 

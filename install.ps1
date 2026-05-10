@@ -15,8 +15,8 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$RepoUrl = "https://github.com/newmindsgroup/ai-agent-skills-library"
-$TarUrl  = "$RepoUrl/archive/refs/heads/main.zip"
+$RepoUrl = if ($env:REPO_URL) { $env:REPO_URL } else { "https://github.com/newmindsgroup/ai-agent-skills-library" }
+$TarUrl  = if ($env:TARBALL_URL) { $env:TARBALL_URL } else { "$RepoUrl/archive/refs/heads/main.zip" }
 
 function Info($m) { Write-Host "[info] $m" -ForegroundColor Cyan }
 function Ok($m)   { Write-Host "[ ok ] $m" -ForegroundColor Green }
@@ -31,7 +31,14 @@ Info "Downloading skills archive..."
 Invoke-WebRequest -Uri $TarUrl -OutFile $zipPath -UseBasicParsing
 Expand-Archive -Path $zipPath -DestinationPath $tmp -Force
 $srcRoot = Get-ChildItem $tmp -Directory | Where-Object { $_.Name -like "ai-agent-skills-library-*" } | Select-Object -First 1
-$srcDir = Join-Path $srcRoot.FullName "skills"
+$srcDir = Join-Path $srcRoot.FullName "dist\skills"
+if (-not (Test-Path $srcDir)) {
+    $srcDir = Join-Path $srcRoot.FullName "skills"
+}
+if (-not (Test-Path $srcDir)) {
+    Err "Could not locate dist\skills in archive."
+    exit 1
+}
 
 # Determine skills to install
 if ($Skill) {

@@ -2,7 +2,7 @@
 
 Generated source map for every skill in the repository.
 
-Canonical loadable skills remain in `skills/<skill-name>/`. Source-organized provenance folders live in [`../sources/`](../sources/).
+Canonical source skills live in `sources/<source-folder>/skills/<skill-name>/`. Generated flat install/export copies live in [`../dist/skills/`](../dist/skills/).
 
 ## Source Groups
 
@@ -20,7 +20,7 @@ Canonical loadable skills remain in `skills/<skill-name>/`. Source-organized pro
 
 ## Duplicate Source Names Resolved
 
-When the same skill name appeared in multiple local source roots, the canonical `skills/<name>/` copy was kept and the other copies are listed below.
+When the same skill name appeared in multiple local source roots, the canonical source copy was kept and the other copies are listed below.
 
 - `ai-startup-building`: agents:`~/.agents/skills/ai-startup-building/SKILL.md`
 - `business-model-canvas`: agents:`~/.agents/skills/business-model-canvas/SKILL.md`
@@ -36,4 +36,4 @@ When the same skill name appeared in multiple local source roots, the canonical 
 
 ## Machine-Readable Manifest
 
-See [`../manifests/skills-manifest.json`](../manifests/skills-manifest.json). Each skill entry now includes `source_slug`, `source_label`, `source_type`, and `source_path` when available.
+See [`../manifests/skills-manifest.json`](../manifests/skills-manifest.json). Each skill entry includes `canonical_path`, `path` for the flat export, `source_slug`, `source_label`, `source_type`, and `source_path` when available.

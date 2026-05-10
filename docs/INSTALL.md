@@ -2,6 +2,8 @@
 
 The one-line `install.sh` handles every supported IDE automatically. This doc is for teammates who want to understand what it's doing, or who use a tool the installer doesn't cover (Claude Projects, ChatGPT Custom GPTs, Gemini Gems).
 
+This repo keeps canonical skills organized by source under `sources/<source-folder>/skills/`. The installer uses the generated flat export at `dist/skills/`, because IDEs expect `<skills-root>/<skill-name>/SKILL.md`.
+
 ## Native Agent Skills support
 
 These tools read the Agent Skills format directly from the folder the installer writes to. Nothing else required.
@@ -47,8 +49,8 @@ These platforms don't have a filesystem-based skill discovery mechanism. You nee
 
 1. Create a new Project.
 2. Upload these files to the Project's knowledge base:
-   - `skills/<name>/SKILL.md`
-   - Every file under `skills/<name>/references/`
+   - `dist/skills/<name>/SKILL.md`
+   - Every file under `dist/skills/<name>/references/`
 3. In the **Custom Instructions** field, paste:
    > Follow the operating principles in `SKILL.md` on every response. Consult the reference files when a task matches the skill's description.
 

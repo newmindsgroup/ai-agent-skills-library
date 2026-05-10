@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design QA"
+  short_description: "Run visual and responsive QA on a UI surface"
+  default_prompt: "Use $design-qa to review this UI for polish, consistency, and responsive issues."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design to Code Orchestrator"
+  short_description: "Choose the right Figma-first or code-first workflow"
+  default_prompt: "Use $design-to-code-orchestrator to route this design-and-implementation task through the right workflow."

@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# Compact long SKILL.md files by moving their original body into
+# Compact long source SKILL.md files by moving their original body into
 # references/full-guidance.md and replacing SKILL.md with a short
 # progressive-disclosure entrypoint.
 
@@ -8,6 +8,16 @@ require "fileutils"
 log_path = ARGV[0] || "/tmp/ai-agent-skills-validate.log"
 min_lines = Integer(ARGV[1] || 501)
 max_lines = Integer(ARGV[2] || 10_000)
+
+def find_skill_dir(name)
+  matches = Dir.glob(File.join("sources", "*", "skills", name)).select { |path| File.directory?(path) }
+  return matches.first if matches.length == 1
+
+  legacy = File.join("skills", name)
+  return legacy if matches.empty? && File.directory?(legacy)
+
+  raise "expected exactly one source skill directory for #{name}, found #{matches.length}"
+end
 
 def titleize(name)
   name.split("-").map { |part| part.empty? ? part : part[0].upcase + part[1..] }.join(" ")
@@ -142,7 +152,7 @@ end
 skills.sort_by! { |count, _name| -count }
 
 skills.each do |_count, name|
-  dir = File.join("skills", name)
+  dir = find_skill_dir(name)
   skill_path = File.join(dir, "SKILL.md")
   frontmatter, body = split_skill(File.read(skill_path))
   title = first_h1(body, name)

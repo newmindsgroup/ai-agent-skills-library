@@ -16,22 +16,11 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 ├── agents/                            ← 16 sub-agents (cherry-picked from msitarzewski/agency-agents, MIT)
 │   ├── ai-engineer.md, sre.md, code-reviewer.md, incident-response-commander.md, ...
 │   └── README.md                       ← install + auto-routing guide
-├── skills/                            ← individual Agent Skills (cross-IDE)
-│   ├── institutional-ai-operating-principles/
-│   ├── design-methodology/
-│   ├── brand-blueprint-builder/
-│   ├── human-voice/
-│   ├── tool-leverage-heuristics/      ← autonomy playbook: when to fire which tool
-│   ├── brand-ssot-precedence/         ← read AGENTS.md → DESIGN.md → voice playbook chain
-│   ├── newsletter-drafter/
-│   ├── social-content-drafter/
-│   ├── voice-drift-scanner/
-│   ├── inbound-triage/
-│   ├── calendar-scheduler/
-│   ├── pipeline-reporter/
-│   ├── competitive-monitor/
-│   └── self-improvement-review/
-├── sources/                           ← provenance index grouped by source repo
+├── sources/                           ← canonical source tree grouped by source repo
+│   ├── original/skills/               ← New Minds-created skills
+│   ├── sickn33-antigravity-awesome-skills/skills/
+│   └── menkesu-awesome-pm-skills/skills/
+├── dist/skills/                       ← generated flat Agent Skills export for installers
 ├── runbooks/                          ← non-loadable patterns + lessons
 │   ├── gate-pattern.md
 │   ├── systemd-watchdog-patterns.md
@@ -69,7 +58,7 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 /plugin install agent-foundation@ai-agent-skills-library
 ```
 
-The marketplace exposes four bundles:
+The marketplace exposes five bundles:
 
 - **`agent-foundation`** — operating principles + design methodology + human-voice + brand-blueprint-builder + tool-leverage-heuristics + brand-ssot-precedence. Load on every project. Six skills make any AI tool act as an institutional agent: signal over noise, on-brand voice, strategic tool-fire decisions, brand canon precedence.
 - **`content-engine`** — newsletter, social, brand-drift.
@@ -108,7 +97,7 @@ curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-libra
 
 ### Option D — Manual
 
-Each skill lives at `skills/<skill-name>/`. Copy the folder into your tool's skill directory. See [`docs/INSTALL.md`](docs/INSTALL.md) for the full per-tool path table.
+Each installable skill export lives at `dist/skills/<skill-name>/`. Copy the folder into your tool's skill directory. See [`docs/INSTALL.md`](docs/INSTALL.md) for the full per-tool path table.
 
 ## Configure brand context
 
@@ -122,15 +111,15 @@ Full placeholder reference: [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
 
 ### Skills
 
-This repository now ships **1513 skills** in `skills/`. The original curated New Minds bundles are preserved, and the broader Codex/agent skill corpus has been imported as portable Agent Skills folders.
+This repository now ships **1513 skills**. Canonical source folders live under `sources/<source-repo>/skills/`, and the installer-ready flat export lives under `dist/skills/`.
 
 For the complete generated index with descriptions, use [`docs/SKILLS-CATALOG.md`](docs/SKILLS-CATALOG.md). For provenance and duplicate-resolution details, use [`docs/SKILL-SOURCES.md`](docs/SKILL-SOURCES.md).
 
 ### Source organization
 
-The canonical loadable layout stays flat at `skills/<skill-name>/` so every supported agent tool can install and validate the library normally.
+The canonical source tree is [`sources/`](sources/). It groups skills into repo-named folders such as `sources/sickn33-antigravity-awesome-skills/skills/`, `sources/menkesu-awesome-pm-skills/skills/`, and `sources/original/skills/` for New Minds-created skills.
 
-For human browsing by origin, use [`sources/`](sources/). It groups the same skills into repo-named provenance folders such as `sources/sickn33-antigravity-awesome-skills/`, `sources/menkesu-awesome-pm-skills/`, and `sources/original/` for New Minds-created skills.
+The flat [`dist/skills/`](dist/skills/) directory is generated for compatibility with tools that expect `skills-root/<skill-name>/SKILL.md`. Do not edit `dist/skills/` directly; edit `sources/` and run `ruby scripts/sync-skill-library.rb`.
 
 | Category | Count |
 |---|---:|
@@ -187,12 +176,13 @@ See [`prompts/README.md`](prompts/README.md). Three reusable system-prompt templ
 ## Contributing a new skill
 
 1. Read [`docs/AUTHORING.md`](docs/AUTHORING.md) — the full authoring guide.
-2. Copy `skills/institutional-ai-operating-principles/` as a starting template, or use the scaffold script: `./scripts/new-skill.sh drafting-proposals`.
+2. Copy `sources/original/skills/institutional-ai-operating-principles/` as a starting template, or use the scaffold script: `./scripts/new-skill.sh drafting-proposals`.
 3. Write your `SKILL.md` following the Agent Skills spec (under 500 lines, gerund naming, third-person description, examples at the bottom).
 4. If your skill needs brand context, document the required `brand-config.yml` keys at the top of SKILL.md and use `{{PLACEHOLDERS}}` in the body. See [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
-5. Validate locally: `./scripts/validate-all.sh`.
-6. If validation warns about long `SKILL.md` files, move deep material into `references/` or run `ruby scripts/compact-long-skills.rb /tmp/validation.log 501 10000` against a saved validation log.
-7. Open a pull request. CI will re-validate every skill on push.
+5. Regenerate the flat export and indexes: `ruby scripts/sync-skill-library.rb`.
+6. Validate locally: `./scripts/validate-all.sh`.
+7. If validation warns about long `SKILL.md` files, move deep material into `references/` or run `ruby scripts/compact-long-skills.rb /tmp/validation.log 501 10000` against a saved validation log, then run the sync script again.
+8. Open a pull request. CI will re-validate every skill on push.
 
 ## What this repo does not do
 
