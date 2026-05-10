@@ -1,6 +1,6 @@
 ---
 name: emotional-arc-designer
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Designs the emotional progression of a page, campaign, onboarding flow, or narrative so users move from tension to trust and action."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

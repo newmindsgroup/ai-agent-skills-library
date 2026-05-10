@@ -1,6 +1,6 @@
 ---
 name: debugging-toolkit-smart-debug
-description: 'Use when working with debugging toolkit smart debug'
+description: "Guides structured debugging by isolating symptoms, reproducing failures, forming hypotheses, inspecting evidence, and choosing minimal fixes."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

@@ -1,6 +1,6 @@
 ---
 name: social-proof-architect
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Selects and structures testimonials, logos, case studies, metrics, and proof points to build credible social proof."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

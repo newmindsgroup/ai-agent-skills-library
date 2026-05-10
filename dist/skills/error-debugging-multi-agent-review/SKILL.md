@@ -1,6 +1,6 @@
 ---
 name: error-debugging-multi-agent-review
-description: 'Use when working with error debugging multi agent review'
+description: "Coordinates multi-perspective review of complex errors, comparing hypotheses and fix plans before implementation."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

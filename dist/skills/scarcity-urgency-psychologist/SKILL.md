@@ -1,6 +1,6 @@
 ---
 name: scarcity-urgency-psychologist
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Uses ethical scarcity and urgency patterns to clarify time-sensitive value, availability, and decision timing without fake pressure."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

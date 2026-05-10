@@ -1,6 +1,6 @@
 ---
 name: performance-testing-review-multi-agent-review
-description: 'Use when working with performance testing review multi agent review'
+description: "Reviews performance test results and system bottlenecks with multiple analytical perspectives before recommending optimization work."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

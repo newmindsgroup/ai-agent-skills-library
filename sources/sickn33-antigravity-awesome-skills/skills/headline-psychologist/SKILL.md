@@ -1,6 +1,6 @@
 ---
 name: headline-psychologist
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Creates and critiques headlines using attention, clarity, curiosity, relevance, and conversion psychology."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

@@ -1,6 +1,6 @@
 ---
 name: comprehensive-review-full-review
-description: 'Use when working with comprehensive review full review'
+description: "Runs a broad code or project review across correctness, maintainability, security, UX, tests, and release readiness."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

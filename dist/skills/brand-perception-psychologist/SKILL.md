@@ -1,6 +1,6 @@
 ---
 name: brand-perception-psychologist
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Analyzes how customers perceive a brand and identifies psychological cues that shape trust, relevance, differentiation, and recall."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

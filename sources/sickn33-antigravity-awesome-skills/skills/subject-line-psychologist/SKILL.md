@@ -1,6 +1,6 @@
 ---
 name: subject-line-psychologist
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Writes and evaluates email subject lines using relevance, curiosity, clarity, audience intent, and ethical attention triggers."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

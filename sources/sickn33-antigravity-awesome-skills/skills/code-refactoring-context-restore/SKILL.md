@@ -1,6 +1,6 @@
 ---
 name: code-refactoring-context-restore
-description: 'Use when working with code refactoring context restore'
+description: "Restores refactoring context by reconstructing goals, touched areas, risks, and next actions after a paused or interrupted code cleanup effort."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

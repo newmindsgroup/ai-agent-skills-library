@@ -7,6 +7,8 @@ Complete generated index of every skill currently shipped in this repository.
 - Added in this sync: 1499
 - Existing curated New Minds skills preserved: 14
 
+For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills-index.json) or [`../dist/skills-index.tsv`](../dist/skills-index.tsv). For curated install subsets, see [`STARTER-PACKS.md`](STARTER-PACKS.md). For trust and provenance metadata, see [`SKILLS-TRUST.md`](SKILLS-TRUST.md).
+
 ## Source Repositories Used
 - **Base Codex skill library:** https://github.com/sickn33/antigravity-awesome-skills
 - **Gap-filler skills:** https://github.com/mxyhi/ok-skills

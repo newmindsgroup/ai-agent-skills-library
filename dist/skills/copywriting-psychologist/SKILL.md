@@ -1,6 +1,6 @@
 ---
 name: copywriting-psychologist
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Improves persuasive copy using behavioral psychology, audience motivation, objection handling, and conversion-focused messaging principles."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

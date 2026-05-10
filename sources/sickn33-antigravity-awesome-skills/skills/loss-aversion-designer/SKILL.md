@@ -1,6 +1,6 @@
 ---
 name: loss-aversion-designer
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Applies loss-aversion psychology to offers, onboarding, and messaging so users understand the cost of inaction without fearmongering."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

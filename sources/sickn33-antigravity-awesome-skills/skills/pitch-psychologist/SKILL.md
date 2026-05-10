@@ -1,6 +1,6 @@
 ---
 name: pitch-psychologist
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Shapes pitches and presentations around audience psychology, stakes, proof, objections, and a clear decision path."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

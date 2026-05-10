@@ -16,6 +16,10 @@ ruby scripts/sync-skill-library.rb
 
 # Validate before committing
 ./scripts/validate-all.sh
+
+# Check generated files and documentation links
+./scripts/check-generated.sh
+ruby scripts/check-links.rb
 ```
 
 ## Folder structure
@@ -62,6 +66,7 @@ metadata:
 
 - `name` — lowercase, hyphens, digits. 1–64 chars. No starting/ending hyphen, no consecutive hyphens. Must match the folder name. Cannot be `claude` or `anthropic`.
 - `description` — 1–1024 chars. **Third person** ("Drafts…", "Analyzes…"). Must explain **what** the skill does and **when** to trigger it. Include trigger phrases a human would say. Wrap in double quotes if it contains `:` or other YAML-special characters.
+- Avoid placeholder descriptions like "One sentence - what this skill does..." or generic "Use when working with..." text. Descriptions drive routing quality, so vague metadata is a functional bug.
 - Any custom field must be nested under `metadata`, not at the top level.
 
 **Body**:
@@ -110,6 +115,16 @@ Run before every commit:
 
 This runs the validator on every exported skill in `dist/skills/`. PRs fail CI if validation fails.
 
+Repository-level checks:
+
+```bash
+./scripts/check-generated.sh
+ruby scripts/check-links.rb
+./scripts/smoke-install.sh
+```
+
+These catch stale generated indexes, broken local docs links, and installer regressions.
+
 If you don't have `agentskills` installed:
 
 ```bash
@@ -127,11 +142,13 @@ npm install -g @agentskills/cli
 - [ ] `SKILL.md` starts with `---` on line 1 (no title or blank lines before)
 - [ ] `name` in frontmatter matches folder name exactly
 - [ ] `description` is third-person and explains what + when
+- [ ] `description` is specific enough to route the skill without reading the full body
 - [ ] Body is under 500 lines
 - [ ] Examples section exists
 - [ ] All referenced files exist at the paths named
 - [ ] `ruby scripts/sync-skill-library.rb` has regenerated `dist/skills/`, `sources/README.md`, and manifest/source docs
 - [ ] `./scripts/validate-all.sh` passes locally
+- [ ] `./scripts/check-generated.sh`, `ruby scripts/check-links.rb`, and `./scripts/smoke-install.sh` pass locally
 - [ ] Added or updated source/catalog docs when the source group changed
 
 ## Versioning

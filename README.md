@@ -39,7 +39,12 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 │   ├── INSTALL.md                     ← per-IDE install detail
 │   ├── AUTHORING.md                   ← how to write a new skill
 │   ├── PLACEHOLDERS.md                ← brand-config.yml placeholder system
-│   └── SKILLS-CATALOG.md              ← full index w/ dependencies + decision tree
+│   ├── SKILLS-CATALOG.md              ← full index w/ dependencies + decision tree
+│   ├── STARTER-PACKS.md               ← curated subsets for easier installs
+│   └── SKILLS-TRUST.md                ← provenance, trust levels, and risk flags
+├── manifests/
+│   ├── skills-manifest.json           ← generated canonical manifest
+│   └── starter-packs.json             ← curated bundle definitions
 ├── CHANGELOG.md                       ← versioned history of every release
 ├── brand-config.example.yml           ← copy to project root: tenant config, voice/visual paths
 ├── DESIGN.example.md                  ← copy to project root: visual SSOT (Stitch 9-section format)
@@ -95,7 +100,49 @@ The installer auto-detects your IDE and installs every skill into the right loca
 curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- newsletter-drafter
 ```
 
-### Option D — Manual
+### Option D — Install a starter pack
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --bundle codex-essentials
+```
+
+Useful starter packs include:
+
+- `agent-foundation` — small default baseline for every project.
+- `codex-essentials` — routing, planning, debugging, verification, current docs, and skill discovery.
+- `builder-stack` — architecture, API design, implementation, review, and validation.
+- `frontend-ui` — frontend, visual design reference, animation, accessibility, and UX.
+- `business-strategy` — business model, startup validation, strategy, OKRs, metrics, and AI product.
+- `security-review` — security audit, API security, SAST, cloud security, and agent-action auditing.
+- `qa-debugging` — dogfooding, browser QA, bug hunting, TDD, and completion verification.
+- `local-ai-ops` — local models, graphing, design references, Claude routing, and AI-native CLI work.
+
+List packs any time:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --bundles
+```
+
+### Option E — Search before installing
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --search "business model"
+curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --category "Frontend, UI, UX, Design" --dry-run
+```
+
+Installer discovery and safety options:
+
+- `--list` lists all skills.
+- `--search <query>` searches names, descriptions, categories, sources, trust levels, and bundle memberships.
+- `--bundles` lists starter packs.
+- `--categories` lists generated categories.
+- `--bundle <name>` installs a curated starter pack.
+- `--category <name>` installs every skill in a category.
+- `--dry-run` previews the target and skill count without copying files.
+- `--force` or `--update` refreshes selected existing skills.
+- `--all` explicitly installs the full library.
+
+### Option F — Manual
 
 Each installable skill export lives at `dist/skills/<skill-name>/`. Copy the folder into your tool's skill directory. See [`docs/INSTALL.md`](docs/INSTALL.md) for the full per-tool path table.
 
@@ -114,12 +161,19 @@ Full placeholder reference: [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
 This repository now ships **1513 skills**. Canonical source folders live under `sources/<source-repo>/skills/`, and the installer-ready flat export lives under `dist/skills/`.
 
 For the complete generated index with descriptions, use [`docs/SKILLS-CATALOG.md`](docs/SKILLS-CATALOG.md). For provenance and duplicate-resolution details, use [`docs/SKILL-SOURCES.md`](docs/SKILL-SOURCES.md).
+For curated starter packs, use [`docs/STARTER-PACKS.md`](docs/STARTER-PACKS.md). For trust metadata and risk flags, use [`docs/SKILLS-TRUST.md`](docs/SKILLS-TRUST.md).
 
 ### Source organization
 
 The canonical source tree is [`sources/`](sources/). It groups skills into repo-named folders such as `sources/sickn33-antigravity-awesome-skills/skills/`, `sources/menkesu-awesome-pm-skills/skills/`, and `sources/original/skills/` for New Minds-created skills.
 
 The flat [`dist/skills/`](dist/skills/) directory is generated for compatibility with tools that expect `skills-root/<skill-name>/SKILL.md`. Do not edit `dist/skills/` directly; edit `sources/` and run `ruby scripts/sync-skill-library.rb`.
+
+Generated discovery artifacts live beside the export:
+
+- [`dist/skills-index.json`](dist/skills-index.json) — machine-readable searchable catalog.
+- [`dist/skills-index.tsv`](dist/skills-index.tsv) — shell-friendly catalog for installers and quick grep/awk use.
+- [`dist/bundles.json`](dist/bundles.json) and [`dist/bundles/`](dist/bundles/) — starter-pack definitions used by installers.
 
 | Category | Count |
 |---|---:|
@@ -181,8 +235,10 @@ See [`prompts/README.md`](prompts/README.md). Three reusable system-prompt templ
 4. If your skill needs brand context, document the required `brand-config.yml` keys at the top of SKILL.md and use `{{PLACEHOLDERS}}` in the body. See [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
 5. Regenerate the flat export and indexes: `ruby scripts/sync-skill-library.rb`.
 6. Validate locally: `./scripts/validate-all.sh`.
-7. If validation warns about long `SKILL.md` files, move deep material into `references/` or run `ruby scripts/compact-long-skills.rb /tmp/validation.log 501 10000` against a saved validation log, then run the sync script again.
-8. Open a pull request. CI will re-validate every skill on push.
+7. Check generated drift and links: `./scripts/check-generated.sh && ruby scripts/check-links.rb`.
+8. Smoke-test installer behavior: `./scripts/smoke-install.sh`.
+9. If validation warns about long `SKILL.md` files, move deep material into `references/` or run `ruby scripts/compact-long-skills.rb /tmp/validation.log 501 10000` against a saved validation log, then run the sync script again.
+10. Open a pull request. CI will re-validate every skill on push.
 
 ## What this repo does not do
 

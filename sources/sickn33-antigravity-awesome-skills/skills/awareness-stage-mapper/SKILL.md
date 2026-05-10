@@ -1,6 +1,6 @@
 ---
 name: awareness-stage-mapper
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Maps audience/customer awareness stages and recommends messaging angles, objections, and next-step content for each stage."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

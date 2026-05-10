@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "packs": [
+    {
+      "name": "agent-foundation",
+      "display_name": "Agent Foundation",
+      "description": "Core operating principles, design methodology, human voice, brand context, and tool-selection discipline for every project.",
+      "recommended_for": "Teams that want a small default baseline before installing the full library.",
+      "skills": [
+        "institutional-ai-operating-principles",
+        "design-methodology",
+        "human-voice",
+        "brand-blueprint-builder",
+        "tool-leverage-heuristics",
+        "brand-ssot-precedence"
+      ]
+    },
+    {
+      "name": "content-engine",
+      "display_name": "Content Engine",
+      "description": "Newsletter, social drafting, and brand-drift review skills for content operations with human approval.",
+      "recommended_for": "Marketing, founder-led content, newsletters, and brand-consistent social output.",
+      "skills": [
+        "newsletter-drafter",
+        "social-content-drafter",
+        "voice-drift-scanner"
+      ]
+    },
+    {
+      "name": "ops-pipeline",
+      "display_name": "Ops Pipeline",
+      "description": "Inbox triage, calendar scheduling, pipeline reporting, and competitive monitoring.",
+      "recommended_for": "Operational teams that need draftable CRM, inbox, calendar, and monitoring workflows.",
+      "skills": [
+        "inbound-triage",
+        "calendar-scheduler",
+        "pipeline-reporter",
+        "competitive-monitor"
+      ]
+    },
+    {
+      "name": "agent-self-improvement",
+      "display_name": "Agent Self-Improvement",
+      "description": "A focused meta-review skill for improving project instructions from observed patterns and user corrections.",
+      "recommended_for": "Teams that want their agent setup to compound over time.",
+      "skills": [
+        "self-improvement-review"
+      ]
+    },
+    {
+      "name": "codex-essentials",
+      "display_name": "Codex Essentials",
+      "description": "High-leverage routing, planning, debugging, verification, docs, and skill-discovery skills for Codex workflows.",
+      "recommended_for": "Codex users who want natural-language skill routing without installing everything.",
+      "skills": [
+        "codex-skill-orchestrator",
+        "skill-router",
+        "codex-workflows",
+        "brainstorming",
+        "concise-planning",
+        "writing-plans",
+        "systematic-debugging",
+        "test-driven-development",
+        "verification-before-completion",
+        "context7-cli",
+        "get-api-docs",
+        "find-skills"
+      ]
+    },
+    {
+      "name": "builder-stack",
+      "display_name": "Builder Stack",
+      "description": "Planning, architecture, API design, implementation, review, debugging, and validation skills for product engineering.",
+      "recommended_for": "Software teams building or maintaining application code.",
+      "skills": [
+        "app-builder",
+        "backend-architect",
+        "architecture",
+        "api-design-principles",
+        "clean-code",
+        "code-review-excellence",
+        "test-driven-development",
+        "systematic-debugging",
+        "verification-before-completion",
+        "lint-and-validate"
+      ]
+    },
+    {
+      "name": "frontend-ui",
+      "display_name": "Frontend UI",
+      "description": "Frontend implementation, visual reference, animation, accessibility, and UX persuasion skills.",
+      "recommended_for": "Teams designing and shipping polished interfaces.",
+      "skills": [
+        "frontend-developer",
+        "baseline-ui",
+        "awesome-design-md",
+        "accessibility-compliance-accessibility-audit",
+        "3d-web-experience",
+        "animejs-animation",
+        "angular-ui-patterns",
+        "ux-persuasion-engineer"
+      ]
+    },
+    {
+      "name": "business-strategy",
+      "display_name": "Business Strategy",
+      "description": "Business model, startup validation, strategy, OKR, metrics, and AI-product skills.",
+      "recommended_for": "Founders, product leads, and strategy work from idea through launch.",
+      "skills": [
+        "business-model-designer",
+        "business-model-canvas",
+        "startup-validator",
+        "strategy-frameworks",
+        "okr-frameworks",
+        "metrics-frameworks",
+        "zero-to-launch",
+        "ai-startup-building",
+        "ai-product",
+        "ai-product-patterns"
+      ]
+    },
+    {
+      "name": "security-review",
+      "display_name": "Security Review",
+      "description": "Security audit, API security, SAST, cloud security, and AI-agent action auditing skills.",
+      "recommended_for": "Security review, risk assessment, and pre-release hardening.",
+      "skills": [
+        "007",
+        "audit-skills",
+        "security-auditor",
+        "api-security-best-practices",
+        "api-security-testing",
+        "aws-security-audit",
+        "sast-configuration",
+        "agentic-actions-auditor"
+      ]
+    },
+    {
+      "name": "qa-debugging",
+      "display_name": "QA and Debugging",
+      "description": "Exploratory testing, browser QA, bug hunting, TDD, validation, and completion-verification skills.",
+      "recommended_for": "Teams that want fewer false-done claims and stronger app-quality checks.",
+      "skills": [
+        "dogfood",
+        "agent-browser",
+        "bug-hunter",
+        "systematic-debugging",
+        "test-driven-development",
+        "verification-before-completion",
+        "awt-e2e-testing",
+        "playwright-skill",
+        "lint-and-validate"
+      ]
+    },
+    {
+      "name": "local-ai-ops",
+      "display_name": "Local AI Ops",
+      "description": "Local model delegation, repo graphing, design references, Claude routing, agent docs, and AI-native CLI patterns.",
+      "recommended_for": "People building a local/private AI-agent workstation or Codex-adjacent tooling setup.",
+      "skills": [
+        "local-gemma-worker",
+        "local-llm-expert",
+        "graphify",
+        "awesome-design-md",
+        "claude-code-router",
+        "agents-md",
+        "ai-native-cli",
+        "agent-manager-skill"
+      ]
+    }
+  ]
+}

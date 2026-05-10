@@ -1,6 +1,6 @@
 ---
 name: full-stack-orchestration-full-stack-feature
-description: 'Use when working with full stack orchestration full stack feature'
+description: "Orchestrates full-stack feature delivery across product requirements, backend, frontend, data, tests, and release checks."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

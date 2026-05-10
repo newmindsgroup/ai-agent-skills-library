@@ -2,7 +2,7 @@
 
 This directory contains patterns and runbooks that aren't loadable as Agent Skills, but encode hard-won lessons that are worth carrying across projects.
 
-Skills in `skills/` are *behaviors* the agent picks up and applies. Runbooks here are *operating principles* the human (and any agent) should read once, internalize, and apply judgement against.
+Skills exported in `dist/skills/` are *behaviors* the agent picks up and applies. Runbooks here are *operating principles* the human (and any agent) should read once, internalize, and apply judgement against.
 
 ## What's here
 

@@ -1,6 +1,6 @@
 ---
 name: visual-emotion-engineer
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Connects visual design choices to intended user emotion, trust, energy, and action in pages, campaigns, and product surfaces."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

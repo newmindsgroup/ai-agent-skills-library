@@ -1,6 +1,6 @@
 ---
 name: context-management-context-restore
-description: 'Use when working with context management context restore'
+description: "Restores working context from notes, files, summaries, and prior decisions so an agent can continue without repeating discovery."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

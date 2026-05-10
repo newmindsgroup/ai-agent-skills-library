@@ -2,7 +2,7 @@
 
 This folder contains 16 specialist sub-agents cherry-picked from [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) (MIT). They are **portable, tenant-agnostic, project-agnostic** — drop them into any Claude Code, Cursor, or Cowork project's `~/.claude/agents/` (or equivalent) directory and they auto-route on natural-language triggers via "Use PROACTIVELY when..." phrases in their `description` frontmatter.
 
-> **Skills vs sub-agents.** Skills (in `skills/`) load as system-prompt directives the agent reads on every turn. Sub-agents (here) are full specialist personas the harness can delegate to via the Task tool. Use sub-agents when work needs deep, domain-focused execution — not just guidance.
+> **Skills vs sub-agents.** Installable skills are exported from `dist/skills/` and load as system-prompt directives the agent reads on matching work. Sub-agents (here) are full specialist personas the harness can delegate to via the Task tool. Use sub-agents when work needs deep, domain-focused execution — not just guidance.
 
 ---
 
@@ -65,7 +65,7 @@ The sub-agent format (markdown with frontmatter) is the cross-IDE convention pop
 | [`ai-citation-strategist`](ai-citation-strategist.md) | AEO/GEO, AI-search visibility audits, citation tracking across ChatGPT/Claude/Gemini/Perplexity |
 | [`document-generator`](document-generator.md) | PDF/PPTX/DOCX/XLSX generation from code (proposals, reports, decks, exports) |
 
-These agents will read your project's brand voice playbook + DESIGN.md before producing output if the [`brand-ssot-precedence`](../skills/brand-ssot-precedence/) skill is also installed.
+These agents will read your project's brand voice playbook + DESIGN.md before producing output if the [`brand-ssot-precedence`](../dist/skills/brand-ssot-precedence/) skill is also installed.
 
 ### Visual / production gate
 
@@ -88,7 +88,7 @@ You don't need to remember names. Examples:
 - *"Is this branch ready to ship?"* → `reality-checker` fires
 - *"Optimize the LLM cost on our agent stack"* → `autonomous-optimization-architect` fires
 
-For the full trigger combo table, see [`runbooks/tool-leverage-heuristics.md`](../runbooks/tool-leverage-heuristics.md) or install the [`tool-leverage-heuristics`](../skills/tool-leverage-heuristics/) skill so the agent applies it proactively.
+For the full trigger combo table, see [`runbooks/tool-leverage-heuristics.md`](../runbooks/tool-leverage-heuristics.md) or install the [`tool-leverage-heuristics`](../dist/skills/tool-leverage-heuristics/) skill so the agent applies it proactively.
 
 ---
 
@@ -98,7 +98,7 @@ The four content-producing agents (`linkedin-content-creator`, `carousel-growth-
 
 **Two ways to wire up brand voice:**
 
-1. **Lightweight** (recommended for cross-project portability): install the [`brand-ssot-precedence`](../skills/brand-ssot-precedence/) skill alongside these agents. The skill defines the precedence chain (AGENTS.md → DESIGN.md → voice playbook → tokens.json) and the agents pick it up automatically.
+1. **Lightweight** (recommended for cross-project portability): install the [`brand-ssot-precedence`](../dist/skills/brand-ssot-precedence/) skill alongside these agents. The skill defines the precedence chain (AGENTS.md → DESIGN.md → voice playbook → tokens.json) and the agents pick it up automatically.
 
 2. **Heavyweight** (for VPS-deployed always-on agents): use the [`installers/superpowers-stack/scripts/07-install-agency-agents.sh`](../installers/superpowers-stack/scripts/07-install-agency-agents.sh) script with `BRAND_VOICE_PATHS_FILE` set in `client.env`. The installer injects an inline brand-voice block into each voice-aware agent at install time, hard-coding the paths to your specific brand canon files.
 
@@ -128,5 +128,5 @@ MIT — same as the upstream `msitarzewski/agency-agents` repo. Each agent file 
 
 - Upstream collection: [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) (MIT, ~150 agents)
 - Cherry-pick rationale: see [`installers/superpowers-stack/agency-agents-installer/manifest.json`](../installers/superpowers-stack/agency-agents-installer/manifest.json) `_comment` field
-- Companion skills: [`skills/tool-leverage-heuristics/`](../skills/tool-leverage-heuristics/), [`skills/brand-ssot-precedence/`](../skills/brand-ssot-precedence/)
+- Companion skills: [`tool-leverage-heuristics`](../dist/skills/tool-leverage-heuristics/), [`brand-ssot-precedence`](../dist/skills/brand-ssot-precedence/)
 - Companion runbook: [`runbooks/tool-leverage-heuristics.md`](../runbooks/tool-leverage-heuristics.md)

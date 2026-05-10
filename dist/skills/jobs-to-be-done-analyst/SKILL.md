@@ -1,6 +1,6 @@
 ---
 name: jobs-to-be-done-analyst
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Analyzes customer jobs to be done, desired outcomes, switching triggers, constraints, and language for product and messaging decisions."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

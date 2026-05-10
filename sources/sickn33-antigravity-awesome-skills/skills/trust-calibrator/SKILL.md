@@ -1,6 +1,6 @@
 ---
 name: trust-calibrator
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Calibrates the amount and type of proof, transparency, and reassurance needed for a user to trust a claim, product, or workflow."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

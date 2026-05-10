@@ -1,6 +1,6 @@
 ---
 name: sequence-psychologist
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Plans message and experience sequencing so context, trust, proof, and calls to action arrive in the right order."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

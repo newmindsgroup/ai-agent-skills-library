@@ -1,6 +1,6 @@
 ---
 name: tdd-workflows-tdd-refactor
-description: 'Use when working with tdd workflows tdd refactor'
+description: "Guides safe TDD refactoring by preserving behavior with tests while simplifying structure, naming, and design."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

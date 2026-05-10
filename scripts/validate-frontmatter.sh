@@ -67,6 +67,11 @@ for skill in "$SKILLS_ROOT"/*/; do
     fail=$((fail+1))
     continue
   fi
+  if [[ "$desc" == "One sentence - what this skill does and when to invoke it" || "$desc" =~ ^Use\ when\ working\ with\ [a-z0-9\ -]+$ ]]; then
+    echo "[fail] $name — description looks like a placeholder; write a specific trigger-focused description"
+    fail=$((fail+1))
+    continue
+  fi
 
   # license field
   if ! echo "$fm" | grep -qE '^license:'; then

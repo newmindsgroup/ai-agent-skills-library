@@ -1,6 +1,6 @@
 ---
 name: identity-mirror
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Aligns messaging with the customer's self-image, aspirations, and identity-based motivations without slipping into manipulation."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

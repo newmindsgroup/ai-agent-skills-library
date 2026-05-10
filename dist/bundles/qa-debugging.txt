@@ -1,0 +1,9 @@
+dogfood
+agent-browser
+bug-hunter
+systematic-debugging
+test-driven-development
+verification-before-completion
+awt-e2e-testing
+playwright-skill
+lint-and-validate

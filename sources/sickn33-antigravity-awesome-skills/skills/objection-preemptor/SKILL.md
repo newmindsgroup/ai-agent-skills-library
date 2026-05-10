@@ -1,6 +1,6 @@
 ---
 name: objection-preemptor
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Identifies likely buyer objections and builds copy, proof, sequencing, and product explanations that answer concerns before they block action."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

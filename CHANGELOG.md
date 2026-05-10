@@ -2,6 +2,14 @@
 
 ## 2026-05-09
 
+- Added generated discovery artifacts: `dist/skills-index.json`, `dist/skills-index.tsv`, `dist/bundles.json`, and `dist/bundles/*.txt`.
+- Added curated starter packs and installer support for `--bundle`, `--category`, `--list`, `--search`, `--bundles`, `--categories`, `--dry-run`, `--force`, `--update`, and `--all`.
+- Added generated trust/provenance fields to the manifest plus `docs/SKILLS-TRUST.md`.
+- Added generated `docs/STARTER-PACKS.md` for smaller install paths.
+- Added CI checks for generated-file drift, local Markdown links, Unix installer smoke tests, and Windows PowerShell installer smoke tests.
+- Added local guardrail scripts: `scripts/check-generated.sh`, `scripts/check-links.rb`, and `scripts/smoke-install.sh`.
+- Tightened validation to reject placeholder-like skill descriptions.
+- Rewrote 32 placeholder descriptions in imported skills to improve routing quality.
 - Imported the local Codex and agent skill corpus into `skills/`, preserving existing New Minds skills and flattening nested local skill paths into the standard `skills/<skill-name>/SKILL.md` layout.
 - Added generated catalog and provenance files: `docs/SKILLS-CATALOG.md`, `docs/SKILL-SOURCES.md`, and `manifests/skills-manifest.json`.
 - Normalized imported skill frontmatter with matching `name`, portable `description`, `license: MIT`, and import metadata so repository validation can scan the complete library.

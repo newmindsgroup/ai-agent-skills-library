@@ -1,6 +1,6 @@
 ---
 name: error-diagnostics-smart-debug
-description: 'Use when working with error diagnostics smart debug'
+description: "Diagnoses errors from logs, traces, stack output, and symptoms, then maps likely causes to targeted verification steps."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

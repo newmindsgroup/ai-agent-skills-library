@@ -1,6 +1,6 @@
 ---
 name: customer-psychographic-profiler
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Builds psychographic profiles from customer signals, motivations, anxieties, buying triggers, and decision-making patterns."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

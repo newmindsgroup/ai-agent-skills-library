@@ -13,3 +13,9 @@ Do not edit `dist/skills/` directly. Edit the canonical source skill under `sour
 ```bash
 ruby scripts/sync-skill-library.rb
 ```
+
+Search and discovery artifacts are generated beside this directory:
+
+- `skills-index.json` - machine-readable search index
+- `skills-index.tsv` - shell-friendly search index
+- `bundles.json` and `bundles/*.txt` - starter-pack definitions for installers

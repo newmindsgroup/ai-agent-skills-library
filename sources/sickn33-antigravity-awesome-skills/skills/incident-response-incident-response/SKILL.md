@@ -1,6 +1,6 @@
 ---
 name: incident-response-incident-response
-description: 'Use when working with incident response incident response'
+description: "Guides incident response from triage through containment, diagnosis, communication, recovery, and post-incident learning."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

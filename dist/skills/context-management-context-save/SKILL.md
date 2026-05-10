@@ -1,6 +1,6 @@
 ---
 name: context-management-context-save
-description: 'Use when working with context management context save'
+description: "Captures durable context, decisions, open questions, and next steps so future agent sessions can resume accurately."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

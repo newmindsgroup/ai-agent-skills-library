@@ -1,6 +1,6 @@
 ---
 name: price-psychology-strategist
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Designs and evaluates pricing presentation, anchoring, packaging, and value framing using ethical pricing psychology."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

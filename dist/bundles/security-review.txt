@@ -1,0 +1,8 @@
+007
+audit-skills
+security-auditor
+api-security-best-practices
+api-security-testing
+aws-security-audit
+sast-configuration
+agentic-actions-auditor

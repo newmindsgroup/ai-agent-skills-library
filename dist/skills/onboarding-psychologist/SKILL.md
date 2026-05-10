@@ -1,6 +1,6 @@
 ---
 name: onboarding-psychologist
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Designs onboarding experiences that reduce uncertainty, increase activation, and guide users toward early value with clear behavioral cues."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

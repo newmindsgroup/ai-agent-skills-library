@@ -23,8 +23,43 @@ jobs:
       - name: Validate all skills
         run: bash scripts/validate-all.sh
 
+      - name: Check generated exports and indexes
+        run: bash scripts/check-generated.sh
+
+      - name: Check local Markdown links
+        run: ruby scripts/check-links.rb
+
+      - name: Smoke test Unix installer from commit archive
+        env:
+          TARBALL_URL: https://github.com/${{ github.repository }}/archive/${{ github.sha }}.tar.gz
+        run: |
+          tmp_project="$(mktemp -d)"
+          trap 'rm -rf "$tmp_project"' EXIT
+          cd "$tmp_project"
+          bash "$GITHUB_WORKSPACE/install.sh" --tool codex --scope project --bundle agent-foundation --dry-run
+          bash "$GITHUB_WORKSPACE/install.sh" --tool codex --scope project newsletter-drafter
+          test -f skills/newsletter-drafter/SKILL.md
+          test -f AGENTS.md
+
       - name: Lint install.sh
         uses: ludeeus/action-shellcheck@master
         with:
           scandir: '.'
           severity: warning
+
+  windows-installer:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Smoke test PowerShell installer from commit archive
+        shell: pwsh
+        env:
+          TARBALL_URL: https://github.com/${{ github.repository }}/archive/${{ github.sha }}.zip
+        run: |
+          $tmp = New-Item -ItemType Directory -Path ([System.IO.Path]::Combine($env:TEMP, [System.Guid]::NewGuid().ToString()))
+          Set-Location $tmp.FullName
+          & "$env:GITHUB_WORKSPACE\install.ps1" -Tool codex -Scope project -Bundle agent-foundation -DryRun
+          & "$env:GITHUB_WORKSPACE\install.ps1" -Tool codex -Scope project -Skill newsletter-drafter
+          if (-not (Test-Path "skills\newsletter-drafter\SKILL.md")) { throw "Skill was not installed" }
+          if (-not (Test-Path "AGENTS.md")) { throw "AGENTS.md was not generated" }

@@ -4,6 +4,31 @@ The one-line `install.sh` handles every supported IDE automatically. This doc is
 
 This repo keeps canonical skills organized by source under `sources/<source-folder>/skills/`. The installer uses the generated flat export at `dist/skills/`, because IDEs expect `<skills-root>/<skill-name>/SKILL.md`.
 
+## Discovery-first installs
+
+You do not have to install all 1513 skills at once. The installer can list, search, preview, and install curated starter packs.
+
+```bash
+# List curated starter packs
+curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --bundles
+
+# Search before installing
+curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --search "business model"
+
+# Preview a starter pack
+curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --bundle codex-essentials --dry-run
+
+# Install a starter pack
+curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --bundle codex-essentials
+
+# Refresh a selected skill
+curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --update newsletter-drafter
+```
+
+Useful flags: `--list`, `--search`, `--bundles`, `--categories`, `--bundle`, `--category`, `--dry-run`, `--force`, `--update`, and `--all`.
+
+Starter-pack details live in [`STARTER-PACKS.md`](STARTER-PACKS.md). Machine-readable indexes live in `dist/skills-index.json`, `dist/skills-index.tsv`, `dist/bundles.json`, and `dist/bundles/`.
+
 ## Native Agent Skills support
 
 These tools read the Agent Skills format directly from the folder the installer writes to. Nothing else required.
@@ -100,7 +125,7 @@ Run from inside a folder that already has one of `.claude/`, `.cursor/`, `.winds
 Skill metadata loads at session start (Level 1), but the body only loads when the skill is *triggered* (Level 2). Ask a question that clearly matches the skill's description, or explicitly reference it by name.
 
 **"Skill already exists, skipping."**
-The installer never overwrites. Delete the existing folder first if you want to reinstall.
+The installer does not overwrite by default. Use `--force` or `--update` to refresh selected existing skills.
 
 **Permission denied on install.sh.**
 Use `bash install.sh` explicitly, or `chmod +x install.sh` if you've cloned the repo.

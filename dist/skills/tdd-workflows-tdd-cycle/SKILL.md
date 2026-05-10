@@ -1,6 +1,6 @@
 ---
 name: tdd-workflows-tdd-cycle
-description: 'Use when working with tdd workflows tdd cycle'
+description: "Applies the red-green-refactor test-driven development cycle to implement focused behavior changes with executable tests first."
 license: MIT
 metadata:
   imported_from: 'codex-regular'

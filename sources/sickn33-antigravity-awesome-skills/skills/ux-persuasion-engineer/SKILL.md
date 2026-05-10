@@ -1,6 +1,6 @@
 ---
 name: ux-persuasion-engineer
-description: 'One sentence - what this skill does and when to invoke it'
+description: "Improves UX flows with ethical persuasion patterns, reducing friction while preserving user agency and clarity."
 license: MIT
 metadata:
   imported_from: 'codex-regular'
