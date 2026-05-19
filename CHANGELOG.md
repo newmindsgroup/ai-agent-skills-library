@@ -22,6 +22,24 @@
 
 All notable changes to this library are documented here. The library follows [semver](https://semver.org/): MAJOR.MINOR.PATCH where MAJOR breaks compatibility with installed skills, MINOR adds skills/installers/runbooks without breaking existing ones, PATCH is bug fixes + docs.
 
+## [1.4.0] — 2026-05-19
+
+### Added — 4 operational-pattern runbooks (lessons from production)
+
+These capture infrastructure recipes battle-tested in a production single-tenant deployment over the v0.2 → v0.3 release cycle of the [Ella reference agent](https://github.com/newmindsgroup/ella-claude-code-ai-agent). Use them when building OR auditing a Claude-Code-based always-on agent.
+
+- **`runbooks/proactive-watcher-pattern.md`** — how to build an event-driven Telegram nudge (one source per watcher, append-only JSONL dedup, plain-text not MarkdownV2, idempotent systemd timer, cost-aware design, inline slash-command shortcuts in the nudge). Anti-patterns: one-watcher-polling-everything, in-memory dedup, watchers that mutate state.
+- **`runbooks/split-llm-bash-design.md`** — when to put `claude --print` in a pipeline vs deterministic bash. Failure case from prod: multi-step prompts short-circuit on sparse data ("0 threads, so I'll skip GHL too"). Solution: LLM does ONE tool call → returns JSON, bash does all downstream work. Lifted reliability from ~70% to ~99% on the hot-lead-inbox-watcher refactor.
+- **`runbooks/agent-self-service-ops-pattern.md`** — sudoers-gated wrapper directory pattern. Lets an agent perform privileged ops (npm update, systemctl restart, nginx reload) WITHOUT human password prompts, while keeping blast radius auditable. The wrapper IS the security boundary, not the sudoers entry. Includes input validation, audit logging, Telegram visibility, emergency lockdown.
+- **`runbooks/telegram-callback-pattern.md`** — how to add a new approval flow (Ship/Hold/Revise, Run/Skip, Reply/Archive/Snooze) by patching the vendored channels plugin. Sentinel-checked idempotency, anchor on the stable upstream `perm:` line, route through `notifications/claude/channel` so the agent's existing handlers work for both typed messages and button taps. Includes the multi-pass verification block + TS-compile check.
+- **`runbooks/smoke-test-recipe.md`** — end-to-end stack health check structure (12 sections, three outcomes per check pass/fail/warn, exit code = success signal for cron). Used after deploys, as a cron health check, and in the new-client bootstrap.
+
+### Changed
+- **`.claude-plugin/marketplace.json`**: library version 1.3.0 → 1.4.0.
+
+### Why this matters
+This release captures the operational patterns. The Ella template now ships 7 proactive watchers, 5 self-service ops wrappers, 5 channels-plugin patches, and a 60+ check smoke test — all following these patterns. Anyone building a similar always-on agent (regardless of brand / business / CRM) can reuse the recipes without re-discovering the failure modes.
+
 ## [1.3.0] — 2026-05-05
 
 ### Added
