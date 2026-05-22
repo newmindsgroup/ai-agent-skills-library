@@ -4,7 +4,8 @@ description: "Builds a comprehensive brand blueprint for any business — person
 license: MIT
 metadata:
   version: '1.0.0'
-  author: New Minds Group
+  author: Daniel Gonell
+  repo: https://github.com/danielgonell/brand-blueprint-builder
   sources: Field-tested on a real personal-brand build (April 2026); StoryBrand SB7 framework; brand-archetype canon (Margaret Mark / Carol Pearson); Marty Neumeier brand-strategy lineage
 ---
 
