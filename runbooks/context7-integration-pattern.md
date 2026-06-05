@@ -10,9 +10,9 @@ The agent's training data ages. By the time an LLM is deployed, a third-party li
 
 [Context7](https://github.com/upstash/context7) (Upstash) is an MCP server that fetches **version-specific library documentation at query time**. The agent calls it before generating code, so the output matches today's API surface instead of yesterday's training cut-off.
 
-This runbook codifies a seven-piece integration so any client agent gets the full benefit on day one, not just a partial install that the agent then routes around.
+This runbook codifies an eight-piece integration so any client agent gets the full benefit on day one, not just a partial install that the agent then routes around.
 
-## The seven pieces
+## The eight pieces
 
 Apply in order. Each is independently shippable; each is verified by smoke after deploy.
 
@@ -96,6 +96,21 @@ In `agent-template/scripts/dashboard-sync-autonomy.py.tmpl`, add `sync_context7(
 In `agent-template/dashboard/index.html`, add a `data-tab="library-docs"` nav link + `data-tab-content="library-docs"` panel with four stat cards (calls 24h/7d, tier, unique libs), a top-libraries bar chart, and a recent-queries timeline. Wire `safeFetch('/api/context7.json')` into the polling list and a `renderContext7()` function into the main render loop.
 
 Cost: $0 — pure log parsing on the free Context7 tier.
+
+### 8. Curated stack-map (tune the generic tool to the client's reality)
+
+The single biggest "fullest leverage" upgrade. `resolve-library-id` often returns **multiple ambiguous results** for common names — e.g. `next.js` resolves to both `/vercel/next.js` (official repo) and `/websites/nextjs` (docs mirror); `tailwindcss` ranks a PrimeUI plugin above the real `/tailwindlabs/tailwindcss.com`. Every resolve is a round-trip AND a guess.
+
+Fix it once: enumerate the client's actual stack and pin canonical IDs in a table inside the agent's CLAUDE.md §Library/API docs section (the agent reads CLAUDE.md every turn, so the map is always in context — better than a separate file it must remember to open). For each library, the table says "skip resolve-library-id, call get-library-docs directly with this ID."
+
+How to build it:
+1. Discover the stack: `cat <each app>/package.json | jq -r '.dependencies | keys[]'`, plus infra (`docker-compose.yml` images) and the agent's own deps (Telegram Bot API, the Claude/Anthropic API, the agent SDK).
+2. Resolve each to its canonical ID with the `ctx7 library <name>` CLI from Piece 5. **Verify the #1 result is authoritative** — ctx7's ranking is imperfect; for `tailwindcss` you must query `"tailwind labs"` to surface `/tailwindlabs/tailwindcss.com`. Pin by benchmark score + official-source check, not blindly by rank.
+3. Drop the table into CLAUDE.md. Include the agent's OWN runtime stack (the LLM API, the bot API, the agent SDK) — the agent writes code against itself constantly.
+
+This is **tenant-specific data** — the populated table lives in the client's CLAUDE.md, NOT in a shared/public template. A public reference template should carry only an empty illustrative table + the "populate during onboarding" instruction.
+
+Reference: Daniel's CoS table covers 16 libraries (Next.js, React, Tailwind, NextAuth, Framer Motion, TipTap, Zod, Recharts, NestJS, Prisma, BullMQ, Socket.IO, FastAPI, Telegram Bot API, Anthropic Claude API, Claude Agent SDK).
 
 ## Smoke verification (always add these to smoke-test.sh)
 
