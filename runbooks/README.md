@@ -15,6 +15,7 @@ Skills exported in `dist/skills/` are *behaviors* the agent picks up and applies
 | [`read-before-escalating.md`](read-before-escalating.md) | When an agent flags an "architectural question," check if the answer is already in the codebase first. Most "decisions" are unread code. |
 | [`agent-operating-principles.md`](agent-operating-principles.md) | The 7 non-negotiable discipline commitments captured from a multi-hotfix deploy chain. Production-runtime context, dry-run before start, no force-push, etc. |
 | [`tool-leverage-heuristics.md`](tool-leverage-heuristics.md) | The autonomy playbook. Maps natural-language triggers ("AI-search visibility", "production is down", "ready to ship?") to specific tool/agent combos that should fire together. Drop the table into your project's CLAUDE.md so the agent reaches for the right tools without being told. |
+| [`context7-integration-pattern.md`](context7-integration-pattern.md) | Seven-piece pattern to give an agent first-class Context7 access (current library docs at code-generation time): MCP installer + `enabledMcpjsonServers` trust list update, `.mcp.json` block, CLAUDE.md auto-use rule, `/docs` slash command, VPS skill library, sub-agent awareness, Mission Control tile. Codifies the silent-failure mode where `.mcp.json` registration alone isn't enough — `dontAsk` mode still gates project MCPs behind `enabledMcpjsonServers`. |
 
 ## How to use
 

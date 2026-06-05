@@ -22,6 +22,11 @@
 
 All notable changes to this library are documented here. The library follows [semver](https://semver.org/): MAJOR.MINOR.PATCH where MAJOR breaks compatibility with installed skills, MINOR adds skills/installers/runbooks without breaking existing ones, PATCH is bug fixes + docs.
 
+## [1.5.0] — 2026-06-05
+
+- **New runbook:** `runbooks/context7-integration-pattern.md` — seven-piece operational pattern for first-class Context7 integration in a Claude Code agent (live MCP install + project trust list update, .mcp.json block, CLAUDE.md auto-use rule, /docs slash command, VPS skill library install, sub-agent awareness via context7_aware flag in agency-agents installer, Mission Control "Library Docs" tile + state/context7.json endpoint). Codifies the discovery that `enabledMcpjsonServers` is the actual gate that loads project MCPs at runtime — without that update, `.mcp.json` registration alone silently fails under `--permission-mode dontAsk`. Reference implementation: ella-claude-code-ai-agent + daniel-personal-brand commits on 2026-06-04/05.
+- **`.claude-plugin/marketplace.json`**: library version 1.4.0 → 1.5.0.
+
 ## [1.4.0] — 2026-05-19
 
 ### Added — 4 operational-pattern runbooks (lessons from production)
