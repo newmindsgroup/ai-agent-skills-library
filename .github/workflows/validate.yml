@@ -12,13 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Install agentskills CLI
-        run: pip install agentskills
+      # The agentskills CLI is not published on PyPI; validate-all.sh is designed
+      # to run its lightweight frontmatter validator without it and will pick up
+      # the CLI automatically if present. When the CLI ships, re-add an install
+      # step here with a PINNED version — do not auto-install an unpinned name.
 
       - name: Validate all skills
         run: bash scripts/validate-all.sh
