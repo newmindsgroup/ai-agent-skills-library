@@ -382,7 +382,7 @@ for t in "${TOOLS_DETECTED[@]}"; do
   for skill in "${SKILLS[@]}"; do
     if [[ -d "$dest/$skill" ]]; then
       if [[ "$FORCE" -eq 1 ]]; then
-        rm -rf "$dest/$skill"
+        rm -rf "${dest:?}/${skill:?}"
       else
         warn "  $skill already exists at $dest/$skill - skipping (use --force or --update to reinstall)."
         continue

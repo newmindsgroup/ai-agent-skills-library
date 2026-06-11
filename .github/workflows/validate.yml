@@ -39,10 +39,13 @@ jobs:
           test -f AGENTS.md
 
       - name: Lint install.sh
-        uses: ludeeus/action-shellcheck@master
+        uses: ludeeus/action-shellcheck@2.0.0
         with:
           scandir: '.'
           severity: warning
+          # Lint only this repo's own scripts — sources/ holds third-party
+          # vendored skills and dist/ their generated exports; not ours to lint.
+          ignore_paths: sources dist
 
   windows-installer:
     runs-on: windows-latest
