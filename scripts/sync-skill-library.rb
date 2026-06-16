@@ -203,6 +203,8 @@ def skill_entries(categories)
     source = normalize_source(metadata["source_repository"], fallback_slug: source_slug)
     source["slug"] = source_slug if source["slug"].nil? || source["slug"].empty?
     description = frontmatter["description"].to_s.strip
+    license = frontmatter["license"].to_s.strip
+    license = "Unspecified" if license.empty?
     risk_flags = risk_flags_for(skill_name, description, skill_text)
     trust = trust_for(source, risk_flags)
 
@@ -210,6 +212,7 @@ def skill_entries(categories)
       "name" => skill_name,
       "frontmatter_name" => frontmatter["name"],
       "description" => description,
+      "license" => license,
       "category" => categories[skill_name] || "Uncategorized",
       "canonical_path" => "sources/#{source_slug}/skills/#{skill_name}/",
       "export_path" => "dist/skills/#{skill_name}/",
@@ -255,7 +258,9 @@ starter_packs.each do |pack|
 end
 source_rows = grouped.map do |slug, skills|
   source = skills.first["source"]
-  source.merge("slug" => slug, "count" => skills.length)
+  licenses = skills.map { |skill| skill["license"] }.uniq.sort
+  license_label = licenses.length == 1 ? licenses.first : licenses.join(", ")
+  source.merge("slug" => slug, "count" => skills.length, "license" => license_label)
 end.sort_by { |entry| [-entry["count"], entry["slug"]] }
 
 safe_reset_generated_dir(EXPORT_DIR, GENERATED_EXPORT_MARKER)
@@ -299,13 +304,13 @@ source_index << "This directory is the organized source of truth for the skill l
 source_index << ""
 source_index << "Canonical skill folders live under `sources/<source-folder>/skills/<skill-name>/`. The generated flat compatibility export lives in `../dist/skills/` for installers and agent tools that expect a flat Agent Skills layout."
 source_index << ""
-source_index << "| Source folder | Source | Type | Skills |"
-source_index << "|---|---|---|---:|"
+source_index << "| Source folder | Source | Type | License (SPDX) | Skills |"
+source_index << "|---|---|---|---|---:|"
 
 source_rows.each do |source|
   folder = source["slug"]
   label = source["url"] ? "[#{markdown_escape(source["label"])}](#{source["url"]})" : markdown_escape(source["label"])
-  source_index << "| [`#{folder}`](#{folder}/) | #{label} | #{source["type"]} | #{source["count"]} |"
+  source_index << "| [`#{folder}`](#{folder}/) | #{label} | #{source["type"]} | #{markdown_escape(source["license"])} | #{source["count"]} |"
 
   source_dir = File.join(SOURCES_DIR, folder)
   FileUtils.mkdir_p(source_dir)
@@ -447,11 +452,11 @@ doc << "Canonical source skills live in `sources/<source-folder>/skills/<skill-n
 doc << ""
 doc << "## Source Groups"
 doc << ""
-doc << "| Source folder | Source | Type | Skills |"
-doc << "|---|---|---|---:|"
+doc << "| Source folder | Source | Type | License (SPDX) | Skills |"
+doc << "|---|---|---|---|---:|"
 source_rows.each do |source|
   label = source["url"] ? "[#{markdown_escape(source["label"])}](#{source["url"]})" : markdown_escape(source["label"])
-  doc << "| [`#{source["slug"]}`](../sources/#{source["slug"]}/) | #{label} | #{source["type"]} | #{source["count"]} |"
+  doc << "| [`#{source["slug"]}`](../sources/#{source["slug"]}/) | #{label} | #{source["type"]} | #{markdown_escape(source["license"])} | #{source["count"]} |"
 end
 
 duplicates = manifest.fetch("duplicate_source_names", {})

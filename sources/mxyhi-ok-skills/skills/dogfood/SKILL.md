@@ -1,14 +1,13 @@
 ---
 name: dogfood
 description: 'Systematically explore and test a web application to find bugs, UX issues, and other problems. Use when asked to "dogfood", "QA", "exploratory test", "find issues", "bug hunt", "test this app/site/platform", or review the quality of a web application. Produces a structured report with full reproduction evidence -- step-by-step screenshots, repro videos, and detailed repro steps for every issue -- so findings can be handed directly to the responsible teams.'
-license: MIT
+license: Apache-2.0
 metadata:
   imported_from: 'codex-regular'
   source_repository: 'https://github.com/mxyhi/ok-skills'
   source_path: '~/.codex/skills/dogfood/SKILL.md'
   imported_at: '2026-05-09'
 ---
-
 # Dogfood
 
 Systematically explore a web application, find issues, and produce a report with full reproduction evidence for every finding.

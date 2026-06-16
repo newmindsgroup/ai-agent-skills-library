@@ -61,7 +61,7 @@ Planning, architecture, API design, implementation, review, debugging, and valid
 ## Business Strategy
 
 - Bundle: `business-strategy`
-- Skills: 10
+- Skills: 8
 - Best for: Founders, product leads, and strategy work from idea through launch.
 
 Business model, startup validation, strategy, OKR, metrics, and AI-product skills.
@@ -69,8 +69,6 @@ Business model, startup validation, strategy, OKR, metrics, and AI-product skill
 | Skill | Category | Trust |
 |---|---|---|
 | [`business-model-designer`](../dist/skills/business-model-designer/) | AI, Agents, LLMs, Data | `imported` |
-| [`business-model-canvas`](../dist/skills/business-model-canvas/) | AI, Agents, LLMs, Data | `imported` |
-| [`startup-validator`](../dist/skills/startup-validator/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
 | [`strategy-frameworks`](../dist/skills/strategy-frameworks/) | Business, Strategy, Product, Growth | `imported` |
 | [`okr-frameworks`](../dist/skills/okr-frameworks/) | Business, Strategy, Product, Growth | `imported` |
 | [`metrics-frameworks`](../dist/skills/metrics-frameworks/) | Business, Strategy, Product, Growth | `imported` |
@@ -188,6 +186,43 @@ Exploratory testing, browser QA, bug hunting, TDD, validation, and completion-ve
 | [`awt-e2e-testing`](../dist/skills/awt-e2e-testing/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
 | [`playwright-skill`](../dist/skills/playwright-skill/) | Testing, QA, Debugging, Review | `imported-review-recommended` |
 | [`lint-and-validate`](../dist/skills/lint-and-validate/) | Testing, QA, Debugging, Review | `imported-review-recommended` |
+
+## Security — Offensive (opt-in)
+
+- Bundle: `security-offensive`
+- Skills: 26
+- Best for: Authorized red-team, penetration-testing, and security-research engagements with written scope and legal sign-off.
+
+Dual-use offensive-security and large-scale data-collection skills (penetration testing, exploitation frameworks, reconnaissance, scraping, and OSINT). NOT installed by default. Use only against systems you are explicitly authorized to test. These skills can collect or transmit personal data and carry GDPR/privacy and computer-misuse obligations — operators are responsible for legal authorization and lawful data handling.
+
+| Skill | Category | Trust |
+|---|---|---|
+| [`apify-lead-generation`](../dist/skills/apify-lead-generation/) | Backend, APIs, Databases | `imported-review-recommended` |
+| [`apify-ultimate-scraper`](../dist/skills/apify-ultimate-scraper/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
+| [`aws-penetration-testing`](../dist/skills/aws-penetration-testing/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
+| [`burp-suite-testing`](../dist/skills/burp-suite-testing/) | Automation, Integrations, Productivity | `imported-review-recommended` |
+| [`burpsuite-project-parser`](../dist/skills/burpsuite-project-parser/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
+| [`cloud-penetration-testing`](../dist/skills/cloud-penetration-testing/) | DevOps, Cloud, Infrastructure | `imported-review-recommended` |
+| [`cold-email`](../dist/skills/cold-email/) | AI, Agents, LLMs, Data | `imported` |
+| [`firecrawl-scraper`](../dist/skills/firecrawl-scraper/) | Backend, APIs, Databases | `imported-review-recommended` |
+| [`frontend-mobile-security-xss-scan`](../dist/skills/frontend-mobile-security-xss-scan/) | Frontend, UI, UX, Design | `imported-review-recommended` |
+| [`html-injection-testing`](../dist/skills/html-injection-testing/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
+| [`identity-mirror`](../dist/skills/identity-mirror/) | General, Workflow, Research, Miscellaneous | `imported` |
+| [`metasploit-framework`](../dist/skills/metasploit-framework/) | Backend, APIs, Databases | `imported-review-recommended` |
+| [`pentest-checklist`](../dist/skills/pentest-checklist/) | Media, Documents, Office, Creative | `imported-review-recommended` |
+| [`pentest-commands`](../dist/skills/pentest-commands/) | Frontend, UI, UX, Design | `imported-review-recommended` |
+| [`red-team-tactics`](../dist/skills/red-team-tactics/) | Security, Compliance, Risk | `imported-review-recommended` |
+| [`red-team-tools`](../dist/skills/red-team-tools/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
+| [`shodan-reconnaissance`](../dist/skills/shodan-reconnaissance/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
+| [`smtp-penetration-testing`](../dist/skills/smtp-penetration-testing/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
+| [`sql-injection-testing`](../dist/skills/sql-injection-testing/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
+| [`sqlmap-database-pentesting`](../dist/skills/sqlmap-database-pentesting/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
+| [`ssh-penetration-testing`](../dist/skills/ssh-penetration-testing/) | Security, Compliance, Risk | `imported-review-recommended` |
+| [`vulnerability-scanner`](../dist/skills/vulnerability-scanner/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
+| [`web-scraper`](../dist/skills/web-scraper/) | AI, Agents, LLMs, Data | `imported` |
+| [`wordpress-penetration-testing`](../dist/skills/wordpress-penetration-testing/) | Testing, QA, Debugging, Review | `imported-review-recommended` |
+| [`x-twitter-scraper`](../dist/skills/x-twitter-scraper/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
+| [`xss-html-injection`](../dist/skills/xss-html-injection/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
 
 ## Security Review
 

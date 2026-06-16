@@ -1,18 +1,18 @@
 {
   "generated_at": "2026-05-09",
-  "total_skills": 1513,
+  "total_skills": 1502,
   "categories": [
     {
       "name": "AI, Agents, LLMs, Data",
-      "count": 735
+      "count": 728
     },
     {
       "name": "Automation, Integrations, Productivity",
-      "count": 188
+      "count": 186
     },
     {
       "name": "Business, Strategy, Product, Growth",
-      "count": 121
+      "count": 120
     },
     {
       "name": "Frontend, UI, UX, Design",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Media, Documents, Office, Creative",
-      "count": 5
+      "count": 4
     }
   ],
   "sources": [
@@ -59,7 +59,8 @@
       "url": "https://github.com/sickn33/antigravity-awesome-skills",
       "type": "github",
       "note": null,
-      "count": 1457
+      "count": 1448,
+      "license": "Apache-2.0, MIT"
     },
     {
       "slug": "menkesu-awesome-pm-skills",
@@ -68,7 +69,8 @@
       "url": "https://github.com/menkesu/awesome-pm-skills",
       "type": "github",
       "note": null,
-      "count": 29
+      "count": 29,
+      "license": "MIT"
     },
     {
       "slug": "original",
@@ -77,7 +79,8 @@
       "url": null,
       "type": "original",
       "note": "Skills created directly in this library.",
-      "count": 14
+      "count": 14,
+      "license": "MIT"
     },
     {
       "slug": "mxyhi-ok-skills",
@@ -86,7 +89,8 @@
       "url": "https://github.com/mxyhi/ok-skills",
       "type": "github",
       "note": null,
-      "count": 6
+      "count": 6,
+      "license": "Apache-2.0"
     },
     {
       "slug": "openai-codex-bundled-system-skills",
@@ -95,16 +99,8 @@
       "url": null,
       "type": "runtime",
       "note": "Bundled with the local Codex runtime rather than imported from a public repo.",
-      "count": 3
-    },
-    {
-      "slug": "ailabs-393-ai-labs-claude-skills",
-      "label": "ailabs-393/ai-labs-claude-skills",
-      "repository": "https://github.com/ailabs-393/ai-labs-claude-skills",
-      "url": "https://github.com/ailabs-393/ai-labs-claude-skills",
-      "type": "github",
-      "note": null,
-      "count": 1
+      "count": 3,
+      "license": "Apache-2.0"
     },
     {
       "slug": "maigentic-stratarts",
@@ -113,7 +109,8 @@
       "url": "https://github.com/maigentic/stratarts",
       "type": "github",
       "note": null,
-      "count": 1
+      "count": 1,
+      "license": "MIT"
     },
     {
       "slug": "refoundai-lenny-skills",
@@ -122,26 +119,18 @@
       "url": "https://github.com/refoundai/lenny-skills",
       "type": "github",
       "note": null,
-      "count": 1
-    },
-    {
-      "slug": "scientiacapital-skills",
-      "label": "scientiacapital/skills",
-      "repository": "https://github.com/scientiacapital/skills",
-      "url": "https://github.com/scientiacapital/skills",
-      "type": "github",
-      "note": null,
-      "count": 1
+      "count": 1,
+      "license": "MIT"
     }
   ],
   "trust_levels": [
     {
       "name": "imported-review-recommended",
-      "count": 926
+      "count": 918
     },
     {
       "name": "imported",
-      "count": 570
+      "count": 567
     },
     {
       "name": "curated",
@@ -155,11 +144,11 @@
   "risk_flags": [
     {
       "name": "shell-execution",
-      "count": 637
+      "count": 629
     },
     {
       "name": "secrets-sensitive",
-      "count": 585
+      "count": 582
     },
     {
       "name": "security-sensitive",
@@ -171,7 +160,7 @@
     },
     {
       "name": "destructive-system-ops",
-      "count": 33
+      "count": 31
     }
   ],
   "starter_packs": [
@@ -226,8 +215,6 @@
       "recommended_for": "Founders, product leads, and strategy work from idea through launch.",
       "skills": [
         "business-model-designer",
-        "business-model-canvas",
-        "startup-validator",
         "strategy-frameworks",
         "okr-frameworks",
         "metrics-frameworks",
@@ -236,7 +223,7 @@
         "ai-product",
         "ai-product-patterns"
       ],
-      "count": 10
+      "count": 8
     },
     {
       "name": "codex-essentials",
@@ -335,6 +322,41 @@
         "lint-and-validate"
       ],
       "count": 9
+    },
+    {
+      "name": "security-offensive",
+      "display_name": "Security — Offensive (opt-in)",
+      "description": "Dual-use offensive-security and large-scale data-collection skills (penetration testing, exploitation frameworks, reconnaissance, scraping, and OSINT). NOT installed by default. Use only against systems you are explicitly authorized to test. These skills can collect or transmit personal data and carry GDPR/privacy and computer-misuse obligations — operators are responsible for legal authorization and lawful data handling.",
+      "recommended_for": "Authorized red-team, penetration-testing, and security-research engagements with written scope and legal sign-off.",
+      "skills": [
+        "apify-lead-generation",
+        "apify-ultimate-scraper",
+        "aws-penetration-testing",
+        "burp-suite-testing",
+        "burpsuite-project-parser",
+        "cloud-penetration-testing",
+        "cold-email",
+        "firecrawl-scraper",
+        "frontend-mobile-security-xss-scan",
+        "html-injection-testing",
+        "identity-mirror",
+        "metasploit-framework",
+        "pentest-checklist",
+        "pentest-commands",
+        "red-team-tactics",
+        "red-team-tools",
+        "shodan-reconnaissance",
+        "smtp-penetration-testing",
+        "sql-injection-testing",
+        "sqlmap-database-pentesting",
+        "ssh-penetration-testing",
+        "vulnerability-scanner",
+        "web-scraper",
+        "wordpress-penetration-testing",
+        "x-twitter-scraper",
+        "xss-html-injection"
+      ],
+      "count": 26
     },
     {
       "name": "security-review",
@@ -2135,7 +2157,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -2195,7 +2217,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -2880,7 +2902,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -6376,7 +6398,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -6396,7 +6418,7 @@
         "shell-execution"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -6416,25 +6438,6 @@
       ],
       "bundles": [
 
-      ]
-    },
-    {
-      "name": "business-model-canvas",
-      "description": "Business model design using Alexander Osterwalder's 9 building blocks. Use when: business model, canvas, value proposition, customer segments, revenue streams, startup planning, analyze business, business strategy.",
-      "category": "AI, Agents, LLMs, Data",
-      "path": "dist/skills/business-model-canvas/",
-      "canonical_path": "sources/scientiacapital-skills/skills/business-model-canvas/",
-      "source_slug": "scientiacapital-skills",
-      "source_label": "scientiacapital/skills",
-      "source_repository": "https://github.com/scientiacapital/skills",
-      "source_type": "github",
-      "trust_level": "imported",
-      "review_status": "frontmatter-validated",
-      "risk_flags": [
-
-      ],
-      "bundles": [
-        "business-strategy"
       ]
     },
     {
@@ -7521,7 +7524,7 @@
         "security-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -7971,7 +7974,7 @@
 
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -10566,26 +10569,6 @@
       ]
     },
     {
-      "name": "docx-official",
-      "description": "A user may ask you to create, edit, or analyze the contents of a .docx file. A .docx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks.",
-      "category": "AI, Agents, LLMs, Data",
-      "path": "dist/skills/docx-official/",
-      "canonical_path": "sources/sickn33-antigravity-awesome-skills/skills/docx-official/",
-      "source_slug": "sickn33-antigravity-awesome-skills",
-      "source_label": "sickn33/antigravity-awesome-skills",
-      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
-      "source_type": "github",
-      "trust_level": "imported-review-recommended",
-      "review_status": "frontmatter-validated",
-      "risk_flags": [
-        "shell-execution",
-        "destructive-system-ops"
-      ],
-      "bundles": [
-
-      ]
-    },
-    {
       "name": "dogfood",
       "description": "Systematically explore and test a web application to find bugs, UX issues, and other problems. Use when asked to \"dogfood\", \"QA\", \"exploratory test\", \"find issues\", \"bug hunt\", \"test this app/site/platform\", or review the quality of a web application. Produces a structured report with full reproduction evidence -- step-by-step screenshots, repro videos, and detailed repro steps for every issue -- so findings can be handed directly to the responsible teams.",
       "category": "AI, Agents, LLMs, Data",
@@ -11930,85 +11913,6 @@
       ]
     },
     {
-      "name": "figma-create-design-system-rules",
-      "description": "Generates custom design system rules for the user's codebase. Use when user says \"create design system rules\", \"generate rules for my project\", \"set up design rules\", \"customize design system guidelines\", or wants to establish project-specific conventions for Figma-to-code workflows. Requires Figma MCP server connection.",
-      "category": "Automation, Integrations, Productivity",
-      "path": "dist/skills/figma-create-design-system-rules/",
-      "canonical_path": "sources/sickn33-antigravity-awesome-skills/skills/figma-create-design-system-rules/",
-      "source_slug": "sickn33-antigravity-awesome-skills",
-      "source_label": "sickn33/antigravity-awesome-skills",
-      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
-      "source_type": "github",
-      "trust_level": "imported",
-      "review_status": "frontmatter-validated",
-      "risk_flags": [
-
-      ],
-      "bundles": [
-
-      ]
-    },
-    {
-      "name": "figma-generate-design",
-      "description": "Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout into Figma. Triggers: 'write to Figma', 'create in Figma from code', 'push page to Figma', 'take this app/page and build it in Figma', 'create a screen', 'build a landing page in Figma', 'update the Figma screen to match code'. This is the preferred workflow skill whenever the user wants to build or update a full page, screen, or view in Figma from code or a description. Discovers design system components, variables, and styles via search_design_system, imports them, and assembles screens incrementally section-by-section using design system tokens instead of hardcoded values.",
-      "category": "Automation, Integrations, Productivity",
-      "path": "dist/skills/figma-generate-design/",
-      "canonical_path": "sources/sickn33-antigravity-awesome-skills/skills/figma-generate-design/",
-      "source_slug": "sickn33-antigravity-awesome-skills",
-      "source_label": "sickn33/antigravity-awesome-skills",
-      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
-      "source_type": "github",
-      "trust_level": "imported-review-recommended",
-      "review_status": "frontmatter-validated",
-      "risk_flags": [
-        "shell-execution",
-        "secrets-sensitive"
-      ],
-      "bundles": [
-
-      ]
-    },
-    {
-      "name": "figma-implement-design",
-      "description": "Translates Figma designs into production-ready application code with 1:1 visual fidelity. Use when implementing UI code from Figma files, when user mentions \"implement design\", \"generate code\", \"implement component\", provides Figma URLs, or asks to build components matching Figma specs. For Figma canvas writes via `use_figma`, use `figma-use`.",
-      "category": "Business, Strategy, Product, Growth",
-      "path": "dist/skills/figma-implement-design/",
-      "canonical_path": "sources/sickn33-antigravity-awesome-skills/skills/figma-implement-design/",
-      "source_slug": "sickn33-antigravity-awesome-skills",
-      "source_label": "sickn33/antigravity-awesome-skills",
-      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
-      "source_type": "github",
-      "trust_level": "imported-review-recommended",
-      "review_status": "frontmatter-validated",
-      "risk_flags": [
-        "shell-execution",
-        "secrets-sensitive"
-      ],
-      "bundles": [
-
-      ]
-    },
-    {
-      "name": "figma-use",
-      "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `use_figma` tool call. NEVER call `use_figma` directly without loading this skill first. Skipping it causes common, hard-to-debug failures. Trigger whenever the user wants to perform a write action or a unique read action that requires JavaScript execution in the Figma file context — e.g. create/edit/delete nodes, set up variables or tokens, build components and variants, modify auto-layout or fills, bind variables to properties, or inspect file structure programmatically.",
-      "category": "AI, Agents, LLMs, Data",
-      "path": "dist/skills/figma-use/",
-      "canonical_path": "sources/sickn33-antigravity-awesome-skills/skills/figma-use/",
-      "source_slug": "sickn33-antigravity-awesome-skills",
-      "source_label": "sickn33/antigravity-awesome-skills",
-      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
-      "source_type": "github",
-      "trust_level": "imported-review-recommended",
-      "review_status": "frontmatter-validated",
-      "risk_flags": [
-        "shell-execution",
-        "secrets-sensitive"
-      ],
-      "bundles": [
-
-      ]
-    },
-    {
       "name": "file-organizer",
       "description": "6. Reduces Clutter: Identifies old files you probably don't need anymore",
       "category": "General, Workflow, Research, Miscellaneous",
@@ -12182,7 +12086,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -12855,7 +12759,7 @@
         "shell-execution"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -14514,7 +14418,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -15006,7 +14910,7 @@
 
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -17066,25 +16970,6 @@
       ]
     },
     {
-      "name": "loki-mode",
-      "description": "Version 2.35.0 | PRD to Production | Zero Human Intervention > Research-enhanced: OpenAI SDK, DeepMind, Anthropic, AWS Bedrock, Agent SDK, HN Production (2025)",
-      "category": "AI, Agents, LLMs, Data",
-      "path": "dist/skills/loki-mode/",
-      "canonical_path": "sources/sickn33-antigravity-awesome-skills/skills/loki-mode/",
-      "source_slug": "sickn33-antigravity-awesome-skills",
-      "source_label": "sickn33/antigravity-awesome-skills",
-      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
-      "source_type": "github",
-      "trust_level": "imported",
-      "review_status": "frontmatter-validated",
-      "risk_flags": [
-
-      ],
-      "bundles": [
-
-      ]
-    },
-    {
       "name": "loss-aversion-designer",
       "description": "Applies loss-aversion psychology to offers, onboarding, and messaging so users understand the cost of inaction without fearmongering.",
       "category": "Frontend, UI, UX, Design",
@@ -17882,7 +17767,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -20401,25 +20286,6 @@
       ]
     },
     {
-      "name": "pdf-official",
-      "description": "This guide covers essential PDF processing operations using Python libraries and command-line tools. For advanced features, JavaScript libraries, and detailed examples, see reference.md. If you need to fill out a PDF form, read forms.md and follow its instructions.",
-      "category": "AI, Agents, LLMs, Data",
-      "path": "dist/skills/pdf-official/",
-      "canonical_path": "sources/sickn33-antigravity-awesome-skills/skills/pdf-official/",
-      "source_slug": "sickn33-antigravity-awesome-skills",
-      "source_label": "sickn33/antigravity-awesome-skills",
-      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
-      "source_type": "github",
-      "trust_level": "imported-review-recommended",
-      "review_status": "frontmatter-validated",
-      "risk_flags": [
-        "shell-execution"
-      ],
-      "bundles": [
-
-      ]
-    },
-    {
       "name": "pentest-checklist",
       "description": "Provide a comprehensive checklist for planning, executing, and following up on penetration tests. Ensure thorough preparation, proper scoping, and effective remediation of discovered vulnerabilities.",
       "category": "Media, Documents, Office, Creative",
@@ -20438,7 +20304,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -20460,7 +20326,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -21075,26 +20941,6 @@
       "risk_flags": [
         "shell-execution",
         "secrets-sensitive"
-      ],
-      "bundles": [
-
-      ]
-    },
-    {
-      "name": "pptx-official",
-      "description": "A user may ask you to create, edit, or analyze the contents of a .pptx file. A .pptx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks.",
-      "category": "AI, Agents, LLMs, Data",
-      "path": "dist/skills/pptx-official/",
-      "canonical_path": "sources/sickn33-antigravity-awesome-skills/skills/pptx-official/",
-      "source_slug": "sickn33-antigravity-awesome-skills",
-      "source_label": "sickn33/antigravity-awesome-skills",
-      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
-      "source_type": "github",
-      "trust_level": "imported-review-recommended",
-      "review_status": "frontmatter-validated",
-      "risk_flags": [
-        "shell-execution",
-        "destructive-system-ops"
       ],
       "bundles": [
 
@@ -22359,7 +22205,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -22381,7 +22227,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -24566,7 +24412,7 @@
         "security-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -25091,7 +24937,7 @@
         "security-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -25362,7 +25208,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -25421,7 +25267,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -25501,7 +25347,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -25655,25 +25501,6 @@
       ],
       "bundles": [
 
-      ]
-    },
-    {
-      "name": "startup-validator",
-      "description": "Comprehensive startup idea validation and market analysis tool. Use when users need to evaluate a startup idea, assess market fit, analyze competition, validate problem-solution fit, or determine market positioning. Triggers include requests to \"validate my startup idea\", \"analyze market opportunity\", \"check if there's demand for\", \"research competition for\", \"evaluate business idea\", or \"see if my idea is viable\". Provides data-driven analysis using web search, market frameworks, competitive research, and positioning recommendations.",
-      "category": "AI, Agents, LLMs, Data",
-      "path": "dist/skills/startup-validator/",
-      "canonical_path": "sources/ailabs-393-ai-labs-claude-skills/skills/startup-validator/",
-      "source_slug": "ailabs-393-ai-labs-claude-skills",
-      "source_label": "ailabs-393/ai-labs-claude-skills",
-      "source_repository": "https://github.com/ailabs-393/ai-labs-claude-skills",
-      "source_type": "github",
-      "trust_level": "imported-review-recommended",
-      "review_status": "frontmatter-validated",
-      "risk_flags": [
-        "shell-execution"
-      ],
-      "bundles": [
-        "business-strategy"
       ]
     },
     {
@@ -28713,7 +28540,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -28865,7 +28692,7 @@
 
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -29289,7 +29116,7 @@
         "security-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -29537,7 +29364,7 @@
         "secrets-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {
@@ -29561,25 +29388,6 @@
       ]
     },
     {
-      "name": "xlsx-official",
-      "description": "Unless otherwise stated by the user or existing template",
-      "category": "Media, Documents, Office, Creative",
-      "path": "dist/skills/xlsx-official/",
-      "canonical_path": "sources/sickn33-antigravity-awesome-skills/skills/xlsx-official/",
-      "source_slug": "sickn33-antigravity-awesome-skills",
-      "source_label": "sickn33/antigravity-awesome-skills",
-      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
-      "source_type": "github",
-      "trust_level": "imported-review-recommended",
-      "review_status": "frontmatter-validated",
-      "risk_flags": [
-        "shell-execution"
-      ],
-      "bundles": [
-
-      ]
-    },
-    {
       "name": "xss-html-injection",
       "description": "Execute comprehensive client-side injection vulnerability assessments on web applications to identify XSS and HTML injection flaws, demonstrate exploitation techniques for session hijacking and credential theft, and validate input sanitization and output encoding mechanisms.",
       "category": "AI, Agents, LLMs, Data",
@@ -29595,7 +29403,7 @@
         "security-sensitive"
       ],
       "bundles": [
-
+        "security-offensive"
       ]
     },
     {

@@ -1,14 +1,13 @@
 ---
 name: mcp-builder
 description: 'Create MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. The quality of an MCP server is measured by how well it enables LLMs to accomplish real-world tasks.'
-license: MIT
+license: Apache-2.0
 metadata:
   imported_from: 'codex-regular'
   source_repository: 'https://github.com/sickn33/antigravity-awesome-skills'
   source_path: '~/.codex/skills/mcp-builder/SKILL.md'
   imported_at: '2026-05-09'
 ---
-
 # MCP Server Development Guide
 
 ## Overview

@@ -1,14 +1,13 @@
 ---
 name: brand-guidelines-community
 description: 'To access Anthropic''s official brand identity and style resources, use this skill.'
-license: MIT
+license: Apache-2.0
 metadata:
   imported_from: 'codex-regular'
   source_repository: 'https://github.com/sickn33/antigravity-awesome-skills'
   source_path: '~/.codex/skills/brand-guidelines-community/SKILL.md'
   imported_at: '2026-05-09'
 ---
-
 # Anthropic Brand Styling
 
 ## Overview

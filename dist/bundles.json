@@ -52,8 +52,6 @@
       "recommended_for": "Founders, product leads, and strategy work from idea through launch.",
       "skills": [
         "business-model-designer",
-        "business-model-canvas",
-        "startup-validator",
         "strategy-frameworks",
         "okr-frameworks",
         "metrics-frameworks",
@@ -62,7 +60,7 @@
         "ai-product",
         "ai-product-patterns"
       ],
-      "count": 10
+      "count": 8
     },
     {
       "name": "codex-essentials",
@@ -161,6 +159,41 @@
         "lint-and-validate"
       ],
       "count": 9
+    },
+    {
+      "name": "security-offensive",
+      "display_name": "Security — Offensive (opt-in)",
+      "description": "Dual-use offensive-security and large-scale data-collection skills (penetration testing, exploitation frameworks, reconnaissance, scraping, and OSINT). NOT installed by default. Use only against systems you are explicitly authorized to test. These skills can collect or transmit personal data and carry GDPR/privacy and computer-misuse obligations — operators are responsible for legal authorization and lawful data handling.",
+      "recommended_for": "Authorized red-team, penetration-testing, and security-research engagements with written scope and legal sign-off.",
+      "skills": [
+        "apify-lead-generation",
+        "apify-ultimate-scraper",
+        "aws-penetration-testing",
+        "burp-suite-testing",
+        "burpsuite-project-parser",
+        "cloud-penetration-testing",
+        "cold-email",
+        "firecrawl-scraper",
+        "frontend-mobile-security-xss-scan",
+        "html-injection-testing",
+        "identity-mirror",
+        "metasploit-framework",
+        "pentest-checklist",
+        "pentest-commands",
+        "red-team-tactics",
+        "red-team-tools",
+        "shodan-reconnaissance",
+        "smtp-penetration-testing",
+        "sql-injection-testing",
+        "sqlmap-database-pentesting",
+        "ssh-penetration-testing",
+        "vulnerability-scanner",
+        "web-scraper",
+        "wordpress-penetration-testing",
+        "x-twitter-scraper",
+        "xss-html-injection"
+      ],
+      "count": 26
     },
     {
       "name": "security-review",
