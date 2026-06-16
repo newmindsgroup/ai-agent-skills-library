@@ -1,0 +1,24 @@
+# Code owners — review is required on these high-risk paths before merge.
+# (Enforced only when branch protection has "Require review from Code Owners" enabled.)
+
+# Default owner
+*                                   @newmindsgroup
+
+# CI/CD — any workflow change runs with repo credentials
+/.github/                           @newmindsgroup
+
+# Install + build path — runs on users' machines
+/install.sh                         @newmindsgroup
+/install.ps1                        @newmindsgroup
+/installers/                        @newmindsgroup
+/scripts/                           @newmindsgroup
+
+# Executable code bundled inside vendored skills — highest supply-chain risk.
+# A new script under any source must be human-reviewed, never auto-merged.
+/sources/**/scripts/                @newmindsgroup
+
+# Licensing / trust governance
+/LICENSE                            @newmindsgroup
+/NOTICE.md                          @newmindsgroup
+/SECURITY.md                        @newmindsgroup
+/docs/SKILLS-TRUST.md               @newmindsgroup

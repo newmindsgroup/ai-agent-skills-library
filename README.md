@@ -53,6 +53,17 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 └── scripts/                           ← validation + scaffolding helpers
 ```
 
+## Trust & safety
+
+This repo redistributes **third-party skills** under `sources/`. Everything outside `sources/original/` is vendored from external upstreams, imported as-is, and is **not independently security-audited**. A skill is instructions an agent acts on, and some bundle executable `scripts/`.
+
+Before installing into an environment with secrets, production access, or sensitive data:
+
+- Check the skill's provenance and risk flags in [`docs/SKILLS-TRUST.md`](docs/SKILLS-TRUST.md).
+- Review any `scripts/` a skill ships.
+- Prefer installing specific skills/packs over the whole library.
+- Report security concerns privately — see [`SECURITY.md`](SECURITY.md).
+
 ## Quick install
 
 ### Option A — Claude Code plugin marketplace (recommended for Claude Code users)
