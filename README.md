@@ -64,6 +64,8 @@ Before installing into an environment with secrets, production access, or sensit
 - Prefer installing specific skills/packs over the whole library.
 - Report security concerns privately — see [`SECURITY.md`](SECURITY.md).
 
+Offensive-security and large-scale scraping/OSINT skills are dual-use and are **not** installed by default; they are gated behind the opt-in [`security-offensive`](docs/STARTER-PACKS.md) starter pack and require explicit authorization and lawful data handling before use. Licensing and attribution for every redistributed source are recorded in [`NOTICE.md`](NOTICE.md).
+
 ## Quick install
 
 ### Option A — Claude Code plugin marketplace (recommended for Claude Code users)

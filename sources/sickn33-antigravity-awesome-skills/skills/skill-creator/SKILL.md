@@ -1,14 +1,13 @@
 ---
 name: skill-creator
 description: 'To create new CLI skills following Anthropic''s official best practices with zero manual configuration. This skill automates brainstorming, template application, validation, and installation processes while maintaining progressive disclosure patterns and writing style standards.'
-license: MIT
+license: Apache-2.0
 metadata:
   imported_from: 'codex-regular'
   source_repository: 'https://github.com/sickn33/antigravity-awesome-skills'
   source_path: '~/.codex/skills/skill-creator/SKILL.md'
   imported_at: '2026-05-09'
 ---
-
 # skill-creator
 
 To create new CLI skills following Anthropic's official best practices with zero manual configuration. This skill automates brainstorming, template application, validation, and installation processes while maintaining progressive disclosure patterns and writing style standards.

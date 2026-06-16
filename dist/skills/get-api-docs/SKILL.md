@@ -1,14 +1,13 @@
 ---
 name: get-api-docs
 description: 'Use this skill when you need documentation for a third-party library, SDK, or API before writing code that uses it — for example, "use the OpenAI API", "call the Stripe API", "use the Anthropic SDK", "query Pinecone", or any time the user asks you to write code against an external service and you need current API reference. Fetch the docs with chub before answering, rather than relying on training knowledge.'
-license: MIT
+license: Apache-2.0
 metadata:
   imported_from: 'codex-regular'
   source_repository: 'https://github.com/mxyhi/ok-skills'
   source_path: '~/.codex/skills/get-api-docs/SKILL.md'
   imported_at: '2026-05-09'
 ---
-
 # Get API Docs via chub
 
 When you need documentation for a library or API, fetch it with the `chub` CLI
