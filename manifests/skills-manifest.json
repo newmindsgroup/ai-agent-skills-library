@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-05-09",
-  "total_skills": 1502,
+  "total_skills": 1503,
   "added_this_sync": 1499,
   "preserved_existing": 14,
   "duplicate_source_names": {
@@ -23282,6 +23282,28 @@
       ]
     },
     {
+      "name": "prompt-engineering-expert",
+      "description": "Designs, improves, converts, debugs, and operationalizes prompts, system instructions, agent definitions, and reusable AI-agent behavior. Works autonomously by default: reads the project, infers intent, and produces a finished prompt with stated assumptions in one pass; runs a guided one-question-at-a-time interactive mode on request. Use when the user is writing or refining a prompt, a system prompt, GPT/agent instructions, an AGENTS.md or CLAUDE.md, a Cursor rule, or asks to make a prompt better, convert a prompt between platforms, debug poor prompt output, or cut a prompt's token usage. Triggers on: 'write a prompt', 'improve this prompt', 'prompt for', 'system prompt', 'agent instructions', 'convert this prompt', 'why is this prompt failing', 'reduce tokens', 'prompt engineering'.",
+      "category": "Uncategorized",
+      "path": "dist/skills/prompt-engineering-expert/",
+      "canonical_path": "sources/original/skills/prompt-engineering-expert/",
+      "source_repository": "Original New Minds Group",
+      "source_slug": "original",
+      "source_label": "Original New Minds Group",
+      "source_type": "original",
+      "source_note": "Skills created directly in this library.",
+      "trust_level": "curated",
+      "review_status": "maintained",
+      "trust_summary": "Created and maintained directly in this library.",
+      "risk_flags": [
+        "security-sensitive",
+        "secrets-sensitive"
+      ],
+      "bundles": [
+
+      ]
+    },
+    {
       "name": "prompt-engineering-patterns",
       "description": "Master advanced prompt engineering techniques to maximize LLM performance, reliability, and controllability.",
       "category": "AI, Agents, LLMs, Data",
@@ -32477,7 +32499,7 @@
       "url": null,
       "type": "original",
       "note": "Skills created directly in this library.",
-      "count": 14,
+      "count": 15,
       "license": "MIT"
     },
     {
