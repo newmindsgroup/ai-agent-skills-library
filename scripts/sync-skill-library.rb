@@ -17,6 +17,12 @@ require "set"
 require "uri"
 require "yaml"
 
+# Read all files as UTF-8 regardless of the shell locale. Without this, an unset
+# locale (LANG/LC_ALL empty) makes Ruby default to US-ASCII, and any non-ASCII
+# byte in a skill file raises "invalid byte sequence in US-ASCII".
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
 ROOT = File.expand_path("..", __dir__)
 SOURCES_DIR = File.join(ROOT, "sources")
 EXPORT_DIR = File.join(ROOT, "dist", "skills")
