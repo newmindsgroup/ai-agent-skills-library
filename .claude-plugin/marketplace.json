@@ -3,7 +3,7 @@
   "name": "ai-agent-skills-library",
   "displayName": "AI Agent Skills Library",
   "description": "A versioned, code-reviewed library of agentic AI skills, sub-agents, runbooks, prompts, and installers. Works in Claude Code, Cursor, Codex, Windsurf, OpenCode, Cowork, and Antigravity. Skills follow the open Agent Skills specification and stay portable across organizations via brand-config.yml.",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "owner": {
     "name": "New Minds Group",
     "url": "https://github.com/newmindsgroup"
@@ -79,6 +79,22 @@
         "agents/document-generator.md",
         "agents/image-prompt-engineer.md",
         "agents/reality-checker.md"
+      ]
+    },
+    {
+      "name": "prompt-engineering-expert",
+      "displayName": "Prompt Engineering Expert",
+      "description": "Auto-triggering prompt-engineering capability: design, improve, convert, debug, and operationalize prompts, system prompts, and agent instructions. Autonomous-first with an on-request interactive mode. Ships the skill, a sub-agent, and the /prompt-engineering-expert and /pe commands.",
+      "version": "1.0.0",
+      "skills": [
+        "dist/skills/prompt-engineering-expert"
+      ],
+      "agents": [
+        "agents/prompt-engineering-expert.md"
+      ],
+      "commands": [
+        "commands/prompt-engineering-expert.md",
+        "commands/pe.md"
       ]
     }
   ]
