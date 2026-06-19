@@ -10,7 +10,7 @@ Canonical source skills live in `sources/<source-folder>/skills/<skill-name>/`. 
 |---|---|---|---|---:|
 | [`sickn33-antigravity-awesome-skills`](../sources/sickn33-antigravity-awesome-skills/) | [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) | github | Apache-2.0, MIT | 1448 |
 | [`menkesu-awesome-pm-skills`](../sources/menkesu-awesome-pm-skills/) | [menkesu/awesome-pm-skills](https://github.com/menkesu/awesome-pm-skills) | github | MIT | 29 |
-| [`original`](../sources/original/) | Original New Minds Group | original | MIT | 14 |
+| [`original`](../sources/original/) | Original New Minds Group | original | MIT | 15 |
 | [`mxyhi-ok-skills`](../sources/mxyhi-ok-skills/) | [mxyhi/ok-skills](https://github.com/mxyhi/ok-skills) | github | Apache-2.0 | 6 |
 | [`openai-codex-bundled-system-skills`](../sources/openai-codex-bundled-system-skills/) | OpenAI Codex bundled system skills | runtime | Apache-2.0 | 3 |
 | [`maigentic-stratarts`](../sources/maigentic-stratarts/) | [maigentic/stratarts](https://github.com/maigentic/stratarts) | github | MIT | 1 |

@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-05-09",
-  "total_skills": 1502,
+  "total_skills": 1503,
   "categories": [
     {
       "name": "AI, Agents, LLMs, Data",
@@ -49,6 +49,10 @@
     {
       "name": "Media, Documents, Office, Creative",
       "count": 4
+    },
+    {
+      "name": "Uncategorized",
+      "count": 1
     }
   ],
   "sources": [
@@ -79,7 +83,7 @@
       "url": null,
       "type": "original",
       "note": "Skills created directly in this library.",
-      "count": 14,
+      "count": 15,
       "license": "MIT"
     },
     {
@@ -134,7 +138,7 @@
     },
     {
       "name": "curated",
-      "count": 14
+      "count": 15
     },
     {
       "name": "runtime",
@@ -148,11 +152,11 @@
     },
     {
       "name": "secrets-sensitive",
-      "count": 582
+      "count": 583
     },
     {
       "name": "security-sensitive",
-      "count": 433
+      "count": 434
     },
     {
       "name": "network-access",
@@ -21424,6 +21428,26 @@
       "risk_flags": [
         "security-sensitive",
         "shell-execution",
+        "secrets-sensitive"
+      ],
+      "bundles": [
+
+      ]
+    },
+    {
+      "name": "prompt-engineering-expert",
+      "description": "Designs, improves, converts, debugs, and operationalizes prompts, system instructions, agent definitions, and reusable AI-agent behavior. Works autonomously by default: reads the project, infers intent, and produces a finished prompt with stated assumptions in one pass; runs a guided one-question-at-a-time interactive mode on request. Use when the user is writing or refining a prompt, a system prompt, GPT/agent instructions, an AGENTS.md or CLAUDE.md, a Cursor rule, or asks to make a prompt better, convert a prompt between platforms, debug poor prompt output, or cut a prompt's token usage. Triggers on: 'write a prompt', 'improve this prompt', 'prompt for', 'system prompt', 'agent instructions', 'convert this prompt', 'why is this prompt failing', 'reduce tokens', 'prompt engineering'.",
+      "category": "Uncategorized",
+      "path": "dist/skills/prompt-engineering-expert/",
+      "canonical_path": "sources/original/skills/prompt-engineering-expert/",
+      "source_slug": "original",
+      "source_label": "Original New Minds Group",
+      "source_repository": "Original New Minds Group",
+      "source_type": "original",
+      "trust_level": "curated",
+      "review_status": "maintained",
+      "risk_flags": [
+        "security-sensitive",
         "secrets-sensitive"
       ],
       "bundles": [
