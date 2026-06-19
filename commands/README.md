@@ -31,3 +31,10 @@ After install, type the command in any Claude Code session — e.g.
 | Command | What it does |
 |---------|--------------|
 | `/prompt-engineering-expert` | Invokes the `prompt-engineering-expert` skill to design, improve, convert, debug, or operationalize a prompt or agent instruction. Defaults to autonomous mode; say "step by step" for the interactive loop. |
+| `/pe` | Short alias for `/prompt-engineering-expert`. |
+
+## Plugin install
+
+These commands also ship in the `prompt-engineering-expert` plugin bundle (see
+`.claude-plugin/marketplace.json`). Installing that plugin via Claude Code's
+`/plugin` system installs the skill, sub-agent, and both commands together.
