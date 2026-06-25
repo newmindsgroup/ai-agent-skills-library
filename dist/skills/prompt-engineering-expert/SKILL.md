@@ -3,7 +3,7 @@ name: prompt-engineering-expert
 description: "Designs, improves, converts, debugs, and operationalizes prompts, system instructions, agent definitions, and reusable AI-agent behavior. Works autonomously by default: reads the project, infers intent, and produces a finished prompt with stated assumptions in one pass; runs a guided one-question-at-a-time interactive mode on request. Use when the user is writing or refining a prompt, a system prompt, GPT/agent instructions, an AGENTS.md or CLAUDE.md, a Cursor rule, or asks to make a prompt better, convert a prompt between platforms, debug poor prompt output, or cut a prompt's token usage. Triggers on: 'write a prompt', 'improve this prompt', 'prompt for', 'system prompt', 'agent instructions', 'convert this prompt', 'why is this prompt failing', 'reduce tokens', 'prompt engineering'."
 license: MIT
 metadata:
-  version: '1.0.0'
+  version: '1.2.0'
   author: New Minds Group
 ---
 
@@ -62,11 +62,29 @@ recent work, and the user's stated goal — to infer:
 Anything you can infer, do NOT ask. Only genuinely output-changing unknowns
 become questions.
 
+### Gap scan (run before drafting)
+
+Score the request against eight dimensions — objective, target model/platform,
+audience/channel, output shape, constraints, success criteria, examples, stakes —
+and classify each: ✅ Known · 🟡 Assumable (safe default exists — state it) ·
+🔴 Blocking (no safe default; a wrong guess changes the output). Details and
+safe-default heuristics: `references/gap-checklist.md`.
+
+**Decision rule:** any 🔴 → ask those as qualifying questions BEFORE drafting,
+batched, each with 2–4 concrete options and a recommended default (max ~3–4;
+one at a time in Interactive mode). Zero 🔴 → draft now and list 🟡 assumptions.
+If the user declines a 🔴, take the recommended default as a flagged assumption.
+Show a compact one-line **Gap scan** above the draft (counts + assumptions made +
+questions asked).
+
 ## The Prompt Blueprint
 
 Structure every drafted prompt against these six sections unless the target
 platform requires a different structure. Full detail and worked examples:
-`references/blueprint.md`.
+`references/blueprint.md`. When a request matches a common archetype (extraction,
+classification, agent system prompt, RAG, code-gen, eval rubric, multi-step
+chain), start from `references/templates/`. Before finalizing, scan the draft
+against `references/anti-patterns.md` and fix any smells.
 
 1. Role / Persona
 2. Objective / OKR
@@ -86,6 +104,10 @@ Each response includes, in order:
    `references/model-guide.md`.
 5. A token-budget note when the prompt is long, multi-document, or near a
    context limit.
+6. A one-line **quality scorecard** — score the draft 1–5 on clarity,
+   specificity, testability, token-efficiency, safety; auto-revise any axis ≤3
+   once before presenting. Criteria: `references/quality-rubric.md`. Example:
+   `Quality: clarity 5 · specificity 4 · testability 5 · tokens 4 · safety 5`.
 
 ## Token awareness + chaining
 
@@ -101,7 +123,8 @@ synthesis — with rough per-step token budgets.
 
 Convert prompts between formats while preserving intent and adapting (not copying)
 platform specifics: Claude Code agent ↔ Cursor rule ↔ Codex/`AGENTS.md` ↔ custom
-GPT instructions ↔ plain system prompt.
+GPT instructions ↔ plain system prompt. For the exact fields and file conventions
+each target requires, follow `references/conversion-checklists.md`.
 
 ## Examples and references
 
