@@ -12,3 +12,9 @@ Both remote main branches were 21 commits ahead of the local base at fetch. Comp
 Version-Timestamp: 2026-09-15 21:54:08 AST
 
 Prior failures resolved. Library skill validation (zero warnings), safety policy (208 quarantined skills), generated-file consistency, local links and ShellCheck pass. Internal repo-only verification and all nine regression test scripts pass. Both approved policy files match. See RECONCILIATION.md for conflict decisions and recovery refs. Full-spec optional validation and Windows installer were not run locally.
+
+## CI portability repair
+
+Version-Timestamp: 2026-09-15 21:58:41 AST
+
+GitHub identified a clock-dependent generated date and Ruby JSON version differences for empty arrays. The generator now retains the recorded manifest date and normalizes empty containers. Two regression tests with nine assertions pass; the workflow runs them before generated-file validation. The earlier local validation overlapped regeneration once and was rerun sequentially to pass. Original failed CI evidence: run 35045954196, validate job.

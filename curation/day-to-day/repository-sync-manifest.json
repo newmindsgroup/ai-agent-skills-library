@@ -1,5 +1,5 @@
 {
-  "version_timestamp": "2026-09-15 21:53:36 AST",
+  "version_timestamp": "2026-09-15 21:59:22 AST",
   "policy_sha256": "a5a2aff071606cd1fb7f3b80f5247ef066df7eb680e3aa2d4962e61199b04fdf",
   "plugins": [
     {
@@ -28,5 +28,5 @@
     "SKILL.md": "ecf303bd457fcaae16c1681d9cffc2477a055c9954fd91a5466cd0bbfff2fe38",
     "references/value-conversation-four-step.md": "175b1562da9e0dfaed2da51175b2c8ed3d382b36985876ef4d2661fe9400c74f"
   },
-  "git_status": "Audit snapshots pushed; reconciliation with origin/main prepared. See RECONCILIATION.md for checks and preserved refs."
+  "git_status": "Reconciled histories pushed to main in both repositories; original audit commits preserved on remote backup/skills-curation-before-reconcile-20260915. Working checkouts use main."
 }

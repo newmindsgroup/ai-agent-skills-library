@@ -25,3 +25,9 @@ Version-Timestamp: 2026-09-15 21:53:36 AST
 - CI on GitHub supplies the Windows installer check unavailable on this Mac.
 
 Routing: model-governor read in full; Astra Low recommendation, current Codex runtime retained for native Git and validation tools. No model switch or paid fallback. Systematic debugging and engineering quality gate used for the reproduced validation issues.
+
+## Remote confirmation
+
+Version-Timestamp: 2026-09-15 21:59:22 AST
+
+Reconciled main commits: library af9d94e, internal configuration 1eea0e1. Both histories and backup refs are pushed. Internal configuration CI passed. Library Windows installer CI passed. Library Linux CI exposed Ruby JSON empty-container formatting and clock-dependent generation; a portability fix normalizes containers and preserves the recorded manifest date. Local regression coverage passes, and subsequent CI must verify the fix.

@@ -16,6 +16,7 @@ require "json"
 require "set"
 require "uri"
 require "yaml"
+require_relative "lib/generated-output"
 
 # Read all files as UTF-8 regardless of the shell locale. Without this, an unset
 # locale (LANG/LC_ALL empty) makes Ruby default to US-ASCII, and any non-ASCII
@@ -268,7 +269,7 @@ end
 manifest = load_existing_manifest
 safety_policy = load_safety_policy
 quarantined_skills = safety_policy.fetch("skills", [])
-generated_at = Date.today.iso8601
+generated_at = GeneratedOutput.date(manifest)
 categories = load_existing_categories(manifest)
 entries = skill_entries(categories)
 grouped = entries.group_by { |entry| entry["source"]["slug"] }
@@ -402,7 +403,7 @@ manifest["skills"] = entries.sort_by { |entry| entry["name"] }.map do |entry|
     "bundles" => bundle_memberships[entry["name"]].sort
   }.compact
 end
-File.write(MANIFEST_PATH, JSON.pretty_generate(manifest) + "\n")
+File.write(MANIFEST_PATH, GeneratedOutput.json(manifest) + "\n")
 
 category_rows = entries.group_by { |entry| entry["category"] }.map do |category, skills|
   { "name" => category, "count" => skills.length }
@@ -446,7 +447,7 @@ index = {
     }
   end
 }
-File.write(INDEX_JSON_PATH, JSON.pretty_generate(index) + "\n")
+File.write(INDEX_JSON_PATH, GeneratedOutput.json(index) + "\n")
 
 tsv = []
 tsv << %w[name category source_slug source_label trust_level review_status risk_flags bundles description].join("\t")
@@ -477,7 +478,7 @@ quarantine_index = {
   "statuses" => quarantine_status_rows,
   "skills" => quarantined_skills.sort_by { |entry| entry["name"] }
 }
-File.write(QUARANTINE_JSON_PATH, JSON.pretty_generate(quarantine_index) + "\n")
+File.write(QUARANTINE_JSON_PATH, GeneratedOutput.json(quarantine_index) + "\n")
 
 quarantine_tsv = []
 quarantine_tsv << %w[name status source_slug original_path quarantine_path reason].join("\t")
@@ -493,7 +494,7 @@ quarantined_skills.sort_by { |entry| entry["name"] }.each do |entry|
 end
 File.write(QUARANTINE_TSV_PATH, quarantine_tsv.join("\n") + "\n")
 
-File.write(BUNDLES_JSON_PATH, JSON.pretty_generate({
+File.write(BUNDLES_JSON_PATH, GeneratedOutput.json({
   "generated_at" => generated_at,
   "packs" => starter_packs.map { |pack| pack.merge("count" => pack.fetch("skills", []).length) }
 }) + "\n")

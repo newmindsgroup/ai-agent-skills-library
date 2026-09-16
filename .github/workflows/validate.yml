@@ -27,6 +27,9 @@ jobs:
       - name: Validate all skills
         run: bash scripts/validate-all.sh
 
+      - name: Test generated output portability
+        run: ruby scripts/tests/generated-output-test.rb
+
       - name: Check generated exports and indexes
         run: bash scripts/check-generated.sh
 
