@@ -1,0 +1,387 @@
+{
+  "repository": "adatarwa/operator-skills",
+  "commit": "ff8afd3de8cddaef7dc4cf20b17fa51da5b6f308",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "tree": {
+    "sha": "ff8afd3de8cddaef7dc4cf20b17fa51da5b6f308",
+    "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/ff8afd3de8cddaef7dc4cf20b17fa51da5b6f308",
+    "tree": [
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6f5c70dd14152ac6cd7d4b8a1bf821fbd72b441c",
+        "size": 42,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/6f5c70dd14152ac6cd7d4b8a1bf821fbd72b441c"
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9094bc062b8ef2a88f4e90894a0524ed3e0b8503",
+        "size": 3472,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/9094bc062b8ef2a88f4e90894a0524ed3e0b8503"
+      },
+      {
+        "path": "LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "35717af7f87e2d7d11ccb98baeed9c185de6038d",
+        "size": 1072,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/35717af7f87e2d7d11ccb98baeed9c185de6038d"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "95eafcc5d524105de0dbae044eced1563b1eb77c",
+        "size": 6762,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/95eafcc5d524105de0dbae044eced1563b1eb77c"
+      },
+      {
+        "path": "skills",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "9dcc7e0cf6753aac2e9cb430b1142ae07d015616",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/9dcc7e0cf6753aac2e9cb430b1142ae07d015616"
+      },
+      {
+        "path": "skills/customer-success",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5d19b239b1cdcdab0034b5497d338efd3068aaa2",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/5d19b239b1cdcdab0034b5497d338efd3068aaa2"
+      },
+      {
+        "path": "skills/customer-success/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7418b02a5e47d65b1d742b7650625b9797adad8f",
+        "size": 3418,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/7418b02a5e47d65b1d742b7650625b9797adad8f"
+      },
+      {
+        "path": "skills/customer-success/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ac3ab0b39d601cb66610bf493793764a44563d72",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/ac3ab0b39d601cb66610bf493793764a44563d72"
+      },
+      {
+        "path": "skills/customer-success/references/prompt-library.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "26db5f4b4cad7bbb0f5befe48b041747cfd09164",
+        "size": 2981,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/26db5f4b4cad7bbb0f5befe48b041747cfd09164"
+      },
+      {
+        "path": "skills/customer-support",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a8212b59cb33ee25bd05f7f5136f225f4acb76d0",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/a8212b59cb33ee25bd05f7f5136f225f4acb76d0"
+      },
+      {
+        "path": "skills/customer-support/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a43c8fe1c531c6da4ecb8ba6bd93fc212a1dacad",
+        "size": 3492,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/a43c8fe1c531c6da4ecb8ba6bd93fc212a1dacad"
+      },
+      {
+        "path": "skills/customer-support/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "43db61f94f98473e07ba237a259572bf26cd9708",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/43db61f94f98473e07ba237a259572bf26cd9708"
+      },
+      {
+        "path": "skills/customer-support/references/prompt-library.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "23e1caab69f3eff3090bc12b63383aea244da1a4",
+        "size": 3205,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/23e1caab69f3eff3090bc12b63383aea244da1a4"
+      },
+      {
+        "path": "skills/finance",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ea5e821d8fb21ef56ed711b382774699cf347c80",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/ea5e821d8fb21ef56ed711b382774699cf347c80"
+      },
+      {
+        "path": "skills/finance/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "914e947d5ff79f8ac7421f6eff46834664a75bc7",
+        "size": 4206,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/914e947d5ff79f8ac7421f6eff46834664a75bc7"
+      },
+      {
+        "path": "skills/finance/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "15ec63ecb8a01b0feaeb6ab8f48672684a270ab0",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/15ec63ecb8a01b0feaeb6ab8f48672684a270ab0"
+      },
+      {
+        "path": "skills/finance/references/prompt-library.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b9f26c76d6e2d2c74d07f3c389f816a694270817",
+        "size": 2477,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/b9f26c76d6e2d2c74d07f3c389f816a694270817"
+      },
+      {
+        "path": "skills/founder",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "66b2439b8c6e5a852b21cc7d168b1e6a179728d7",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/66b2439b8c6e5a852b21cc7d168b1e6a179728d7"
+      },
+      {
+        "path": "skills/founder/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e3f6ab0ef9a147a10ebab93436ef1f3373be9804",
+        "size": 4006,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/e3f6ab0ef9a147a10ebab93436ef1f3373be9804"
+      },
+      {
+        "path": "skills/founder/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bb61c0d17700f898102792dd0ce17368f1c4c216",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/bb61c0d17700f898102792dd0ce17368f1c4c216"
+      },
+      {
+        "path": "skills/founder/references/prompt-library.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "454c5af2879d7eb6fc222db39ed39e0a8879a64c",
+        "size": 3246,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/454c5af2879d7eb6fc222db39ed39e0a8879a64c"
+      },
+      {
+        "path": "skills/hr",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4ce2d393364cbecadc506fde934e564b40880a90",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/4ce2d393364cbecadc506fde934e564b40880a90"
+      },
+      {
+        "path": "skills/hr/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c4754e89dda7faa55b0739e1b5b8be6f71232ebe",
+        "size": 4099,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/c4754e89dda7faa55b0739e1b5b8be6f71232ebe"
+      },
+      {
+        "path": "skills/hr/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8da549c0c8d68f4cf57d3acb1ec52f8e2e875c27",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/8da549c0c8d68f4cf57d3acb1ec52f8e2e875c27"
+      },
+      {
+        "path": "skills/hr/references/prompt-library.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ad79ecbd8148023062d85135df1c5e51f9bb97cd",
+        "size": 2849,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/ad79ecbd8148023062d85135df1c5e51f9bb97cd"
+      },
+      {
+        "path": "skills/legal",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "013a2c94d32d5bb10b089c917279e9d0e9ed0d1c",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/013a2c94d32d5bb10b089c917279e9d0e9ed0d1c"
+      },
+      {
+        "path": "skills/legal/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "021215081fad0ec4c8d528eaa427fe245e0c5723",
+        "size": 3935,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/021215081fad0ec4c8d528eaa427fe245e0c5723"
+      },
+      {
+        "path": "skills/legal/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ae95c865a7c14e97e6ab1664a61aa08cbc2b9794",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/ae95c865a7c14e97e6ab1664a61aa08cbc2b9794"
+      },
+      {
+        "path": "skills/legal/references/prompt-library.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "30037463c217c74d5463efec2b6cb7797477d47e",
+        "size": 3078,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/30037463c217c74d5463efec2b6cb7797477d47e"
+      },
+      {
+        "path": "skills/marketing",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "36baa0804839efcc3441b2ba56faa3f69d0c08db",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/36baa0804839efcc3441b2ba56faa3f69d0c08db"
+      },
+      {
+        "path": "skills/marketing/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0127fab421d8f6ac77387645e244c1effcfbe967",
+        "size": 3542,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/0127fab421d8f6ac77387645e244c1effcfbe967"
+      },
+      {
+        "path": "skills/marketing/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2f5872c381011b7c8658a7437d54c46efc51a660",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/2f5872c381011b7c8658a7437d54c46efc51a660"
+      },
+      {
+        "path": "skills/marketing/references/prompt-library.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "65df775ad5b78c9873ee92f2f3edd3e743371cc6",
+        "size": 2867,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/65df775ad5b78c9873ee92f2f3edd3e743371cc6"
+      },
+      {
+        "path": "skills/operations",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7f5291b64165da51f034ddc754ee0e3ec1861368",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/7f5291b64165da51f034ddc754ee0e3ec1861368"
+      },
+      {
+        "path": "skills/operations/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "de320ecff889d48076093039a8cadc493ad6e886",
+        "size": 3573,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/de320ecff889d48076093039a8cadc493ad6e886"
+      },
+      {
+        "path": "skills/operations/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "9cd1c37c2efc74e1abdd6cd5d947cc43260b068f",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/9cd1c37c2efc74e1abdd6cd5d947cc43260b068f"
+      },
+      {
+        "path": "skills/operations/references/prompt-library.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bb0581956647b7662228292d78d4fd02aba47ce1",
+        "size": 2285,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/bb0581956647b7662228292d78d4fd02aba47ce1"
+      },
+      {
+        "path": "skills/procurement",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "fed005f8d3170a19d94a57ccb87a2b6487400a5c",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/fed005f8d3170a19d94a57ccb87a2b6487400a5c"
+      },
+      {
+        "path": "skills/procurement/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "808e27311aac1c78ce02e7f928d89401ac86d679",
+        "size": 3548,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/808e27311aac1c78ce02e7f928d89401ac86d679"
+      },
+      {
+        "path": "skills/procurement/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7b5d5af2db5430b3100985d48bbce173896f21de",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/7b5d5af2db5430b3100985d48bbce173896f21de"
+      },
+      {
+        "path": "skills/procurement/references/prompt-library.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bbabb5f2af27935f4fbae60c0222efbcec0619a0",
+        "size": 3311,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/bbabb5f2af27935f4fbae60c0222efbcec0619a0"
+      },
+      {
+        "path": "skills/product",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bbfe7506b9140dd5d7d077f7c0c965f4a407a7a2",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/bbfe7506b9140dd5d7d077f7c0c965f4a407a7a2"
+      },
+      {
+        "path": "skills/product/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "45caf6aae628d13077eb1ca4eddda94507d8895e",
+        "size": 3357,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/45caf6aae628d13077eb1ca4eddda94507d8895e"
+      },
+      {
+        "path": "skills/product/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "fef0cd8512de17b9df6966592d5ba6e8503c94c7",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/fef0cd8512de17b9df6966592d5ba6e8503c94c7"
+      },
+      {
+        "path": "skills/product/references/prompt-library.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "34ea01e7fd284848c7b3e134002cf394063d7487",
+        "size": 3247,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/34ea01e7fd284848c7b3e134002cf394063d7487"
+      },
+      {
+        "path": "skills/sales",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "df8f5de5e05a9f7d0c3956d4b58cd83b561ec05f",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/df8f5de5e05a9f7d0c3956d4b58cd83b561ec05f"
+      },
+      {
+        "path": "skills/sales/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6105d563aedf3b9deab74362fa56279f74d244f3",
+        "size": 3651,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/6105d563aedf3b9deab74362fa56279f74d244f3"
+      },
+      {
+        "path": "skills/sales/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "670a1e9797dcd4a2d8933f1892f74c543a33542e",
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/trees/670a1e9797dcd4a2d8933f1892f74c543a33542e"
+      },
+      {
+        "path": "skills/sales/references/prompt-library.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "601cd2f02e07b7715c1ad97d30df48f0c8d75828",
+        "size": 2453,
+        "url": "https://api.github.com/repos/adatarwa/operator-skills/git/blobs/601cd2f02e07b7715c1ad97d30df48f0c8d75828"
+      }
+    ],
+    "truncated": false
+  }
+}

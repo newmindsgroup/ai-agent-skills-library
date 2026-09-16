@@ -1,0 +1,18 @@
+{
+  "name": "business-strategy-curated",
+  "version": "0.2.0",
+  "description": "Business model design, requested strategy critiques, financial reporting and vendor negotiation preparation.",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Business Strategy Curated",
+    "shortDescription": "Use Business Strategy Curated in Codex.",
+    "longDescription": "A curated business-model workflow for explicit assumptions, consistent calculation units and scoped strategy drafts.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Help me use Business Strategy Curated."
+  }
+}

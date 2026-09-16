@@ -1,0 +1,22 @@
+[
+  {
+    "path": "LICENSE",
+    "sha256": "a2c922f9b81b4f40347ddfa79c38eda0f1278b5a6d108bd4099b4da254c774ee",
+    "bytes": 1068
+  },
+  {
+    "path": "README.md",
+    "sha256": "d0e3176395903d0c98c0ae3937b4d6cc476129c4b72f33139b8f1e19bcdd51cf",
+    "bytes": 27737
+  },
+  {
+    "path": "pm-execution/skills/pre-mortem/SKILL.md",
+    "sha256": "4e5cf10a46ac1d1cdde6aa009ba2b860c532f55c0c3d9ec53a82082cad073052",
+    "bytes": 4082
+  },
+  {
+    "path": "pm-execution/skills/strategy-red-team/SKILL.md",
+    "sha256": "3758fcf6f2f2653721c9d58586f7816e17d47d4723b54a5d3457a6641d2663fc",
+    "bytes": 4515
+  }
+]

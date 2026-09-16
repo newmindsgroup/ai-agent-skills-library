@@ -1,0 +1,32 @@
+[
+  {
+    "path": "LICENSE",
+    "sha256": "554a74c921de55972a4fe1176eef41e5665941a328936ef6542e754f99ade88f",
+    "bytes": 1072
+  },
+  {
+    "path": "README.md",
+    "sha256": "ea4dd59c6081dcc2effb6889b99d68245fb6a06b7d4aabf7961331b983b71145",
+    "bytes": 6762
+  },
+  {
+    "path": "skills/finance/SKILL.md",
+    "sha256": "7400cbd956d39536ae947d4442ee0aec054e97ac4070768ea475468695f60218",
+    "bytes": 4206
+  },
+  {
+    "path": "skills/finance/references/prompt-library.md",
+    "sha256": "21bf2015d0be19da9a9988c0b89cba42dabea26b0aac0aecdff5abb96ab29ae3",
+    "bytes": 2477
+  },
+  {
+    "path": "skills/procurement/SKILL.md",
+    "sha256": "981020a8d0b4cdca006c5508bfa432bcbc663640816726fcb171b4025604bc8a",
+    "bytes": 3548
+  },
+  {
+    "path": "skills/procurement/references/prompt-library.md",
+    "sha256": "a2b76285137d2fb213928dfd042450244b17cfc0d3fdf6525bdafe2a06a2e90a",
+    "bytes": 3311
+  }
+]

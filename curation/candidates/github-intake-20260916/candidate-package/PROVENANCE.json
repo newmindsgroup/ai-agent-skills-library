@@ -1,0 +1,27 @@
+{
+  "version_timestamp": "2026-09-16 12:30:08 AST",
+  "upstream": "https://github.com/maigentic/stratarts",
+  "commit": "aea77df147c02445e2e10ece7ae771fcf47009b4",
+  "license": "MIT notice preserved",
+  "changes": "Local wrapper and repaired calculation/scope guidance. Historical raw snapshot and HTML assets excluded.",
+  "scope": "Synthetic-tested canvas and supplied-input economics; HTML unqualified; no commercial viability guarantee",
+  "status": "Synthetic-tested candidate only; no active installation or superiority claim",
+  "additional_sources": [
+    {
+      "repo": "phuryn/pm-skills",
+      "commit": "8607e3b077817f89bf4a9b623246219734ac3be0",
+      "path": "pm-execution/skills/strategy-red-team/SKILL.md",
+      "license": "MIT"
+    },
+    {
+      "repo": "adatarwa/operator-skills",
+      "commit": "ff8afd3de8cddaef7dc4cf20b17fa51da5b6f308",
+      "paths": [
+        "skills/finance",
+        "skills/procurement"
+      ],
+      "license": "MIT"
+    }
+  ],
+  "changes_new": "Selective rewrites, evidence-aware thresholds and missing values, draft authority, prompt-injection boundaries; no upstream scripts copied."
+}

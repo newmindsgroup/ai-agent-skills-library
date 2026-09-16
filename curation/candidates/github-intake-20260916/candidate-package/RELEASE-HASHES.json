@@ -1,0 +1,15 @@
+{
+  "version_timestamp": "2026-09-16 12:30:08 AST",
+  "files": {
+    ".codex-plugin/plugin.json": "8d07fb873849d4a78b25364fba5520f6300e36a9d4b0fbfb85d5da068bc07839",
+    "LICENSE.operator-skills": "554a74c921de55972a4fe1176eef41e5665941a328936ef6542e754f99ade88f",
+    "LICENSE.phuryn": "a2c922f9b81b4f40347ddfa79c38eda0f1278b5a6d108bd4099b4da254c774ee",
+    "LICENSE.upstream": "50b0c6ba431857b97b9d2dc347eb4421c349ade2a9fb5d79202f211c428588c9",
+    "PROVENANCE.json": "6f2467a1021cae5499e2b0b9e6dbe5d5fe5d5a54f32c594860320c9e9669c55a",
+    "skills/business-model-designer/SKILL.md": "9cfcface02a057fe941043b3a07a4359af75033ae241396ea6e659a0b62f432c",
+    "skills/business-model-designer/references/ASSEMBLY-WORKFLOW.md": "e622b7bcd310a313027994a6b387616a320f6e327b00c63200e2e98a9e4d5a11",
+    "skills/business-model-designer/references/strategy-stress-test.md": "7568ac8932caeb1b74e895d56dc163365221ec4c92427e63b24f353bdb662178",
+    "skills/financial-reporting/SKILL.md": "345d6f87ecc9bebd6cac92208c3db8c502cd5443e9a3452da98efd024b591447",
+    "skills/vendor-negotiation-prep/SKILL.md": "9ddba7d08636d0ae5f7bd3e111ff11e9e8078f456f6ab8ce2d41d84a308eae76"
+  }
+}

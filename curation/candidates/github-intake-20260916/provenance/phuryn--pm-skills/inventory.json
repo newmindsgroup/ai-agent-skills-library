@@ -1,0 +1,2010 @@
+{
+  "repository": "phuryn/pm-skills",
+  "commit": "8607e3b077817f89bf4a9b623246219734ac3be0",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "tree": {
+    "sha": "8607e3b077817f89bf4a9b623246219734ac3be0",
+    "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/8607e3b077817f89bf4a9b623246219734ac3be0",
+    "tree": [
+      {
+        "path": ".claude-plugin",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f4808141f276a220ca42841f324622fde7a01fef",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/f4808141f276a220ca42841f324622fde7a01fef"
+      },
+      {
+        "path": ".claude-plugin/marketplace.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e01328c308d16f44c3a4982fb53a2663e5c88ff8",
+        "size": 3194,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/e01328c308d16f44c3a4982fb53a2663e5c88ff8"
+      },
+      {
+        "path": ".docs",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "34be853687fec6818037696c58938481d7565deb",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/34be853687fec6818037696c58938481d7565deb"
+      },
+      {
+        "path": ".docs/images",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ce1a642cf425d4aa8ebf380ab1e91a26f9e4a36d",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/ce1a642cf425d4aa8ebf380ab1e91a26f9e4a36d"
+      },
+      {
+        "path": ".docs/images/add-marketplace.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dcedcffd46afa73f0d2e765a085905107433272e",
+        "size": 39640,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/dcedcffd46afa73f0d2e765a085905107433272e"
+      },
+      {
+        "path": ".docs/images/examples.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fe1e5542448cc1ebeab992a3bea6c69766b17349",
+        "size": 145664,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/fe1e5542448cc1ebeab992a3bea6c69766b17349"
+      },
+      {
+        "path": ".docs/images/plugins.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3de31105f4ac2f519c2437e617bf1d0658b1c6bd",
+        "size": 487774,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/3de31105f4ac2f519c2437e617bf1d0658b1c6bd"
+      },
+      {
+        "path": ".docs/images/pm-brain-pm-skills.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f7773c88085473ad211d5892ebbec05bf5f48940",
+        "size": 27914,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/f7773c88085473ad211d5892ebbec05bf5f48940"
+      },
+      {
+        "path": ".docs/images/pm-skills-install.gif",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f13ebbeb51ab7bdde7d02390a5a3d658ec7d2c77",
+        "size": 4958538,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/f13ebbeb51ab7bdde7d02390a5a3d658ec7d2c77"
+      },
+      {
+        "path": ".gitattributes",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a153f640c65aea2161317a40317ad91fdb23a89f",
+        "size": 98,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/a153f640c65aea2161317a40317ad91fdb23a89f"
+      },
+      {
+        "path": ".github",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "618598c9cec7fc48d5a5c7cce8086ceb6643d2ee",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/618598c9cec7fc48d5a5c7cce8086ceb6643d2ee"
+      },
+      {
+        "path": ".github/workflows",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2909c366cfa9b8a4a9e858ab201fe5988735e709",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/2909c366cfa9b8a4a9e858ab201fe5988735e709"
+      },
+      {
+        "path": ".github/workflows/tag-on-merge.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "da9e8aaa9cdd3f79ff9276cdb535e9020eb4ab99",
+        "size": 7136,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/da9e8aaa9cdd3f79ff9276cdb535e9020eb4ab99"
+      },
+      {
+        "path": ".github/workflows/tests.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "293b1adf7ecf82fee9e1984713fe784290a003fb",
+        "size": 570,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/293b1adf7ecf82fee9e1984713fe784290a003fb"
+      },
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a518e1444d647412b939131327f47f22e3b5e034",
+        "size": 125,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/a518e1444d647412b939131327f47f22e3b5e034"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a35a0e7b671822e539eefb97989b1a04998160d0",
+        "size": 326,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/a35a0e7b671822e539eefb97989b1a04998160d0"
+      },
+      {
+        "path": "CHANGELOG.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d11b7bfcc0c21a82cba280b1575f11892befe752",
+        "size": 3920,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/d11b7bfcc0c21a82cba280b1575f11892befe752"
+      },
+      {
+        "path": "CLAUDE.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2c4e8fef16b5762e24afa16e75b848e53993d3d7",
+        "size": 8112,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/2c4e8fef16b5762e24afa16e75b848e53993d3d7"
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4793259f599f29044f104fbc5a289376697b570e",
+        "size": 2212,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/4793259f599f29044f104fbc5a289376697b570e"
+      },
+      {
+        "path": "LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f6eca502b7f3fd6a3f0b024e4c98a3dcf5611cee",
+        "size": 1068,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/f6eca502b7f3fd6a3f0b024e4c98a3dcf5611cee"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8d105eb8142ecf231eeca584ab76120cbd7f8812",
+        "size": 27737,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/8d105eb8142ecf231eeca584ab76120cbd7f8812"
+      },
+      {
+        "path": "pm-ai-shipping",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "679ccfef6f4c8bb3725e602febd2f442211d736f",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/679ccfef6f4c8bb3725e602febd2f442211d736f"
+      },
+      {
+        "path": "pm-ai-shipping/.claude-plugin",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d5eef5204c1a7177992217f7bf1a56280aa2c1fb",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/d5eef5204c1a7177992217f7bf1a56280aa2c1fb"
+      },
+      {
+        "path": "pm-ai-shipping/.claude-plugin/plugin.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4da06eb634c91e2f3e489f05376a579b29131cd0",
+        "size": 676,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/4da06eb634c91e2f3e489f05376a579b29131cd0"
+      },
+      {
+        "path": "pm-ai-shipping/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "36d47cea4bd8b582b6a1ede7cf077a39747cd45d",
+        "size": 3322,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/36d47cea4bd8b582b6a1ede7cf077a39747cd45d"
+      },
+      {
+        "path": "pm-ai-shipping/commands",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "992d179c24990e9cc3badaadb60221bb88d6cf33",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/992d179c24990e9cc3badaadb60221bb88d6cf33"
+      },
+      {
+        "path": "pm-ai-shipping/commands/derive-tests.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "880c2d729051471c4f5c16b8e12c166d9a3066f1",
+        "size": 7715,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/880c2d729051471c4f5c16b8e12c166d9a3066f1"
+      },
+      {
+        "path": "pm-ai-shipping/commands/document-app.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ff43d02f756778c1f9c7da12a0cb2fec11950f32",
+        "size": 3571,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/ff43d02f756778c1f9c7da12a0cb2fec11950f32"
+      },
+      {
+        "path": "pm-ai-shipping/commands/performance-audit-static.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a2f837d0bbade824ec74a02b908236498b39d357",
+        "size": 5740,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/a2f837d0bbade824ec74a02b908236498b39d357"
+      },
+      {
+        "path": "pm-ai-shipping/commands/security-audit-static.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f8d354992c9317f97260c4f07cf6a11b987ece83",
+        "size": 11785,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/f8d354992c9317f97260c4f07cf6a11b987ece83"
+      },
+      {
+        "path": "pm-ai-shipping/commands/ship-check.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3784f6a18ada4c55f8464bfc4bfae34b7c9eb6cc",
+        "size": 8162,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/3784f6a18ada4c55f8464bfc4bfae34b7c9eb6cc"
+      },
+      {
+        "path": "pm-ai-shipping/skills",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2781433b72a1207bf113013c39fd922e98ff88ae",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/2781433b72a1207bf113013c39fd922e98ff88ae"
+      },
+      {
+        "path": "pm-ai-shipping/skills/code-review",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c4d99a84a9189e71148bc0e483285f93b4b2fcc5",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/c4d99a84a9189e71148bc0e483285f93b4b2fcc5"
+      },
+      {
+        "path": "pm-ai-shipping/skills/code-review/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ad70cb73cacc5e8727651d6920901cdf1a60ce2a",
+        "size": 14467,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/ad70cb73cacc5e8727651d6920901cdf1a60ce2a"
+      },
+      {
+        "path": "pm-ai-shipping/skills/code-review/references",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d594d0721ab819505559c7e6bb2ae74793fef23f",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/d594d0721ab819505559c7e6bb2ae74793fef23f"
+      },
+      {
+        "path": "pm-ai-shipping/skills/code-review/references/correctness-taxonomy.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0e5a3c1740868f581acdc45a2f8abdf4225e46e6",
+        "size": 8765,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/0e5a3c1740868f581acdc45a2f8abdf4225e46e6"
+      },
+      {
+        "path": "pm-ai-shipping/skills/code-review/references/performance-review.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dd6ef63b46d9aea41c34799b9c5a9a31a0ad970d",
+        "size": 3074,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/dd6ef63b46d9aea41c34799b9c5a9a31a0ad970d"
+      },
+      {
+        "path": "pm-ai-shipping/skills/code-review/references/security-review.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "06865268868581f56299eb73d4e1ddd257439b7f",
+        "size": 4278,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/06865268868581f56299eb73d4e1ddd257439b7f"
+      },
+      {
+        "path": "pm-ai-shipping/skills/intended-vs-implemented",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4f88c8077157caed22e4975585c53d31ae880a73",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/4f88c8077157caed22e4975585c53d31ae880a73"
+      },
+      {
+        "path": "pm-ai-shipping/skills/intended-vs-implemented/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fd52d028afd1de556725e74e5b78280d1a6f0fe6",
+        "size": 3815,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/fd52d028afd1de556725e74e5b78280d1a6f0fe6"
+      },
+      {
+        "path": "pm-ai-shipping/skills/shipping-artifacts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f15d47508052a6934143e5a6a3c3d6e168a23eb1",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/f15d47508052a6934143e5a6a3c3d6e168a23eb1"
+      },
+      {
+        "path": "pm-ai-shipping/skills/shipping-artifacts/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5586c9179f64610e676d28e125d63729f80f4799",
+        "size": 8836,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/5586c9179f64610e676d28e125d63729f80f4799"
+      },
+      {
+        "path": "pm-data-analytics",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5e350dda7cee44bd266f88eaf9e019b875ea45fe",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/5e350dda7cee44bd266f88eaf9e019b875ea45fe"
+      },
+      {
+        "path": "pm-data-analytics/.claude-plugin",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bb5ecc214b8b1661518f4a01c23d8d6461c05599",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/bb5ecc214b8b1661518f4a01c23d8d6461c05599"
+      },
+      {
+        "path": "pm-data-analytics/.claude-plugin/plugin.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8519279a67024abd7d37f1ef2882fd18e74b7555",
+        "size": 535,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/8519279a67024abd7d37f1ef2882fd18e74b7555"
+      },
+      {
+        "path": "pm-data-analytics/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "581e930a14982be3968ad2b1ed4f53bc1b680276",
+        "size": 1057,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/581e930a14982be3968ad2b1ed4f53bc1b680276"
+      },
+      {
+        "path": "pm-data-analytics/commands",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f7f99f3c7e657657c6c0f2e93043ef9777305327",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/f7f99f3c7e657657c6c0f2e93043ef9777305327"
+      },
+      {
+        "path": "pm-data-analytics/commands/analyze-cohorts.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "947417bd7d5138fd64d39bf58cd3610e526e52af",
+        "size": 3415,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/947417bd7d5138fd64d39bf58cd3610e526e52af"
+      },
+      {
+        "path": "pm-data-analytics/commands/analyze-test.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ed58ab5500bf75dd238ef6a41f8aa5209c85bf44",
+        "size": 3942,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/ed58ab5500bf75dd238ef6a41f8aa5209c85bf44"
+      },
+      {
+        "path": "pm-data-analytics/commands/write-query.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8bea78695d6d27082dd4f03f03a6a6473d3cda13",
+        "size": 2817,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/8bea78695d6d27082dd4f03f03a6a6473d3cda13"
+      },
+      {
+        "path": "pm-data-analytics/skills",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "9607e3520f7457331db61695cca1c6183c1fb4a0",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/9607e3520f7457331db61695cca1c6183c1fb4a0"
+      },
+      {
+        "path": "pm-data-analytics/skills/ab-test-analysis",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1f91cf05a785982eae7d0ff76978498125b28831",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/1f91cf05a785982eae7d0ff76978498125b28831"
+      },
+      {
+        "path": "pm-data-analytics/skills/ab-test-analysis/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "58c239714c0e20e19167fcde3d4cd3a608578754",
+        "size": 3587,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/58c239714c0e20e19167fcde3d4cd3a608578754"
+      },
+      {
+        "path": "pm-data-analytics/skills/cohort-analysis",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3592373b6ac6ffd3d0f2b6d8377eee4d44610735",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/3592373b6ac6ffd3d0f2b6d8377eee4d44610735"
+      },
+      {
+        "path": "pm-data-analytics/skills/cohort-analysis/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e2d7b0e9fb83e04d7ff584747efedd4d0701d6fd",
+        "size": 5026,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/e2d7b0e9fb83e04d7ff584747efedd4d0701d6fd"
+      },
+      {
+        "path": "pm-data-analytics/skills/sql-queries",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f1fefc80be136029a02e7bf0bae4ebab94bb79d0",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/f1fefc80be136029a02e7bf0bae4ebab94bb79d0"
+      },
+      {
+        "path": "pm-data-analytics/skills/sql-queries/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7780d95a33f2a493a4a8e66d6b523aa089ef97ed",
+        "size": 3628,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/7780d95a33f2a493a4a8e66d6b523aa089ef97ed"
+      },
+      {
+        "path": "pm-execution",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a596b768d6cfa5f2a9e8c9033c81c10fddf4a165",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/a596b768d6cfa5f2a9e8c9033c81c10fddf4a165"
+      },
+      {
+        "path": "pm-execution/.claude-plugin",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4f51762b7a1de3da5ba72d1d62ed7998352f045c",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/4f51762b7a1de3da5ba72d1d62ed7998352f045c"
+      },
+      {
+        "path": "pm-execution/.claude-plugin/plugin.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3ee9ec21eaf354a6a9699df39d7102198ef85333",
+        "size": 625,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/3ee9ec21eaf354a6a9699df39d7102198ef85333"
+      },
+      {
+        "path": "pm-execution/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a41eac208e531a4f7dd3068eef9335d2e1b807eb",
+        "size": 3964,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/a41eac208e531a4f7dd3068eef9335d2e1b807eb"
+      },
+      {
+        "path": "pm-execution/commands",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "cdcd87bea95e2c2b941ac66c5c8e1ddf76ca4e19",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/cdcd87bea95e2c2b941ac66c5c8e1ddf76ca4e19"
+      },
+      {
+        "path": "pm-execution/commands/generate-data.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b4811d6acafaf45655fc8fe4f22c58675fc6dc7e",
+        "size": 2810,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/b4811d6acafaf45655fc8fe4f22c58675fc6dc7e"
+      },
+      {
+        "path": "pm-execution/commands/meeting-notes.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "227ee464de3f8d35703cf0c95b887b1230321193",
+        "size": 2882,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/227ee464de3f8d35703cf0c95b887b1230321193"
+      },
+      {
+        "path": "pm-execution/commands/plan-okrs.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cdda1df84044b0b91fbafd3d7a0ddb74fe30f8fb",
+        "size": 3629,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/cdda1df84044b0b91fbafd3d7a0ddb74fe30f8fb"
+      },
+      {
+        "path": "pm-execution/commands/pre-mortem.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6b3da2a563115ed92a380fad67dbb47b7d8c97c4",
+        "size": 3733,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/6b3da2a563115ed92a380fad67dbb47b7d8c97c4"
+      },
+      {
+        "path": "pm-execution/commands/red-team-prd.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c631f9ed9ffa36008b8837aed06af3e0855368c3",
+        "size": 2748,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/c631f9ed9ffa36008b8837aed06af3e0855368c3"
+      },
+      {
+        "path": "pm-execution/commands/sprint.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5bf71c59da8512eb825bac149a047b45a6b74cf4",
+        "size": 5164,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/5bf71c59da8512eb825bac149a047b45a6b74cf4"
+      },
+      {
+        "path": "pm-execution/commands/stakeholder-map.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1ec5fd33f6694cf29fb8f272b7a3805bc66d9fb0",
+        "size": 3854,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/1ec5fd33f6694cf29fb8f272b7a3805bc66d9fb0"
+      },
+      {
+        "path": "pm-execution/commands/test-scenarios.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "12b82591c093d61ddf93547945dd541032c8200d",
+        "size": 2868,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/12b82591c093d61ddf93547945dd541032c8200d"
+      },
+      {
+        "path": "pm-execution/commands/transform-roadmap.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "03aaaa2ea64b3229f7637c28c7ea1a5b94b6a339",
+        "size": 3433,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/03aaaa2ea64b3229f7637c28c7ea1a5b94b6a339"
+      },
+      {
+        "path": "pm-execution/commands/write-prd.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "34f9da345667b33ed4eb45c11dd805218472f53f",
+        "size": 3971,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/34f9da345667b33ed4eb45c11dd805218472f53f"
+      },
+      {
+        "path": "pm-execution/commands/write-stories.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4be23d90b2265e97ef253b3131c3b61ad42c4b38",
+        "size": 3916,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/4be23d90b2265e97ef253b3131c3b61ad42c4b38"
+      },
+      {
+        "path": "pm-execution/skills",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "23694c603969eb054002ee7818bf3bf6d1d5aa0e",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/23694c603969eb054002ee7818bf3bf6d1d5aa0e"
+      },
+      {
+        "path": "pm-execution/skills/brainstorm-okrs",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1ec7d337b8b57316ffb94d528f78de2a03169f96",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/1ec7d337b8b57316ffb94d528f78de2a03169f96"
+      },
+      {
+        "path": "pm-execution/skills/brainstorm-okrs/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "74709d80c461458ff4dab3712586f90ee5ec8cc1",
+        "size": 4341,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/74709d80c461458ff4dab3712586f90ee5ec8cc1"
+      },
+      {
+        "path": "pm-execution/skills/create-prd",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f82b9de5b5c5919fab588aae145c2b3ea0fa700c",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/f82b9de5b5c5919fab588aae145c2b3ea0fa700c"
+      },
+      {
+        "path": "pm-execution/skills/create-prd/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "68c8b26690db8e826782f3029c24b88340ec570e",
+        "size": 3551,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/68c8b26690db8e826782f3029c24b88340ec570e"
+      },
+      {
+        "path": "pm-execution/skills/dummy-dataset",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ceac642215f5114780993d051c79e9b8a900576d",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/ceac642215f5114780993d051c79e9b8a900576d"
+      },
+      {
+        "path": "pm-execution/skills/dummy-dataset/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f324581b591b02762b52d9b9c66df7f4839f9b2c",
+        "size": 3930,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/f324581b591b02762b52d9b9c66df7f4839f9b2c"
+      },
+      {
+        "path": "pm-execution/skills/job-stories",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bd192fa658078713badabecfbc60524f6547bd2b",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/bd192fa658078713badabecfbc60524f6547bd2b"
+      },
+      {
+        "path": "pm-execution/skills/job-stories/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "767c3f7978ce2fd1c69b566ec665bf9d7ca0235c",
+        "size": 2969,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/767c3f7978ce2fd1c69b566ec665bf9d7ca0235c"
+      },
+      {
+        "path": "pm-execution/skills/outcome-roadmap",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7f0c3b92c255cc91d53a0ac602767b13b42c1089",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/7f0c3b92c255cc91d53a0ac602767b13b42c1089"
+      },
+      {
+        "path": "pm-execution/skills/outcome-roadmap/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c51cfa226a50ab9f14367adc4c54af14b2562da9",
+        "size": 3601,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/c51cfa226a50ab9f14367adc4c54af14b2562da9"
+      },
+      {
+        "path": "pm-execution/skills/pre-mortem",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1b5cb59a2f7fd53c38add90febd6ab9bfbaa9814",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/1b5cb59a2f7fd53c38add90febd6ab9bfbaa9814"
+      },
+      {
+        "path": "pm-execution/skills/pre-mortem/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3a22d36b4dfac5685ccbc73486686ea6e7df6452",
+        "size": 4082,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/3a22d36b4dfac5685ccbc73486686ea6e7df6452"
+      },
+      {
+        "path": "pm-execution/skills/prioritization-frameworks",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2ed51156a75ced537f4029e8374cb582115c85e8",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/2ed51156a75ced537f4029e8374cb582115c85e8"
+      },
+      {
+        "path": "pm-execution/skills/prioritization-frameworks/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "de34f2b4ba2ea114e6848e2f8a5c031d09601b47",
+        "size": 4235,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/de34f2b4ba2ea114e6848e2f8a5c031d09601b47"
+      },
+      {
+        "path": "pm-execution/skills/release-notes",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1af884c5d1fd997c698182ef54279ca69912cd50",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/1af884c5d1fd997c698182ef54279ca69912cd50"
+      },
+      {
+        "path": "pm-execution/skills/release-notes/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "148bf1cb176851d13531a54facc207824b22f493",
+        "size": 2569,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/148bf1cb176851d13531a54facc207824b22f493"
+      },
+      {
+        "path": "pm-execution/skills/retro",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c8e73385a0a1e20c7bf0aa0b8a12279390d5f887",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/c8e73385a0a1e20c7bf0aa0b8a12279390d5f887"
+      },
+      {
+        "path": "pm-execution/skills/retro/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f90eeb5f1121ca6ed4cf5780e09060d1cb983210",
+        "size": 2809,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/f90eeb5f1121ca6ed4cf5780e09060d1cb983210"
+      },
+      {
+        "path": "pm-execution/skills/sprint-plan",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e8332f7734c5b43d6e32ace1b3008e6344da73cc",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/e8332f7734c5b43d6e32ace1b3008e6344da73cc"
+      },
+      {
+        "path": "pm-execution/skills/sprint-plan/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "05c49f8c1806e95c3681536cd0e48ca3f2c4d07c",
+        "size": 2365,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/05c49f8c1806e95c3681536cd0e48ca3f2c4d07c"
+      },
+      {
+        "path": "pm-execution/skills/stakeholder-map",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "04ff4755f5ac500040102cfb3699f3e553153495",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/04ff4755f5ac500040102cfb3699f3e553153495"
+      },
+      {
+        "path": "pm-execution/skills/stakeholder-map/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "08e5ad24a830a8faef9942a6fd9acdd274261835",
+        "size": 2510,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/08e5ad24a830a8faef9942a6fd9acdd274261835"
+      },
+      {
+        "path": "pm-execution/skills/strategy-red-team",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a98019f3b56d1227bb8f5415b3b5cd55c9f2dd53",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/a98019f3b56d1227bb8f5415b3b5cd55c9f2dd53"
+      },
+      {
+        "path": "pm-execution/skills/strategy-red-team/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fe7b7feaaa7a7662d72aac226d40d3abea7e0596",
+        "size": 4515,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/fe7b7feaaa7a7662d72aac226d40d3abea7e0596"
+      },
+      {
+        "path": "pm-execution/skills/summarize-meeting",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "0cee0b6ffb5c8db81061a0e30fb172d220c2bd4d",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/0cee0b6ffb5c8db81061a0e30fb172d220c2bd4d"
+      },
+      {
+        "path": "pm-execution/skills/summarize-meeting/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a103503d8002be02efaff273dcad1777b55f3fd7",
+        "size": 2997,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/a103503d8002be02efaff273dcad1777b55f3fd7"
+      },
+      {
+        "path": "pm-execution/skills/test-scenarios",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2bc166c85ef16e57ab550431551d2bb3aa7be0b7",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/2bc166c85ef16e57ab550431551d2bb3aa7be0b7"
+      },
+      {
+        "path": "pm-execution/skills/test-scenarios/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d5a25a7185d1681f97c1506d2ff1ccc083a7ce95",
+        "size": 3472,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/d5a25a7185d1681f97c1506d2ff1ccc083a7ce95"
+      },
+      {
+        "path": "pm-execution/skills/user-stories",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "75579bd44b4a9e0aefe2e4d9387093ca601be01b",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/75579bd44b4a9e0aefe2e4d9387093ca601be01b"
+      },
+      {
+        "path": "pm-execution/skills/user-stories/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "325d74bbe166460bab9f5e5dbfb01f200649a409",
+        "size": 2991,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/325d74bbe166460bab9f5e5dbfb01f200649a409"
+      },
+      {
+        "path": "pm-execution/skills/wwas",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5c42edd41a39fe8bd21a75e9976c81e1f3e17ea7",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/5c42edd41a39fe8bd21a75e9976c81e1f3e17ea7"
+      },
+      {
+        "path": "pm-execution/skills/wwas/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "75ebf6bc77f4fff3d26b4b5352f58015c2d5e762",
+        "size": 3086,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/75ebf6bc77f4fff3d26b4b5352f58015c2d5e762"
+      },
+      {
+        "path": "pm-go-to-market",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "085dbaff7b84566a4ec67c5266391f96ad4bdac8",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/085dbaff7b84566a4ec67c5266391f96ad4bdac8"
+      },
+      {
+        "path": "pm-go-to-market/.claude-plugin",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6382d16443f59a20fb3366e14e87409cda280963",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/6382d16443f59a20fb3366e14e87409cda280963"
+      },
+      {
+        "path": "pm-go-to-market/.claude-plugin/plugin.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e1cb54004fccaecf35fa063746abed3b0e942cb9",
+        "size": 512,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/e1cb54004fccaecf35fa063746abed3b0e942cb9"
+      },
+      {
+        "path": "pm-go-to-market/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "51d09a71c01dce8e13cd92bffb48e2e420eac2c3",
+        "size": 1391,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/51d09a71c01dce8e13cd92bffb48e2e420eac2c3"
+      },
+      {
+        "path": "pm-go-to-market/commands",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2ca98ff46eb70e1bd1b4842c84e14f6c0d57d06c",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/2ca98ff46eb70e1bd1b4842c84e14f6c0d57d06c"
+      },
+      {
+        "path": "pm-go-to-market/commands/battlecard.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b0ab575c530dce7d823199bc0795010091c6e2c9",
+        "size": 3797,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/b0ab575c530dce7d823199bc0795010091c6e2c9"
+      },
+      {
+        "path": "pm-go-to-market/commands/growth-strategy.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b93177ace3dc8d891031beef14dc8da6824fea09",
+        "size": 4110,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/b93177ace3dc8d891031beef14dc8da6824fea09"
+      },
+      {
+        "path": "pm-go-to-market/commands/plan-launch.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "946b80f566390a8920bc6def1b15057025dd15e0",
+        "size": 4542,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/946b80f566390a8920bc6def1b15057025dd15e0"
+      },
+      {
+        "path": "pm-go-to-market/skills",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "cd2ef44e8e7b845f5bc89585e1fabc2a1cdc0b0f",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/cd2ef44e8e7b845f5bc89585e1fabc2a1cdc0b0f"
+      },
+      {
+        "path": "pm-go-to-market/skills/beachhead-segment",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "944b1b038456a5722c43a268763d87b7d7786f5e",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/944b1b038456a5722c43a268763d87b7d7786f5e"
+      },
+      {
+        "path": "pm-go-to-market/skills/beachhead-segment/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f9062151ea756462de19109d5268a65e046c0fcc",
+        "size": 5876,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/f9062151ea756462de19109d5268a65e046c0fcc"
+      },
+      {
+        "path": "pm-go-to-market/skills/competitive-battlecard",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "0c49f81b7393608203c5b607242da578f6884fdc",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/0c49f81b7393608203c5b607242da578f6884fdc"
+      },
+      {
+        "path": "pm-go-to-market/skills/competitive-battlecard/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cc0d13b0401d26b24db6647ecd4e35829d6769ef",
+        "size": 2886,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/cc0d13b0401d26b24db6647ecd4e35829d6769ef"
+      },
+      {
+        "path": "pm-go-to-market/skills/growth-loops",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "431ad612144778d542c95028b078e161b340682a",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/431ad612144778d542c95028b078e161b340682a"
+      },
+      {
+        "path": "pm-go-to-market/skills/growth-loops/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f6ff788a378318d6138ccf865f69882f525e3ae9",
+        "size": 5788,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/f6ff788a378318d6138ccf865f69882f525e3ae9"
+      },
+      {
+        "path": "pm-go-to-market/skills/gtm-motions",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "716375ceefef552f7f8987dbc5c5b5ea6fc6df6f",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/716375ceefef552f7f8987dbc5c5b5ea6fc6df6f"
+      },
+      {
+        "path": "pm-go-to-market/skills/gtm-motions/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ad4dcdc24141925d2a668376076201be1af3bb3a",
+        "size": 7556,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/ad4dcdc24141925d2a668376076201be1af3bb3a"
+      },
+      {
+        "path": "pm-go-to-market/skills/gtm-strategy",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f0598ffb6219b241d3417b4d2a4d97df4775b456",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/f0598ffb6219b241d3417b4d2a4d97df4775b456"
+      },
+      {
+        "path": "pm-go-to-market/skills/gtm-strategy/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5992ae5fd38c05665ddbcaf17250980a0eda6517",
+        "size": 4047,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/5992ae5fd38c05665ddbcaf17250980a0eda6517"
+      },
+      {
+        "path": "pm-go-to-market/skills/ideal-customer-profile",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e30478f8f4b17c24a55b4ab1a42005be9b143433",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/e30478f8f4b17c24a55b4ab1a42005be9b143433"
+      },
+      {
+        "path": "pm-go-to-market/skills/ideal-customer-profile/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b07c067e84307a14b66f37e0a4633172cdb47ed9",
+        "size": 6002,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/b07c067e84307a14b66f37e0a4633172cdb47ed9"
+      },
+      {
+        "path": "pm-market-research",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4a0190882dacaf27a4b5fc5172bd27f91589ba3b",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/4a0190882dacaf27a4b5fc5172bd27f91589ba3b"
+      },
+      {
+        "path": "pm-market-research/.claude-plugin",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1b2654fd430f8243ca235c351b176bbbb8e68665",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/1b2654fd430f8243ca235c351b176bbbb8e68665"
+      },
+      {
+        "path": "pm-market-research/.claude-plugin/plugin.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a753a6a58b3557def0f60f7a67062d0fe02f2494",
+        "size": 574,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/a753a6a58b3557def0f60f7a67062d0fe02f2494"
+      },
+      {
+        "path": "pm-market-research/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "91f45b2ef2d27a49bfd5d2345427d42db9c3f2e9",
+        "size": 1559,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/91f45b2ef2d27a49bfd5d2345427d42db9c3f2e9"
+      },
+      {
+        "path": "pm-market-research/commands",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7d21644a73432d9a2e8cf577268ca50497f1cdcb",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/7d21644a73432d9a2e8cf577268ca50497f1cdcb"
+      },
+      {
+        "path": "pm-market-research/commands/analyze-feedback.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fdb5599dc14898a25ede07ae845b702689a8e024",
+        "size": 3640,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/fdb5599dc14898a25ede07ae845b702689a8e024"
+      },
+      {
+        "path": "pm-market-research/commands/competitive-analysis.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "558aabd9a3bf257c331dc91a2d98757147847480",
+        "size": 3537,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/558aabd9a3bf257c331dc91a2d98757147847480"
+      },
+      {
+        "path": "pm-market-research/commands/research-users.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6900329caef79c5019cf9c27113e2e0ae2b42b1c",
+        "size": 4282,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/6900329caef79c5019cf9c27113e2e0ae2b42b1c"
+      },
+      {
+        "path": "pm-market-research/skills",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "614448d3b5a09f4757d9c999534af826130adff8",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/614448d3b5a09f4757d9c999534af826130adff8"
+      },
+      {
+        "path": "pm-market-research/skills/competitor-analysis",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "642caf62446d246069018d255c729361bc8f7d79",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/642caf62446d246069018d255c729361bc8f7d79"
+      },
+      {
+        "path": "pm-market-research/skills/competitor-analysis/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b9cafee194fc0e7560781d4538e05081c112282c",
+        "size": 4814,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/b9cafee194fc0e7560781d4538e05081c112282c"
+      },
+      {
+        "path": "pm-market-research/skills/customer-journey-map",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "0bb72ea1b4d595e03475711e21884610d049189b",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/0bb72ea1b4d595e03475711e21884610d049189b"
+      },
+      {
+        "path": "pm-market-research/skills/customer-journey-map/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6df20664f09803b20bef6c28ccb1eb435d7fae7f",
+        "size": 3268,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/6df20664f09803b20bef6c28ccb1eb435d7fae7f"
+      },
+      {
+        "path": "pm-market-research/skills/market-segments",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4eccef64e6ac95817c18e7d78b77ee8b23be82cd",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/4eccef64e6ac95817c18e7d78b77ee8b23be82cd"
+      },
+      {
+        "path": "pm-market-research/skills/market-segments/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9393012c8a4487e8e13fc037284d209bdfc34fbb",
+        "size": 3623,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/9393012c8a4487e8e13fc037284d209bdfc34fbb"
+      },
+      {
+        "path": "pm-market-research/skills/market-sizing",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8077fd4aa75eb17431d54e2c52fd756ec8deed4c",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/8077fd4aa75eb17431d54e2c52fd756ec8deed4c"
+      },
+      {
+        "path": "pm-market-research/skills/market-sizing/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "58cc6c2de00e10cbdc94d976448812a7c6a79feb",
+        "size": 4424,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/58cc6c2de00e10cbdc94d976448812a7c6a79feb"
+      },
+      {
+        "path": "pm-market-research/skills/sentiment-analysis",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7ed1b795d7cde38c0907e24a6f0bc7d44257098a",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/7ed1b795d7cde38c0907e24a6f0bc7d44257098a"
+      },
+      {
+        "path": "pm-market-research/skills/sentiment-analysis/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9368b74ce9d15cb865a704dab3d8d22bca65483d",
+        "size": 3500,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/9368b74ce9d15cb865a704dab3d8d22bca65483d"
+      },
+      {
+        "path": "pm-market-research/skills/user-personas",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "58bbb0463cd8360fbda860d388146a4cfb6b4b4c",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/58bbb0463cd8360fbda860d388146a4cfb6b4b4c"
+      },
+      {
+        "path": "pm-market-research/skills/user-personas/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dd486a376020209c3ef62f2e19224e982b731dab",
+        "size": 3047,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/dd486a376020209c3ef62f2e19224e982b731dab"
+      },
+      {
+        "path": "pm-market-research/skills/user-segmentation",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "0c721989374c5a8618e59ff9abea6c582025537f",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/0c721989374c5a8618e59ff9abea6c582025537f"
+      },
+      {
+        "path": "pm-market-research/skills/user-segmentation/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cf94ddde154142740113c60b2e559e5a8cc7c68a",
+        "size": 4102,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/cf94ddde154142740113c60b2e559e5a8cc7c68a"
+      },
+      {
+        "path": "pm-marketing-growth",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "9ce5eae867c7b1fee889dbae83c6bb7d5a819c44",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/9ce5eae867c7b1fee889dbae83c6bb7d5a819c44"
+      },
+      {
+        "path": "pm-marketing-growth/.claude-plugin",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b20f8dc3321ed93246d700512d7105c30286dc94",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/b20f8dc3321ed93246d700512d7105c30286dc94"
+      },
+      {
+        "path": "pm-marketing-growth/.claude-plugin/plugin.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3c1cd3973ee2beb87b5db69d43fe26393bd33e9f",
+        "size": 542,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/3c1cd3973ee2beb87b5db69d43fe26393bd33e9f"
+      },
+      {
+        "path": "pm-marketing-growth/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fd9011ef103e84fffc423531949f58c308069ff6",
+        "size": 1206,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/fd9011ef103e84fffc423531949f58c308069ff6"
+      },
+      {
+        "path": "pm-marketing-growth/commands",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "25f68b40e09d3c732ef0454451d9d0a8d3f4e75a",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/25f68b40e09d3c732ef0454451d9d0a8d3f4e75a"
+      },
+      {
+        "path": "pm-marketing-growth/commands/market-product.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6970d005d1ae9afcde41f96381af0714d2394169",
+        "size": 3459,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/6970d005d1ae9afcde41f96381af0714d2394169"
+      },
+      {
+        "path": "pm-marketing-growth/commands/north-star.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8bf5ef0abf6b8dca99a39ef37b2fa45cf48bd707",
+        "size": 4017,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/8bf5ef0abf6b8dca99a39ef37b2fa45cf48bd707"
+      },
+      {
+        "path": "pm-marketing-growth/skills",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "cae624b1bc16ef47fe078c8ed2fe5bb8f8b58fe0",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/cae624b1bc16ef47fe078c8ed2fe5bb8f8b58fe0"
+      },
+      {
+        "path": "pm-marketing-growth/skills/marketing-ideas",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b193b9b14112f3135d8c4cff5233ca72caa38906",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/b193b9b14112f3135d8c4cff5233ca72caa38906"
+      },
+      {
+        "path": "pm-marketing-growth/skills/marketing-ideas/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "026abcfa1206ba0d5cfcbf738798ccce96c93480",
+        "size": 2178,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/026abcfa1206ba0d5cfcbf738798ccce96c93480"
+      },
+      {
+        "path": "pm-marketing-growth/skills/north-star-metric",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4fdb048371a45b53ebdfed25eedaf8d061848eae",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/4fdb048371a45b53ebdfed25eedaf8d061848eae"
+      },
+      {
+        "path": "pm-marketing-growth/skills/north-star-metric/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e7cf1cc8aa0d49f1718f81dac357fcad2556a8d5",
+        "size": 4152,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/e7cf1cc8aa0d49f1718f81dac357fcad2556a8d5"
+      },
+      {
+        "path": "pm-marketing-growth/skills/positioning-ideas",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1987e6172ba46346b05762b0600adfc50891b6b5",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/1987e6172ba46346b05762b0600adfc50891b6b5"
+      },
+      {
+        "path": "pm-marketing-growth/skills/positioning-ideas/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d3f225a0c8b1f5a99cb5ba2b93f7804ab810127d",
+        "size": 3002,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/d3f225a0c8b1f5a99cb5ba2b93f7804ab810127d"
+      },
+      {
+        "path": "pm-marketing-growth/skills/product-name",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8256ccfd21f516f21457391d52c9d4177f90741b",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/8256ccfd21f516f21457391d52c9d4177f90741b"
+      },
+      {
+        "path": "pm-marketing-growth/skills/product-name/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2fff74a3dbbd08309714b53639a8f9906b820275",
+        "size": 2196,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/2fff74a3dbbd08309714b53639a8f9906b820275"
+      },
+      {
+        "path": "pm-marketing-growth/skills/value-prop-statements",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e0d7deae792d7645b217f172f36727d43889e456",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/e0d7deae792d7645b217f172f36727d43889e456"
+      },
+      {
+        "path": "pm-marketing-growth/skills/value-prop-statements/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7f3eae0e8c12712d8470e51b89d6e5e026b4c41a",
+        "size": 3032,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/7f3eae0e8c12712d8470e51b89d6e5e026b4c41a"
+      },
+      {
+        "path": "pm-product-discovery",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bc45852f09719e47470f4b6c079236afa96b9f95",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/bc45852f09719e47470f4b6c079236afa96b9f95"
+      },
+      {
+        "path": "pm-product-discovery/.claude-plugin",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "06dc7a6aacf6630fbf0fb25de6fb13547a725e43",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/06dc7a6aacf6630fbf0fb25de6fb13547a725e43"
+      },
+      {
+        "path": "pm-product-discovery/.claude-plugin/plugin.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6876cc0b5267f3394f2725f1c7673595a711a812",
+        "size": 528,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/6876cc0b5267f3394f2725f1c7673595a711a812"
+      },
+      {
+        "path": "pm-product-discovery/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cb36a5f39bfbb93f26c0bc75069c0c42869ca712",
+        "size": 2822,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/cb36a5f39bfbb93f26c0bc75069c0c42869ca712"
+      },
+      {
+        "path": "pm-product-discovery/commands",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b37d41343d4335e817b5e42eae82549e39436a0e",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/b37d41343d4335e817b5e42eae82549e39436a0e"
+      },
+      {
+        "path": "pm-product-discovery/commands/brainstorm.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8f6eabd9c5a0c059b635a50a87c2b2e5a293029f",
+        "size": 4971,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/8f6eabd9c5a0c059b635a50a87c2b2e5a293029f"
+      },
+      {
+        "path": "pm-product-discovery/commands/discover.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c7867a64ffb7d989be069e9f8a01baf4abcff72f",
+        "size": 4921,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/c7867a64ffb7d989be069e9f8a01baf4abcff72f"
+      },
+      {
+        "path": "pm-product-discovery/commands/interview.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a8e228e3c43de5c26dc9930868efe8c1736cba74",
+        "size": 5301,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/a8e228e3c43de5c26dc9930868efe8c1736cba74"
+      },
+      {
+        "path": "pm-product-discovery/commands/setup-metrics.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c349162c78f0304516802d8c8d6e49500d9f0349",
+        "size": 4448,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/c349162c78f0304516802d8c8d6e49500d9f0349"
+      },
+      {
+        "path": "pm-product-discovery/commands/triage-requests.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d406a8df40d1cd2087312512bea481d3b2524bd1",
+        "size": 4483,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/d406a8df40d1cd2087312512bea481d3b2524bd1"
+      },
+      {
+        "path": "pm-product-discovery/skills",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6e93916a16c75697cb6ddd1d4eda13da1517b331",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/6e93916a16c75697cb6ddd1d4eda13da1517b331"
+      },
+      {
+        "path": "pm-product-discovery/skills/analyze-feature-requests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5aa15aecfaf0cc7eced687c356d6969637955a78",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/5aa15aecfaf0cc7eced687c356d6969637955a78"
+      },
+      {
+        "path": "pm-product-discovery/skills/analyze-feature-requests/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "755b5cae934fb0fb8c334fdef10bbb358ed1492d",
+        "size": 2274,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/755b5cae934fb0fb8c334fdef10bbb358ed1492d"
+      },
+      {
+        "path": "pm-product-discovery/skills/brainstorm-experiments-existing",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "da0cc60ce6f0a36ec54fca84e4e9998a3c118e26",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/da0cc60ce6f0a36ec54fca84e4e9998a3c118e26"
+      },
+      {
+        "path": "pm-product-discovery/skills/brainstorm-experiments-existing/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cf151f5c2a8761dfc4bdf5a8c5b326775689437a",
+        "size": 2408,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/cf151f5c2a8761dfc4bdf5a8c5b326775689437a"
+      },
+      {
+        "path": "pm-product-discovery/skills/brainstorm-experiments-new",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ad413d46f4e6aaa48ba51633358495d3f7ca602b",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/ad413d46f4e6aaa48ba51633358495d3f7ca602b"
+      },
+      {
+        "path": "pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8c946a51839c85b7ffb666c268ca4b06513166ed",
+        "size": 2538,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/8c946a51839c85b7ffb666c268ca4b06513166ed"
+      },
+      {
+        "path": "pm-product-discovery/skills/brainstorm-ideas-existing",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "86e72873831091ca89447290d918616394670c33",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/86e72873831091ca89447290d918616394670c33"
+      },
+      {
+        "path": "pm-product-discovery/skills/brainstorm-ideas-existing/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2228dd7097debad34abd05874d8c709fdac68d54",
+        "size": 2951,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/2228dd7097debad34abd05874d8c709fdac68d54"
+      },
+      {
+        "path": "pm-product-discovery/skills/brainstorm-ideas-new",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6c86e89e55debbc9a121fe5120e031e8d13da275",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/6c86e89e55debbc9a121fe5120e031e8d13da275"
+      },
+      {
+        "path": "pm-product-discovery/skills/brainstorm-ideas-new/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "449ef41b53a1218261fb192053c56b233a28e1db",
+        "size": 2437,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/449ef41b53a1218261fb192053c56b233a28e1db"
+      },
+      {
+        "path": "pm-product-discovery/skills/identify-assumptions-existing",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1e4cb40e331006a7ec677840fc97d0a27fe78d5b",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/1e4cb40e331006a7ec677840fc97d0a27fe78d5b"
+      },
+      {
+        "path": "pm-product-discovery/skills/identify-assumptions-existing/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "66da6c92e1a0722791882f325734d1de3d98e5b2",
+        "size": 2102,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/66da6c92e1a0722791882f325734d1de3d98e5b2"
+      },
+      {
+        "path": "pm-product-discovery/skills/identify-assumptions-new",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "309cddbc4aa258d1be8065947c90906abb98fe87",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/309cddbc4aa258d1be8065947c90906abb98fe87"
+      },
+      {
+        "path": "pm-product-discovery/skills/identify-assumptions-new/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3ddc8bc514b2a05cf5f0914635f144940797f5ac",
+        "size": 3227,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/3ddc8bc514b2a05cf5f0914635f144940797f5ac"
+      },
+      {
+        "path": "pm-product-discovery/skills/interview-script",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "baefcb1232dff679b3218ac2030a68c961aa1c93",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/baefcb1232dff679b3218ac2030a68c961aa1c93"
+      },
+      {
+        "path": "pm-product-discovery/skills/interview-script/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7ec574e0d107507cb6c1926d2620e2ac822c00b6",
+        "size": 4817,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/7ec574e0d107507cb6c1926d2620e2ac822c00b6"
+      },
+      {
+        "path": "pm-product-discovery/skills/metrics-dashboard",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "77b4aa48a0efa407f777c7dd759743c865e135ad",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/77b4aa48a0efa407f777c7dd759743c865e135ad"
+      },
+      {
+        "path": "pm-product-discovery/skills/metrics-dashboard/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "636990e363dfdf6204a17ef1325b488d724fcdcc",
+        "size": 5754,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/636990e363dfdf6204a17ef1325b488d724fcdcc"
+      },
+      {
+        "path": "pm-product-discovery/skills/opportunity-solution-tree",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3f3ea6e00d19547e45db8ad4606389d2a140dc15",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/3f3ea6e00d19547e45db8ad4606389d2a140dc15"
+      },
+      {
+        "path": "pm-product-discovery/skills/opportunity-solution-tree/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d62668118be00de5626e08488673ec22e7f83491",
+        "size": 4281,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/d62668118be00de5626e08488673ec22e7f83491"
+      },
+      {
+        "path": "pm-product-discovery/skills/prioritize-assumptions",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5426256959adc3dd4c64812140f8cbd3747d630b",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/5426256959adc3dd4c64812140f8cbd3747d630b"
+      },
+      {
+        "path": "pm-product-discovery/skills/prioritize-assumptions/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bf7ed8a8ba9522cba14a7d5d0080fcfb69282e6b",
+        "size": 2311,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/bf7ed8a8ba9522cba14a7d5d0080fcfb69282e6b"
+      },
+      {
+        "path": "pm-product-discovery/skills/prioritize-features",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "509fe2f036f6351d8880eebe8ca1028bfdd38cf9",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/509fe2f036f6351d8880eebe8ca1028bfdd38cf9"
+      },
+      {
+        "path": "pm-product-discovery/skills/prioritize-features/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e58190d88a63f2f429ad04743dc6427751476ba7",
+        "size": 2497,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/e58190d88a63f2f429ad04743dc6427751476ba7"
+      },
+      {
+        "path": "pm-product-discovery/skills/summarize-interview",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "89059fa57cdb8db1774bf479d8659cd7e66fcf27",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/89059fa57cdb8db1774bf479d8659cd7e66fcf27"
+      },
+      {
+        "path": "pm-product-discovery/skills/summarize-interview/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b4fee4359979f565a785f9ee704ab6d9ee48d54a",
+        "size": 2036,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/b4fee4359979f565a785f9ee704ab6d9ee48d54a"
+      },
+      {
+        "path": "pm-product-strategy",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "73fcf94ce1a7a295737125eb68682bbd92043c58",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/73fcf94ce1a7a295737125eb68682bbd92043c58"
+      },
+      {
+        "path": "pm-product-strategy/.claude-plugin",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1f98ed72528ad8a0acd3e1c8430770c7540d9c60",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/1f98ed72528ad8a0acd3e1c8430770c7540d9c60"
+      },
+      {
+        "path": "pm-product-strategy/.claude-plugin/plugin.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1f290ed1e31e7f83eff4249e71090c15a4fb5b92",
+        "size": 596,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/1f290ed1e31e7f83eff4249e71090c15a4fb5b92"
+      },
+      {
+        "path": "pm-product-strategy/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "25d0287d8ebc7f14793215b89f5f0721e0115e65",
+        "size": 3133,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/25d0287d8ebc7f14793215b89f5f0721e0115e65"
+      },
+      {
+        "path": "pm-product-strategy/commands",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5dfbfd88e426cc62e34c795da75fec0e864a41c2",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/5dfbfd88e426cc62e34c795da75fec0e864a41c2"
+      },
+      {
+        "path": "pm-product-strategy/commands/business-model.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5bf191b13f03ed618abc9253f5e58817689a2f06",
+        "size": 6001,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/5bf191b13f03ed618abc9253f5e58817689a2f06"
+      },
+      {
+        "path": "pm-product-strategy/commands/market-scan.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7bd60b9bcc35a124b96f9ce900093877eb7614c8",
+        "size": 4583,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/7bd60b9bcc35a124b96f9ce900093877eb7614c8"
+      },
+      {
+        "path": "pm-product-strategy/commands/pricing.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "67a6a1de2c13cfc636cb358a810611fd8b3cb4ab",
+        "size": 4577,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/67a6a1de2c13cfc636cb358a810611fd8b3cb4ab"
+      },
+      {
+        "path": "pm-product-strategy/commands/strategy.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eb7588eee7ba6b525717c7a5c33c7664cab8bf02",
+        "size": 4214,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/eb7588eee7ba6b525717c7a5c33c7664cab8bf02"
+      },
+      {
+        "path": "pm-product-strategy/commands/value-proposition.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "075c0eff81bf16aeac062d4cc58a604e72259fed",
+        "size": 2836,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/075c0eff81bf16aeac062d4cc58a604e72259fed"
+      },
+      {
+        "path": "pm-product-strategy/skills",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "28c6be1de47174a7a928ea74b8c004a3ddb8c455",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/28c6be1de47174a7a928ea74b8c004a3ddb8c455"
+      },
+      {
+        "path": "pm-product-strategy/skills/ansoff-matrix",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6376e0a07bed8c41e4711a8a86f2cfda3b19b10b",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/6376e0a07bed8c41e4711a8a86f2cfda3b19b10b"
+      },
+      {
+        "path": "pm-product-strategy/skills/ansoff-matrix/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "19eba3cf58ea03a181c00c7de1bc093f0526f333",
+        "size": 5684,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/19eba3cf58ea03a181c00c7de1bc093f0526f333"
+      },
+      {
+        "path": "pm-product-strategy/skills/business-model",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "cdbae9e554eaf5efb8379c3dcd4d9a01a66f3d73",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/cdbae9e554eaf5efb8379c3dcd4d9a01a66f3d73"
+      },
+      {
+        "path": "pm-product-strategy/skills/business-model/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "237f1f290ee32464fb7c79bde4583fd9465738fa",
+        "size": 5784,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/237f1f290ee32464fb7c79bde4583fd9465738fa"
+      },
+      {
+        "path": "pm-product-strategy/skills/lean-canvas",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "9c39ffdf212c4dc4474a03d9e5999f55c8d1d4f1",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/9c39ffdf212c4dc4474a03d9e5999f55c8d1d4f1"
+      },
+      {
+        "path": "pm-product-strategy/skills/lean-canvas/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "482791e799d425c3ffb8581c7bd24cb5397b40da",
+        "size": 4860,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/482791e799d425c3ffb8581c7bd24cb5397b40da"
+      },
+      {
+        "path": "pm-product-strategy/skills/monetization-strategy",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "cab0f597bbb96d6b6bd740dca1bd25a561382d9d",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/cab0f597bbb96d6b6bd740dca1bd25a561382d9d"
+      },
+      {
+        "path": "pm-product-strategy/skills/monetization-strategy/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4a2c486c1305dac79f24e60f7462cc94798b6683",
+        "size": 6660,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/4a2c486c1305dac79f24e60f7462cc94798b6683"
+      },
+      {
+        "path": "pm-product-strategy/skills/pestle-analysis",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f8853efdf889619904ab19665c72dec5e06fec12",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/f8853efdf889619904ab19665c72dec5e06fec12"
+      },
+      {
+        "path": "pm-product-strategy/skills/pestle-analysis/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bf2636f5cd9af3dd29ee54b8f3bd721444eda556",
+        "size": 4647,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/bf2636f5cd9af3dd29ee54b8f3bd721444eda556"
+      },
+      {
+        "path": "pm-product-strategy/skills/porters-five-forces",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3fb4511ac0aaa4961dff2c42daffa476a1a1e79b",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/3fb4511ac0aaa4961dff2c42daffa476a1a1e79b"
+      },
+      {
+        "path": "pm-product-strategy/skills/porters-five-forces/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "82fd3592e2af142907674214296ef86cc11d6478",
+        "size": 8185,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/82fd3592e2af142907674214296ef86cc11d6478"
+      },
+      {
+        "path": "pm-product-strategy/skills/pricing-strategy",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "50fb96f519ce29ee75f6f3bcb7dd329a5ef17e93",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/50fb96f519ce29ee75f6f3bcb7dd329a5ef17e93"
+      },
+      {
+        "path": "pm-product-strategy/skills/pricing-strategy/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "26298a3d461e7d218c3a60bdb992d5b9ba03a917",
+        "size": 3666,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/26298a3d461e7d218c3a60bdb992d5b9ba03a917"
+      },
+      {
+        "path": "pm-product-strategy/skills/product-strategy",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a3b0ee95a0c99ca7a5c6e77f3017742ce61832a4",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/a3b0ee95a0c99ca7a5c6e77f3017742ce61832a4"
+      },
+      {
+        "path": "pm-product-strategy/skills/product-strategy/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b92514e84b3f1c122255628ac48acbc7403913f8",
+        "size": 4833,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/b92514e84b3f1c122255628ac48acbc7403913f8"
+      },
+      {
+        "path": "pm-product-strategy/skills/product-vision",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d0038f5d51e03a6f2bbd020cea8c1b15e24c166d",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/d0038f5d51e03a6f2bbd020cea8c1b15e24c166d"
+      },
+      {
+        "path": "pm-product-strategy/skills/product-vision/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a6443edb2bf108e583ddb339a9163dc6de05b9da",
+        "size": 2518,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/a6443edb2bf108e583ddb339a9163dc6de05b9da"
+      },
+      {
+        "path": "pm-product-strategy/skills/startup-canvas",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f3405562ab05651cd037c5b922d7fe70e8180545",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/f3405562ab05651cd037c5b922d7fe70e8180545"
+      },
+      {
+        "path": "pm-product-strategy/skills/startup-canvas/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7c98302acedf89cd83ea2c119621e031c7e64c39",
+        "size": 6346,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/7c98302acedf89cd83ea2c119621e031c7e64c39"
+      },
+      {
+        "path": "pm-product-strategy/skills/swot-analysis",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "739d529a70a32a2bd18bf99b6164214ca6cabbbe",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/739d529a70a32a2bd18bf99b6164214ca6cabbbe"
+      },
+      {
+        "path": "pm-product-strategy/skills/swot-analysis/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c54dd1963d2bfba02916d21a3a5ae34ef46fd1c2",
+        "size": 3813,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/c54dd1963d2bfba02916d21a3a5ae34ef46fd1c2"
+      },
+      {
+        "path": "pm-product-strategy/skills/value-proposition",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a840c9572a21b901a24cf3154c36ae76dc2dbd75",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/a840c9572a21b901a24cf3154c36ae76dc2dbd75"
+      },
+      {
+        "path": "pm-product-strategy/skills/value-proposition/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c96c645ca3a2d3696b7b5b54be0e7abb1ee43bd3",
+        "size": 5836,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/c96c645ca3a2d3696b7b5b54be0e7abb1ee43bd3"
+      },
+      {
+        "path": "pm-toolkit",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3b34da0c6e58bce3c3affc4c85dea6c0bcd9dd8c",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/3b34da0c6e58bce3c3affc4c85dea6c0bcd9dd8c"
+      },
+      {
+        "path": "pm-toolkit/.claude-plugin",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a75aae207af74b76b47f621ab066e36e8cbbf497",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/a75aae207af74b76b47f621ab066e36e8cbbf497"
+      },
+      {
+        "path": "pm-toolkit/.claude-plugin/plugin.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4d044e23ffe2eb2b71a429337b01e1a101f0b3f7",
+        "size": 556,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/4d044e23ffe2eb2b71a429337b01e1a101f0b3f7"
+      },
+      {
+        "path": "pm-toolkit/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9c01cca7173b50021f78a143de321b84c1c4a4dd",
+        "size": 1566,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/9c01cca7173b50021f78a143de321b84c1c4a4dd"
+      },
+      {
+        "path": "pm-toolkit/commands",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b7b6f00191d964f9e8b98b1544c12984b849c407",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/b7b6f00191d964f9e8b98b1544c12984b849c407"
+      },
+      {
+        "path": "pm-toolkit/commands/draft-nda.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c9a2ca49a42da67ffecece75fc6b205ab9ed4f8e",
+        "size": 2058,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/c9a2ca49a42da67ffecece75fc6b205ab9ed4f8e"
+      },
+      {
+        "path": "pm-toolkit/commands/privacy-policy.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "70f2765a530c96fc0cbde021fde0e4c54151d1b7",
+        "size": 2178,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/70f2765a530c96fc0cbde021fde0e4c54151d1b7"
+      },
+      {
+        "path": "pm-toolkit/commands/proofread.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5b2514fe50838ba342a1cea0dae8ed41e0a3708c",
+        "size": 1806,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/5b2514fe50838ba342a1cea0dae8ed41e0a3708c"
+      },
+      {
+        "path": "pm-toolkit/commands/review-resume.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b003900d60ff9e5a01ec308a12139e673b1be16d",
+        "size": 3157,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/b003900d60ff9e5a01ec308a12139e673b1be16d"
+      },
+      {
+        "path": "pm-toolkit/commands/tailor-resume.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b3cf323c8fd60a9fe7d97d396b9278bcc7c889f8",
+        "size": 2514,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/b3cf323c8fd60a9fe7d97d396b9278bcc7c889f8"
+      },
+      {
+        "path": "pm-toolkit/skills",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "54b5c9b6149fd5aba25645a9d2c26cfe88e15b08",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/54b5c9b6149fd5aba25645a9d2c26cfe88e15b08"
+      },
+      {
+        "path": "pm-toolkit/skills/draft-nda",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "38dbf8e88f2f21378f12ae5fcd4be5345a70e3f2",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/38dbf8e88f2f21378f12ae5fcd4be5345a70e3f2"
+      },
+      {
+        "path": "pm-toolkit/skills/draft-nda/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "00e4208dd746dd6af5f25ca2843a25e386076376",
+        "size": 7484,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/00e4208dd746dd6af5f25ca2843a25e386076376"
+      },
+      {
+        "path": "pm-toolkit/skills/grammar-check",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "089028ee9bb963d0a2afab63039a1e43c0920404",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/089028ee9bb963d0a2afab63039a1e43c0920404"
+      },
+      {
+        "path": "pm-toolkit/skills/grammar-check/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2770da59b9ba78faa4c9d170a67b00d64be7f299",
+        "size": 9673,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/2770da59b9ba78faa4c9d170a67b00d64be7f299"
+      },
+      {
+        "path": "pm-toolkit/skills/privacy-policy",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "128fedce2733769b0a8951e2e9cc3a229d83f34b",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/128fedce2733769b0a8951e2e9cc3a229d83f34b"
+      },
+      {
+        "path": "pm-toolkit/skills/privacy-policy/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "100a06b4a3f8ccafb36a51e7f710449ec9b729b4",
+        "size": 10699,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/100a06b4a3f8ccafb36a51e7f710449ec9b729b4"
+      },
+      {
+        "path": "pm-toolkit/skills/review-resume",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "83662def51306c58d1d4306a47aa87f01df93d9a",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/83662def51306c58d1d4306a47aa87f01df93d9a"
+      },
+      {
+        "path": "pm-toolkit/skills/review-resume/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e4620d5e64261cd453724f3c714791562adabc1a",
+        "size": 11301,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/e4620d5e64261cd453724f3c714791562adabc1a"
+      },
+      {
+        "path": "tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a56370f0b6f8e27196efd3b36c01537cbadf7e26",
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/trees/a56370f0b6f8e27196efd3b36c01537cbadf7e26"
+      },
+      {
+        "path": "tests/test_consistency.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b95d5d293e42e4a09a187dd5eab4c0f3400f0928",
+        "size": 7926,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/b95d5d293e42e4a09a187dd5eab4c0f3400f0928"
+      },
+      {
+        "path": "tests/test_validator.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6c259d361b344ee6a7a71be5c32ce4a2409e727f",
+        "size": 2066,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/6c259d361b344ee6a7a71be5c32ce4a2409e727f"
+      },
+      {
+        "path": "validate_plugins.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ee54d358847dcb06ccbc0a672dbda3b9fc8e01fc",
+        "size": 17908,
+        "url": "https://api.github.com/repos/phuryn/pm-skills/git/blobs/ee54d358847dcb06ccbc0a672dbda3b9fc8e01fc"
+      }
+    ],
+    "truncated": false
+  }
+}
