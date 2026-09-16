@@ -1,0 +1,24 @@
+{
+  "writes": [
+    {
+      "path": "${HOME}/.codex/skills/business-model-designer/SKILL.md",
+      "response": {
+        "id": 10,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    }
+  ],
+  "rollback": [
+    {
+      "path": "${HOME}/.codex/skills/business-model-designer/SKILL.md",
+      "enabled": true
+    }
+  ],
+  "version_timestamp": "2026-09-15T19:34:18.402506-04:00",
+  "verified": true,
+  "plugin_skills": [
+    "business-strategy-curated:business-model-designer"
+  ]
+}

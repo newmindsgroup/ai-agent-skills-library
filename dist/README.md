@@ -1,6 +1,9 @@
 # Flat Skills Export
 
 This directory is generated from `../sources/<source>/skills/`.
+It contains only the safe default install set. Skills removed by the safety
+policy are preserved under `../quarantine/` and documented in
+`../docs/SKILLS-SAFETY.md`.
 
 Agent Skills-compatible tools generally expect a flat layout:
 
@@ -18,4 +21,5 @@ Search and discovery artifacts are generated beside this directory:
 
 - `skills-index.json` - machine-readable search index
 - `skills-index.tsv` - shell-friendly search index
+- `quarantine-index.json` and `quarantine-index.tsv` - blocked/gated skill index
 - `bundles.json` and `bundles/*.txt` - starter-pack definitions for installers

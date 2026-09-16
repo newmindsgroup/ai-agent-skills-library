@@ -1,0 +1,10 @@
+{
+  "version_timestamp": "2026-09-15T21:41:51.840856-04:00",
+  "scope": "Last complete discovery reconciled with current settings; not a fresh full discovery",
+  "discovered_baseline": 1637,
+  "expected_enabled": 346,
+  "configured_disabled": 1291,
+  "standalone_system_enabled": 138,
+  "plugin_expected_enabled": 208,
+  "plugin_disable_live_discovery_pending": 28
+}

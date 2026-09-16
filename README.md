@@ -20,7 +20,8 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 │   ├── original/skills/               ← New Minds-created skills
 │   ├── sickn33-antigravity-awesome-skills/skills/
 │   └── menkesu-awesome-pm-skills/skills/
-├── dist/skills/                       ← generated flat Agent Skills export for installers
+├── quarantine/                        ← review-only skills removed from the safe default export
+├── dist/skills/                       ← generated flat safe-default Agent Skills export for installers
 ├── runbooks/                          ← non-loadable patterns + lessons
 │   ├── gate-pattern.md
 │   ├── systemd-watchdog-patterns.md
@@ -41,7 +42,8 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 │   ├── PLACEHOLDERS.md                ← brand-config.yml placeholder system
 │   ├── SKILLS-CATALOG.md              ← full index w/ dependencies + decision tree
 │   ├── STARTER-PACKS.md               ← curated subsets for easier installs
-│   └── SKILLS-TRUST.md                ← provenance, trust levels, and risk flags
+│   ├── SKILLS-TRUST.md                ← provenance, trust levels, and risk flags
+│   └── SKILLS-SAFETY.md               ← quarantined/gated skills and reinstatement rules
 ├── manifests/
 │   ├── skills-manifest.json           ← generated canonical manifest
 │   └── starter-packs.json             ← curated bundle definitions
@@ -113,7 +115,7 @@ Useful starter packs include:
 - `builder-stack` — architecture, API design, implementation, review, and validation.
 - `frontend-ui` — frontend, visual design reference, animation, accessibility, and UX.
 - `business-strategy` — business model, startup validation, strategy, OKRs, metrics, and AI product.
-- `security-review` — security audit, API security, SAST, cloud security, and agent-action auditing.
+- `security-review` — conservative audit, SAST configuration, and AI-agent action review without offensive playbooks.
 - `qa-debugging` — dogfooding, browser QA, bug hunting, TDD, and completion verification.
 - `local-ai-ops` — local models, graphing, design references, Claude routing, and AI-native CLI work.
 
@@ -134,13 +136,15 @@ Installer discovery and safety options:
 
 - `--list` lists all skills.
 - `--search <query>` searches names, descriptions, categories, sources, trust levels, and bundle memberships.
+- `--quarantine` lists skills removed from the safe-default export.
+- `--quarantine-search <query>` searches blocked/gated skills and explains why they are not installable by default.
 - `--bundles` lists starter packs.
 - `--categories` lists generated categories.
 - `--bundle <name>` installs a curated starter pack.
 - `--category <name>` installs every skill in a category.
 - `--dry-run` previews the target and skill count without copying files.
 - `--force` or `--update` refreshes selected existing skills.
-- `--all` explicitly installs the full library.
+- `--all` explicitly installs the full safe-default export.
 
 ### Option F — Manual
 
@@ -158,37 +162,50 @@ Full placeholder reference: [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
 
 ### Skills
 
-This repository now ships **1513 skills**. Canonical source folders live under `sources/<source-repo>/skills/`, and the installer-ready flat export lives under `dist/skills/`.
+This repository now ships **1305 default-installable skills**. Canonical source folders live under `sources/<source-repo>/skills/`, and the installer-ready flat export lives under `dist/skills/`.
+
+Another **208 skills** are preserved under [`quarantine/`](quarantine/) but removed from the default installer/export path because they raised offensive-security, external-account automation, high-stakes advice, public-figure persona, or over-broad meta-skill concerns. See [`docs/SKILLS-SAFETY.md`](docs/SKILLS-SAFETY.md).
 
 For the complete generated index with descriptions, use [`docs/SKILLS-CATALOG.md`](docs/SKILLS-CATALOG.md). For provenance and duplicate-resolution details, use [`docs/SKILL-SOURCES.md`](docs/SKILL-SOURCES.md).
-For curated starter packs, use [`docs/STARTER-PACKS.md`](docs/STARTER-PACKS.md). For trust metadata and risk flags, use [`docs/SKILLS-TRUST.md`](docs/SKILLS-TRUST.md).
+For curated starter packs, use [`docs/STARTER-PACKS.md`](docs/STARTER-PACKS.md). For trust metadata and risk flags, use [`docs/SKILLS-TRUST.md`](docs/SKILLS-TRUST.md). For the quarantine policy, use [`docs/SKILLS-SAFETY.md`](docs/SKILLS-SAFETY.md).
 
 ### Source organization
 
 The canonical source tree is [`sources/`](sources/). It groups skills into repo-named folders such as `sources/sickn33-antigravity-awesome-skills/skills/`, `sources/menkesu-awesome-pm-skills/skills/`, and `sources/original/skills/` for New Minds-created skills.
 
-The flat [`dist/skills/`](dist/skills/) directory is generated for compatibility with tools that expect `skills-root/<skill-name>/SKILL.md`. Do not edit `dist/skills/` directly; edit `sources/` and run `ruby scripts/sync-skill-library.rb`.
+The flat [`dist/skills/`](dist/skills/) directory is generated for compatibility with tools that expect `skills-root/<skill-name>/SKILL.md`. It contains only the safe default export; quarantined skills stay under [`quarantine/`](quarantine/). Do not edit `dist/skills/` directly; edit `sources/` and run `ruby scripts/sync-skill-library.rb`.
 
 Generated discovery artifacts live beside the export:
 
-- [`dist/skills-index.json`](dist/skills-index.json) — machine-readable searchable catalog.
+- [`dist/skills-index.json`](dist/skills-index.json) — machine-readable searchable safe-default catalog.
 - [`dist/skills-index.tsv`](dist/skills-index.tsv) — shell-friendly catalog for installers and quick grep/awk use.
+- [`dist/quarantine-index.json`](dist/quarantine-index.json) and [`dist/quarantine-index.tsv`](dist/quarantine-index.tsv) — searchable blocked/gated skill catalog.
 - [`dist/bundles.json`](dist/bundles.json) and [`dist/bundles/`](dist/bundles/) — starter-pack definitions used by installers.
+
+### Local Codex safety cleanup
+
+To apply the same safety policy to already-installed local Codex skills, run:
+
+```bash
+ruby scripts/audit-local-codex-skills.rb --apply --fail-on-policy-matches
+```
+
+The script scans `~/.codex/skills`, `~/.agents/skills`, and Codex runtime/plugin roots. It moves policy-matched user-installed skills to `~/.codex/skill-quarantine/<timestamp>/`, writes [`manifests/local-codex-skills-audit.json`](manifests/local-codex-skills-audit.json), and writes a human-readable report under [`docs/`](docs/).
 
 | Category | Count |
 |---|---:|
-| AI, Agents, LLMs, Data | 735 |
-| Automation, Integrations, Productivity | 188 |
-| Backend, APIs, Databases | 97 |
-| Business, Strategy, Product, Growth | 121 |
-| Content, SEO, Writing, Docs | 56 |
-| DevOps, Cloud, Infrastructure | 59 |
-| Frontend, UI, UX, Design | 111 |
-| General, Workflow, Research, Miscellaneous | 62 |
-| Languages, Frameworks, Specialist Tools | 25 |
-| Media, Documents, Office, Creative | 5 |
-| Security, Compliance, Risk | 19 |
-| Testing, QA, Debugging, Review | 35 |
+| AI, Agents, LLMs, Data | 648 |
+| Business, Strategy, Product, Growth | 118 |
+| Automation, Integrations, Productivity | 114 |
+| Frontend, UI, UX, Design | 105 |
+| Backend, APIs, Databases | 90 |
+| General, Workflow, Research, Miscellaneous | 56 |
+| DevOps, Cloud, Infrastructure | 55 |
+| Content, SEO, Writing, Docs | 54 |
+| Testing, QA, Debugging, Review | 30 |
+| Languages, Frameworks, Specialist Tools | 22 |
+| Security, Compliance, Risk | 10 |
+| Media, Documents, Office, Creative | 3 |
 
 Curated marketplace bundles remain intentionally small and high-signal:
 
@@ -249,3 +266,9 @@ Every skill is portable — the canonical `SKILL.md` is the Agent Skills standar
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## Daily skill curation policy
+
+Version-Timestamp: 2026-09-15T21:41:51.840856-04:00
+
+Use the [approved daily skill policy](curation/day-to-day/REPOSITORY-SYNC.md) before installing global skills. The source archive is broader than the active daily collection.

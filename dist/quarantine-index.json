@@ -1,0 +1,1904 @@
+{
+  "generated_at": "2026-08-04",
+  "total_quarantined": 208,
+  "statuses": [
+    {
+      "name": "delete-default-offensive",
+      "count": 35
+    },
+    {
+      "name": "gated-defensive-security",
+      "count": 24
+    },
+    {
+      "name": "gated-external-actions",
+      "count": 97
+    },
+    {
+      "name": "quarantine-high-stakes",
+      "count": 33
+    },
+    {
+      "name": "quarantine-meta-authority",
+      "count": 6
+    },
+    {
+      "name": "quarantine-persona",
+      "count": 13
+    }
+  ],
+  "skills": [
+    {
+      "name": "007",
+      "status": "quarantine-persona",
+      "reason": "Fictional spy persona; also overlaps with covert/security framing.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/007/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/007/"
+    },
+    {
+      "name": "active-directory-attacks",
+      "status": "delete-default-offensive",
+      "reason": "Explicitly teaches attacking Microsoft Active Directory, including credential harvesting, lateral movement, privilege escalation, and domain dominance. Delete.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/active-directory-attacks/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/active-directory-attacks/"
+    },
+    {
+      "name": "activecampaign-automation",
+      "status": "gated-external-actions",
+      "reason": "Marketing automation can email real contacts and alter campaigns.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/activecampaign-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/activecampaign-automation/"
+    },
+    {
+      "name": "advogado-criminal",
+      "status": "quarantine-high-stakes",
+      "reason": "Criminal-law advice. Too high-stakes for a general skill.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/advogado-criminal/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/advogado-criminal/"
+    },
+    {
+      "name": "advogado-especialista",
+      "status": "quarantine-high-stakes",
+      "reason": "Legal advice. Needs jurisdiction, disclaimers, and attorney-review boundaries.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/advogado-especialista/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/advogado-especialista/"
+    },
+    {
+      "name": "agent-browser",
+      "status": "gated-external-actions",
+      "reason": "Can log in, click, fill forms, scrape, automate desktop apps, and send Slack messages; it also says to prefer itself over built-in browser tools. Delete from default.",
+      "source_slug": "mxyhi-ok-skills",
+      "source_repository": "https://github.com/mxyhi/ok-skills",
+      "original_path": "sources/mxyhi-ok-skills/skills/agent-browser/",
+      "quarantine_path": "quarantine/gated-external-actions/mxyhi-ok-skills/skills/agent-browser/"
+    },
+    {
+      "name": "agent-orchestrator",
+      "status": "quarantine-meta-authority",
+      "reason": "Auto-scans, matches, and orchestrates skills. This overlaps with the repo's curated routing layer and can route too broadly.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/agent-orchestrator/",
+      "quarantine_path": "quarantine/quarantine-meta-authority/sickn33-antigravity-awesome-skills/skills/agent-orchestrator/"
+    },
+    {
+      "name": "agentmail",
+      "status": "gated-external-actions",
+      "reason": "Email/account workflow. External side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/agentmail/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/agentmail/"
+    },
+    {
+      "name": "agentphone",
+      "status": "gated-external-actions",
+      "reason": "Phone/SMS or communications workflow. External side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/agentphone/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/agentphone/"
+    },
+    {
+      "name": "airtable-automation",
+      "status": "gated-external-actions",
+      "reason": "Can read/write business databases.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/airtable-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/airtable-automation/"
+    },
+    {
+      "name": "amplitude-automation",
+      "status": "gated-external-actions",
+      "reason": "Can touch product analytics data.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/amplitude-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/amplitude-automation/"
+    },
+    {
+      "name": "andrej-karpathy",
+      "status": "quarantine-persona",
+      "reason": "Public-figure simulation. Rewrite as \"AI education / LLM pedagogy style analysis\" or delete.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/andrej-karpathy/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/andrej-karpathy/"
+    },
+    {
+      "name": "anti-reversing-techniques",
+      "status": "delete-default-offensive",
+      "reason": "Helps resist reverse engineering and analysis; useful for malware-like evasive behavior. Delete from public default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/anti-reversing-techniques/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/anti-reversing-techniques/"
+    },
+    {
+      "name": "api-fuzzing-bug-bounty",
+      "status": "delete-default-offensive",
+      "reason": "Fuzzing and bug-bounty workflow can be legitimate, but it is still automated vulnerability discovery against APIs. Move to a gated security pack at minimum.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/api-fuzzing-bug-bounty/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/api-fuzzing-bug-bounty/"
+    },
+    {
+      "name": "api-security-best-practices",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/api-security-best-practices/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/api-security-best-practices/"
+    },
+    {
+      "name": "api-security-testing",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/api-security-testing/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/api-security-testing/"
+    },
+    {
+      "name": "api-testing-observability-api-mock",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/api-testing-observability-api-mock/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/api-testing-observability-api-mock/"
+    },
+    {
+      "name": "asana-automation",
+      "status": "gated-external-actions",
+      "reason": "Can alter task/project state.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/asana-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/asana-automation/"
+    },
+    {
+      "name": "aws-compliance-checker",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/aws-compliance-checker/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/aws-compliance-checker/"
+    },
+    {
+      "name": "aws-iam-best-practices",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/aws-iam-best-practices/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/aws-iam-best-practices/"
+    },
+    {
+      "name": "aws-penetration-testing",
+      "status": "delete-default-offensive",
+      "reason": "Cloud pentesting guidance can cross into unauthorized cloud attack paths. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/aws-penetration-testing/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/aws-penetration-testing/"
+    },
+    {
+      "name": "aws-security-audit",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/aws-security-audit/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/aws-security-audit/"
+    },
+    {
+      "name": "backend-security-coder",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/backend-security-coder/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/backend-security-coder/"
+    },
+    {
+      "name": "bamboohr-automation",
+      "status": "gated-external-actions",
+      "reason": "HR data is sensitive. Remove from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/bamboohr-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/bamboohr-automation/"
+    },
+    {
+      "name": "basecamp-automation",
+      "status": "gated-external-actions",
+      "reason": "Project/account side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/basecamp-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/basecamp-automation/"
+    },
+    {
+      "name": "bill-gates",
+      "status": "quarantine-persona",
+      "reason": "Public-figure simulation. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/bill-gates/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/bill-gates/"
+    },
+    {
+      "name": "billing-automation",
+      "status": "gated-external-actions",
+      "reason": "Billing workflows are high-impact.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/billing-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/billing-automation/"
+    },
+    {
+      "name": "bitbucket-automation",
+      "status": "gated-external-actions",
+      "reason": "Repo/project changes.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/bitbucket-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/bitbucket-automation/"
+    },
+    {
+      "name": "box-automation",
+      "status": "gated-external-actions",
+      "reason": "File storage access and data movement.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/box-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/box-automation/"
+    },
+    {
+      "name": "brevo-automation",
+      "status": "gated-external-actions",
+      "reason": "Email marketing side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/brevo-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/brevo-automation/"
+    },
+    {
+      "name": "broken-authentication",
+      "status": "delete-default-offensive",
+      "reason": "Focused on auth weakness exploitation patterns. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/broken-authentication/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/broken-authentication/"
+    },
+    {
+      "name": "browser-automation",
+      "status": "gated-external-actions",
+      "reason": "General browser automation can perform real-world actions.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/browser-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/browser-automation/"
+    },
+    {
+      "name": "burp-suite-testing",
+      "status": "delete-default-offensive",
+      "reason": "Burp-driven web security testing belongs in a controlled security pack, not a general library.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/burp-suite-testing/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/burp-suite-testing/"
+    },
+    {
+      "name": "burpsuite-project-parser",
+      "status": "delete-default-offensive",
+      "reason": "Parses Burp project data and audit findings; not directly malicious, but tightly coupled to offensive web testing workflows. Remove from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/burpsuite-project-parser/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/burpsuite-project-parser/"
+    },
+    {
+      "name": "cal-com-automation",
+      "status": "gated-external-actions",
+      "reason": "Calendar booking side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/cal-com-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/cal-com-automation/"
+    },
+    {
+      "name": "calendly-automation",
+      "status": "gated-external-actions",
+      "reason": "Calendar booking side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/calendly-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/calendly-automation/"
+    },
+    {
+      "name": "canva-automation",
+      "status": "gated-external-actions",
+      "reason": "Asset/design account changes.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/canva-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/canva-automation/"
+    },
+    {
+      "name": "cc-skill-continuous-learning",
+      "status": "quarantine-meta-authority",
+      "reason": "Weak placeholder-like metadata and unclear behavior. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/cc-skill-continuous-learning/",
+      "quarantine_path": "quarantine/quarantine-meta-authority/sickn33-antigravity-awesome-skills/skills/cc-skill-continuous-learning/"
+    },
+    {
+      "name": "cc-skill-security-review",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/cc-skill-security-review/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/cc-skill-security-review/"
+    },
+    {
+      "name": "cc-skill-strategic-compact",
+      "status": "quarantine-meta-authority",
+      "reason": "Weak placeholder-like metadata and unclear behavior. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/cc-skill-strategic-compact/",
+      "quarantine_path": "quarantine/quarantine-meta-authority/sickn33-antigravity-awesome-skills/skills/cc-skill-strategic-compact/"
+    },
+    {
+      "name": "circleci-automation",
+      "status": "gated-external-actions",
+      "reason": "CI workflow manipulation.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/circleci-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/circleci-automation/"
+    },
+    {
+      "name": "claude-ally-health",
+      "status": "quarantine-high-stakes",
+      "reason": "Health-oriented guidance. Needs medical boundaries.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/claude-ally-health/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/claude-ally-health/"
+    },
+    {
+      "name": "clickup-automation",
+      "status": "gated-external-actions",
+      "reason": "Task/project mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/clickup-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/clickup-automation/"
+    },
+    {
+      "name": "close-automation",
+      "status": "gated-external-actions",
+      "reason": "CRM and sales data changes.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/close-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/close-automation/"
+    },
+    {
+      "name": "cloud-penetration-testing",
+      "status": "delete-default-offensive",
+      "reason": "Cloud offensive testing is too dangerous for automatic routing in a default install.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/cloud-penetration-testing/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/cloud-penetration-testing/"
+    },
+    {
+      "name": "coda-automation",
+      "status": "gated-external-actions",
+      "reason": "Document/database mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/coda-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/coda-automation/"
+    },
+    {
+      "name": "confluence-automation",
+      "status": "gated-external-actions",
+      "reason": "Knowledge-base mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/confluence-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/confluence-automation/"
+    },
+    {
+      "name": "convertkit-automation",
+      "status": "gated-external-actions",
+      "reason": "Email marketing actions.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/convertkit-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/convertkit-automation/"
+    },
+    {
+      "name": "crypto-bd-agent",
+      "status": "quarantine-high-stakes",
+      "reason": "Crypto/finance risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/crypto-bd-agent/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/crypto-bd-agent/"
+    },
+    {
+      "name": "customs-trade-compliance",
+      "status": "quarantine-high-stakes",
+      "reason": "Regulatory compliance risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/customs-trade-compliance/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/customs-trade-compliance/"
+    },
+    {
+      "name": "datadog-automation",
+      "status": "gated-external-actions",
+      "reason": "Observability/account changes.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/datadog-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/datadog-automation/"
+    },
+    {
+      "name": "discord-automation",
+      "status": "gated-external-actions",
+      "reason": "Can send or manage messages/communities.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/discord-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/discord-automation/"
+    },
+    {
+      "name": "docusign-automation",
+      "status": "gated-external-actions",
+      "reason": "Legal/signature workflow. High stakes.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/docusign-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/docusign-automation/"
+    },
+    {
+      "name": "dogfood",
+      "status": "gated-external-actions",
+      "reason": "Browser QA workflow depends on agent-browser and can log in, click, fill forms, and capture real websites; removed from default with browser automation skills.",
+      "source_slug": "mxyhi-ok-skills",
+      "source_repository": "https://github.com/mxyhi/ok-skills",
+      "original_path": "sources/mxyhi-ok-skills/skills/dogfood/",
+      "quarantine_path": "quarantine/gated-external-actions/mxyhi-ok-skills/skills/dogfood/"
+    },
+    {
+      "name": "dropbox-automation",
+      "status": "gated-external-actions",
+      "reason": "File access and data movement.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/dropbox-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/dropbox-automation/"
+    },
+    {
+      "name": "elon-musk",
+      "status": "quarantine-persona",
+      "reason": "Public-figure simulation. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/elon-musk/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/elon-musk/"
+    },
+    {
+      "name": "emblemai-crypto-wallet",
+      "status": "quarantine-high-stakes",
+      "reason": "Wallet/crypto asset risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/emblemai-crypto-wallet/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/emblemai-crypto-wallet/"
+    },
+    {
+      "name": "employment-contract-templates",
+      "status": "quarantine-high-stakes",
+      "reason": "Legal/employment document generation risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/employment-contract-templates/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/employment-contract-templates/"
+    },
+    {
+      "name": "ethical-hacking-methodology",
+      "status": "delete-default-offensive",
+      "reason": "Broad hacking methodology. The \"ethical\" label is not enough for default trust.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/ethical-hacking-methodology/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/ethical-hacking-methodology/"
+    },
+    {
+      "name": "family-health-analyzer",
+      "status": "quarantine-high-stakes",
+      "reason": "Health analysis. Needs medical boundaries.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/family-health-analyzer/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/family-health-analyzer/"
+    },
+    {
+      "name": "fda-food-safety-auditor",
+      "status": "quarantine-high-stakes",
+      "reason": "FDA/food-safety compliance is regulated and high-impact.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/fda-food-safety-auditor/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/fda-food-safety-auditor/"
+    },
+    {
+      "name": "fda-medtech-compliance-auditor",
+      "status": "quarantine-high-stakes",
+      "reason": "FDA/medical-device compliance is regulated and high-impact.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/fda-medtech-compliance-auditor/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/fda-medtech-compliance-auditor/"
+    },
+    {
+      "name": "ffuf-claude-skill",
+      "status": "delete-default-offensive",
+      "reason": "Fuzzing workflow with weak metadata. Delete.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/ffuf-claude-skill/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/ffuf-claude-skill/"
+    },
+    {
+      "name": "ffuf-web-fuzzing",
+      "status": "delete-default-offensive",
+      "reason": "Web fuzzing can hit real targets and enumerate hidden paths. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/ffuf-web-fuzzing/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/ffuf-web-fuzzing/"
+    },
+    {
+      "name": "figma-automation",
+      "status": "gated-external-actions",
+      "reason": "Design/account mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/figma-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/figma-automation/"
+    },
+    {
+      "name": "file-path-traversal",
+      "status": "delete-default-offensive",
+      "reason": "Teaches path traversal testing/exploitation. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/file-path-traversal/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/file-path-traversal/"
+    },
+    {
+      "name": "food-database-query",
+      "status": "quarantine-high-stakes",
+      "reason": "Nutrition/health interpretation risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/food-database-query/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/food-database-query/"
+    },
+    {
+      "name": "freshdesk-automation",
+      "status": "gated-external-actions",
+      "reason": "Support ticket mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/freshdesk-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/freshdesk-automation/"
+    },
+    {
+      "name": "freshservice-automation",
+      "status": "gated-external-actions",
+      "reason": "IT service-management mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/freshservice-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/freshservice-automation/"
+    },
+    {
+      "name": "frontend-mobile-security-xss-scan",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/frontend-mobile-security-xss-scan/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/frontend-mobile-security-xss-scan/"
+    },
+    {
+      "name": "frontend-security-coder",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/frontend-security-coder/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/frontend-security-coder/"
+    },
+    {
+      "name": "geoffrey-hinton",
+      "status": "quarantine-persona",
+      "reason": "Public-figure simulation. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/geoffrey-hinton/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/geoffrey-hinton/"
+    },
+    {
+      "name": "gha-security-review",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/gha-security-review/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/gha-security-review/"
+    },
+    {
+      "name": "github-automation",
+      "status": "gated-external-actions",
+      "reason": "Repo/issues/PR/actions mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/github-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/github-automation/"
+    },
+    {
+      "name": "gitlab-automation",
+      "status": "gated-external-actions",
+      "reason": "Repo/issues/CI mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/gitlab-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/gitlab-automation/"
+    },
+    {
+      "name": "gmail-automation",
+      "status": "gated-external-actions",
+      "reason": "Email access and sending via OAuth.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/gmail-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/gmail-automation/"
+    },
+    {
+      "name": "goal-analyzer",
+      "status": "quarantine-high-stakes",
+      "reason": "Health-goal analysis. Needs medical boundaries.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/goal-analyzer/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/goal-analyzer/"
+    },
+    {
+      "name": "google-analytics-automation",
+      "status": "gated-external-actions",
+      "reason": "Analytics/account access.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/google-analytics-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/google-analytics-automation/"
+    },
+    {
+      "name": "google-calendar-automation",
+      "status": "gated-external-actions",
+      "reason": "Calendar mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/google-calendar-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/google-calendar-automation/"
+    },
+    {
+      "name": "google-docs-automation",
+      "status": "gated-external-actions",
+      "reason": "Document access and edits.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/google-docs-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/google-docs-automation/"
+    },
+    {
+      "name": "google-drive-automation",
+      "status": "gated-external-actions",
+      "reason": "File storage access and sharing risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/google-drive-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/google-drive-automation/"
+    },
+    {
+      "name": "google-sheets-automation",
+      "status": "gated-external-actions",
+      "reason": "Spreadsheet/database mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/google-sheets-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/google-sheets-automation/"
+    },
+    {
+      "name": "google-slides-automation",
+      "status": "gated-external-actions",
+      "reason": "Presentation edits/sharing.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/google-slides-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/google-slides-automation/"
+    },
+    {
+      "name": "googlesheets-automation",
+      "status": "gated-external-actions",
+      "reason": "Duplicate Sheets connector; remove from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/googlesheets-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/googlesheets-automation/"
+    },
+    {
+      "name": "health-trend-analyzer",
+      "status": "quarantine-high-stakes",
+      "reason": "Health trend interpretation. Needs medical boundaries.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/health-trend-analyzer/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/health-trend-analyzer/"
+    },
+    {
+      "name": "helpdesk-automation",
+      "status": "gated-external-actions",
+      "reason": "Customer-support side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/helpdesk-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/helpdesk-automation/"
+    },
+    {
+      "name": "html-injection-testing",
+      "status": "delete-default-offensive",
+      "reason": "Injection testing belongs in a gated security pack.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/html-injection-testing/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/html-injection-testing/"
+    },
+    {
+      "name": "hubspot-automation",
+      "status": "gated-external-actions",
+      "reason": "CRM/marketing/sales mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/hubspot-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/hubspot-automation/"
+    },
+    {
+      "name": "idor-testing",
+      "status": "delete-default-offensive",
+      "reason": "IDOR testing can become unauthorized data access. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/idor-testing/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/idor-testing/"
+    },
+    {
+      "name": "ilya-sutskever",
+      "status": "quarantine-persona",
+      "reason": "Public-figure simulation. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/ilya-sutskever/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/ilya-sutskever/"
+    },
+    {
+      "name": "instagram-automation",
+      "status": "gated-external-actions",
+      "reason": "Social publishing/account actions.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/instagram-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/instagram-automation/"
+    },
+    {
+      "name": "intercom-automation",
+      "status": "gated-external-actions",
+      "reason": "Customer messaging and support data.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/intercom-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/intercom-automation/"
+    },
+    {
+      "name": "it-manager-hospital",
+      "status": "quarantine-high-stakes",
+      "reason": "Hospital IT decisions can affect sensitive systems and patient operations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/it-manager-hospital/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/it-manager-hospital/"
+    },
+    {
+      "name": "jira-automation",
+      "status": "gated-external-actions",
+      "reason": "Project/ticket mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/jira-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/jira-automation/"
+    },
+    {
+      "name": "klaviyo-automation",
+      "status": "gated-external-actions",
+      "reason": "Marketing email/SMS side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/klaviyo-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/klaviyo-automation/"
+    },
+    {
+      "name": "legal-advisor",
+      "status": "quarantine-high-stakes",
+      "reason": "Generic legal-advisor framing is too broad.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/legal-advisor/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/legal-advisor/"
+    },
+    {
+      "name": "linear-automation",
+      "status": "gated-external-actions",
+      "reason": "Issue/project mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/linear-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/linear-automation/"
+    },
+    {
+      "name": "linkedin-automation",
+      "status": "gated-external-actions",
+      "reason": "Social/account automation.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/linkedin-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/linkedin-automation/"
+    },
+    {
+      "name": "linkedin-cli",
+      "status": "gated-external-actions",
+      "reason": "LinkedIn automation from CLI; remove from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/linkedin-cli/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/linkedin-cli/"
+    },
+    {
+      "name": "linux-privilege-escalation",
+      "status": "delete-default-offensive",
+      "reason": "Explicit privilege escalation. Delete.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/linux-privilege-escalation/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/linux-privilege-escalation/"
+    },
+    {
+      "name": "mailchimp-automation",
+      "status": "gated-external-actions",
+      "reason": "Email marketing side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/mailchimp-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/mailchimp-automation/"
+    },
+    {
+      "name": "make-automation",
+      "status": "gated-external-actions",
+      "reason": "Workflow automation can trigger broad external actions.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/make-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/make-automation/"
+    },
+    {
+      "name": "malware-analyst",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/malware-analyst/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/malware-analyst/"
+    },
+    {
+      "name": "manage-skills",
+      "status": "quarantine-meta-authority",
+      "reason": "Teaches create/edit/toggle/copy/move/delete operations across many agent tools and includes destructive file commands. Keep only for maintainers.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/manage-skills/",
+      "quarantine_path": "quarantine/quarantine-meta-authority/sickn33-antigravity-awesome-skills/skills/manage-skills/"
+    },
+    {
+      "name": "memory-forensics",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/memory-forensics/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/memory-forensics/"
+    },
+    {
+      "name": "mental-health-analyzer",
+      "status": "quarantine-high-stakes",
+      "reason": "Mental-health interpretation is high stakes.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/mental-health-analyzer/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/mental-health-analyzer/"
+    },
+    {
+      "name": "metasploit-framework",
+      "status": "delete-default-offensive",
+      "reason": "Metasploit is an offensive exploitation framework. Authorized-use disclaimers do not make it safe for default install.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/metasploit-framework/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/metasploit-framework/"
+    },
+    {
+      "name": "microsoft-teams-automation",
+      "status": "gated-external-actions",
+      "reason": "Messaging and collaboration side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/microsoft-teams-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/microsoft-teams-automation/"
+    },
+    {
+      "name": "miro-automation",
+      "status": "gated-external-actions",
+      "reason": "Board/account mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/miro-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/miro-automation/"
+    },
+    {
+      "name": "mixpanel-automation",
+      "status": "gated-external-actions",
+      "reason": "Product analytics access.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/mixpanel-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/mixpanel-automation/"
+    },
+    {
+      "name": "monday-automation",
+      "status": "gated-external-actions",
+      "reason": "Project/data mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/monday-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/monday-automation/"
+    },
+    {
+      "name": "network-101",
+      "status": "delete-default-offensive",
+      "reason": "Penetration-testing lab workflow for network services. Remove from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/network-101/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/network-101/"
+    },
+    {
+      "name": "notion-automation",
+      "status": "gated-external-actions",
+      "reason": "Workspace/document/database mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/notion-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/notion-automation/"
+    },
+    {
+      "name": "occupational-health-analyzer",
+      "status": "quarantine-high-stakes",
+      "reason": "Workplace health guidance is regulated/sensitive.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/occupational-health-analyzer/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/occupational-health-analyzer/"
+    },
+    {
+      "name": "odoo-l10n-compliance",
+      "status": "quarantine-high-stakes",
+      "reason": "Localization/compliance advice can be legally sensitive.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/odoo-l10n-compliance/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/odoo-l10n-compliance/"
+    },
+    {
+      "name": "one-drive-automation",
+      "status": "gated-external-actions",
+      "reason": "File storage access and sharing risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/one-drive-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/one-drive-automation/"
+    },
+    {
+      "name": "openclaw-github-repo-commander",
+      "status": "gated-external-actions",
+      "reason": "Repo command/control. Too much authority for default install.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/openclaw-github-repo-commander/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/openclaw-github-repo-commander/"
+    },
+    {
+      "name": "oral-health-analyzer",
+      "status": "quarantine-high-stakes",
+      "reason": "Dental/medical advice risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/oral-health-analyzer/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/oral-health-analyzer/"
+    },
+    {
+      "name": "outlook-automation",
+      "status": "gated-external-actions",
+      "reason": "Email access and sending.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/outlook-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/outlook-automation/"
+    },
+    {
+      "name": "outlook-calendar-automation",
+      "status": "gated-external-actions",
+      "reason": "Calendar mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/outlook-calendar-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/outlook-calendar-automation/"
+    },
+    {
+      "name": "pagerduty-automation",
+      "status": "gated-external-actions",
+      "reason": "Incident/on-call workflow side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/pagerduty-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/pagerduty-automation/"
+    },
+    {
+      "name": "pakistan-payments-stack",
+      "status": "quarantine-high-stakes",
+      "reason": "Payments and regulatory risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/pakistan-payments-stack/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/pakistan-payments-stack/"
+    },
+    {
+      "name": "payment-integration",
+      "status": "gated-external-actions",
+      "reason": "Payment workflow. High stakes.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/payment-integration/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/payment-integration/"
+    },
+    {
+      "name": "paypal-integration",
+      "status": "gated-external-actions",
+      "reason": "Payment workflow. High stakes.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/paypal-integration/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/paypal-integration/"
+    },
+    {
+      "name": "pci-compliance",
+      "status": "quarantine-high-stakes",
+      "reason": "Compliance advice must be precise and auditable.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/pci-compliance/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/pci-compliance/"
+    },
+    {
+      "name": "pentest-checklist",
+      "status": "delete-default-offensive",
+      "reason": "General pentest execution checklist. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/pentest-checklist/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/pentest-checklist/"
+    },
+    {
+      "name": "pentest-commands",
+      "status": "delete-default-offensive",
+      "reason": "Command-level pentest guidance is too operational. Delete.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/pentest-commands/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/pentest-commands/"
+    },
+    {
+      "name": "pipedrive-automation",
+      "status": "gated-external-actions",
+      "reason": "CRM mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/pipedrive-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/pipedrive-automation/"
+    },
+    {
+      "name": "posthog-automation",
+      "status": "gated-external-actions",
+      "reason": "Product analytics access and changes.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/posthog-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/posthog-automation/"
+    },
+    {
+      "name": "postmark-automation",
+      "status": "gated-external-actions",
+      "reason": "Transactional email side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/postmark-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/postmark-automation/"
+    },
+    {
+      "name": "privilege-escalation-methods",
+      "status": "delete-default-offensive",
+      "reason": "Explicit privilege escalation methods. Delete.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/privilege-escalation-methods/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/privilege-escalation-methods/"
+    },
+    {
+      "name": "protocol-reverse-engineering",
+      "status": "delete-default-offensive",
+      "reason": "Reverse engineering can be legitimate, but protocol RE plus agent automation is sensitive. Quarantine at minimum.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/protocol-reverse-engineering/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/protocol-reverse-engineering/"
+    },
+    {
+      "name": "quant-analyst",
+      "status": "quarantine-high-stakes",
+      "reason": "Financial/trading advice risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/quant-analyst/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/quant-analyst/"
+    },
+    {
+      "name": "red-team-tactics",
+      "status": "delete-default-offensive",
+      "reason": "Red-team tactics are offensive by design. Delete.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/red-team-tactics/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/red-team-tactics/"
+    },
+    {
+      "name": "red-team-tools",
+      "status": "delete-default-offensive",
+      "reason": "Offensive tooling catalog. Delete.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/red-team-tools/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/red-team-tools/"
+    },
+    {
+      "name": "reddit-automation",
+      "status": "gated-external-actions",
+      "reason": "Social posting/account actions.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/reddit-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/reddit-automation/"
+    },
+    {
+      "name": "render-automation",
+      "status": "gated-external-actions",
+      "reason": "Deployment/platform mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/render-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/render-automation/"
+    },
+    {
+      "name": "reverse-engineer",
+      "status": "delete-default-offensive",
+      "reason": "Binary RE with IDA/Ghidra/radare2/x64dbg is sensitive. Remove from default; allow only in a lab pack.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/reverse-engineer/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/reverse-engineer/"
+    },
+    {
+      "name": "risk-manager",
+      "status": "quarantine-high-stakes",
+      "reason": "Financial/enterprise risk advice can be high-impact.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/risk-manager/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/risk-manager/"
+    },
+    {
+      "name": "risk-metrics-calculation",
+      "status": "quarantine-high-stakes",
+      "reason": "Quantitative finance/risk calculations need validation.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/risk-metrics-calculation/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/risk-metrics-calculation/"
+    },
+    {
+      "name": "salesforce-automation",
+      "status": "gated-external-actions",
+      "reason": "CRM/account mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/salesforce-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/salesforce-automation/"
+    },
+    {
+      "name": "sam-altman",
+      "status": "quarantine-persona",
+      "reason": "Public-figure simulation. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/sam-altman/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/sam-altman/"
+    },
+    {
+      "name": "scanning-tools",
+      "status": "delete-default-offensive",
+      "reason": "Covers vulnerability and network scanning tools. Too easy to misuse against real targets.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/scanning-tools/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/scanning-tools/"
+    },
+    {
+      "name": "security-audit",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/security-audit/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/security-audit/"
+    },
+    {
+      "name": "security-auditor",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/security-auditor/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/security-auditor/"
+    },
+    {
+      "name": "security-compliance-compliance-check",
+      "status": "quarantine-high-stakes",
+      "reason": "Compliance judgment needs evidence and scope controls.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/security-compliance-compliance-check/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/security-compliance-compliance-check/"
+    },
+    {
+      "name": "security-scanning-security-dependencies",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/security-scanning-security-dependencies/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/security-scanning-security-dependencies/"
+    },
+    {
+      "name": "security-scanning-security-hardening",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/security-scanning-security-hardening/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/security-scanning-security-hardening/"
+    },
+    {
+      "name": "security-scanning-security-sast",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/security-scanning-security-sast/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/security-scanning-security-sast/"
+    },
+    {
+      "name": "segment-automation",
+      "status": "gated-external-actions",
+      "reason": "Customer data pipeline changes.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/segment-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/segment-automation/"
+    },
+    {
+      "name": "sendgrid-automation",
+      "status": "gated-external-actions",
+      "reason": "Email delivery side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/sendgrid-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/sendgrid-automation/"
+    },
+    {
+      "name": "sentry-automation",
+      "status": "gated-external-actions",
+      "reason": "Error-tracking account/project changes.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/sentry-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/sentry-automation/"
+    },
+    {
+      "name": "sexual-health-analyzer",
+      "status": "quarantine-high-stakes",
+      "reason": "Medical and sensitive personal data risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/sexual-health-analyzer/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/sexual-health-analyzer/"
+    },
+    {
+      "name": "shodan-reconnaissance",
+      "status": "delete-default-offensive",
+      "reason": "Internet-exposed target reconnaissance. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/shodan-reconnaissance/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/shodan-reconnaissance/"
+    },
+    {
+      "name": "shopify-automation",
+      "status": "gated-external-actions",
+      "reason": "Store/customer/product/order mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/shopify-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/shopify-automation/"
+    },
+    {
+      "name": "skill-scanner",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/skill-scanner/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/skill-scanner/"
+    },
+    {
+      "name": "skill-seekers",
+      "status": "quarantine-meta-authority",
+      "reason": "Converts websites/repos/PDFs into skills. Useful, but it can import unreviewed content quickly. Gate it.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/skill-seekers/",
+      "quarantine_path": "quarantine/quarantine-meta-authority/sickn33-antigravity-awesome-skills/skills/skill-seekers/"
+    },
+    {
+      "name": "skin-health-analyzer",
+      "status": "quarantine-high-stakes",
+      "reason": "Medical advice risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/skin-health-analyzer/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/skin-health-analyzer/"
+    },
+    {
+      "name": "slack-automation",
+      "status": "gated-external-actions",
+      "reason": "Messaging/workspace side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/slack-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/slack-automation/"
+    },
+    {
+      "name": "smtp-penetration-testing",
+      "status": "delete-default-offensive",
+      "reason": "Service-specific pentesting. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/smtp-penetration-testing/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/smtp-penetration-testing/"
+    },
+    {
+      "name": "sql-injection-testing",
+      "status": "delete-default-offensive",
+      "reason": "SQL injection testing can become exploitation. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/sql-injection-testing/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/sql-injection-testing/"
+    },
+    {
+      "name": "sqlmap-database-pentesting",
+      "status": "delete-default-offensive",
+      "reason": "SQLMap is highly operational exploitation tooling. Delete.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/sqlmap-database-pentesting/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/sqlmap-database-pentesting/"
+    },
+    {
+      "name": "square-automation",
+      "status": "gated-external-actions",
+      "reason": "Payment/business data side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/square-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/square-automation/"
+    },
+    {
+      "name": "ssh-penetration-testing",
+      "status": "delete-default-offensive",
+      "reason": "Service-specific pentesting. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/ssh-penetration-testing/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/ssh-penetration-testing/"
+    },
+    {
+      "name": "startup-business-analyst-financial-projections",
+      "status": "quarantine-high-stakes",
+      "reason": "Financial projections can be misused as advice.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/startup-business-analyst-financial-projections/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/startup-business-analyst-financial-projections/"
+    },
+    {
+      "name": "startup-financial-modeling",
+      "status": "quarantine-high-stakes",
+      "reason": "Financial-modeling advice should be bounded.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/startup-financial-modeling/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/startup-financial-modeling/"
+    },
+    {
+      "name": "steve-jobs",
+      "status": "quarantine-persona",
+      "reason": "Public-figure simulation. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/steve-jobs/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/steve-jobs/"
+    },
+    {
+      "name": "stripe-automation",
+      "status": "gated-external-actions",
+      "reason": "Customers, charges, invoices, refunds, and subscriptions. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/stripe-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/stripe-automation/"
+    },
+    {
+      "name": "stripe-integration",
+      "status": "gated-external-actions",
+      "reason": "Payment workflow. High stakes.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/stripe-integration/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/stripe-integration/"
+    },
+    {
+      "name": "supabase-automation",
+      "status": "gated-external-actions",
+      "reason": "Database/project automation, including possible SQL execution. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/supabase-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/supabase-automation/"
+    },
+    {
+      "name": "supply-chain-risk-auditor",
+      "status": "quarantine-high-stakes",
+      "reason": "Useful but high-impact; should be gated with evidence standards.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/supply-chain-risk-auditor/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/supply-chain-risk-auditor/"
+    },
+    {
+      "name": "task-intelligence",
+      "status": "quarantine-meta-authority",
+      "reason": "Says it activates all relevant agents before every task and escalates orchestration. Too broad for default behavior.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/task-intelligence/",
+      "quarantine_path": "quarantine/quarantine-meta-authority/sickn33-antigravity-awesome-skills/skills/task-intelligence/"
+    },
+    {
+      "name": "telegram-automation",
+      "status": "gated-external-actions",
+      "reason": "Messaging/community side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/telegram-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/telegram-automation/"
+    },
+    {
+      "name": "threat-mitigation-mapping",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/threat-mitigation-mapping/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/threat-mitigation-mapping/"
+    },
+    {
+      "name": "threat-modeling-expert",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/threat-modeling-expert/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/threat-modeling-expert/"
+    },
+    {
+      "name": "tiktok-automation",
+      "status": "gated-external-actions",
+      "reason": "Social publishing/account actions.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/tiktok-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/tiktok-automation/"
+    },
+    {
+      "name": "todoist-automation",
+      "status": "gated-external-actions",
+      "reason": "Task/project mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/todoist-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/todoist-automation/"
+    },
+    {
+      "name": "top-web-vulnerabilities",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/top-web-vulnerabilities/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/top-web-vulnerabilities/"
+    },
+    {
+      "name": "travel-health-analyzer",
+      "status": "quarantine-high-stakes",
+      "reason": "Medical/travel health advice risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/travel-health-analyzer/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/travel-health-analyzer/"
+    },
+    {
+      "name": "trello-automation",
+      "status": "gated-external-actions",
+      "reason": "Board/card mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/trello-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/trello-automation/"
+    },
+    {
+      "name": "twilio-communications",
+      "status": "gated-external-actions",
+      "reason": "SMS/voice/communications side effects and cost risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/twilio-communications/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/twilio-communications/"
+    },
+    {
+      "name": "twitter-automation",
+      "status": "gated-external-actions",
+      "reason": "Social posting/account actions.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/twitter-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/twitter-automation/"
+    },
+    {
+      "name": "vercel-automation",
+      "status": "gated-external-actions",
+      "reason": "Deployments, domains, DNS, and environment variables. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/vercel-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/vercel-automation/"
+    },
+    {
+      "name": "vulnerability-scanner",
+      "status": "delete-default-offensive",
+      "reason": "Vulnerability scanning can be useful defensively, but should require explicit authorization and target scope. Remove from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/vulnerability-scanner/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/vulnerability-scanner/"
+    },
+    {
+      "name": "warren-buffett",
+      "status": "quarantine-persona",
+      "reason": "Public-figure simulation plus finance-advice adjacency. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/warren-buffett/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/warren-buffett/"
+    },
+    {
+      "name": "web-security-testing",
+      "status": "delete-default-offensive",
+      "reason": "Broad web security testing should be gated, not automatic.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/web-security-testing/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/web-security-testing/"
+    },
+    {
+      "name": "webflow-automation",
+      "status": "gated-external-actions",
+      "reason": "Website/CMS publishing side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/webflow-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/webflow-automation/"
+    },
+    {
+      "name": "weightloss-analyzer",
+      "status": "quarantine-high-stakes",
+      "reason": "Medical/nutrition advice risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/weightloss-analyzer/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/weightloss-analyzer/"
+    },
+    {
+      "name": "wellally-tech",
+      "status": "quarantine-high-stakes",
+      "reason": "Health-tech framing. Needs strict boundaries.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/wellally-tech/",
+      "quarantine_path": "quarantine/quarantine-high-stakes/sickn33-antigravity-awesome-skills/skills/wellally-tech/"
+    },
+    {
+      "name": "whatsapp-automation",
+      "status": "gated-external-actions",
+      "reason": "Messaging side effects.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/whatsapp-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/whatsapp-automation/"
+    },
+    {
+      "name": "whatsapp-cloud-api",
+      "status": "gated-external-actions",
+      "reason": "Messaging API integration. High side-effect risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/whatsapp-cloud-api/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/whatsapp-cloud-api/"
+    },
+    {
+      "name": "windows-privilege-escalation",
+      "status": "delete-default-offensive",
+      "reason": "Explicit privilege escalation. Delete.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/windows-privilege-escalation/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/windows-privilege-escalation/"
+    },
+    {
+      "name": "wireshark-analysis",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/wireshark-analysis/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/wireshark-analysis/"
+    },
+    {
+      "name": "wordpress-penetration-testing",
+      "status": "delete-default-offensive",
+      "reason": "CMS-specific pentesting. Delete from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/wordpress-penetration-testing/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/wordpress-penetration-testing/"
+    },
+    {
+      "name": "wrike-automation",
+      "status": "gated-external-actions",
+      "reason": "Project/task mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/wrike-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/wrike-automation/"
+    },
+    {
+      "name": "x-article-publisher-skill",
+      "status": "gated-external-actions",
+      "reason": "Publishes articles externally. Remove from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/x-article-publisher-skill/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/x-article-publisher-skill/"
+    },
+    {
+      "name": "x-twitter-scraper",
+      "status": "gated-external-actions",
+      "reason": "Platform scraping/automation risk.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/x-twitter-scraper/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/x-twitter-scraper/"
+    },
+    {
+      "name": "xss-html-injection",
+      "status": "delete-default-offensive",
+      "reason": "XSS/injection testing guidance. Remove from default.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/xss-html-injection/",
+      "quarantine_path": "quarantine/delete-default-offensive/sickn33-antigravity-awesome-skills/skills/xss-html-injection/"
+    },
+    {
+      "name": "yann-lecun",
+      "status": "quarantine-persona",
+      "reason": "Public-figure simulation. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/yann-lecun/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/yann-lecun/"
+    },
+    {
+      "name": "yann-lecun-debate",
+      "status": "quarantine-persona",
+      "reason": "Public-figure simulation. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/yann-lecun-debate/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/yann-lecun-debate/"
+    },
+    {
+      "name": "yann-lecun-filosofia",
+      "status": "quarantine-persona",
+      "reason": "Public-figure simulation. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/yann-lecun-filosofia/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/yann-lecun-filosofia/"
+    },
+    {
+      "name": "yann-lecun-tecnico",
+      "status": "quarantine-persona",
+      "reason": "Public-figure simulation. Delete or rewrite.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/yann-lecun-tecnico/",
+      "quarantine_path": "quarantine/quarantine-persona/sickn33-antigravity-awesome-skills/skills/yann-lecun-tecnico/"
+    },
+    {
+      "name": "youtube-automation",
+      "status": "gated-external-actions",
+      "reason": "Channel/content/account actions.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/youtube-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/youtube-automation/"
+    },
+    {
+      "name": "zapier-make-patterns",
+      "status": "gated-external-actions",
+      "reason": "Workflow automation can fan out to many external tools.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/zapier-make-patterns/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/zapier-make-patterns/"
+    },
+    {
+      "name": "zendesk-automation",
+      "status": "gated-external-actions",
+      "reason": "Customer support ticket mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/zendesk-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/zendesk-automation/"
+    },
+    {
+      "name": "zeroize-audit",
+      "status": "gated-defensive-security",
+      "reason": "Defensive security review skill; useful only with explicit authorization, scoped targets, and evidence-based output.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/zeroize-audit/",
+      "quarantine_path": "quarantine/gated-defensive-security/sickn33-antigravity-awesome-skills/skills/zeroize-audit/"
+    },
+    {
+      "name": "zoho-crm-automation",
+      "status": "gated-external-actions",
+      "reason": "CRM mutations.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/zoho-crm-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/zoho-crm-automation/"
+    },
+    {
+      "name": "zoom-automation",
+      "status": "gated-external-actions",
+      "reason": "Meeting/account actions.",
+      "source_slug": "sickn33-antigravity-awesome-skills",
+      "source_repository": "https://github.com/sickn33/antigravity-awesome-skills",
+      "original_path": "sources/sickn33-antigravity-awesome-skills/skills/zoom-automation/",
+      "quarantine_path": "quarantine/gated-external-actions/sickn33-antigravity-awesome-skills/skills/zoom-automation/"
+    }
+  ]
+}

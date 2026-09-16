@@ -1,0 +1,25 @@
+{
+  "version_timestamp": "2026-09-15T08:59:33.937530-04:00",
+  "path": "/Users/newmindsgroup/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-three-statement-forecast/assets/reference.xlsx",
+  "exists": true,
+  "calculation_verified": false,
+  "sheets": [
+    "Read Me",
+    "Assumptions",
+    "Outputs >>",
+    "Exec Sum",
+    "Statements >>",
+    "IS",
+    "BS",
+    "CF",
+    "Builds >>",
+    "Revenue",
+    "OpEx",
+    "HC",
+    "WC",
+    "FA & D&A",
+    "Fin, Tax & Equity"
+  ],
+  "formula_count": 2770,
+  "cached_errors": []
+}

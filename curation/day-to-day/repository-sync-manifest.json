@@ -1,0 +1,32 @@
+{
+  "version_timestamp": "2026-09-15T21:41:51.840856-04:00",
+  "policy_sha256": "a5a2aff071606cd1fb7f3b80f5247ef066df7eb680e3aa2d4962e61199b04fdf",
+  "plugins": [
+    {
+      "name": "marketing-growth-curated",
+      "version": "0.1.0+codex.20260915231736",
+      "skills": [
+        "cold-email",
+        "copy-editing",
+        "content-strategy",
+        "customer-research",
+        "lead-magnets"
+      ],
+      "source_in_library": "curation/plugins/marketing-growth-curated"
+    },
+    {
+      "name": "business-strategy-curated",
+      "version": "0.1.0",
+      "skills": [
+        "business-model-designer"
+      ],
+      "source_in_library": "curation/plugins/business-strategy-curated"
+    }
+  ],
+  "pricing_source": "knowledge-canon/canon/pricing-economics",
+  "pricing_hashes": {
+    "SKILL.md": "ecf303bd457fcaae16c1681d9cffc2477a055c9954fd91a5466cd0bbfff2fe38",
+    "references/value-conversation-four-step.md": "175b1562da9e0dfaed2da51175b2c8ed3d382b36985876ef4d2661fe9400c74f"
+  },
+  "git_status": "Local changes only; no commit or push performed; unrelated existing edits preserved"
+}

@@ -1,0 +1,36 @@
+{
+  "version_timestamp": "2026-09-15T18:54:08.751363-04:00",
+  "files": {
+    "business-model-designer/SKILL.md": "ddb23ca438a6d51d720096c71153f721795b120bd3ed993b6a53ed6e17b460b1",
+    "business-model-designer/SKILL.raw.md": "e7fdad3967107c64b7ed7db8c47e9e518d94093e412eda7b58e3d43f4c1c6484",
+    "business-model-designer/html-templates/business-model-designer.html": "8cf74f701b60e1b2258378e97dc9cc44f8c43ce6a0076d2d48c10df0ae278f44",
+    "business-model-designer/references/ASSEMBLY-WORKFLOW.md": "8147ec5babbdb8dbec10a864ef76059664e0d18a1872f065167d9a10f40e07ef"
+  },
+  "checks": {
+    "designer_frontmatter": "pass",
+    "pricing_generated_frontmatter": "pass",
+    "canon_three_tool_parity": "pass"
+  },
+  "limits": [
+    "Designer candidate not installed; imported source revision and complete resource provenance remain unqualified",
+    "HTML implementation and visual validation not performed",
+    "Pricing adaptation does not assert fidelity to the original book"
+  ],
+  "pricing_generated_hashes": {
+    "codex": {
+      ".generated-by-knowledge-canon": "c06c95c4ce5de25b8f5225d8fd0175ebf5ae3bdde66f95cb3b5d953b259a4406",
+      "SKILL.md": "ecf303bd457fcaae16c1681d9cffc2477a055c9954fd91a5466cd0bbfff2fe38",
+      "references/value-conversation-four-step.md": "175b1562da9e0dfaed2da51175b2c8ed3d382b36985876ef4d2661fe9400c74f"
+    },
+    "claude": {
+      ".generated-by-knowledge-canon": "c06c95c4ce5de25b8f5225d8fd0175ebf5ae3bdde66f95cb3b5d953b259a4406",
+      "SKILL.md": "ecf303bd457fcaae16c1681d9cffc2477a055c9954fd91a5466cd0bbfff2fe38",
+      "references/value-conversation-four-step.md": "175b1562da9e0dfaed2da51175b2c8ed3d382b36985876ef4d2661fe9400c74f"
+    },
+    "gemini": {
+      ".generated-by-knowledge-canon": "c06c95c4ce5de25b8f5225d8fd0175ebf5ae3bdde66f95cb3b5d953b259a4406",
+      "SKILL.md": "ecf303bd457fcaae16c1681d9cffc2477a055c9954fd91a5466cd0bbfff2fe38",
+      "references/value-conversation-four-step.md": "175b1562da9e0dfaed2da51175b2c8ed3d382b36985876ef4d2661fe9400c74f"
+    }
+  }
+}

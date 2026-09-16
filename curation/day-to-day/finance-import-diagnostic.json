@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-09-15T13:56:53.782Z",
+  "engine": "artifact-tool",
+  "checks": [
+    {
+      "sheet": "BS",
+      "range": "C32:N32",
+      "values": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "sheet": "CF",
+      "range": "C35:N35",
+      "values": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "sheet": "CF",
+      "range": "C18:N18",
+      "values": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "pass": true
+    }
+  ],
+  "errors": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "scenarios": [
+    {
+      "scenario": "Base",
+      "selector": "Base",
+      "activeDSO": 45,
+      "revenue": 1277.0751783779358,
+      "cash": 243.40237194736096,
+      "balanced": true
+    },
+    {
+      "scenario": "Growth",
+      "selector": "Growth",
+      "activeDSO": 45,
+      "revenue": 1277.0751783779358,
+      "cash": 243.40237194736096,
+      "balanced": true
+    },
+    {
+      "scenario": "Downside",
+      "selector": "Downside",
+      "activeDSO": 45,
+      "revenue": 1277.0751783779358,
+      "cash": 243.40237194736096,
+      "balanced": true
+    }
+  ],
+  "collectionDelay": {
+    "input": 60,
+    "active": 45,
+    "before": {
+      "cash": 243.40237194736096,
+      "revenue": 1277.0751783779358
+    },
+    "after": {
+      "cash": 243.40237194736096,
+      "revenue": 1277.0751783779358
+    },
+    "pass": false
+  },
+  "control": {
+    "initial": 6,
+    "changed": 12
+  }
+}

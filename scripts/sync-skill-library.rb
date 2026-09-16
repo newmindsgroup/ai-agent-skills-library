@@ -25,11 +25,16 @@ DIST_README = File.join(ROOT, "dist", "README.md")
 INDEX_JSON_PATH = File.join(ROOT, "dist", "skills-index.json")
 INDEX_TSV_PATH = File.join(ROOT, "dist", "skills-index.tsv")
 BUNDLES_JSON_PATH = File.join(ROOT, "dist", "bundles.json")
+QUARANTINE_JSON_PATH = File.join(ROOT, "dist", "quarantine-index.json")
+QUARANTINE_TSV_PATH = File.join(ROOT, "dist", "quarantine-index.tsv")
 MANIFEST_PATH = File.join(ROOT, "manifests", "skills-manifest.json")
 STARTER_PACKS_PATH = File.join(ROOT, "manifests", "starter-packs.json")
 SOURCE_DOC_PATH = File.join(ROOT, "docs", "SKILL-SOURCES.md")
 TRUST_DOC_PATH = File.join(ROOT, "docs", "SKILLS-TRUST.md")
 STARTER_PACKS_DOC_PATH = File.join(ROOT, "docs", "STARTER-PACKS.md")
+CATALOG_DOC_PATH = File.join(ROOT, "docs", "SKILLS-CATALOG.md")
+SAFETY_DOC_PATH = File.join(ROOT, "docs", "SKILLS-SAFETY.md")
+SAFETY_POLICY_PATH = File.join(ROOT, "manifests", "skill-safety-policy.json")
 GENERATED_SOURCE_MARKER = ".generated-source-index"
 GENERATED_EXPORT_MARKER = ".generated-flat-skills"
 GENERATED_BUNDLES_MARKER = ".generated-bundles"
@@ -135,6 +140,12 @@ def load_existing_categories(manifest)
   manifest.fetch("skills", []).to_h { |entry| [entry["name"], entry["category"]] }
 end
 
+def load_safety_policy
+  return { "skills" => [] } unless File.exist?(SAFETY_POLICY_PATH)
+
+  JSON.parse(File.read(SAFETY_POLICY_PATH))
+end
+
 def risk_flags_for(name, description, text)
   haystack = [name, description, text].join("\n").downcase
   flags = []
@@ -203,6 +214,8 @@ def skill_entries(categories)
     source = normalize_source(metadata["source_repository"], fallback_slug: source_slug)
     source["slug"] = source_slug if source["slug"].nil? || source["slug"].empty?
     description = frontmatter["description"].to_s.strip
+    category = categories[skill_name] || frontmatter["category"].to_s.strip
+    category = "Uncategorized" if category.empty?
     risk_flags = risk_flags_for(skill_name, description, skill_text)
     trust = trust_for(source, risk_flags)
 
@@ -210,7 +223,7 @@ def skill_entries(categories)
       "name" => skill_name,
       "frontmatter_name" => frontmatter["name"],
       "description" => description,
-      "category" => categories[skill_name] || "Uncategorized",
+      "category" => category,
       "canonical_path" => "sources/#{source_slug}/skills/#{skill_name}/",
       "export_path" => "dist/skills/#{skill_name}/",
       "imported_source_path" => metadata["source_path"],
@@ -244,7 +257,9 @@ def safe_reset_generated_dir(path, marker)
 end
 
 manifest = load_existing_manifest
-generated_at = manifest["generated_at"] || Date.today.iso8601
+safety_policy = load_safety_policy
+quarantined_skills = safety_policy.fetch("skills", [])
+generated_at = Date.today.iso8601
 categories = load_existing_categories(manifest)
 entries = skill_entries(categories)
 grouped = entries.group_by { |entry| entry["source"]["slug"] }
@@ -272,6 +287,9 @@ File.write(DIST_README, <<~MARKDOWN)
   # Flat Skills Export
 
   This directory is generated from `../sources/<source>/skills/`.
+  It contains only the safe default install set. Skills removed by the safety
+  policy are preserved under `../quarantine/` and documented in
+  `../docs/SKILLS-SAFETY.md`.
 
   Agent Skills-compatible tools generally expect a flat layout:
 
@@ -289,6 +307,7 @@ File.write(DIST_README, <<~MARKDOWN)
 
   - `skills-index.json` - machine-readable search index
   - `skills-index.tsv` - shell-friendly search index
+  - `quarantine-index.json` and `quarantine-index.tsv` - blocked/gated skill index
   - `bundles.json` and `bundles/*.txt` - starter-pack definitions for installers
 MARKDOWN
 
@@ -342,6 +361,8 @@ File.write(File.join(SOURCES_DIR, "README.md"), source_index.join("\n") + "\n")
 
 manifest["generated_at"] = generated_at
 manifest["total_skills"] = entries.length
+manifest["default_install_policy"] = "safe-default"
+manifest["quarantined_skills"] = quarantined_skills.length
 manifest["source_groups"] = source_rows
 manifest["starter_packs"] = starter_packs.map do |pack|
   pack.merge(
@@ -387,6 +408,8 @@ end.sort_by { |row| [-row["count"], row["name"]] }
 index = {
   "generated_at" => generated_at,
   "total_skills" => entries.length,
+  "default_install_policy" => "safe-default",
+  "quarantined_skills" => quarantined_skills.length,
   "categories" => category_rows,
   "sources" => source_rows,
   "trust_levels" => trust_rows,
@@ -432,6 +455,32 @@ entries.sort_by { |entry| entry["name"] }.each do |entry|
   ].map { |value| tsv_escape(value) }.join("\t")
 end
 File.write(INDEX_TSV_PATH, tsv.join("\n") + "\n")
+
+quarantine_status_rows = quarantined_skills.group_by { |entry| entry["status"] }.map do |status, values|
+  { "name" => status, "count" => values.length }
+end.sort_by { |row| [row["name"]] }
+
+quarantine_index = {
+  "generated_at" => generated_at,
+  "total_quarantined" => quarantined_skills.length,
+  "statuses" => quarantine_status_rows,
+  "skills" => quarantined_skills.sort_by { |entry| entry["name"] }
+}
+File.write(QUARANTINE_JSON_PATH, JSON.pretty_generate(quarantine_index) + "\n")
+
+quarantine_tsv = []
+quarantine_tsv << %w[name status source_slug original_path quarantine_path reason].join("\t")
+quarantined_skills.sort_by { |entry| entry["name"] }.each do |entry|
+  quarantine_tsv << [
+    entry["name"],
+    entry["status"],
+    entry["source_slug"],
+    entry["original_path"],
+    entry["quarantine_path"],
+    entry["reason"]
+  ].map { |value| tsv_escape(value) }.join("\t")
+end
+File.write(QUARANTINE_TSV_PATH, quarantine_tsv.join("\n") + "\n")
 
 File.write(BUNDLES_JSON_PATH, JSON.pretty_generate({
   "generated_at" => generated_at,
@@ -516,6 +565,10 @@ source_rows.each do |source|
   trust_doc << "| #{label} | `#{source["type"]}` | #{posture} | #{source["count"]} |"
 end
 trust_doc << ""
+trust_doc << "## Safety Quarantine"
+trust_doc << ""
+trust_doc << "#{quarantined_skills.length} skill(s) are preserved under `../quarantine/` but removed from the default install/export path. See [`SKILLS-SAFETY.md`](SKILLS-SAFETY.md) for the policy, reasons, and reinstatement rules."
+trust_doc << ""
 trust_doc << "Machine-readable trust fields are included in [`../dist/skills-index.json`](../dist/skills-index.json) and [`../manifests/skills-manifest.json`](../manifests/skills-manifest.json)."
 File.write(TRUST_DOC_PATH, trust_doc.join("\n") + "\n")
 
@@ -550,8 +603,128 @@ end
 packs_doc << "Machine-readable bundle files live in [`../dist/bundles/`](../dist/bundles/) and [`../dist/bundles.json`](../dist/bundles.json)."
 File.write(STARTER_PACKS_DOC_PATH, packs_doc.join("\n") + "\n")
 
+safety_counts = quarantined_skills.group_by { |entry| entry["status"] }.map do |status, values|
+  { "name" => status, "count" => values.length }
+end.sort_by { |row| [row["name"]] }
+
+catalog_doc = []
+catalog_doc << "# Skills Catalog"
+catalog_doc << ""
+catalog_doc << "Complete generated index of every default-installable skill currently shipped in this repository."
+catalog_doc << ""
+catalog_doc << "- Generated: #{generated_at}"
+catalog_doc << "- Default-installable skills: #{entries.length}"
+catalog_doc << "- Quarantined or gated skills removed from default export: #{quarantined_skills.length}"
+catalog_doc << ""
+catalog_doc << "For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills-index.json) or [`../dist/skills-index.tsv`](../dist/skills-index.tsv). For curated install subsets, see [`STARTER-PACKS.md`](STARTER-PACKS.md). For trust and provenance metadata, see [`SKILLS-TRUST.md`](SKILLS-TRUST.md). For removed or gated skills, see [`SKILLS-SAFETY.md`](SKILLS-SAFETY.md)."
+catalog_doc << ""
+catalog_doc << "## Source Repositories Used"
+source_rows.each do |source|
+  label = source["url"] ? "#{source["label"]} - #{source["url"]}" : source["label"]
+  catalog_doc << "- **#{markdown_escape(source["slug"])}:** #{markdown_escape(label)}"
+end
+catalog_doc << ""
+catalog_doc << "## High-Leverage Routing Set"
+catalog_doc << ""
+catalog_doc << "| Skill | What it does |"
+catalog_doc << "|---|---|"
+entries_by_name = entries.to_h { |entry| [entry["name"], entry] }
+[
+  "codex-skill-orchestrator",
+  "codex-workflows",
+  "codex-design-expert",
+  "skill-router",
+  "brainstorming",
+  "concise-planning",
+  "writing-plans",
+  "systematic-debugging",
+  "test-driven-development",
+  "verification-before-completion",
+  "context7-cli",
+  "get-api-docs",
+  "gh-fix-ci",
+  "dogfood",
+  "find-skills",
+  "business-model-designer",
+  "startup-validator",
+  "setting-okrs-goals",
+  "business-model-canvas",
+  "strategy-frameworks",
+  "okr-frameworks",
+  "metrics-frameworks",
+  "zero-to-launch",
+  "ai-startup-building"
+].each do |skill_name|
+  entry = entries_by_name[skill_name]
+  next unless entry
+
+  catalog_doc << "| [`#{skill_name}`](../dist/skills/#{skill_name}/) | #{markdown_escape(entry["description"])} |"
+end
+catalog_doc << ""
+catalog_doc << "## Category Summary"
+catalog_doc << ""
+catalog_doc << "| Category | Count |"
+catalog_doc << "|---|---:|"
+category_rows.each { |row| catalog_doc << "| #{markdown_escape(row["name"])} | #{row["count"]} |" }
+entries.group_by { |entry| entry["category"] }.sort_by { |category, _skills| category }.each do |category, skills|
+  catalog_doc << ""
+  catalog_doc << "## #{category}"
+  catalog_doc << ""
+  catalog_doc << "| Skill | What it does | Trust |"
+  catalog_doc << "|---|---|---|"
+  skills.sort_by { |skill| skill["name"] }.each do |skill|
+    catalog_doc << "| [`#{skill["name"]}`](../dist/skills/#{skill["name"]}/) | #{markdown_escape(skill["description"])} | `#{skill["trust"]["trust_level"]}` |"
+  end
+end
+File.write(CATALOG_DOC_PATH, catalog_doc.join("\n") + "\n")
+
+safety_doc = []
+safety_doc << "# Skill Safety Policy"
+safety_doc << ""
+safety_doc << "This repository ships a safe default skill export. Skills that raised material safety, compliance, impersonation, or external-action concerns are preserved for review under `../quarantine/`, but they are not copied into `../dist/skills/` and are not installed by the one-line installer."
+safety_doc << ""
+safety_doc << "- Default-installable skills: #{entries.length}"
+safety_doc << "- Quarantined or gated skills: #{quarantined_skills.length}"
+safety_doc << "- Policy manifest: [`../manifests/skill-safety-policy.json`](../manifests/skill-safety-policy.json)"
+safety_doc << "- Audit report: [`SKILL-RISK-AUDIT-2026-05-21.md`](SKILL-RISK-AUDIT-2026-05-21.md)"
+local_audit_doc = "LOCAL-CODEX-SKILLS-SAFETY-#{generated_at}.md"
+safety_doc << "- Local Codex audit report: [`#{local_audit_doc}`](#{local_audit_doc})" if File.exist?(File.join(File.dirname(SAFETY_DOC_PATH), local_audit_doc))
+safety_doc << ""
+safety_doc << "## Status Counts"
+safety_doc << ""
+safety_doc << "| Status | Count | Meaning |"
+safety_doc << "|---|---:|---|"
+status_meanings = safety_policy.fetch("statuses", {})
+safety_counts.each do |row|
+  safety_doc << "| `#{row["name"]}` | #{row["count"]} | #{markdown_escape(status_meanings.fetch(row["name"], ""))} |"
+end
+safety_doc << ""
+safety_doc << "## Local Codex Runtime Cleanup"
+safety_doc << ""
+safety_doc << "The same policy can be applied to already-installed local Codex skills with:"
+safety_doc << ""
+safety_doc << "```bash"
+safety_doc << "ruby scripts/audit-local-codex-skills.rb --apply --fail-on-policy-matches"
+safety_doc << "```"
+safety_doc << ""
+safety_doc << "This moves policy-matched user-installed skills out of active discovery roots like `~/.codex/skills` and into `~/.codex/skill-quarantine/<timestamp>/`. It does not delete them, and it does not move system or plugin-managed runtime skills."
+safety_doc << ""
+safety_doc << "## Quarantined Skills"
+safety_doc << ""
+safety_doc << "| Skill | Status | Original source | Quarantine path | Reason |"
+safety_doc << "|---|---|---|---|---|"
+quarantined_skills.sort_by { |entry| [entry["status"], entry["name"]] }.each do |entry|
+  safety_doc << "| `#{entry["name"]}` | `#{entry["status"]}` | `#{entry["original_path"]}` | [`#{entry["quarantine_path"]}`](../#{entry["quarantine_path"]}) | #{markdown_escape(entry["reason"])} |"
+end
+safety_doc << ""
+safety_doc << "## Reinstatement Rules"
+safety_doc << ""
+safety_doc << "A quarantined skill can return to `sources/` only after a maintainer rewrites it to remove the flagged behavior, updates this policy manifest, runs the full validation suite, and verifies that the skill does not create offensive, high-stakes, impersonation, or external-side-effect risk in the default install path."
+File.write(SAFETY_DOC_PATH, safety_doc.join("\n") + "\n")
+
 puts "Synced #{entries.length} skill(s)."
 puts "Generated #{source_rows.length} source group(s)."
 puts "Generated #{starter_packs.length} starter pack(s)."
+puts "Quarantined #{quarantined_skills.length} skill(s) outside the default export."
 puts "Flat export: #{EXPORT_DIR}"
 source_rows.each { |source| puts "#{source["count"]}\t#{source["slug"]}\t#{source["label"]}" }

@@ -1,0 +1,10 @@
+{
+  "version_timestamp": "2026-09-15 18:53:24 AST",
+  "designer_source": "/Users/newmindsgroup/Library/Mobile Documents/com~apple~CloudDocs/Documents/ai-agents/codex-configuration/ai-agent-skills-library/sources/maigentic-stratarts/skills/business-model-designer",
+  "designer_status": "isolated candidate; historical upstream resources preserved; not installed",
+  "pricing_source": "/Users/newmindsgroup/Library/Mobile Documents/com~apple~CloudDocs/Documents/ai-agents/knowledge-canon/canon/pricing-economics/value-conversation-four-step.md",
+  "pricing_before_sha256": "80d75783f3f377857d4c7d834017a8a9631544dd9ed4a7a9aca7a556098affb6",
+  "routing": "Astra Low Standard recommended; current Codex runtime retained; no model switch",
+  "acceptance": "structural checks, compiler preview and parity, bounded synthetic decisions",
+  "review": "Claude usage exception from user remains applicable"
+}

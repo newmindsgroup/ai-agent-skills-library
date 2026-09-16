@@ -1,0 +1,116 @@
+{
+  "version_timestamp": "2026-09-15T19:17:36.003665-04:00",
+  "distribution": "Private local pilot; no public publication performed.",
+  "skills": [
+    {
+      "skill": "customer-research",
+      "source": "/Users/newmindsgroup/.codex/skills/customer-research",
+      "original_files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "e61f3b6fe3e766cf8309c20ed14f25e56b24c7f3fdcde14292751d31066e8f73"
+        },
+        {
+          "path": "evals/evals.json",
+          "sha256": "a024a1709e28ad867543e0be82f2d9e1712b67a9b76398fbc372751a5946ddab"
+        },
+        {
+          "path": "references/source-guides.md",
+          "sha256": "56682ea98d781060396fd4009739d071671b3489a0d4c81f0a0ef3078cb5c9ee"
+        }
+      ],
+      "license_status": "MIT notice verified at anchored upstream commit and preserved",
+      "changes": "local curation rules and task-specific evidence/scope corrections",
+      "version_timestamp": "2026-09-14 19:58:24 AST",
+      "upstream_commit": "ef8e08ffd2dfe56b272853a64399a2dae71595c9",
+      "provenance_status": "Resources and evals match upstream bytes. Entry exact for customer-research; cold-email and lead-magnets differ only by documented importer metadata/sections and whitespace, before local curation."
+    },
+    {
+      "skill": "cold-email",
+      "source": "/Users/newmindsgroup/.codex/skills/cold-email",
+      "original_files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "f7b9d4e01ab2bb942daa036cf4ec9ec2fccdb8a1b12262c0bb94bd7627541c16"
+        },
+        {
+          "path": "evals/evals.json",
+          "sha256": "80d7b362f84e1a40b6e7dbeb09e2f50dc89aa64677e63aa10d7ac5acd25aea64"
+        },
+        {
+          "path": "references/personalization.md",
+          "sha256": "08f18652938e14143402786fbdb8e1a6269650bb5eef9106898f1cdf31e47e36"
+        },
+        {
+          "path": "references/frameworks.md",
+          "sha256": "b29fb89922f96ae1c6911675a7e173a8f7c6a40999c9a18b14ac7f357b5f5a03"
+        },
+        {
+          "path": "references/benchmarks.md",
+          "sha256": "3dc1d38a2d1f4fbb2706be7ca3d40156b66a3d7078c183a930ff373c3bb04c09"
+        },
+        {
+          "path": "references/subject-lines.md",
+          "sha256": "f71f31b1151d972bb19ff03791ffb9d24941a8ccea8b913e5a5c7aca439b45ce"
+        },
+        {
+          "path": "references/follow-up-sequences.md",
+          "sha256": "87e14749104b0c5bcd865e55d33513a161edb8e6773b2a2d9802b5460f2f7369"
+        }
+      ],
+      "license_status": "MIT notice verified at anchored upstream commit and preserved",
+      "changes": "local curation rules and task-specific evidence/scope corrections",
+      "version_timestamp": "2026-09-14 19:58:24 AST",
+      "upstream_commit": "68f5eaf64e858438db47e436d7a3bef0e9d69721",
+      "provenance_status": "Resources and evals match upstream bytes. Entry exact for customer-research; cold-email and lead-magnets differ only by documented importer metadata/sections and whitespace, before local curation."
+    },
+    {
+      "skill": "lead-magnets",
+      "source": "/Users/newmindsgroup/.codex/skills/lead-magnets",
+      "original_files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "f774c7348d8cc25b10f8c5321d5f23b29c1027f59b573b80a26dee0042c3b7c8"
+        },
+        {
+          "path": "references/benchmarks.md",
+          "sha256": "becdf4bcde17e788ead10794c797294548c712ea1074e042336da93433a61187"
+        },
+        {
+          "path": "references/format-guide.md",
+          "sha256": "160b34c4c0d19e67fcc032181fdfbf1d5cae6dac94937f2333e8e21815ce9732"
+        }
+      ],
+      "license_status": "MIT notice verified at anchored upstream commit and preserved",
+      "changes": "local curation rules and task-specific evidence/scope corrections",
+      "version_timestamp": "2026-09-14 19:58:24 AST",
+      "upstream_commit": "1c32ad3dbf29cc73416e3874a508e25dd003c089",
+      "provenance_status": "Resources and evals match upstream bytes. Entry exact for customer-research; cold-email and lead-magnets differ only by documented importer metadata/sections and whitespace, before local curation."
+    },
+    {
+      "skill": "content-strategy",
+      "source": "/Users/newmindsgroup/Library/Mobile Documents/com~apple~CloudDocs/Documents/ai-agents/codex-configuration/ai-agent-skills-library/curation/content-repairs/content-strategy",
+      "upstream_repository": "https://github.com/coreyhaines31/marketingskills",
+      "upstream_commit": "51146da746ab2a877b6161b00585994616e3ba0a",
+      "license_status": "Pinned MIT notice matches LICENSE.upstream",
+      "changes": "Evidence/scope rules, conditional scoring, channel-fit and CMS reference repaired locally",
+      "tested_candidate_hashes": {
+        "SKILL.md": "c7f5995a5bde12b3bd78239b9c5a92a5072c2ea713798938b582c8e672246fe0",
+        "evals/evals.json": "eb330d1f3baefe0bab560e3ce42201a4e1e2cae4da530fb3d2a6314816772d2e",
+        "references/headless-cms.md": "131048684b5b661185900a922aa0f3ce117008d0735ba25cc0450fa7ed537b5c"
+      }
+    },
+    {
+      "skill": "copy-editing",
+      "upstream_repository": "https://github.com/coreyhaines31/marketingskills",
+      "upstream_commit": "4874fe8979134ff428ee2e564b8b20c5855515c3",
+      "license_status": "Pinned MIT matches LICENSE.upstream",
+      "changes": "Portable project context, bounded edits and evidence-sensitive references; historical evals excluded",
+      "tested_candidate_hashes": {
+        "SKILL.md": "4bb701c289cd91ee93c7528cf468f58bcbc8c3495efd57d13a82f7c33dbfa9ce",
+        "references/plain-english-alternatives.md": "e2c58bd34206b8e05eec994cf16fd5c92859da2d12831864bed392303c342d12",
+        "references/content-refresh.md": "50553a162eb2e5af002f494347428846a8d844c00aa7ecbb85e11de23b649625"
+      }
+    }
+  ]
+}

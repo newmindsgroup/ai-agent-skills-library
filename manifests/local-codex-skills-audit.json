@@ -1,0 +1,206 @@
+{
+  "generated_at": "2026-05-21T22:19:34Z",
+  "mode": "apply",
+  "policy_path": "manifests/skill-safety-policy.json",
+  "safe_index_path": "dist/skills-index.json",
+  "local_allowlist_path": "manifests/local-codex-skill-allowlist.json",
+  "quarantine_root": "/Users/newmindsgroup/.codex/skill-quarantine/20260521T221433Z",
+  "roots": [
+    {
+      "label": ".codex-skills",
+      "path": "/Users/newmindsgroup/.codex/skills",
+      "mode": "active-user",
+      "apply": true
+    },
+    {
+      "label": ".agents-skills",
+      "path": "/Users/newmindsgroup/.agents/skills",
+      "mode": "active-user",
+      "apply": true
+    },
+    {
+      "label": ".codex-skills-.system",
+      "path": "/Users/newmindsgroup/.codex/skills/.system",
+      "mode": "runtime-or-plugin",
+      "apply": false
+    },
+    {
+      "label": ".codex-plugins-cache-openai-bundled",
+      "path": "/Users/newmindsgroup/.codex/plugins/cache/openai-bundled",
+      "mode": "runtime-or-plugin",
+      "apply": false
+    },
+    {
+      "label": ".codex-plugins-cache-openai-primary-runtime",
+      "path": "/Users/newmindsgroup/.codex/plugins/cache/openai-primary-runtime",
+      "mode": "runtime-or-plugin",
+      "apply": false
+    },
+    {
+      "label": ".codex-plugins-cache-openai-curated-canva-36878fcb-skills",
+      "path": "/Users/newmindsgroup/.codex/plugins/cache/openai-curated/canva/36878fcb/skills",
+      "mode": "runtime-or-plugin",
+      "apply": false
+    },
+    {
+      "label": ".codex-plugins-cache-openai-curated-github-36878fcb-skills",
+      "path": "/Users/newmindsgroup/.codex/plugins/cache/openai-curated/github/36878fcb/skills",
+      "mode": "runtime-or-plugin",
+      "apply": false
+    },
+    {
+      "label": ".codex-plugins-cache-openai-curated-google-drive-36878fcb-skills",
+      "path": "/Users/newmindsgroup/.codex/plugins/cache/openai-curated/google-drive/36878fcb/skills",
+      "mode": "runtime-or-plugin",
+      "apply": false
+    },
+    {
+      "label": ".codex-plugins-cache-openai-curated-superpowers-36878fcb-skills",
+      "path": "/Users/newmindsgroup/.codex/plugins/cache/openai-curated/superpowers/36878fcb/skills",
+      "mode": "runtime-or-plugin",
+      "apply": false
+    }
+  ],
+  "before": {
+    "total_records": 1335,
+    "active_user_skills": 1298,
+    "runtime_or_plugin_skills": 37,
+    "active_policy_matches": 0,
+    "active_unknown_to_library": 0,
+    "active_local_allowlisted": 2,
+    "active_duplicate_names": 9,
+    "policy_matches_by_status": {
+    }
+  },
+  "after": {
+    "total_records": 1335,
+    "active_user_skills": 1298,
+    "runtime_or_plugin_skills": 37,
+    "active_policy_matches": 0,
+    "active_unknown_to_library": 0,
+    "active_local_allowlisted": 2,
+    "active_duplicate_names": 9,
+    "policy_matches_by_status": {
+    }
+  },
+  "actions": [
+
+  ],
+  "remaining_active_policy_matches": [
+
+  ],
+  "active_local_allowlisted": [
+    {
+      "name": "android_ui_verification",
+      "path": "/Users/newmindsgroup/.codex/skills/android_ui_verification",
+      "skill_md": "/Users/newmindsgroup/.codex/skills/android_ui_verification/SKILL.md",
+      "relative_path": "android_ui_verification",
+      "root_label": ".codex-skills",
+      "root_path": "/Users/newmindsgroup/.codex/skills",
+      "root_mode": "active-user",
+      "apply_root": true,
+      "policy_status": null,
+      "policy_reason": null,
+      "local_allow_status": "allow-local-legacy-alias",
+      "local_allow_reason": "Legacy underscore-named Android emulator UI verification skill. It overlaps with the safe default android-ui-verification skill and is limited to local ADB/emulator QA workflows.",
+      "in_safe_default_index": false,
+      "unknown_to_library": false
+    },
+    {
+      "name": "open-design-controller",
+      "path": "/Users/newmindsgroup/.codex/skills/open-design-controller",
+      "skill_md": "/Users/newmindsgroup/.codex/skills/open-design-controller/SKILL.md",
+      "relative_path": "open-design-controller",
+      "root_label": ".codex-skills",
+      "root_path": "/Users/newmindsgroup/.codex/skills",
+      "root_mode": "active-user",
+      "apply_root": true,
+      "policy_status": null,
+      "policy_reason": null,
+      "local_allow_status": "allow-local-only",
+      "local_allow_reason": "Local Open Design runtime controller with machine-specific paths and OAuth/billing guardrails. Keep local; do not publish as a generic default skill without rewriting for portability.",
+      "in_safe_default_index": false,
+      "unknown_to_library": false
+    }
+  ],
+  "active_unknown_to_library": [
+
+  ],
+  "active_duplicate_details": [
+    {
+      "name": "ai-startup-building",
+      "identical_skill_md": true,
+      "paths": [
+        "/Users/newmindsgroup/.codex/skills/ai-startup-building",
+        "/Users/newmindsgroup/.agents/skills/ai-startup-building"
+      ]
+    },
+    {
+      "name": "business-model-canvas",
+      "identical_skill_md": true,
+      "paths": [
+        "/Users/newmindsgroup/.codex/skills/business-model-canvas",
+        "/Users/newmindsgroup/.agents/skills/business-model-canvas"
+      ]
+    },
+    {
+      "name": "graphify",
+      "identical_skill_md": true,
+      "paths": [
+        "/Users/newmindsgroup/.codex/skills/graphify",
+        "/Users/newmindsgroup/.agents/skills/graphify"
+      ]
+    },
+    {
+      "name": "metrics-frameworks",
+      "identical_skill_md": true,
+      "paths": [
+        "/Users/newmindsgroup/.codex/skills/metrics-frameworks",
+        "/Users/newmindsgroup/.agents/skills/metrics-frameworks"
+      ]
+    },
+    {
+      "name": "okr-frameworks",
+      "identical_skill_md": true,
+      "paths": [
+        "/Users/newmindsgroup/.codex/skills/okr-frameworks",
+        "/Users/newmindsgroup/.agents/skills/okr-frameworks"
+      ]
+    },
+    {
+      "name": "setting-okrs-goals",
+      "identical_skill_md": true,
+      "paths": [
+        "/Users/newmindsgroup/.codex/skills/setting-okrs-goals",
+        "/Users/newmindsgroup/.agents/skills/setting-okrs-goals"
+      ]
+    },
+    {
+      "name": "startup-validator",
+      "identical_skill_md": true,
+      "paths": [
+        "/Users/newmindsgroup/.codex/skills/startup-validator",
+        "/Users/newmindsgroup/.agents/skills/startup-validator"
+      ]
+    },
+    {
+      "name": "strategy-frameworks",
+      "identical_skill_md": true,
+      "paths": [
+        "/Users/newmindsgroup/.codex/skills/strategy-frameworks",
+        "/Users/newmindsgroup/.agents/skills/strategy-frameworks"
+      ]
+    },
+    {
+      "name": "zero-to-launch",
+      "identical_skill_md": true,
+      "paths": [
+        "/Users/newmindsgroup/.codex/skills/zero-to-launch",
+        "/Users/newmindsgroup/.agents/skills/zero-to-launch"
+      ]
+    }
+  ],
+  "runtime_or_plugin_policy_matches": [
+
+  ]
+}

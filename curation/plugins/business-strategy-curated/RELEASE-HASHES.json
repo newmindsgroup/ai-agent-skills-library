@@ -1,0 +1,10 @@
+{
+  "version_timestamp": "2026-09-15T19:34:17.367615-04:00",
+  "files": {
+    "PROVENANCE.json": "1fe26598a01f46e0d8ec2b1ab53def6d16001db90b19f220e0b8a84d75411a87",
+    "LICENSE.upstream": "50b0c6ba431857b97b9d2dc347eb4421c349ade2a9fb5d79202f211c428588c9",
+    ".codex-plugin/plugin.json": "7d7253cb5e64eb963471cafc512b37a5e2e2683390bc859f24634f34a949df2e",
+    "skills/business-model-designer/SKILL.md": "d7c5a348464adcf2c8675a44b362b98800a6517f5922d37ded1c455e3c0c4708",
+    "skills/business-model-designer/references/ASSEMBLY-WORKFLOW.md": "e622b7bcd310a313027994a6b387616a320f6e327b00c63200e2e98a9e4d5a11"
+  }
+}

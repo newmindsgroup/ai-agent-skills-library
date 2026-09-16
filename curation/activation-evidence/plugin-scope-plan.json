@@ -1,0 +1,173 @@
+{
+  "version_timestamp": "2026-09-15T21:38:41.290759-04:00",
+  "entries": [
+    {
+      "name": "openai-developers:chatgpt-app-submission",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/openai-developers/1.3.0/skills/chatgpt-app-submission/SKILL.md",
+      "plugin": "openai-developers",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "openai-templates:artifact-template-investment-committee-memo",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-investment-committee-memo/SKILL.md",
+      "plugin": "openai-templates",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "openai-templates:artifact-template-legal-memorandum",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-legal-memorandum/SKILL.md",
+      "plugin": "openai-templates",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "openai-templates:artifact-template-three-statement-forecast",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-three-statement-forecast/SKILL.md",
+      "plugin": "openai-templates",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:ai-gateway",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/ai-gateway/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:ai-generation-persistence",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/ai-generation-persistence/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:chat-sdk",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/chat-sdk/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:eve",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/eve/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:geist",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/geist/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:geistdocs",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/geistdocs/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:json-render",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/json-render/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:micro",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/micro/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:microfrontends",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/microfrontends/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:ncc",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/ncc/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:next-forge",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/next-forge/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:satori",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/satori/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:sign-in-with-vercel",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/sign-in-with-vercel/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:swr",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/swr/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:turbopack",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/turbopack/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:turborepo",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/turborepo/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:v0-dev",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/v0-dev/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:vercel-agent",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-agent/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:vercel-connect",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-connect/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:vercel-flags",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-flags/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:vercel-queues",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-queues/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:vercel-sandbox",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-sandbox/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:vercel-services",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-services/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    },
+    {
+      "name": "vercel:workflow",
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/workflow/SKILL.md",
+      "plugin": "vercel",
+      "reason": "Project-only specialist; finance forecast additionally has recorded recalculation failure"
+    }
+  ]
+}

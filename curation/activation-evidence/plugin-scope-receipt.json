@@ -1,0 +1,376 @@
+{
+  "version_timestamp": "2026-09-15T21:38:41.417144-04:00",
+  "writes": [
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/openai-developers/1.3.0/skills/chatgpt-app-submission/SKILL.md",
+      "response": {
+        "id": 10,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-investment-committee-memo/SKILL.md",
+      "response": {
+        "id": 11,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-legal-memorandum/SKILL.md",
+      "response": {
+        "id": 12,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-three-statement-forecast/SKILL.md",
+      "response": {
+        "id": 13,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/ai-gateway/SKILL.md",
+      "response": {
+        "id": 14,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/ai-generation-persistence/SKILL.md",
+      "response": {
+        "id": 15,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/chat-sdk/SKILL.md",
+      "response": {
+        "id": 16,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/eve/SKILL.md",
+      "response": {
+        "id": 17,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/geist/SKILL.md",
+      "response": {
+        "id": 18,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/geistdocs/SKILL.md",
+      "response": {
+        "id": 19,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/json-render/SKILL.md",
+      "response": {
+        "id": 20,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/micro/SKILL.md",
+      "response": {
+        "id": 21,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/microfrontends/SKILL.md",
+      "response": {
+        "id": 22,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/ncc/SKILL.md",
+      "response": {
+        "id": 23,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/next-forge/SKILL.md",
+      "response": {
+        "id": 24,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/satori/SKILL.md",
+      "response": {
+        "id": 25,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/sign-in-with-vercel/SKILL.md",
+      "response": {
+        "id": 26,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/swr/SKILL.md",
+      "response": {
+        "id": 27,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/turbopack/SKILL.md",
+      "response": {
+        "id": 28,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/turborepo/SKILL.md",
+      "response": {
+        "id": 29,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/v0-dev/SKILL.md",
+      "response": {
+        "id": 30,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-agent/SKILL.md",
+      "response": {
+        "id": 31,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-connect/SKILL.md",
+      "response": {
+        "id": 32,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-flags/SKILL.md",
+      "response": {
+        "id": 33,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-queues/SKILL.md",
+      "response": {
+        "id": 34,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-sandbox/SKILL.md",
+      "response": {
+        "id": 35,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-services/SKILL.md",
+      "response": {
+        "id": 36,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/workflow/SKILL.md",
+      "response": {
+        "id": 37,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    }
+  ],
+  "rollback": [
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/openai-developers/1.3.0/skills/chatgpt-app-submission/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-investment-committee-memo/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-legal-memorandum/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-three-statement-forecast/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/ai-gateway/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/ai-generation-persistence/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/chat-sdk/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/eve/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/geist/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/geistdocs/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/json-render/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/micro/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/microfrontends/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/ncc/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/next-forge/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/satori/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/sign-in-with-vercel/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/swr/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/turbopack/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/turborepo/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/v0-dev/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-agent/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-connect/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-flags/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-queues/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-sandbox/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/vercel-services/SKILL.md",
+      "enabled": true
+    },
+    {
+      "path": "${HOME}/.codex/plugins/cache/openai-curated-remote/vercel/0.21.4/skills/workflow/SKILL.md",
+      "enabled": true
+    }
+  ],
+  "config_verified": true,
+  "unrelated_skill_settings_preserved": true,
+  "plugin_settings_preserved": true,
+  "targets_visible_in_discovery": 0,
+  "targets_pending_discovery": 28
+}

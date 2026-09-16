@@ -1,0 +1,26 @@
+{
+  "version_timestamp": "2026-09-15T10:14:18.034541-04:00",
+  "installed_originals_unchanged": true,
+  "candidate_hashes": {
+    "copy-editing/SKILL.md": "9138e6d8f4444c21d37b0890b9619cd4ce56300ec9c195493bfba3ff652275f7",
+    "content-strategy/SKILL.md": "4bbcd9be7698a5f73db1a7d6bc3cda86a56e465693f23a29653e7f5ca508187a"
+  },
+  "structural_validation": "Both passed first-party quick_validate.py",
+  "arithmetic": {
+    "example_inputs": [
+      8,
+      9,
+      7,
+      6
+    ],
+    "weights": [
+      0.4,
+      0.3,
+      0.2,
+      0.1
+    ],
+    "expected": 7.9,
+    "computed": 7.9
+  },
+  "installed": false
+}

@@ -1,0 +1,8 @@
+{
+  "version_timestamp": "2026-09-15T19:32:56.672706-04:00",
+  "upstream": "https://github.com/maigentic/stratarts",
+  "commit": "aea77df147c02445e2e10ece7ae771fcf47009b4",
+  "license": "MIT notice preserved",
+  "changes": "Local wrapper and repaired calculation/scope guidance. Historical raw snapshot and HTML assets excluded.",
+  "scope": "Synthetic-tested canvas and supplied-input economics; HTML unqualified; no commercial viability guarantee"
+}

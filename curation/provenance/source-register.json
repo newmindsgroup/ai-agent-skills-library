@@ -1,0 +1,107 @@
+{
+  "version_timestamp": "2026-09-15T19:04:55.287022-04:00",
+  "scope": "Pinned source evidence; not blanket safety, authorship or quality certification",
+  "skills": [
+    {
+      "name": "content-strategy",
+      "repo": "coreyhaines31/marketingskills",
+      "commit": "51146da746ab2a877b6161b00585994616e3ba0a",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/51146da746ab2a877b6161b00585994616e3ba0a/LICENSE",
+          "sha256": "b70d71e24e40fce5da8f4b6f9cd862096a048e433db7f3c8cac5e348e6d34591"
+        },
+        {
+          "path": "references/headless-cms.md",
+          "url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/51146da746ab2a877b6161b00585994616e3ba0a/skills/content-strategy/references/headless-cms.md",
+          "sha256": "5434e226fd593a2e1174264c37b7cba589e60a82739deec0c29107b48f1ffae5",
+          "installed_exact": true
+        }
+      ],
+      "assessment": "Upstream entry and original CMS reference exact; staged reference repaired locally. Eligible for constrained packaging after final tests."
+    },
+    {
+      "name": "copy-editing",
+      "repo": "coreyhaines31/marketingskills",
+      "commit": "4874fe8979134ff428ee2e564b8b20c5855515c3",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/4874fe8979134ff428ee2e564b8b20c5855515c3/LICENSE",
+          "sha256": "b70d71e24e40fce5da8f4b6f9cd862096a048e433db7f3c8cac5e348e6d34591"
+        },
+        {
+          "path": "references/content-refresh.md",
+          "url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/4874fe8979134ff428ee2e564b8b20c5855515c3/skills/copy-editing/references/content-refresh.md",
+          "sha256": "8a3a2d301bb2b8b2a780f5bef43093ab42295041b2fea2a9caeca2421ef3c79b",
+          "installed_exact": true
+        },
+        {
+          "path": "references/plain-english-alternatives.md",
+          "url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/4874fe8979134ff428ee2e564b8b20c5855515c3/skills/copy-editing/references/plain-english-alternatives.md",
+          "sha256": "df4f820d4c63ae8a517c64a243c101658352cd07d002355bf3c97de0a00f3775",
+          "installed_exact": true
+        }
+      ],
+      "assessment": "Upstream entry differs only by documented local StoryBrand/brand-brain additions; references exact before local repairs. Portable packaging held for machine-specific book and skill paths."
+    },
+    {
+      "name": "competitor-alternatives",
+      "repo": "coreyhaines31/marketingskills",
+      "commit": "3617bdc883230c2eec6cd77721987f71650902e5",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/3617bdc883230c2eec6cd77721987f71650902e5/LICENSE",
+          "error": "curl: (56) The requested URL returned error: 404\n"
+        }
+      ],
+      "assessment": "Near match with documented importer metadata, links and footer changes. No license file in matched commit tree; historical licensing unresolved."
+    },
+    {
+      "name": "competitive-landscape",
+      "repo": "sickn33/antigravity-awesome-skills",
+      "commit": "2138ff8fd03e70a03e116098923de0bdab3d2748",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/sickn33/antigravity-awesome-skills/2138ff8fd03e70a03e116098923de0bdab3d2748/LICENSE",
+          "sha256": "af98370a7edc0f00ec46979d049517833c9a7fa2ba74e3cf8cc42f7db557299d"
+        },
+        {
+          "path": "resources/implementation-playbook.md",
+          "url": "https://raw.githubusercontent.com/sickn33/antigravity-awesome-skills/2138ff8fd03e70a03e116098923de0bdab3d2748/skills/competitive-landscape/resources/implementation-playbook.md",
+          "sha256": "97ee901fb502b8f38f4d26a7f1bf37eaa3365ada8170d511410ffd21d3cd4f7b",
+          "installed_exact": true
+        }
+      ],
+      "assessment": "Entry and playbook exact against aggregator revision with MIT notice. Original authorship beyond aggregator not established. Constrained internal use only pending origin review."
+    },
+    {
+      "name": "business-model-designer",
+      "repo": "maigentic/stratarts",
+      "commit": "aea77df147c02445e2e10ece7ae771fcf47009b4",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/maigentic/stratarts/aea77df147c02445e2e10ece7ae771fcf47009b4/LICENSE",
+          "sha256": "50b0c6ba431857b97b9d2dc347eb4421c349ade2a9fb5d79202f211c428588c9"
+        },
+        {
+          "path": "html-templates/business-model-designer.html",
+          "url": "https://raw.githubusercontent.com/maigentic/stratarts/aea77df147c02445e2e10ece7ae771fcf47009b4/html-templates/business-model-designer.html",
+          "sha256": "8cf74f701b60e1b2258378e97dc9cc44f8c43ce6a0076d2d48c10df0ae278f44",
+          "installed_exact": true
+        },
+        {
+          "path": "references/ASSEMBLY-WORKFLOW.md",
+          "url": "https://raw.githubusercontent.com/maigentic/stratarts/aea77df147c02445e2e10ece7ae771fcf47009b4/html-templates/ASSEMBLY-WORKFLOW.md",
+          "sha256": "51931064fb49f5c750059528f724b60137eac51b6e667965aa5046a450caba6a",
+          "installed_exact": true
+        }
+      ],
+      "assessment": "Raw workflow, assembly notes and HTML exact against MIT upstream revision. Main entry is a local wrapper. Preserved historical resources excluded from execution by repaired entry; HTML remains unqualified."
+    }
+  ]
+}

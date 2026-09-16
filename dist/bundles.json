@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-09",
+  "generated_at": "2026-08-04",
   "packs": [
     {
       "name": "agent-foundation",
       "display_name": "Agent Foundation",
       "description": "Core operating principles, design methodology, human voice, brand context, and tool-selection discipline for every project.",
-      "recommended_for": "Teams that want a small default baseline before installing the full library.",
+      "recommended_for": "Teams that want a small default baseline before installing the full safe-default export.",
       "skills": [
         "institutional-ai-operating-principles",
         "design-methodology",
@@ -150,8 +150,6 @@
       "description": "Exploratory testing, browser QA, bug hunting, TDD, validation, and completion-verification skills.",
       "recommended_for": "Teams that want fewer false-done claims and stronger app-quality checks.",
       "skills": [
-        "dogfood",
-        "agent-browser",
         "bug-hunter",
         "systematic-debugging",
         "test-driven-development",
@@ -160,24 +158,36 @@
         "playwright-skill",
         "lint-and-validate"
       ],
-      "count": 9
+      "count": 7
+    },
+    {
+      "name": "release-safety",
+      "display_name": "Release Safety",
+      "description": "Original New Minds Group release, data, AI, API, frontend, Laravel, and knowledge-governance gates created from the Yazinc toolkit import audit without copying unlicensed third-party skill text.",
+      "recommended_for": "Teams that want the useful Yazinc capability coverage through curated original skills and safe default install rules.",
+      "skills": [
+        "deployment-secret-exposure-gate",
+        "application-release-audit",
+        "data-operations-governance",
+        "ai-reliability-evaluation",
+        "api-contract-release-gate",
+        "frontend-release-quality-gate",
+        "laravel-delivery-safety-pack",
+        "knowledge-base-governance"
+      ],
+      "count": 8
     },
     {
       "name": "security-review",
       "display_name": "Security Review",
-      "description": "Security audit, API security, SAST, cloud security, and AI-agent action auditing skills.",
-      "recommended_for": "Security review, risk assessment, and pre-release hardening.",
+      "description": "Conservative security-audit, SAST configuration, and AI-agent action auditing skills that avoid offensive playbooks.",
+      "recommended_for": "Pre-release hardening and agent-action risk review without installing exploit, pentest, or external-account automation skills.",
       "skills": [
-        "007",
         "audit-skills",
-        "security-auditor",
-        "api-security-best-practices",
-        "api-security-testing",
-        "aws-security-audit",
         "sast-configuration",
         "agentic-actions-auditor"
       ],
-      "count": 8
+      "count": 3
     }
   ]
 }

@@ -7,9 +7,13 @@ cd "$(dirname "$0")/.."
 paths=(
   dist
   docs/SKILL-SOURCES.md
+  docs/SKILLS-CATALOG.md
+  docs/SKILLS-SAFETY.md
   docs/SKILLS-TRUST.md
   docs/STARTER-PACKS.md
   manifests/skills-manifest.json
+  manifests/skill-safety-policy.json
+  quarantine
   sources
 )
 

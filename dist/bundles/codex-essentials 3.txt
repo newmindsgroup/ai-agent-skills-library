@@ -1,0 +1,12 @@
+codex-skill-orchestrator
+skill-router
+codex-workflows
+brainstorming
+concise-planning
+writing-plans
+systematic-debugging
+test-driven-development
+verification-before-completion
+context7-cli
+get-api-docs
+find-skills

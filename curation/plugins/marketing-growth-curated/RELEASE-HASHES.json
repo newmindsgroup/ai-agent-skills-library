@@ -1,0 +1,28 @@
+{
+  "version_timestamp": "2026-09-15T19:17:36.178230-04:00",
+  "files": {
+    "DRAFT-STATUS.md": "84aa1409814f0fc9eceb8657d0bc3a8324bcd8a0d77c95fb993419e0d9783888",
+    "PROVENANCE.json": "ce30cd7c93fc5dbb63af96eefe321215ac116d3172d30eaa064ba7b3a80acf66",
+    "LICENSE.upstream": "b70d71e24e40fce5da8f4b6f9cd862096a048e433db7f3c8cac5e348e6d34591",
+    ".codex-plugin/plugin.json": "4594a7869482ba44df8e3ba1c4c9c4be55819db8569c8e1d8911f75e9da83b9c",
+    "skills/cold-email/SKILL.md": "7f03fd28a3edf989a907e740951833c742373b7973e13a48d1aafdec40597abe",
+    "skills/copy-editing/SKILL.md": "4bb701c289cd91ee93c7528cf468f58bcbc8c3495efd57d13a82f7c33dbfa9ce",
+    "skills/content-strategy/SKILL.md": "c7f5995a5bde12b3bd78239b9c5a92a5072c2ea713798938b582c8e672246fe0",
+    "skills/customer-research/SKILL.md": "73f63c51ded07c7d6395151bff9a5e5733d243bd6f194fce695ad00fe85abbbf",
+    "skills/lead-magnets/SKILL.md": "b94affa51902e02eb5b08e018aa5891bad106ab5d640f0e2f9c9046161e6ba8f",
+    "skills/lead-magnets/references/benchmarks.md": "d76369f607d46f30cdb5af38874eb2d4369e2e98cf5850aec5ea5e227f9b59e5",
+    "skills/lead-magnets/references/format-guide.md": "2692b2aa28f574ba4e3245ddde69b82053a79866ff7460c9bc989075b77c9f52",
+    "skills/customer-research/evals/evals.json": "a024a1709e28ad867543e0be82f2d9e1712b67a9b76398fbc372751a5946ddab",
+    "skills/customer-research/references/source-guides.md": "64973f7f5958985288b6f5e49ed343333d021eee74da5b204101b2791ae7a810",
+    "skills/content-strategy/evals/evals.json": "eb330d1f3baefe0bab560e3ce42201a4e1e2cae4da530fb3d2a6314816772d2e",
+    "skills/content-strategy/references/headless-cms.md": "131048684b5b661185900a922aa0f3ce117008d0735ba25cc0450fa7ed537b5c",
+    "skills/copy-editing/references/plain-english-alternatives.md": "e2c58bd34206b8e05eec994cf16fd5c92859da2d12831864bed392303c342d12",
+    "skills/copy-editing/references/content-refresh.md": "50553a162eb2e5af002f494347428846a8d844c00aa7ecbb85e11de23b649625",
+    "skills/cold-email/evals/evals.json": "80d7b362f84e1a40b6e7dbeb09e2f50dc89aa64677e63aa10d7ac5acd25aea64",
+    "skills/cold-email/references/personalization.md": "ed267672d0881a85a98f1054f4a4b3c3e88838593f9b15a5a6e32ae214528bb5",
+    "skills/cold-email/references/frameworks.md": "b632853dce5746ba861375ffefd7ff26d28bb7e61a2d7e2339c00f3e3d15cc7f",
+    "skills/cold-email/references/benchmarks.md": "dde6b307213bb044ff59c219f7a5759d6cd462da60a40b11f96381c6792d563f",
+    "skills/cold-email/references/subject-lines.md": "548c83ca576d9549fbc0f7b7b60e850eb8c5a1f4ce62dd706c787da276003ae0",
+    "skills/cold-email/references/follow-up-sequences.md": "32058e904cdcf3c655e3b880f8510e8c243cb4a93aee153944d2f81eb37cef9b"
+  }
+}

@@ -10,6 +10,8 @@
 #   curl -fsSL ... | bash -s -- --category "Frontend, UI, UX, Design"
 #   curl -fsSL ... | bash -s -- --list
 #   curl -fsSL ... | bash -s -- --search "business model"
+#   curl -fsSL ... | bash -s -- --quarantine
+#   curl -fsSL ... | bash -s -- --quarantine-search "stripe"
 #   curl -fsSL ... | bash -s -- --bundles
 #   curl -fsSL ... | bash -s -- --dry-run --bundle agent-foundation
 #   curl -fsSL ... | bash -s -- --force --tool codex --scope project newsletter-drafter
@@ -29,6 +31,8 @@ SEARCH_QUERY=""
 LIST_MODE=0
 LIST_BUNDLES=0
 LIST_CATEGORIES=0
+LIST_QUARANTINE=0
+QUARANTINE_SEARCH=""
 DRY_RUN=0
 FORCE=0
 UPDATE=0
@@ -58,12 +62,14 @@ Common options:
   --category <name>          install all skills in a generated category
   --list                     list all skills and exit
   --search <query>           search names, categories, sources, bundles, and descriptions
+  --quarantine               list skills removed from the safe-default export
+  --quarantine-search <q>    search blocked/gated skills and reasons
   --bundles                  list starter packs and exit
   --categories               list categories and exit
   --dry-run                  show what would install without copying files
   --force                    overwrite selected existing skills
   --update                   refresh selected existing skills
-  --all                      explicitly install the full library
+  --all                      explicitly install the full safe-default export
 USAGE
 }
 
@@ -85,6 +91,10 @@ while [[ $# -gt 0 ]]; do
     --search)
       [[ $# -ge 2 ]] || { echo "--search requires a query" >&2; exit 64; }
       SEARCH_QUERY="$2"; shift 2 ;;
+    --quarantine) LIST_QUARANTINE=1; shift ;;
+    --quarantine-search)
+      [[ $# -ge 2 ]] || { echo "--quarantine-search requires a query" >&2; exit 64; }
+      QUARANTINE_SEARCH="$2"; shift 2 ;;
     --list) LIST_MODE=1; shift ;;
     --bundles) LIST_BUNDLES=1; shift ;;
     --categories) LIST_CATEGORIES=1; shift ;;
@@ -190,6 +200,37 @@ search_skills() {
   fi
 }
 
+list_quarantine() {
+  if [[ -f "$QUARANTINE_TSV" ]]; then
+    awk -F '\t' 'NR > 1 { printf "%-36s %-30s %s\n", $1, $2, $6 }' "$QUARANTINE_TSV"
+  else
+    warn "Quarantine index not available in this archive."
+  fi
+}
+
+search_quarantine() {
+  local query
+  query="$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]')"
+  if [[ -f "$QUARANTINE_TSV" ]]; then
+    awk -F '\t' -v q="$query" '
+      NR > 1 {
+        haystack = tolower($1 " " $2 " " $3 " " $4 " " $5 " " $6)
+        if (index(haystack, q) > 0) {
+          printf "%-36s %-30s %s\n", $1, $2, $6
+        }
+      }
+    ' "$QUARANTINE_TSV"
+  else
+    warn "Quarantine index not available in this archive."
+  fi
+}
+
+quarantine_record() {
+  local skill="$1"
+  [[ -f "$QUARANTINE_TSV" ]] || return 1
+  awk -F '\t' -v skill="$skill" 'NR > 1 && $1 == skill { print $2 "\t" $6; found=1; exit } END { if (!found) exit 1 }' "$QUARANTINE_TSV"
+}
+
 skills_for_category() {
   local category="$1"
   [[ -f "$INDEX_TSV" ]] || { err "Category filtering requires dist/skills-index.tsv."; exit 1; }
@@ -228,6 +269,7 @@ if [[ ! -d "$SRC_DIR" ]]; then
   SRC_DIR="$ARCHIVE_ROOT/skills"
 fi
 INDEX_TSV="$ARCHIVE_ROOT/dist/skills-index.tsv"
+QUARANTINE_TSV="$ARCHIVE_ROOT/dist/quarantine-index.tsv"
 BUNDLES_DIR="$ARCHIVE_ROOT/dist/bundles"
 [[ -d "$SRC_DIR" ]] || { err "Could not locate installable skills in archive."; exit 1; }
 
@@ -250,6 +292,18 @@ if [[ "$LIST_MODE" -eq 1 ]]; then
   exit 0
 fi
 
+if [[ "$LIST_QUARANTINE" -eq 1 ]]; then
+  head1 "Quarantined and gated skills"
+  list_quarantine
+  exit 0
+fi
+
+if [[ -n "$QUARANTINE_SEARCH" ]]; then
+  head1 "Quarantine results for \"$QUARANTINE_SEARCH\""
+  search_quarantine "$QUARANTINE_SEARCH"
+  exit 0
+fi
+
 if [[ -n "$SEARCH_QUERY" && ${#REQUESTED_SKILLS[@]} -eq 0 && -z "$BUNDLE_FILTER" && -z "$CATEGORY_FILTER" ]]; then
   head1 "Search results for \"$SEARCH_QUERY\""
   search_skills "$SEARCH_QUERY"
@@ -269,7 +323,7 @@ if [[ ${#REQUESTED_SKILLS[@]} -gt 0 ]]; then
 fi
 if [[ ${#SKILLS[@]} -eq 0 ]]; then
   if [[ "$INSTALL_ALL" -eq 0 ]]; then
-    warn "No skill, bundle, or category selected. Installing the full library for backward compatibility."
+    warn "No skill, bundle, or category selected. Installing the full safe-default export for backward compatibility."
     warn "For a smaller setup, use --bundle codex-essentials or run --bundles to see starter packs."
   fi
   while IFS= read -r d; do SKILLS+=("$(basename "$d")"); done < <(find "$SRC_DIR" -mindepth 1 -maxdepth 1 -type d | sort)
@@ -282,6 +336,15 @@ done < <(printf '%s\n' "${SKILLS[@]}" | dedupe)
 SKILLS=("${DEDUPED_SKILLS[@]}")
 for skill in "${SKILLS[@]}"; do
   if ! has_skill "$skill"; then
+    if record="$(quarantine_record "$skill")"; then
+      status="${record%%$'\t'*}"
+      reason="${record#*$'\t'}"
+      err "Skill blocked by safety policy: $skill"
+      info "Status: $status"
+      info "Reason: $reason"
+      info "Use --quarantine-search \"$skill\" or read docs/SKILLS-SAFETY.md for review and reinstatement rules."
+      exit 1
+    fi
     err "Skill not found: $skill"
     info "Try --search \"$skill\" or --list."
     exit 1

@@ -1,0 +1,21 @@
+{
+  "version_timestamp": "2026-09-15 06:46:18 AST",
+  "status": "local repairs, not installed or redistributed; upstream provenance qualification pending",
+  "skills": [
+    {
+      "name": "competitive-landscape",
+      "source": "/Users/newmindsgroup/.codex/skills/competitive-landscape",
+      "original_files": {
+        "SKILL.md": "ed759eedd410f6f726fb6dadd9b83e8d37523b75fcf35db99a231f71c8b87e7a",
+        "resources/implementation-playbook.md": "97ee901fb502b8f38f4d26a7f1bf37eaa3365ada8170d511410ffd21d3cd4f7b"
+      }
+    },
+    {
+      "name": "competitor-alternatives",
+      "source": "/Users/newmindsgroup/.codex/skills/competitor-alternatives",
+      "original_files": {
+        "SKILL.md": "5d07eb59485c00dd630351636bd141b7006dbd8e47504712ff5bb0be9f96e8d5"
+      }
+    }
+  ]
+}

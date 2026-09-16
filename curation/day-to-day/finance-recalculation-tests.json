@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-09-15T13:51:45.455Z",
+  "engine": "artifact-tool",
+  "checks": [
+    {
+      "sheet": "BS",
+      "range": "C32:N32",
+      "values": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "sheet": "CF",
+      "range": "C35:N35",
+      "values": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "sheet": "CF",
+      "range": "C18:N18",
+      "values": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "pass": true
+    }
+  ],
+  "errors": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "scenarios": [
+    {
+      "scenario": "Base",
+      "revenue": 1277.0751783779358,
+      "cash": 243.40237194736096,
+      "balanced": true
+    },
+    {
+      "scenario": "Growth",
+      "revenue": 1277.0751783779358,
+      "cash": 243.40237194736096,
+      "balanced": true
+    },
+    {
+      "scenario": "Downside",
+      "revenue": 1277.0751783779358,
+      "cash": 243.40237194736096,
+      "balanced": true
+    }
+  ],
+  "collectionDelay": {
+    "before": {
+      "cash": 243.40237194736096,
+      "revenue": 1277.0751783779358
+    },
+    "after": {
+      "cash": 243.40237194736096,
+      "revenue": 1277.0751783779358
+    },
+    "pass": false
+  }
+}

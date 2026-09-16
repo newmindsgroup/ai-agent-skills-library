@@ -1,0 +1,16 @@
+{
+  "version_timestamp": "2026-09-15 10:13:15 AST",
+  "status": "isolated candidates, not installed; source licensing qualification pending",
+  "sources": [
+    {
+      "name": "content-strategy",
+      "source": "/Users/newmindsgroup/.codex/skills/content-strategy",
+      "sha256": "bfaf5c1a7c492a57a236ef993c21b9858bc57e080d301f3a4e3969d53730d13e"
+    },
+    {
+      "name": "copy-editing",
+      "source": "/Users/newmindsgroup/.codex/skills/copy-editing",
+      "sha256": "eb170d68e5a0d9f75e0e34d70dfcebd93f96f50f0616ca217422590c14d84795"
+    }
+  ]
+}

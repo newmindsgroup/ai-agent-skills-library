@@ -4,12 +4,12 @@
 # Strategy:
 #   1. Always run the lightweight frontmatter validator (no external deps,
 #      works in any CI / dev environment).
-#   2. If the agentskills CLI is available locally, also run the full validator
-#      for deeper spec compliance.
+#   2. Optionally run Agent Skills CLI full-spec validation with FULL_SPEC=1.
 #
-# The agentskills CLI is not yet on PyPI as of this commit; the lightweight
-# validator covers the core frontmatter requirements (name matches folder,
-# description present + length-bounded, license present, file under 500 lines).
+# The lightweight validator covers the core frontmatter requirements (name
+# matches folder, description present + length-bounded, license present, file
+# under 500 lines). The full-spec pass can be slow for the whole library, so it
+# is explicit instead of surprising every local/CI validation run.
 #
 # Exits non-zero on any failure.
 set -euo pipefail
@@ -24,18 +24,35 @@ fi
 # Always run the lightweight pass first — covers frontmatter integrity for every skill
 bash scripts/validate-frontmatter.sh "$SKILLS_ROOT"
 
-# Optional second pass with the agentskills CLI if it's installed
-if command -v agentskills >/dev/null 2>&1; then
+# Ensure quarantined/gated skills cannot quietly re-enter the default install path
+ruby scripts/validate-safety-policy.rb
+
+# Optional second pass with the Agent Skills CLI.
+if [[ "${FULL_SPEC:-0}" == "1" ]]; then
+  validator=()
+  if command -v agentskills >/dev/null 2>&1; then
+    validator=(agentskills validate)
+  elif command -v agent-skills >/dev/null 2>&1; then
+    validator=(agent-skills validate)
+  elif command -v npx >/dev/null 2>&1; then
+    validator=(npx -y agent-skills-cli validate)
+  else
+    echo ""
+    echo "FULL_SPEC=1 requested, but no Agent Skills CLI runner was found."
+    echo "Install with: npm install -g agent-skills-cli"
+    exit 1
+  fi
+
   echo ""
-  echo "agentskills CLI detected — running full spec validation..."
+  echo "Running full Agent Skills spec validation..."
   fail=0
   for skill in "$SKILLS_ROOT"/*/; do
     name="$(basename "$skill")"
-    if agentskills validate "$skill" >/dev/null 2>&1; then
+    if "${validator[@]}" "$skill" >/dev/null 2>&1; then
       echo "[ ok ] $name (full spec)"
     else
       echo "[fail] $name (full spec)"
-      agentskills validate "$skill" || true
+      "${validator[@]}" "$skill" || true
       fail=$((fail+1))
     fi
   done
@@ -48,6 +65,5 @@ if command -v agentskills >/dev/null 2>&1; then
   echo "All skills pass full spec validation."
 else
   echo ""
-  echo "(agentskills CLI not installed — frontmatter pass only.)"
-  echo "To run full-spec validation, install the agentskills CLI from https://agentskills.io"
+  echo "(Full-spec validation skipped. Run FULL_SPEC=1 ./scripts/validate-all.sh to use the Agent Skills CLI.)"
 fi

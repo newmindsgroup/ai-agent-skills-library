@@ -1,0 +1,29 @@
+{
+  "version_timestamp": "2026-09-15T19:05:44.694019-04:00",
+  "skills": {
+    "content-strategy": {
+      "SKILL.md": "c7f5995a5bde12b3bd78239b9c5a92a5072c2ea713798938b582c8e672246fe0",
+      "evals/evals.json": "eb330d1f3baefe0bab560e3ce42201a4e1e2cae4da530fb3d2a6314816772d2e",
+      "references/headless-cms.md": "131048684b5b661185900a922aa0f3ce117008d0735ba25cc0450fa7ed537b5c"
+    },
+    "copy-editing": {
+      "SKILL.md": "9c2a30775c8068193e2064294fcf771173546f45f329b238fc60ba2bf6f27845",
+      "evals/evals.json": "91a98f24fbe3449bd79a17aa0fac81c963ae20150052a41bbd9f3f67c0d53771",
+      "references/plain-english-alternatives.md": "e2c58bd34206b8e05eec994cf16fd5c92859da2d12831864bed392303c342d12",
+      "references/content-refresh.md": "50553a162eb2e5af002f494347428846a8d844c00aa7ecbb85e11de23b649625"
+    },
+    "competitor-alternatives": {
+      "SKILL.md": "adf3783058911c13fef02e211b210475fac621724f9ec886ed5532208faf712f"
+    },
+    "competitive-landscape": {
+      "SKILL.md": "f1c733c2f023040c4f40efdac3a022da36977c0a4b89da2312d08365a400ea2d",
+      "resources/implementation-playbook.md": "c6a1f6a155dbcebbf40e46c45ce22e7c752486f45749dd689a2c13479ff8b629"
+    },
+    "business-model-designer": {
+      "SKILL.md": "ddb23ca438a6d51d720096c71153f721795b120bd3ed993b6a53ed6e17b460b1",
+      "SKILL.raw.md": "e7fdad3967107c64b7ed7db8c47e9e518d94093e412eda7b58e3d43f4c1c6484",
+      "html-templates/business-model-designer.html": "8cf74f701b60e1b2258378e97dc9cc44f8c43ce6a0076d2d48c10df0ae278f44",
+      "references/ASSEMBLY-WORKFLOW.md": "8147ec5babbdb8dbec10a864ef76059664e0d18a1872f065167d9a10f40e07ef"
+    }
+  }
+}

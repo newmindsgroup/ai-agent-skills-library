@@ -1,0 +1,10 @@
+app-builder
+backend-architect
+architecture
+api-design-principles
+clean-code
+code-review-excellence
+test-driven-development
+systematic-debugging
+verification-before-completion
+lint-and-validate

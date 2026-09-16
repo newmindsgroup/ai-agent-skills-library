@@ -1,0 +1,331 @@
+{
+  "version": 1,
+  "version_timestamp": "2026-08-04 13:10:00 AST",
+  "source": {
+    "label": "Yaz-inc/yazinc-ai-toolkit",
+    "repository": "https://github.com/Yaz-inc/yazinc-ai-toolkit",
+    "reviewed_commit": "23bb4109949bde727773f5ca708d93f2d35737f0",
+    "previously_reviewed_commit": "72dcc6c73505de43f6f83d0e2ff76576b8311635",
+    "license_status": "blocked_no_license_or_copying_file_found",
+    "content_import_status": "no_third_party_skill_text_copied"
+  },
+  "decision": "Do not bulk import or run the upstream installer. Preserve source as a candidate, create original New Minds Group coverage for high-value capability gaps, and require license resolution before copying upstream skill bodies.",
+  "original_replacement_skills": [
+    "deployment-secret-exposure-gate",
+    "application-release-audit",
+    "data-operations-governance",
+    "ai-reliability-evaluation",
+    "api-contract-release-gate",
+    "frontend-release-quality-gate",
+    "laravel-delivery-safety-pack",
+    "knowledge-base-governance"
+  ],
+  "skills": [
+    {
+      "source_skill": "accessibility-audit",
+      "disposition": "covered_by_original_or_existing",
+      "target": "frontend-release-quality-gate",
+      "reason": "Accessibility release checks belong in the frontend gate rather than a duplicate standalone import."
+    },
+    {
+      "source_skill": "ai-evaluation-red-team",
+      "disposition": "covered_by_original",
+      "target": "ai-reliability-evaluation",
+      "reason": "AI adversarial and safety testing is useful but must remain authorized and bounded."
+    },
+    {
+      "source_skill": "ai-observability",
+      "disposition": "covered_by_original",
+      "target": "ai-reliability-evaluation",
+      "reason": "AI traces, latency, cost, quality, and incident readiness are included in the original AI reliability gate."
+    },
+    {
+      "source_skill": "analyst-insight-reporting",
+      "disposition": "covered_by_original",
+      "target": "data-operations-governance",
+      "reason": "Reproducible analysis and evidence standards are included in the data operations skill."
+    },
+    {
+      "source_skill": "analytics-engineering",
+      "disposition": "covered_by_original",
+      "target": "data-operations-governance",
+      "reason": "Analytics models, metrics, freshness, and documentation are included in the data operations skill."
+    },
+    {
+      "source_skill": "animated-glow-border",
+      "disposition": "exclude",
+      "target": null,
+      "reason": "Too narrow as a standalone skill for this library."
+    },
+    {
+      "source_skill": "api-contract-testing",
+      "disposition": "covered_by_original",
+      "target": "api-contract-release-gate",
+      "reason": "Contract, auth, compatibility, failure, and evidence checks are covered by the original API gate."
+    },
+    {
+      "source_skill": "application-security-review",
+      "disposition": "covered_by_existing_and_original",
+      "target": "application-release-audit",
+      "reason": "Security review belongs in release audit and existing security review skills, with explicit authorization gates."
+    },
+    {
+      "source_skill": "architecture-decision-records",
+      "disposition": "duplicate_existing",
+      "target": "architecture-decision-records",
+      "reason": "Exact skill name already exists in the library."
+    },
+    {
+      "source_skill": "big-data-analytics",
+      "disposition": "covered_by_original",
+      "target": "data-operations-governance",
+      "reason": "Large-scale routing and evidence requirements are included in the data operations skill."
+    },
+    {
+      "source_skill": "central-knowledge-base",
+      "disposition": "covered_by_original",
+      "target": "knowledge-base-governance",
+      "reason": "Safe local knowledge-base writes and retrieval are covered with confidentiality controls."
+    },
+    {
+      "source_skill": "ci-cd-release-gates",
+      "disposition": "covered_by_original",
+      "target": "deployment-secret-exposure-gate",
+      "reason": "Release gates, deployment authorization, rollback, and secret exposure checks are covered."
+    },
+    {
+      "source_skill": "data-lineage-governance",
+      "disposition": "covered_by_original",
+      "target": "data-operations-governance",
+      "reason": "Lineage, ownership, classification, retention, and impact analysis are covered."
+    },
+    {
+      "source_skill": "data-operations-router",
+      "disposition": "covered_by_original",
+      "target": "data-operations-governance",
+      "reason": "Data work routing is the first step in the original data operations skill."
+    },
+    {
+      "source_skill": "data-pipeline-orchestration",
+      "disposition": "covered_by_original",
+      "target": "data-operations-governance",
+      "reason": "Idempotent pipelines, retries, backfills, and quality gates are covered."
+    },
+    {
+      "source_skill": "data-profile-clean-validate",
+      "disposition": "covered_by_original",
+      "target": "data-operations-governance",
+      "reason": "Profiling, cleaning, validation, and before-after evidence are covered."
+    },
+    {
+      "source_skill": "data-quality-contracts",
+      "disposition": "covered_by_original",
+      "target": "data-operations-governance",
+      "reason": "Data contracts and quality thresholds are covered."
+    },
+    {
+      "source_skill": "data-reconciliation-migration",
+      "disposition": "covered_by_original",
+      "target": "data-operations-governance",
+      "reason": "Migration and reconciliation checks are covered."
+    },
+    {
+      "source_skill": "database-reliability-audit",
+      "disposition": "covered_by_original",
+      "target": "data-operations-governance",
+      "reason": "Database reliability, backups, recovery, and integrity checks are covered."
+    },
+    {
+      "source_skill": "deepeval-ai-testing",
+      "disposition": "covered_by_original",
+      "target": "ai-reliability-evaluation",
+      "reason": "Dataset-driven AI regression testing is covered without binding the workflow to one tool."
+    },
+    {
+      "source_skill": "deploy-secrets-zero-exposure",
+      "disposition": "covered_by_original",
+      "target": "deployment-secret-exposure-gate",
+      "reason": "Secret exposure prevention is covered in original wording."
+    },
+    {
+      "source_skill": "design-system-engineering",
+      "disposition": "merge_existing",
+      "target": "design-system",
+      "reason": "Existing library already has design-system coverage."
+    },
+    {
+      "source_skill": "design-to-code-implementation",
+      "disposition": "covered_by_original_or_existing",
+      "target": "frontend-release-quality-gate",
+      "reason": "Design-to-code verification belongs in the frontend gate and existing design implementation skills."
+    },
+    {
+      "source_skill": "extract-to-toolkit",
+      "disposition": "exclude",
+      "target": null,
+      "reason": "Meta-publishing workflow targets another repository and includes direct push authority."
+    },
+    {
+      "source_skill": "figma-canva-design-workflow",
+      "disposition": "merge_existing",
+      "target": "design-to-code-orchestrator",
+      "reason": "Connector-specific design workflow should remain under existing design workflow skills."
+    },
+    {
+      "source_skill": "frontend-quality-gate",
+      "disposition": "covered_by_original",
+      "target": "frontend-release-quality-gate",
+      "reason": "Frontend runtime, responsive, accessibility, and performance gates are covered."
+    },
+    {
+      "source_skill": "laravel-activity-logger",
+      "disposition": "covered_by_original_optional_pack",
+      "target": "laravel-delivery-safety-pack",
+      "reason": "Safe audit logging is included in the Laravel pack."
+    },
+    {
+      "source_skill": "laravel-ai-multi-provider",
+      "disposition": "covered_by_original_optional_pack",
+      "target": "laravel-delivery-safety-pack",
+      "reason": "Provider fallback and cost-aware AI settings are included in the Laravel pack."
+    },
+    {
+      "source_skill": "laravel-datatables-module",
+      "disposition": "covered_by_original_optional_pack",
+      "target": "laravel-delivery-safety-pack",
+      "reason": "Admin tables, filters, exports, and tenant scoping are included in the Laravel pack."
+    },
+    {
+      "source_skill": "laravel-deploy-fix-php",
+      "disposition": "exclude_until_rewritten",
+      "target": null,
+      "reason": "Public recovery endpoint pattern is too risky for default import."
+    },
+    {
+      "source_skill": "laravel-dual-repo-push",
+      "disposition": "gated_only",
+      "target": "laravel-delivery-safety-pack",
+      "reason": "External Git mutations require explicit authorization and are not default safe."
+    },
+    {
+      "source_skill": "laravel-env-maintenance",
+      "disposition": "covered_by_original_optional_pack",
+      "target": "laravel-delivery-safety-pack",
+      "reason": "Maintenance and environment hygiene are included with safe constraints."
+    },
+    {
+      "source_skill": "laravel-form-select2-global",
+      "disposition": "covered_by_original_optional_pack",
+      "target": "laravel-delivery-safety-pack",
+      "reason": "Reusable Laravel form control consistency is included at a high level."
+    },
+    {
+      "source_skill": "laravel-json-ai-settings",
+      "disposition": "covered_by_original_optional_pack",
+      "target": "laravel-delivery-safety-pack",
+      "reason": "Encrypted runtime AI settings are included with sensitive-data constraints."
+    },
+    {
+      "source_skill": "laravel-rbac-permissions",
+      "disposition": "covered_by_original_optional_pack",
+      "target": "laravel-delivery-safety-pack",
+      "reason": "RBAC, policies, gates, and object-level authorization are included."
+    },
+    {
+      "source_skill": "laravel-security-hardening",
+      "disposition": "covered_by_original_optional_pack",
+      "target": "laravel-delivery-safety-pack",
+      "reason": "Laravel hardening is included in safe delivery rules."
+    },
+    {
+      "source_skill": "laravel-soft-delete-trash",
+      "disposition": "covered_by_original_optional_pack",
+      "target": "laravel-delivery-safety-pack",
+      "reason": "Soft delete, restore, retention, and permanent deletion gates are included."
+    },
+    {
+      "source_skill": "laravel-vision-label-scan",
+      "disposition": "covered_by_original_optional_pack",
+      "target": "laravel-delivery-safety-pack",
+      "reason": "Vision and OCR privacy and provider controls are included."
+    },
+    {
+      "source_skill": "mission-control",
+      "disposition": "gated_only",
+      "target": null,
+      "reason": "Agent registration, heartbeat, task, and skill APIs require known deployment and credentials."
+    },
+    {
+      "source_skill": "nosql-query-engineering",
+      "disposition": "covered_by_original",
+      "target": "data-operations-governance",
+      "reason": "NoSQL modeling and query validation are covered through data operation routing."
+    },
+    {
+      "source_skill": "observability-incident-response",
+      "disposition": "covered_by_existing_and_original",
+      "target": "application-release-audit",
+      "reason": "Operations readiness belongs in app release audit and existing incident skills."
+    },
+    {
+      "source_skill": "performance-load-testing",
+      "disposition": "covered_by_original_or_existing",
+      "target": "application-release-audit",
+      "reason": "Performance and release readiness are covered at gate level, with existing dedicated performance skills available."
+    },
+    {
+      "source_skill": "playwright-e2e-testing",
+      "disposition": "covered_by_original_or_existing",
+      "target": "frontend-release-quality-gate",
+      "reason": "Browser workflow testing belongs in the frontend gate and existing Playwright skills."
+    },
+    {
+      "source_skill": "rag-evaluation",
+      "disposition": "covered_by_original",
+      "target": "ai-reliability-evaluation",
+      "reason": "RAG retrieval, grounding, citation, freshness, and tenant boundary checks are covered."
+    },
+    {
+      "source_skill": "screen-reader-accessibility-testing",
+      "disposition": "covered_by_original_or_existing",
+      "target": "frontend-release-quality-gate",
+      "reason": "Keyboard and screen-reader checks are covered in the frontend gate and existing accessibility skills."
+    },
+    {
+      "source_skill": "sql-performance-optimization",
+      "disposition": "covered_by_existing",
+      "target": "sql-optimization-patterns",
+      "reason": "Existing SQL optimization skills already cover this area."
+    },
+    {
+      "source_skill": "sql-query-engineering",
+      "disposition": "covered_by_existing",
+      "target": "database",
+      "reason": "Existing database and SQL skills already cover this area."
+    },
+    {
+      "source_skill": "supply-chain-security",
+      "disposition": "covered_by_original_or_existing",
+      "target": "deployment-secret-exposure-gate",
+      "reason": "Secret, dependency, artifact, and release risks are covered by deployment and existing security skills."
+    },
+    {
+      "source_skill": "test-software-app",
+      "disposition": "covered_by_original",
+      "target": "application-release-audit",
+      "reason": "Application testing, evidence, fix boundaries, and release verdicts are covered in original wording."
+    },
+    {
+      "source_skill": "ui-ux-product-design",
+      "disposition": "merge_existing",
+      "target": "ui-ux-designer",
+      "reason": "Existing UI and UX design skills already cover this area."
+    },
+    {
+      "source_skill": "vector-database-readiness",
+      "disposition": "covered_by_original_or_existing",
+      "target": "ai-reliability-evaluation",
+      "reason": "Vector search readiness is covered through RAG and AI reliability evaluation, with existing vector skills available."
+    }
+  ]
+}

@@ -2,11 +2,13 @@
 
 The one-line `install.sh` handles every supported IDE automatically. This doc is for teammates who want to understand what it's doing, or who use a tool the installer doesn't cover (Claude Projects, ChatGPT Custom GPTs, Gemini Gems).
 
-This repo keeps canonical skills organized by source under `sources/<source-folder>/skills/`. The installer uses the generated flat export at `dist/skills/`, because IDEs expect `<skills-root>/<skill-name>/SKILL.md`.
+This repo keeps canonical skills organized by source under `sources/<source-folder>/skills/`. The installer uses the generated safe-default flat export at `dist/skills/`, because IDEs expect `<skills-root>/<skill-name>/SKILL.md`.
 
 ## Discovery-first installs
 
-You do not have to install all 1513 skills at once. The installer can list, search, preview, and install curated starter packs.
+You do not have to install all 1305 default-installable skills at once. The installer can list, search, preview, and install curated starter packs.
+
+Skills removed by the safety policy are preserved under `quarantine/` and documented in [`SKILLS-SAFETY.md`](SKILLS-SAFETY.md); they are not installed by the one-line installer.
 
 ```bash
 # List curated starter packs
@@ -14,6 +16,9 @@ curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-libra
 
 # Search before installing
 curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --search "business model"
+
+# See why a removed skill is blocked
+curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --quarantine-search "stripe"
 
 # Preview a starter pack
 curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --bundle codex-essentials --dry-run
@@ -25,9 +30,25 @@ curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-libra
 curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-library/main/install.sh | bash -s -- --update newsletter-drafter
 ```
 
-Useful flags: `--list`, `--search`, `--bundles`, `--categories`, `--bundle`, `--category`, `--dry-run`, `--force`, `--update`, and `--all`.
+Useful flags: `--list`, `--search`, `--quarantine`, `--quarantine-search`, `--bundles`, `--categories`, `--bundle`, `--category`, `--dry-run`, `--force`, `--update`, and `--all`.
 
-Starter-pack details live in [`STARTER-PACKS.md`](STARTER-PACKS.md). Machine-readable indexes live in `dist/skills-index.json`, `dist/skills-index.tsv`, `dist/bundles.json`, and `dist/bundles/`.
+Starter-pack details live in [`STARTER-PACKS.md`](STARTER-PACKS.md). Machine-readable safe-default indexes live in `dist/skills-index.json`, `dist/skills-index.tsv`, `dist/bundles.json`, and `dist/bundles/`. Blocked/gated skill indexes live in `dist/quarantine-index.json` and `dist/quarantine-index.tsv`.
+
+If you request a quarantined skill by name, the installer refuses it and prints the safety status and reason instead of silently failing.
+
+## Local Codex safety audit
+
+The public installer only installs the safe-default export, but older local Codex installs may still contain skills that are now quarantined. Use the local audit script to scan and clean already-installed user skill roots:
+
+```bash
+# Preview only
+ruby scripts/audit-local-codex-skills.rb
+
+# Move policy-matched local skills out of active Codex discovery
+ruby scripts/audit-local-codex-skills.rb --apply --fail-on-policy-matches
+```
+
+The script scans `~/.codex/skills`, `~/.agents/skills`, and Codex runtime/plugin roots. It only moves policy-matched user-installed skills; system and plugin-managed roots are reported but left in place. Moved skills are preserved under `~/.codex/skill-quarantine/<timestamp>/`.
 
 ## Native Agent Skills support
 

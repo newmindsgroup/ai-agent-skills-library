@@ -5,6 +5,8 @@
 #   & ([scriptblock]::Create((iwr -useb ...))) -Skill newsletter-drafter
 #   & ([scriptblock]::Create((iwr -useb ...))) -Bundle codex-essentials
 #   & ([scriptblock]::Create((iwr -useb ...))) -Search "business model"
+#   & ([scriptblock]::Create((iwr -useb ...))) -Quarantine
+#   & ([scriptblock]::Create((iwr -useb ...))) -QuarantineSearch "stripe"
 #   & ([scriptblock]::Create((iwr -useb ...))) -List
 #   & ([scriptblock]::Create((iwr -useb ...))) -DryRun -Bundle agent-foundation
 #   & ([scriptblock]::Create((iwr -useb ...))) -Tool codex -Scope project -Force -Skill newsletter-drafter
@@ -18,9 +20,11 @@ param(
     [string]$Bundle = "",
     [string]$Category = "",
     [string]$Search = "",
+    [string]$QuarantineSearch = "",
     [switch]$List,
     [switch]$Bundles,
     [switch]$Categories,
+    [switch]$Quarantine,
     [switch]$DryRun,
     [switch]$Force,
     [switch]$Update,
@@ -109,6 +113,36 @@ function Search-Skills($rows, $query, $srcDir) {
     }
 }
 
+function List-Quarantine($rows) {
+    if ($rows.Count -eq 0) {
+        Warn "Quarantine index not available in this archive."
+        return
+    }
+    $rows | Sort-Object name | ForEach-Object {
+        "{0,-36} {1,-30} {2}" -f $_.name, $_.status, $_.reason
+    }
+}
+
+function Search-Quarantine($rows, $query) {
+    if ($rows.Count -eq 0) {
+        Warn "Quarantine index not available in this archive."
+        return
+    }
+    $needle = $query.ToLowerInvariant()
+    $rows | Where-Object {
+        ($_.name + " " + $_.status + " " + $_.source_slug + " " + $_.original_path + " " + $_.quarantine_path + " " + $_.reason).ToLowerInvariant().Contains($needle)
+    } | Sort-Object name | ForEach-Object {
+        "{0,-36} {1,-30} {2}" -f $_.name, $_.status, $_.reason
+    }
+}
+
+function Find-QuarantineSkill($rows, $name) {
+    if ($rows.Count -eq 0) {
+        return $null
+    }
+    return @($rows | Where-Object { $_.name -eq $name } | Select-Object -First 1)
+}
+
 function Skills-ForCategory($rows, $category) {
     if ($rows.Count -eq 0) {
         throw "Category filtering requires dist\skills-index.tsv."
@@ -151,8 +185,10 @@ if (-not (Test-Path $srcDir)) {
 }
 
 $indexTsv = Join-Path $archiveRoot "dist\skills-index.tsv"
+$quarantineTsv = Join-Path $archiveRoot "dist\quarantine-index.tsv"
 $bundlesDir = Join-Path $archiveRoot "dist\bundles"
 $rows = Read-IndexRows $indexTsv
+$quarantineRows = Read-IndexRows $quarantineTsv
 
 if ($Categories) {
     Write-Host ""
@@ -178,6 +214,22 @@ if ($List) {
     exit 0
 }
 
+if ($Quarantine) {
+    Write-Host ""
+    Write-Host "Quarantined and gated skills"
+    List-Quarantine $quarantineRows
+    Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
+    exit 0
+}
+
+if ($QuarantineSearch) {
+    Write-Host ""
+    Write-Host "Quarantine results for `"$QuarantineSearch`""
+    Search-Quarantine $quarantineRows $QuarantineSearch
+    Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
+    exit 0
+}
+
 if ($Search -and $Skill.Count -eq 0 -and -not $Bundle -and -not $Category) {
     Write-Host ""
     Write-Host "Search results for `"$Search`""
@@ -198,7 +250,7 @@ if ($Skill.Count -gt 0) {
 }
 if ($skills.Count -eq 0) {
     if (-not $All) {
-        Warn "No skill, bundle, or category selected. Installing the full library for backward compatibility."
+        Warn "No skill, bundle, or category selected. Installing the full safe-default export for backward compatibility."
         Warn "For a smaller setup, use -Bundle codex-essentials or run -Bundles to see starter packs."
     }
     $skills = Get-ChildItem $srcDir -Directory | Sort-Object Name | Select-Object -ExpandProperty Name
@@ -207,6 +259,14 @@ if ($skills.Count -eq 0) {
 $skills = @($skills | Where-Object { $_.Trim() -ne "" } | Select-Object -Unique)
 foreach ($s in $skills) {
     if (-not (Test-Path (Join-Path $srcDir $s))) {
+        $blocked = Find-QuarantineSkill $quarantineRows $s
+        if ($blocked) {
+            Err "Skill blocked by safety policy: $s"
+            Info "Status: $($blocked.status)"
+            Info "Reason: $($blocked.reason)"
+            Info "Use -QuarantineSearch `"$s`" or read docs/SKILLS-SAFETY.md for review and reinstatement rules."
+            exit 1
+        }
         Err "Skill not found: $s"
         Info "Try -Search `"$s`" or -List."
         exit 1

@@ -1,0 +1,10 @@
+business-model-designer
+business-model-canvas
+startup-validator
+strategy-frameworks
+okr-frameworks
+metrics-frameworks
+zero-to-launch
+ai-startup-building
+ai-product
+ai-product-patterns

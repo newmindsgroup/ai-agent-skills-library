@@ -8,10 +8,10 @@ Canonical source skills live in `sources/<source-folder>/skills/<skill-name>/`. 
 
 | Source folder | Source | Type | Skills |
 |---|---|---|---:|
-| [`sickn33-antigravity-awesome-skills`](../sources/sickn33-antigravity-awesome-skills/) | [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) | github | 1457 |
+| [`sickn33-antigravity-awesome-skills`](../sources/sickn33-antigravity-awesome-skills/) | [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) | github | 1251 |
 | [`menkesu-awesome-pm-skills`](../sources/menkesu-awesome-pm-skills/) | [menkesu/awesome-pm-skills](https://github.com/menkesu/awesome-pm-skills) | github | 29 |
-| [`original`](../sources/original/) | Original New Minds Group | original | 14 |
-| [`mxyhi-ok-skills`](../sources/mxyhi-ok-skills/) | [mxyhi/ok-skills](https://github.com/mxyhi/ok-skills) | github | 6 |
+| [`original`](../sources/original/) | Original New Minds Group | original | 22 |
+| [`mxyhi-ok-skills`](../sources/mxyhi-ok-skills/) | [mxyhi/ok-skills](https://github.com/mxyhi/ok-skills) | github | 4 |
 | [`openai-codex-bundled-system-skills`](../sources/openai-codex-bundled-system-skills/) | OpenAI Codex bundled system skills | runtime | 3 |
 | [`ailabs-393-ai-labs-claude-skills`](../sources/ailabs-393-ai-labs-claude-skills/) | [ailabs-393/ai-labs-claude-skills](https://github.com/ailabs-393/ai-labs-claude-skills) | github | 1 |
 | [`maigentic-stratarts`](../sources/maigentic-stratarts/) | [maigentic/stratarts](https://github.com/maigentic/stratarts) | github | 1 |

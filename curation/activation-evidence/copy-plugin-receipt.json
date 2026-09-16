@@ -1,0 +1,28 @@
+{
+  "writes": [
+    {
+      "path": "${HOME}/.codex/skills/copy-editing/SKILL.md",
+      "response": {
+        "id": 10,
+        "result": {
+          "effectiveEnabled": false
+        }
+      }
+    }
+  ],
+  "rollback": [
+    {
+      "path": "${HOME}/.codex/skills/copy-editing/SKILL.md",
+      "enabled": true
+    }
+  ],
+  "version_timestamp": "2026-09-15T19:17:47.881674-04:00",
+  "verified": true,
+  "plugin_skills": [
+    "marketing-growth-curated:cold-email",
+    "marketing-growth-curated:content-strategy",
+    "marketing-growth-curated:copy-editing",
+    "marketing-growth-curated:customer-research",
+    "marketing-growth-curated:lead-magnets"
+  ]
+}

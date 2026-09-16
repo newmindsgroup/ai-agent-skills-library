@@ -12,7 +12,7 @@ curl -fsSL https://raw.githubusercontent.com/newmindsgroup/ai-agent-skills-libra
 
 - Bundle: `agent-foundation`
 - Skills: 6
-- Best for: Teams that want a small default baseline before installing the full library.
+- Best for: Teams that want a small default baseline before installing the full safe-default export.
 
 Core operating principles, design methodology, human voice, brand context, and tool-selection discipline for every project.
 
@@ -172,15 +172,13 @@ Inbox triage, calendar scheduling, pipeline reporting, and competitive monitorin
 ## QA and Debugging
 
 - Bundle: `qa-debugging`
-- Skills: 9
+- Skills: 7
 - Best for: Teams that want fewer false-done claims and stronger app-quality checks.
 
 Exploratory testing, browser QA, bug hunting, TDD, validation, and completion-verification skills.
 
 | Skill | Category | Trust |
 |---|---|---|
-| [`dogfood`](../dist/skills/dogfood/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
-| [`agent-browser`](../dist/skills/agent-browser/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
 | [`bug-hunter`](../dist/skills/bug-hunter/) | Testing, QA, Debugging, Review | `imported-review-recommended` |
 | [`systematic-debugging`](../dist/skills/systematic-debugging/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
 | [`test-driven-development`](../dist/skills/test-driven-development/) | Business, Strategy, Product, Growth | `imported-review-recommended` |
@@ -189,22 +187,36 @@ Exploratory testing, browser QA, bug hunting, TDD, validation, and completion-ve
 | [`playwright-skill`](../dist/skills/playwright-skill/) | Testing, QA, Debugging, Review | `imported-review-recommended` |
 | [`lint-and-validate`](../dist/skills/lint-and-validate/) | Testing, QA, Debugging, Review | `imported-review-recommended` |
 
-## Security Review
+## Release Safety
 
-- Bundle: `security-review`
+- Bundle: `release-safety`
 - Skills: 8
-- Best for: Security review, risk assessment, and pre-release hardening.
+- Best for: Teams that want the useful Yazinc capability coverage through curated original skills and safe default install rules.
 
-Security audit, API security, SAST, cloud security, and AI-agent action auditing skills.
+Original New Minds Group release, data, AI, API, frontend, Laravel, and knowledge-governance gates created from the Yazinc toolkit import audit without copying unlicensed third-party skill text.
 
 | Skill | Category | Trust |
 |---|---|---|
-| [`007`](../dist/skills/007/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
+| [`deployment-secret-exposure-gate`](../dist/skills/deployment-secret-exposure-gate/) | Security, Compliance, Reliability | `curated` |
+| [`application-release-audit`](../dist/skills/application-release-audit/) | QA, Testing, Release | `curated` |
+| [`data-operations-governance`](../dist/skills/data-operations-governance/) | AI, Agents, LLMs, Data | `curated` |
+| [`ai-reliability-evaluation`](../dist/skills/ai-reliability-evaluation/) | AI, Agents, LLMs, Data | `curated` |
+| [`api-contract-release-gate`](../dist/skills/api-contract-release-gate/) | Engineering, APIs, Testing | `curated` |
+| [`frontend-release-quality-gate`](../dist/skills/frontend-release-quality-gate/) | Frontend, UI, UX, Design | `curated` |
+| [`laravel-delivery-safety-pack`](../dist/skills/laravel-delivery-safety-pack/) | Backend, Laravel, Security | `curated` |
+| [`knowledge-base-governance`](../dist/skills/knowledge-base-governance/) | Automation, Integrations, Productivity | `curated` |
+
+## Security Review
+
+- Bundle: `security-review`
+- Skills: 3
+- Best for: Pre-release hardening and agent-action risk review without installing exploit, pentest, or external-account automation skills.
+
+Conservative security-audit, SAST configuration, and AI-agent action auditing skills that avoid offensive playbooks.
+
+| Skill | Category | Trust |
+|---|---|---|
 | [`audit-skills`](../dist/skills/audit-skills/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
-| [`security-auditor`](../dist/skills/security-auditor/) | Security, Compliance, Risk | `imported-review-recommended` |
-| [`api-security-best-practices`](../dist/skills/api-security-best-practices/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
-| [`api-security-testing`](../dist/skills/api-security-testing/) | Automation, Integrations, Productivity | `imported-review-recommended` |
-| [`aws-security-audit`](../dist/skills/aws-security-audit/) | DevOps, Cloud, Infrastructure | `imported-review-recommended` |
 | [`sast-configuration`](../dist/skills/sast-configuration/) | Security, Compliance, Risk | `imported-review-recommended` |
 | [`agentic-actions-auditor`](../dist/skills/agentic-actions-auditor/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
 

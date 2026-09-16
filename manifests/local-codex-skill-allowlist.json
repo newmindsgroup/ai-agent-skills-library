@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "generated_at": "2026-05-21",
+  "note": "Reviewed local-only Codex skills that are allowed to remain installed even though they are not part of the public safe-default library export.",
+  "skills": [
+    {
+      "name": "open-design-controller",
+      "status": "allow-local-only",
+      "reason": "Local Open Design runtime controller with machine-specific paths and OAuth/billing guardrails. Keep local; do not publish as a generic default skill without rewriting for portability."
+    },
+    {
+      "name": "android_ui_verification",
+      "status": "allow-local-legacy-alias",
+      "reason": "Legacy underscore-named Android emulator UI verification skill. It overlaps with the safe default android-ui-verification skill and is limited to local ADB/emulator QA workflows."
+    }
+  ]
+}
