@@ -1,8 +1,0 @@
-local-gemma-worker
-local-llm-expert
-graphify
-awesome-design-md
-claude-code-router
-agents-md
-ai-native-cli
-agent-manager-skill

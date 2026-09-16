@@ -1,14 +1,13 @@
 ---
 name: context7-cli
 description: 'Use the ctx7 CLI to fetch library documentation, manage AI coding skills, and configure Context7 MCP. Activate when the user mentions "ctx7" or "context7", needs current docs for any library, wants to install/search/generate skills, or needs to set up Context7 for their AI coding agent.'
-license: MIT
+license: Apache-2.0
 metadata:
   imported_from: 'codex-regular'
   source_repository: 'https://github.com/mxyhi/ok-skills'
   source_path: '~/.codex/skills/context7-cli/SKILL.md'
   imported_at: '2026-05-09'
 ---
-
 # ctx7 CLI
 
 The Context7 CLI does three things: fetches up-to-date library documentation, manages AI coding skills, and sets up Context7 MCP for your editor.

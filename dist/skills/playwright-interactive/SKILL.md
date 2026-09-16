@@ -1,14 +1,13 @@
 ---
 name: playwright-interactive
 description: 'Persistent browser and Electron interaction through `js_repl` for fast iterative UI debugging.'
-license: MIT
+license: Apache-2.0
 metadata:
   imported_from: 'codex-regular'
   source_repository: 'https://github.com/sickn33/antigravity-awesome-skills'
   source_path: '~/.codex/skills/playwright-interactive/SKILL.md'
   imported_at: '2026-05-09'
 ---
-
 # Playwright Interactive Skill
 
 Use a persistent `js_repl` Playwright session to debug local web or Electron apps, keep the same handles alive across iterations, and run functional plus visual QA without restarting the whole toolchain unless the process ownership changed.

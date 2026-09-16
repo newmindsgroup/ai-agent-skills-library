@@ -1,3 +1,0 @@
-newsletter-drafter
-social-content-drafter
-voice-drift-scanner

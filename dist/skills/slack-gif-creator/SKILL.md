@@ -1,14 +1,13 @@
 ---
 name: slack-gif-creator
 description: 'A toolkit providing utilities and knowledge for creating animated GIFs optimized for Slack.'
-license: MIT
+license: Apache-2.0
 metadata:
   imported_from: 'codex-regular'
   source_repository: 'https://github.com/sickn33/antigravity-awesome-skills'
   source_path: '~/.codex/skills/slack-gif-creator/SKILL.md'
   imported_at: '2026-05-09'
 ---
-
 # Slack GIF Creator
 
 A toolkit providing utilities and knowledge for creating animated GIFs optimized for Slack.

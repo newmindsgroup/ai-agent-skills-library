@@ -2,8 +2,8 @@
 
 Complete generated index of every default-installable skill currently shipped in this repository.
 
-- Generated: 2026-08-04
-- Default-installable skills: 1313
+- Generated: 2026-09-15
+- Default-installable skills: 1303
 - Quarantined or gated skills removed from default export: 208
 
 For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills-index.json) or [`../dist/skills-index.tsv`](../dist/skills-index.tsv). For curated install subsets, see [`STARTER-PACKS.md`](STARTER-PACKS.md). For trust and provenance metadata, see [`SKILLS-TRUST.md`](SKILLS-TRUST.md). For removed or gated skills, see [`SKILLS-SAFETY.md`](SKILLS-SAFETY.md).
@@ -14,10 +14,8 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 - **original:** Original New Minds Group
 - **mxyhi-ok-skills:** mxyhi/ok-skills - https://github.com/mxyhi/ok-skills
 - **openai-codex-bundled-system-skills:** OpenAI Codex bundled system skills
-- **ailabs-393-ai-labs-claude-skills:** ailabs-393/ai-labs-claude-skills - https://github.com/ailabs-393/ai-labs-claude-skills
 - **maigentic-stratarts:** maigentic/stratarts - https://github.com/maigentic/stratarts
 - **refoundai-lenny-skills:** refoundai/lenny-skills - https://github.com/refoundai/lenny-skills
-- **scientiacapital-skills:** scientiacapital/skills - https://github.com/scientiacapital/skills
 
 ## High-Leverage Routing Set
 
@@ -38,9 +36,7 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | [`gh-fix-ci`](../dist/skills/gh-fix-ci/) | Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL. |
 | [`find-skills`](../dist/skills/find-skills/) | Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill. |
 | [`business-model-designer`](../dist/skills/business-model-designer/) | Design a complete Business Model Canvas for a new or existing business, including customer segments, value propositions, channels, revenue streams, cost structure, unit economics, and strategic coherence. Use when the user wants to create or refine a business model, define revenue streams, map operating assumptions, or turn a validated idea into a scalable commercial blueprint. |
-| [`startup-validator`](../dist/skills/startup-validator/) | Comprehensive startup idea validation and market analysis tool. Use when users need to evaluate a startup idea, assess market fit, analyze competition, validate problem-solution fit, or determine market positioning. Triggers include requests to "validate my startup idea", "analyze market opportunity", "check if there's demand for", "research competition for", "evaluate business idea", or "see if my idea is viable". Provides data-driven analysis using web search, market frameworks, competitive research, and positioning recommendations. |
 | [`setting-okrs-goals`](../dist/skills/setting-okrs-goals/) | Help users set effective OKRs and goals. Use when someone is creating quarterly objectives, defining key results, setting team goals, planning annual targets, or struggling with goal alignment across their organization. |
-| [`business-model-canvas`](../dist/skills/business-model-canvas/) | Business model design using Alexander Osterwalder's 9 building blocks. Use when: business model, canvas, value proposition, customer segments, revenue streams, startup planning, analyze business, business strategy. |
 | [`strategy-frameworks`](../dist/skills/strategy-frameworks/) | Creates product strategies using Crossing the Chasm, Playing to Win, and strategic canvas frameworks. Use when defining where to play and how to win, choosing beachhead markets, or connecting tactics to strategy. |
 | [`okr-frameworks`](../dist/skills/okr-frameworks/) | Writes effective OKRs using Christina Wodtke's best practices and Google's OKR methodology. Use when setting goals, aligning teams, creating measurement frameworks, or tracking quarterly progress. |
 | [`metrics-frameworks`](../dist/skills/metrics-frameworks/) | Defines right metrics using North Star framework, AARRR, and leading vs lagging indicators. Use when choosing metrics, instrumenting products, creating dashboards, or distinguishing vanity metrics from actionable ones. |
@@ -51,9 +47,9 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 
 | Category | Count |
 |---|---:|
-| AI, Agents, LLMs, Data | 650 |
-| Business, Strategy, Product, Growth | 118 |
-| Automation, Integrations, Productivity | 115 |
+| AI, Agents, LLMs, Data | 643 |
+| Business, Strategy, Product, Growth | 117 |
+| Automation, Integrations, Productivity | 113 |
 | Frontend, UI, UX, Design | 106 |
 | Backend, APIs, Databases | 90 |
 | General, Workflow, Research, Miscellaneous | 56 |
@@ -62,11 +58,12 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | Testing, QA, Debugging, Review | 30 |
 | Languages, Frameworks, Specialist Tools | 22 |
 | Security, Compliance, Risk | 10 |
-| Media, Documents, Office, Creative | 3 |
+| Media, Documents, Office, Creative | 2 |
 | Backend, Laravel, Security | 1 |
 | Engineering, APIs, Testing | 1 |
 | QA, Testing, Release | 1 |
 | Security, Compliance, Reliability | 1 |
+| Uncategorized | 1 |
 
 ## AI, Agents, LLMs, Data
 
@@ -221,7 +218,6 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | [`build`](../dist/skills/build/) | Provides the build workflow for agent-assisted work. Use when the user's request matches this skill's domain or trigger language. | `imported` |
 | [`bullmq-specialist`](../dist/skills/bullmq-specialist/) | BullMQ expert for Redis-backed job queues, background processing, | `imported-review-recommended` |
 | [`business-analyst`](../dist/skills/business-analyst/) | Master modern business analysis with AI-powered analytics, real-time dashboards, and data-driven insights. Build comprehensive KPI frameworks, predictive models, and strategic recommendations. | `imported-review-recommended` |
-| [`business-model-canvas`](../dist/skills/business-model-canvas/) | Business model design using Alexander Osterwalder's 9 building blocks. Use when: business model, canvas, value proposition, customer segments, revenue streams, startup planning, analyze business, business strategy. | `imported` |
 | [`business-model-designer`](../dist/skills/business-model-designer/) | Design a complete Business Model Canvas for a new or existing business, including customer segments, value propositions, channels, revenue streams, cost structure, unit economics, and strategic coherence. Use when the user wants to create or refine a business model, define revenue streams, map operating assumptions, or turn a validated idea into a scalable commercial blueprint. | `imported` |
 | [`c-pro`](../dist/skills/c-pro/) | Write efficient C code with proper memory management, pointer | `imported` |
 | [`c4-container`](../dist/skills/c4-container/) | Expert C4 Container-level documentation specialist. | `imported-review-recommended` |
@@ -327,7 +323,6 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | [`docs-architect`](../dist/skills/docs-architect/) | Creates comprehensive technical documentation from existing codebases. Analyzes architecture, design patterns, and implementation details to produce long-form technical manuals and ebooks. | `imported` |
 | [`documentation-generation-doc-generate`](../dist/skills/documentation-generation-doc-generate/) | You are a documentation expert specializing in creating comprehensive, maintainable documentation from code. Generate API docs, architecture diagrams, user guides, and technical references using AI-powered analysis and industry best practices. | `imported-review-recommended` |
 | [`documentation-templates`](../dist/skills/documentation-templates/) | Documentation templates and structure guidelines. README, API docs, code comments, and AI-friendly documentation. | `imported` |
-| [`docx-official`](../dist/skills/docx-official/) | A user may ask you to create, edit, or analyze the contents of a .docx file. A .docx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks. | `imported-review-recommended` |
 | [`domain-driven-design`](../dist/skills/domain-driven-design/) | Plan and route Domain-Driven Design work from strategic modeling to tactical implementation and evented architecture patterns. | `imported` |
 | [`draw`](../dist/skills/draw/) | Vector graphics and diagram creation, format conversion (ODG/SVG/PDF) with LibreOffice Draw. | `imported-review-recommended` |
 | [`drizzle-orm-expert`](../dist/skills/drizzle-orm-expert/) | Expert in Drizzle ORM for TypeScript — schema design, relational queries, migrations, and serverless database integration. Use when building type-safe database layers with Drizzle. | `imported-review-recommended` |
@@ -359,7 +354,6 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | [`fal-upscale`](../dist/skills/fal-upscale/) | Upscale and enhance image and video resolution using AI | `imported` |
 | [`fal-workflow`](../dist/skills/fal-workflow/) | Generate workflow JSON files for chaining AI models | `imported` |
 | [`fastapi-router-py`](../dist/skills/fastapi-router-py/) | Create FastAPI routers following established patterns with proper authentication, response models, and HTTP status codes. | `imported-review-recommended` |
-| [`figma-use`](../dist/skills/figma-use/) | **MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `use_figma` tool call. NEVER call `use_figma` directly without loading this skill first. Skipping it causes common, hard-to-debug failures. Trigger whenever the user wants to perform a write action or a unique read action that requires JavaScript execution in the Figma file context — e.g. create/edit/delete nodes, set up variables or tokens, build components and variants, modify auto-layout or fills, bind variables to properties, or inspect file structure programmatically. | `imported-review-recommended` |
 | [`file-uploads`](../dist/skills/file-uploads/) | Expert at handling file uploads and cloud storage. Covers S3, | `imported-review-recommended` |
 | [`find-skills`](../dist/skills/find-skills/) | Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill. | `imported-review-recommended` |
 | [`firebase`](../dist/skills/firebase/) | Firebase gives you a complete backend in minutes - auth, database, | `imported` |
@@ -469,7 +463,6 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | [`llm-structured-output`](../dist/skills/llm-structured-output/) | Get reliable JSON, enums, and typed objects from LLMs using response_format, tool_use, and schema-constrained decoding across OpenAI, Anthropic, and Google APIs. | `imported-review-recommended` |
 | [`local-gemma-worker`](../dist/skills/local-gemma-worker/) | Delegate bounded local/offline tasks to Google's Gemma 4 through Ollama from Codex. Use when the user asks to use Gemma, assign work to Gemma, run a local model pass, do private/offline summarization, extraction, first-pass review, or compare drafts before Codex synthesizes the final answer. | `imported` |
 | [`local-llm-expert`](../dist/skills/local-llm-expert/) | Master local LLM inference, model selection, VRAM optimization, and local deployment using Ollama, llama.cpp, vLLM, and LM Studio. Expert in quantization formats (GGUF, EXL2) and local AI privacy. | `imported-review-recommended` |
-| [`loki-mode`](../dist/skills/loki-mode/) | Version 2.35.0 \| PRD to Production \| Zero Human Intervention > Research-enhanced: OpenAI SDK, DeepMind, Anthropic, AWS Bedrock, Agent SDK, HN Production (2025) | `imported` |
 | [`m365-agents-dotnet`](../dist/skills/m365-agents-dotnet/) | Microsoft 365 Agents SDK for .NET. Build multichannel agents for Teams/M365/Copilot Studio with ASP.NET Core hosting, AgentApplication routing, and MSAL-based auth. | `imported-review-recommended` |
 | [`m365-agents-py`](../dist/skills/m365-agents-py/) | Microsoft 365 Agents SDK for Python. Build multichannel agents for Teams/M365/Copilot Studio with aiohttp hosting, AgentApplication routing, streaming responses, and MSAL-based auth. | `imported-review-recommended` |
 | [`m365-agents-ts`](../dist/skills/m365-agents-ts/) | Microsoft 365 Agents SDK for TypeScript/Node.js. | `imported-review-recommended` |
@@ -538,7 +531,6 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | [`paid-ads`](../dist/skills/paid-ads/) | You are an expert performance marketer with direct access to ad platform accounts. Your goal is to help create, optimize, and scale paid advertising campaigns that drive efficient customer acquisition. | `imported` |
 | [`parallel-agents`](../dist/skills/parallel-agents/) | Multi-agent orchestration patterns. Use when multiple independent tasks can run with different domain expertise or when comprehensive analysis requires multiple perspectives. | `imported-review-recommended` |
 | [`paywall-upgrade-cro`](../dist/skills/paywall-upgrade-cro/) | You are an expert in in-app paywalls and upgrade flows. Your goal is to convert free users to paid, or upgrade users to higher tiers, at moments when they've experienced enough value to justify the commitment. | `imported` |
-| [`pdf-official`](../dist/skills/pdf-official/) | This guide covers essential PDF processing operations using Python libraries and command-line tools. For advanced features, JavaScript libraries, and detailed examples, see reference.md. If you need to fill out a PDF form, read forms.md and follow its instructions. | `imported-review-recommended` |
 | [`performance-optimizer`](../dist/skills/performance-optimizer/) | Identifies and fixes performance bottlenecks in code, databases, and APIs. Measures before and after to prove improvements. | `imported-review-recommended` |
 | [`performance-testing-review-ai-review`](../dist/skills/performance-testing-review-ai-review/) | You are an expert AI-powered code review specialist combining automated static analysis, intelligent pattern recognition, and modern DevOps practices. Leverage AI tools (GitHub Copilot, Qodo, GPT-5, C | `imported-review-recommended` |
 | [`performance-testing-review-multi-agent-review`](../dist/skills/performance-testing-review-multi-agent-review/) | Reviews performance test results and system bottlenecks with multiple analytical perspectives before recommending optimization work. | `imported-review-recommended` |
@@ -554,7 +546,6 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | [`postgres-best-practices`](../dist/skills/postgres-best-practices/) | Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations. | `imported` |
 | [`postgresql`](../dist/skills/postgresql/) | Design a PostgreSQL-specific schema. Covers best-practices, data types, indexing, constraints, performance patterns, and advanced features | `imported` |
 | [`postgresql-optimization`](../dist/skills/postgresql-optimization/) | PostgreSQL database optimization workflow for query tuning, indexing strategies, performance analysis, and production database management. | `imported` |
-| [`pptx-official`](../dist/skills/pptx-official/) | A user may ask you to create, edit, or analyze the contents of a .pptx file. A .pptx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks. | `imported-review-recommended` |
 | [`prioritization-craft`](../dist/skills/prioritization-craft/) | Applies prioritization frameworks including RICE, ICE, Value vs Effort, and Kano model. Use when prioritizing features, managing backlog, making tradeoffs, or saying no gracefully. Based on Shreyas Doshi and Intercom frameworks. | `imported` |
 | [`prisma-expert`](../dist/skills/prisma-expert/) | You are an expert in Prisma ORM with deep knowledge of schema design, migrations, query optimization, relations modeling, and database operations across PostgreSQL, MySQL, and SQLite. | `imported-review-recommended` |
 | [`privacy-by-design`](../dist/skills/privacy-by-design/) | Use when building apps that collect user data. Ensures privacy protections are built in from the start—data minimization, consent, encryption. | `imported-review-recommended` |
@@ -644,7 +635,6 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | [`stability-ai`](../dist/skills/stability-ai/) | Geracao de imagens via Stability AI (SD3.5, Ultra, Core). Text-to-image, img2img, inpainting, upscale, remove-bg, search-replace. 15 estilos artisticos. | `imported-review-recommended` |
 | [`startup-analyst`](../dist/skills/startup-analyst/) | Expert startup business analyst specializing in market sizing, financial modeling, competitive analysis, and strategic planning for early-stage companies. | `imported` |
 | [`startup-metrics-framework`](../dist/skills/startup-metrics-framework/) | Comprehensive guide to tracking, calculating, and optimizing key performance metrics for different startup business models from seed through Series A. | `imported` |
-| [`startup-validator`](../dist/skills/startup-validator/) | Comprehensive startup idea validation and market analysis tool. Use when users need to evaluate a startup idea, assess market fit, analyze competition, validate problem-solution fit, or determine market positioning. Triggers include requests to "validate my startup idea", "analyze market opportunity", "check if there's demand for", "research competition for", "evaluate business idea", or "see if my idea is viable". Provides data-driven analysis using web search, market frameworks, competitive research, and positioning recommendations. | `imported-review-recommended` |
 | [`statsmodels`](../dist/skills/statsmodels/) | Statsmodels is Python's premier library for statistical modeling, providing tools for estimation, inference, and diagnostics across a wide range of statistical methods. | `imported-review-recommended` |
 | [`stitch-loop`](../dist/skills/stitch-loop/) | Teaches agents to iteratively build websites using Stitch with an autonomous baton-passing loop pattern | `imported-review-recommended` |
 | [`stitch-ui-design`](../dist/skills/stitch-ui-design/) | Expert guidance for crafting effective prompts in Google Stitch, the AI-powered UI design tool by Google Labs. This skill helps create precise, actionable prompts that generate high-quality UI designs for web and mobile applications. | `imported` |
@@ -767,8 +757,6 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | [`e2e-testing`](../dist/skills/e2e-testing/) | End-to-end testing workflow with Playwright for browser automation, visual regression, cross-browser testing, and CI/CD integration. | `imported` |
 | [`evolution`](../dist/skills/evolution/) | This skill enables makepad-skills to self-improve continuously during development. | `imported-review-recommended` |
 | [`exec-comms`](../dist/skills/exec-comms/) | Drafts executive memos and stakeholder communications using Amazon's 6-pager structure, Stripe's memo format, and SCQA framework. Use when writing board updates, executive summaries, or strategic documents. | `imported` |
-| [`figma-create-design-system-rules`](../dist/skills/figma-create-design-system-rules/) | Generates custom design system rules for the user's codebase. Use when user says "create design system rules", "generate rules for my project", "set up design rules", "customize design system guidelines", or wants to establish project-specific conventions for Figma-to-code workflows. Requires Figma MCP server connection. | `imported` |
-| [`figma-generate-design`](../dist/skills/figma-generate-design/) | Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout into Figma. Triggers: 'write to Figma', 'create in Figma from code', 'push page to Figma', 'take this app/page and build it in Figma', 'create a screen', 'build a landing page in Figma', 'update the Figma screen to match code'. This is the preferred workflow skill whenever the user wants to build or update a full page, screen, or view in Figma from code or a description. Discovers design system components, variables, and styles via search_design_system, imports them, and assembles screens incrementally section-by-section using design system tokens instead of hardcoded values. | `imported-review-recommended` |
 | [`game-art`](../dist/skills/game-art/) | Game art principles. Visual style selection, asset pipeline, animation workflow. | `imported-review-recommended` |
 | [`gh-review-requests`](../dist/skills/gh-review-requests/) | Fetch unread GitHub notifications for open PRs where review is requested from a specified team or opened by a team member. Use when asked to "find PRs I need to review", "show my review requests", "what needs my review", "fetch GitHub review requests", or "check team review queue". | `imported-review-recommended` |
 | [`git-hooks-automation`](../dist/skills/git-hooks-automation/) | Master Git hooks setup with Husky, lint-staged, pre-commit framework, and commitlint. Automate code quality gates, formatting, linting, and commit message enforcement before code reaches CI. | `imported-review-recommended` |
@@ -987,7 +975,6 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | [`error-diagnostics-error-analysis`](../dist/skills/error-diagnostics-error-analysis/) | You are an expert error analysis specialist with deep expertise in debugging distributed systems, analyzing production incidents, and implementing comprehensive observability solutions. | `imported-review-recommended` |
 | [`expo-deployment`](../dist/skills/expo-deployment/) | Deploy Expo apps to production | `imported` |
 | [`expo-dev-client`](../dist/skills/expo-dev-client/) | Build and distribute Expo development clients locally or via TestFlight | `imported-review-recommended` |
-| [`figma-implement-design`](../dist/skills/figma-implement-design/) | Translates Figma designs into production-ready application code with 1:1 visual fidelity. Use when implementing UI code from Figma files, when user mentions "implement design", "generate code", "implement component", provides Figma URLs, or asks to build components matching Figma specs. For Figma canvas writes via `use_figma`, use `figma-use`. | `imported-review-recommended` |
 | [`finishing-a-development-branch`](../dist/skills/finishing-a-development-branch/) | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup | `imported-review-recommended` |
 | [`flutter-expert`](../dist/skills/flutter-expert/) | Master Flutter development with Dart 3, advanced widgets, and multi-platform deployment. | `imported-review-recommended` |
 | [`free-tool-strategy`](../dist/skills/free-tool-strategy/) | You are an expert in engineering-as-marketing strategy. Your goal is to help plan and evaluate free tools that generate leads, attract organic traffic, and build brand awareness. | `imported` |
@@ -1397,7 +1384,6 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 |---|---|---|
 | [`favicon`](../dist/skills/favicon/) | Generate favicons from a source image | `imported-review-recommended` |
 | [`remotion`](../dist/skills/remotion/) | Generate walkthrough videos from Stitch projects using Remotion with smooth transitions, zooming, and text overlays | `imported-review-recommended` |
-| [`xlsx-official`](../dist/skills/xlsx-official/) | Unless otherwise stated by the user or existing template | `imported-review-recommended` |
 
 ## QA, Testing, Release
 
@@ -1460,3 +1446,9 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | [`social-proof-architect`](../dist/skills/social-proof-architect/) | Selects and structures testimonials, logos, case studies, metrics, and proof points to build credible social proof. | `imported-review-recommended` |
 | [`track-management`](../dist/skills/track-management/) | Use this skill when creating, managing, or working with Conductor tracks - the logical work units for features, bugs, and refactors. Applies to spec.md, plan.md, and track lifecycle operations. | `imported` |
 | [`web3-testing`](../dist/skills/web3-testing/) | Master comprehensive testing strategies for smart contracts using Hardhat, Foundry, and advanced testing patterns. | `imported-review-recommended` |
+
+## Uncategorized
+
+| Skill | What it does | Trust |
+|---|---|---|
+| [`prompt-engineering-expert`](../dist/skills/prompt-engineering-expert/) | Designs, improves, converts, debugs, and operationalizes prompts, system instructions, agent definitions, and reusable AI-agent behavior. Works autonomously by default: reads the project, infers intent, and produces a finished prompt with stated assumptions in one pass; runs a guided one-question-at-a-time interactive mode on request. Use when the user is writing or refining a prompt, a system prompt, GPT/agent instructions, an AGENTS.md or CLAUDE.md, a Cursor rule, or asks to make a prompt better, convert a prompt between platforms, debug poor prompt output, or cut a prompt's token usage. Triggers on: 'write a prompt', 'improve this prompt', 'prompt for', 'system prompt', 'agent instructions', 'convert this prompt', 'why is this prompt failing', 'reduce tokens', 'prompt engineering'. | `curated` |

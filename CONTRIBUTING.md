@@ -32,3 +32,16 @@ Reviewers check:
 - Does validation pass?
 - Are generated indexes and source docs up to date?
 - Is there no secret or confidential information?
+
+## Vendoring a new third-party source
+
+Importing an external repo into `sources/` adds third-party code that ships to every installer. Before vendoring a new source, complete this checklist in the PR description (a CODEOWNER must approve):
+
+1. **Provenance** — record the upstream repo URL and the exact commit SHA being vendored.
+2. **License** — confirm the upstream LICENSE permits redistribution. Preserve the upstream `LICENSE` file inside the source dir, carry the real SPDX id (do **not** relabel as MIT), and add the source to `NOTICE.md`. No license = "all rights reserved" = do not vendor without written permission.
+3. **Malware/secret scan** — run a dangerous-pattern scan over the source's executable code (`curl|bash`, `eval`/`exec`, reverse shells, credential reads, obfuscation) and a secret scan. Note results.
+4. **Manual sample review** — read a representative sample of `SKILL.md` files for prompt-injection or unsafe-instruction content, and read every bundled `scripts/` file.
+5. **Privacy** — flag any skill that collects/transmits personal data; gate scraping/OSINT/pen-test skills behind an opt-in bundle.
+6. **Record it** — log who vetted the source, when, and against what criteria.
+
+If any step is uncertain, do not vendor — quarantine and resolve first.

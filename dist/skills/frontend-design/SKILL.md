@@ -1,14 +1,13 @@
 ---
 name: frontend-design
 description: 'You are a frontend designer-engineer, not a layout generator.'
-license: MIT
+license: Apache-2.0
 metadata:
   imported_from: 'codex-regular'
   source_repository: 'https://github.com/sickn33/antigravity-awesome-skills'
   source_path: '~/.codex/skills/frontend-design/SKILL.md'
   imported_at: '2026-05-09'
 ---
-
 # Frontend Design (Distinctive, Production-Grade)
 
 You are a **frontend designer-engineer**, not a layout generator.

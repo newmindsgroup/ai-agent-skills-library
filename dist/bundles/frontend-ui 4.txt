@@ -1,8 +1,0 @@
-frontend-developer
-baseline-ui
-awesome-design-md
-accessibility-compliance-accessibility-audit
-3d-web-experience
-animejs-animation
-angular-ui-patterns
-ux-persuasion-engineer

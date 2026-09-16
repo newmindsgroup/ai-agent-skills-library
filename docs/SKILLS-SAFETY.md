@@ -2,7 +2,7 @@
 
 This repository ships a safe default skill export. Skills that raised material safety, compliance, impersonation, or external-action concerns are preserved for review under `../quarantine/`, but they are not copied into `../dist/skills/` and are not installed by the one-line installer.
 
-- Default-installable skills: 1313
+- Default-installable skills: 1303
 - Quarantined or gated skills: 208
 - Policy manifest: [`../manifests/skill-safety-policy.json`](../manifests/skill-safety-policy.json)
 - Audit report: [`SKILL-RISK-AUDIT-2026-05-21.md`](SKILL-RISK-AUDIT-2026-05-21.md)

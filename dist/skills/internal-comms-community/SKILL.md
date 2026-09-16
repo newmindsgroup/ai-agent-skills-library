@@ -1,14 +1,13 @@
 ---
 name: internal-comms-community
 description: 'To write internal communications, use this skill for:'
-license: MIT
+license: Apache-2.0
 metadata:
   imported_from: 'codex-regular'
   source_repository: 'https://github.com/sickn33/antigravity-awesome-skills'
   source_path: '~/.codex/skills/internal-comms-community/SKILL.md'
   imported_at: '2026-05-09'
 ---
-
 ## When to use this skill
 To write internal communications, use this skill for:
 - 3P updates (Progress, Plans, Problems)

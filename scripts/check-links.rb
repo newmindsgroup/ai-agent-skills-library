@@ -1,6 +1,11 @@
 #!/usr/bin/env ruby
 # Check local Markdown links without crawling the large exported skill bodies.
 
+# Read files as UTF-8 regardless of the shell locale (avoids "invalid byte
+# sequence in US-ASCII" when LANG/LC_ALL are unset).
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
 ROOT = File.expand_path("..", __dir__)
 
 GLOBS = [

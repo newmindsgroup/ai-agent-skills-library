@@ -61,7 +61,7 @@ Planning, architecture, API design, implementation, review, debugging, and valid
 ## Business Strategy
 
 - Bundle: `business-strategy`
-- Skills: 10
+- Skills: 8
 - Best for: Founders, product leads, and strategy work from idea through launch.
 
 Business model, startup validation, strategy, OKR, metrics, and AI-product skills.
@@ -69,8 +69,6 @@ Business model, startup validation, strategy, OKR, metrics, and AI-product skill
 | Skill | Category | Trust |
 |---|---|---|
 | [`business-model-designer`](../dist/skills/business-model-designer/) | AI, Agents, LLMs, Data | `imported` |
-| [`business-model-canvas`](../dist/skills/business-model-canvas/) | AI, Agents, LLMs, Data | `imported` |
-| [`startup-validator`](../dist/skills/startup-validator/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
 | [`strategy-frameworks`](../dist/skills/strategy-frameworks/) | Business, Strategy, Product, Growth | `imported` |
 | [`okr-frameworks`](../dist/skills/okr-frameworks/) | Business, Strategy, Product, Growth | `imported` |
 | [`metrics-frameworks`](../dist/skills/metrics-frameworks/) | Business, Strategy, Product, Growth | `imported` |

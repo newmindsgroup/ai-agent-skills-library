@@ -1,3 +1,0 @@
-audit-skills
-sast-configuration
-agentic-actions-auditor

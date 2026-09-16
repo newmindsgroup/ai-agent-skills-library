@@ -8,34 +8,32 @@ The trust layer is intentionally conservative: imported skills can be useful whi
 
 | Trust level | Count | Meaning |
 |---|---:|---|
-| `imported-review-recommended` | 763 | Imported and contains content that matched risk-sensitive keywords; review before sensitive use. |
-| `imported` | 525 | Imported from an upstream source and schema/frontmatter validated here. |
-| `curated` | 22 | Created and maintained directly in this library. |
+| `imported-review-recommended` | 755 | Imported and contains content that matched risk-sensitive keywords; review before sensitive use. |
+| `imported` | 522 | Imported from an upstream source and schema/frontmatter validated here. |
+| `curated` | 23 | Created and maintained directly in this library. |
 | `runtime` | 3 | Bundled with a local runtime and tracked here for portability. |
 
 ## Risk Flags
 
 | Risk flag | Count |
 |---|---:|
-| `shell-execution` | 583 |
-| `secrets-sensitive` | 463 |
-| `security-sensitive` | 362 |
+| `shell-execution` | 575 |
+| `secrets-sensitive` | 461 |
+| `security-sensitive` | 363 |
 | `network-access` | 53 |
-| `destructive-system-ops` | 22 |
+| `destructive-system-ops` | 20 |
 
 ## Source Groups
 
 | Source | Type | Trust posture | Skills |
 |---|---|---|---:|
-| [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) | `github` | Imported upstream; validate before sensitive use | 1251 |
+| [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) | `github` | Imported upstream; validate before sensitive use | 1242 |
 | [menkesu/awesome-pm-skills](https://github.com/menkesu/awesome-pm-skills) | `github` | Imported upstream; validate before sensitive use | 29 |
-| Original New Minds Group | `original` | Curated in this repo | 22 |
+| Original New Minds Group | `original` | Curated in this repo | 23 |
 | [mxyhi/ok-skills](https://github.com/mxyhi/ok-skills) | `github` | Imported upstream; validate before sensitive use | 4 |
 | OpenAI Codex bundled system skills | `runtime` | Runtime-provided | 3 |
-| [ailabs-393/ai-labs-claude-skills](https://github.com/ailabs-393/ai-labs-claude-skills) | `github` | Imported upstream; validate before sensitive use | 1 |
 | [maigentic/stratarts](https://github.com/maigentic/stratarts) | `github` | Imported upstream; validate before sensitive use | 1 |
 | [refoundai/lenny-skills](https://github.com/refoundai/lenny-skills) | `github` | Imported upstream; validate before sensitive use | 1 |
-| [scientiacapital/skills](https://github.com/scientiacapital/skills) | `github` | Imported upstream; validate before sensitive use | 1 |
 
 ## Safety Quarantine
 

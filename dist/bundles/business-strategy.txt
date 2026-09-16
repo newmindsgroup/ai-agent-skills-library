@@ -1,6 +1,4 @@
 business-model-designer
-business-model-canvas
-startup-validator
 strategy-frameworks
 okr-frameworks
 metrics-frameworks

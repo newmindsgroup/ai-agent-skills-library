@@ -1,14 +1,13 @@
 ---
 name: canvas-design
 description: 'These are instructions for creating design philosophies - aesthetic movements that are then EXPRESSED VISUALLY. Output only .md files, .pdf files, and .png files.'
-license: MIT
+license: Apache-2.0
 metadata:
   imported_from: 'codex-regular'
   source_repository: 'https://github.com/sickn33/antigravity-awesome-skills'
   source_path: '~/.codex/skills/canvas-design/SKILL.md'
   imported_at: '2026-05-09'
 ---
-
 These are instructions for creating design philosophies - aesthetic movements that are then EXPRESSED VISUALLY. Output only .md files, .pdf files, and .png files.
 
 Complete this in two steps:

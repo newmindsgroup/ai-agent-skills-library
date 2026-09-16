@@ -1,14 +1,13 @@
 ---
 name: webapp-testing
 description: 'To test local web applications, write native Python Playwright scripts.'
-license: MIT
+license: Apache-2.0
 metadata:
   imported_from: 'codex-regular'
   source_repository: 'https://github.com/sickn33/antigravity-awesome-skills'
   source_path: '~/.codex/skills/webapp-testing/SKILL.md'
   imported_at: '2026-05-09'
 ---
-
 # Web Application Testing
 
 To test local web applications, write native Python Playwright scripts.

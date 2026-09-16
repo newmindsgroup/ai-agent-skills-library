@@ -1,4 +1,0 @@
-inbound-triage
-calendar-scheduler
-pipeline-reporter
-competitive-monitor
