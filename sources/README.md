@@ -7,8 +7,8 @@ Canonical skill folders live under `sources/<source-folder>/skills/<skill-name>/
 | Source folder | Source | Type | License (SPDX) | Skills |
 |---|---|---|---|---:|
 | [`sickn33-antigravity-awesome-skills`](sickn33-antigravity-awesome-skills/) | [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) | github | Apache-2.0, MIT | 1242 |
+| [`original`](original/) | Original New Minds Group | original | MIT | 31 |
 | [`menkesu-awesome-pm-skills`](menkesu-awesome-pm-skills/) | [menkesu/awesome-pm-skills](https://github.com/menkesu/awesome-pm-skills) | github | MIT | 29 |
-| [`original`](original/) | Original New Minds Group | original | MIT | 23 |
 | [`mxyhi-ok-skills`](mxyhi-ok-skills/) | [mxyhi/ok-skills](https://github.com/mxyhi/ok-skills) | github | Apache-2.0 | 4 |
 | [`openai-codex-bundled-system-skills`](openai-codex-bundled-system-skills/) | OpenAI Codex bundled system skills | runtime | Apache-2.0 | 3 |
 | [`maigentic-stratarts`](maigentic-stratarts/) | [maigentic/stratarts](https://github.com/maigentic/stratarts) | github | MIT | 1 |

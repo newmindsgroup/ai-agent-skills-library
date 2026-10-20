@@ -1,0 +1,4 @@
+content-quality-gate
+engineering-quality-gate
+visual-and-code-quality-gate
+generative-ui

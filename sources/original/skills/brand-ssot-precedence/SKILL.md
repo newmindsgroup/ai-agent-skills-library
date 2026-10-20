@@ -75,7 +75,7 @@ The agent-facing visual specification. Sections:
 1. Visual Theme & Atmosphere (mood, density, philosophy)
 2. Color Palette & Roles (semantic name + hex + functional role)
 3. Typography Rules (font families, hierarchy table, licensing)
-4. Component Stylings (buttons, cards, inputs, navigation with states)
+4. Component Stylings (buttons, cards, inputs, navigation with states), including an **Iconography block**: one open-licensed icon set for the whole project (set name, size, stroke, pinned version, self-hosted or SRI, taking the text colour); real company logos only from a logo set such as Simple Icons (CC0 collection, trademarks stay with their owners), never hand-drawn; no decorative sparkles or ornament icons; every icon beside visible text or carrying an `aria-label`. No `@latest` CDN loads (dependency hygiene); no paid or attribution-bound sets (license hygiene).
 5. Layout Principles (grid, spacing scale, whitespace philosophy)
 6. Depth & Elevation (shadow system, surface hierarchy)
 7. Do's and Don'ts (anti-patterns, AI-image tells to avoid)

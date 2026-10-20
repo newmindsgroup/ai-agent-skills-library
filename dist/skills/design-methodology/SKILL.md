@@ -107,7 +107,7 @@ Before opening a design tool or writing CSS, articulate:
 - Which **principles** apply — balance, emphasis, proportion, rhythm, unity, contrast
 - Which **classical systems** are in play — and *where* they belong (see `references/golden-ratio.md` for the hardest case: golden ratio)
 - What **archetype** you're serving
-- What **reference set** you're borrowing restraint from
+- What **reference set** you're borrowing restraint from (start from `references/reference-sites.md`, filtered through `DESIGN.md`)
 
 If you can't articulate these before designing, you're decorating, not designing.
 
@@ -237,6 +237,8 @@ If you can't articulate the reasoning, the decision isn't ready to lock.
 - `references/iteration-playbook.md` — the full seven-stage playbook with stage-by-stage detail, fast-loop vs slow-loop heuristics, and signals you're skipping a stage.
 - `references/golden-ratio.md` — when φ applies and when it doesn't, with a decision checklist and a fully-annotated example logo spec.
 - `references/honesty-protocol.md` — the six self-critique triggers, how to phrase ownership of a mistake, and the correction-log format.
+- `references/motion-assets.md`: the five SSOT-compliant micro-interaction recipes (2px lift, no shadow, 200ms cap, count-up once, reduced-motion block) and the motion critique checklist.
+- `references/reference-sites.md`: reference galleries by design need (motion, brand, type, sections, flows, icons) with the pattern-not-pixels, credit and license rules.
 
 ---
 

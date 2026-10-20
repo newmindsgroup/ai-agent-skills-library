@@ -3,15 +3,15 @@
 Complete generated index of every default-installable skill currently shipped in this repository.
 
 - Generated: 2026-09-15
-- Default-installable skills: 1303
+- Default-installable skills: 1311
 - Quarantined or gated skills removed from default export: 208
 
 For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills-index.json) or [`../dist/skills-index.tsv`](../dist/skills-index.tsv). For curated install subsets, see [`STARTER-PACKS.md`](STARTER-PACKS.md). For trust and provenance metadata, see [`SKILLS-TRUST.md`](SKILLS-TRUST.md). For removed or gated skills, see [`SKILLS-SAFETY.md`](SKILLS-SAFETY.md).
 
 ## Source Repositories Used
 - **sickn33-antigravity-awesome-skills:** sickn33/antigravity-awesome-skills - https://github.com/sickn33/antigravity-awesome-skills
-- **menkesu-awesome-pm-skills:** menkesu/awesome-pm-skills - https://github.com/menkesu/awesome-pm-skills
 - **original:** Original New Minds Group
+- **menkesu-awesome-pm-skills:** menkesu/awesome-pm-skills - https://github.com/menkesu/awesome-pm-skills
 - **mxyhi-ok-skills:** mxyhi/ok-skills - https://github.com/mxyhi/ok-skills
 - **openai-codex-bundled-system-skills:** OpenAI Codex bundled system skills
 - **maigentic-stratarts:** maigentic/stratarts - https://github.com/maigentic/stratarts
@@ -58,12 +58,12 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 | Testing, QA, Debugging, Review | 30 |
 | Languages, Frameworks, Specialist Tools | 22 |
 | Security, Compliance, Risk | 10 |
+| Uncategorized | 9 |
 | Media, Documents, Office, Creative | 2 |
 | Backend, Laravel, Security | 1 |
 | Engineering, APIs, Testing | 1 |
 | QA, Testing, Release | 1 |
 | Security, Compliance, Reliability | 1 |
-| Uncategorized | 1 |
 
 ## AI, Agents, LLMs, Data
 
@@ -1451,4 +1451,12 @@ For machine-readable discovery, use [`../dist/skills-index.json`](../dist/skills
 
 | Skill | What it does | Trust |
 |---|---|---|
+| [`content-quality-gate`](../dist/skills/content-quality-gate/) | Apply the canonical brand voice, remove AI tells and dash characters, and require factual and audience-specific editorial review before public or client-facing copy is considered ready. | `curated` |
+| [`engineering-quality-gate`](../dist/skills/engineering-quality-gate/) | Require project-specific tests, static analysis, security review, changed-path acceptance evidence, and a proportionate release check before non-trivial code is considered complete. | `curated` |
+| [`generative-ui`](../dist/skills/generative-ui/) | Use when an AI assistant or copilot could answer with interactive forms, tables, charts, filters or cards, or when evaluating or integrating Thesys OpenUI. Ordinary static pages and fixed forms do not require this skill. | `curated` |
+| [`memory-vault-mirror`](../dist/skills/memory-vault-mirror/) | Mirror an agent's memory store into a versioned, human-readable Obsidian vault. Use this whenever the user wants agent memory to be searchable, backed up, or visible outside the tool that wrote it - phrases like "back up my memory", "mirror memory to Obsidian", "why isn't this in my vault", "make the agent's memory searchable", "sync memory to the repo", "our memory only lives on one machine", or when setting up a new tenant/client agent that needs a durable memory surface. Also use when auditing an existing memory system for orphaned entries, stale paths, or missing backups, and when a memory store lives only on one disk. | `curated` |
+| [`model-governor`](../dist/skills/model-governor/) | Select the lowest-cost safe model, effort, and speed for a substantive task using sensitivity, task shape, risk, urgency, and tool requirements. Use for model choice, token conservation, provider fallback, local versus subscription routing, or cross-project LLM policy. | `curated` |
+| [`project-init`](../dist/skills/project-init/) | Stamp the shared operating standard (the four-pillar Engineering Mantra plus the full Working Style spine) into a project so every tool that enters the repo works under the same Security, Stability, Reliability, and Compliance lens. Use when starting a new project or repo, when onboarding an existing project that lacks an AGENTS.md, when the user says 'set up this project', 'apply our standard', 'add the operating standard here', 'make this project follow the four pillars', 'init this repo', or '/project-init'. Creates AGENTS.md if absent, merges the standard into an existing AGENTS.md without overwriting project-specific content, and offers a DESIGN.md scaffold for brand-facing projects. Idempotent and safe to re-run. | `curated` |
 | [`prompt-engineering-expert`](../dist/skills/prompt-engineering-expert/) | Designs, improves, converts, debugs, and operationalizes prompts, system instructions, agent definitions, and reusable AI-agent behavior. Works autonomously by default: reads the project, infers intent, and produces a finished prompt with stated assumptions in one pass; runs a guided one-question-at-a-time interactive mode on request. Use when the user is writing or refining a prompt, a system prompt, GPT/agent instructions, an AGENTS.md or CLAUDE.md, a Cursor rule, or asks to make a prompt better, convert a prompt between platforms, debug poor prompt output, or cut a prompt's token usage. Triggers on: 'write a prompt', 'improve this prompt', 'prompt for', 'system prompt', 'agent instructions', 'convert this prompt', 'why is this prompt failing', 'reduce tokens', 'prompt engineering'. | `curated` |
+| [`vetting-third-party-components`](../dist/skills/vetting-third-party-components/) | Vets third-party skills, agents, plugins, MCP connectors, extensions, and packages before they touch production work, client data, or credentials. Use this whenever the user wants to install, enable, connect, or try ANY third-party component — a skill from a marketplace or GitHub repo, an MCP server, a Claude Code mod, a Claude/Chrome/desktop extension, an npm/pip package for production use, or an agent collection — even if they don't say "vet" or "security." Also use when the user asks "is this safe," "should we trust this," or before granting a connector access to CRM, email, files, or client systems. Produces a verdict (approve / approve with constraints / reject) and records it in the vetting log. | `curated` |
+| [`visual-and-code-quality-gate`](../dist/skills/visual-and-code-quality-gate/) | Require proportionate functional, visual, accessibility, and source-of-truth verification before completing code, UI, UX, or design work. | `curated` |

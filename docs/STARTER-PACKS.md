@@ -25,6 +25,21 @@ Core operating principles, design methodology, human voice, brand context, and t
 | [`tool-leverage-heuristics`](../dist/skills/tool-leverage-heuristics/) | AI, Agents, LLMs, Data | `curated` |
 | [`brand-ssot-precedence`](../dist/skills/brand-ssot-precedence/) | AI, Agents, LLMs, Data | `curated` |
 
+## Agent Governance
+
+- Bundle: `agent-governance`
+- Skills: 4
+- Best for: Teams running several AI tools who want one vetting log, one routing policy and durable memory.
+
+Third-party vetting, model and effort routing, memory mirroring, and project operating-standard setup.
+
+| Skill | Category | Trust |
+|---|---|---|
+| [`vetting-third-party-components`](../dist/skills/vetting-third-party-components/) | Uncategorized | `curated` |
+| [`model-governor`](../dist/skills/model-governor/) | Uncategorized | `curated` |
+| [`memory-vault-mirror`](../dist/skills/memory-vault-mirror/) | Uncategorized | `curated` |
+| [`project-init`](../dist/skills/project-init/) | Uncategorized | `curated` |
+
 ## Agent Self-Improvement
 
 - Bundle: `agent-self-improvement`
@@ -184,6 +199,21 @@ Exploratory testing, browser QA, bug hunting, TDD, validation, and completion-ve
 | [`awt-e2e-testing`](../dist/skills/awt-e2e-testing/) | AI, Agents, LLMs, Data | `imported-review-recommended` |
 | [`playwright-skill`](../dist/skills/playwright-skill/) | Testing, QA, Debugging, Review | `imported-review-recommended` |
 | [`lint-and-validate`](../dist/skills/lint-and-validate/) | Testing, QA, Debugging, Review | `imported-review-recommended` |
+
+## Quality Gates
+
+- Bundle: `quality-gates`
+- Skills: 4
+- Best for: Teams that want 'done' to mean verified, in every discipline.
+
+Evidence-based completion gates for content, engineering and visual work, plus generative UI guidance.
+
+| Skill | Category | Trust |
+|---|---|---|
+| [`content-quality-gate`](../dist/skills/content-quality-gate/) | Uncategorized | `curated` |
+| [`engineering-quality-gate`](../dist/skills/engineering-quality-gate/) | Uncategorized | `curated` |
+| [`visual-and-code-quality-gate`](../dist/skills/visual-and-code-quality-gate/) | Uncategorized | `curated` |
+| [`generative-ui`](../dist/skills/generative-ui/) | Uncategorized | `curated` |
 
 ## Release Safety
 
