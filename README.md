@@ -175,7 +175,7 @@ Full placeholder reference: [`docs/PLACEHOLDERS.md`](docs/PLACEHOLDERS.md).
 
 ### Skills
 
-This repository now ships **1305 default-installable skills**. Canonical source folders live under `sources/<source-repo>/skills/`, and the installer-ready flat export lives under `dist/skills/`.
+This repository now ships **1311 default-installable skills**. Canonical source folders live under `sources/<source-repo>/skills/`, and the installer-ready flat export lives under `dist/skills/`.
 
 Another **208 skills** are preserved under [`quarantine/`](quarantine/) but removed from the default installer/export path because they raised offensive-security, external-account automation, high-stakes advice, public-figure persona, or over-broad meta-skill concerns. See [`docs/SKILLS-SAFETY.md`](docs/SKILLS-SAFETY.md).
 

@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-19
+
+- Added eight New Minds originals: `vetting-third-party-components`, `model-governor`, `memory-vault-mirror`, `project-init`, `content-quality-gate`, `engineering-quality-gate`, `visual-and-code-quality-gate`, `generative-ui`.
+- Added two starter packs and marketplace plugins: `agent-governance` and `quality-gates`.
+- Refreshed `brand-ssot-precedence` (iconography block), `design-methodology` (motion-assets and reference-sites references), `inbound-triage` 2.1.0 (scam and phishing gate, pricing hold, invoice screen) and `prompt-engineering-expert` 1.3.0 (selective activation and stop rule).
+- Agents: Context7-first documentation header on the five engineering agents; portable brand-voice lock (brand-config placeholders) on the five content agents.
+- Marketplace 1.8.0.
+
+Version-Timestamp: 2026-10-19 19:40:00 AST
+
 ## 2026-05-09
 
 - Added generated discovery artifacts: `dist/skills-index.json`, `dist/skills-index.tsv`, `dist/bundles.json`, and `dist/bundles/*.txt`.

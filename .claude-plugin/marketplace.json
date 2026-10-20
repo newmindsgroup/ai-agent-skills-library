@@ -3,7 +3,7 @@
   "name": "ai-agent-skills-library",
   "displayName": "AI Agent Skills Library",
   "description": "A versioned, code-reviewed library of agentic AI skills, sub-agents, runbooks, prompts, and installers. Works in Claude Code, Cursor, Codex, Windsurf, OpenCode, Cowork, and Antigravity. Skills follow the open Agent Skills specification and stay portable across organizations via brand-config.yml.",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "owner": {
     "name": "New Minds Group",
     "url": "https://github.com/newmindsgroup"
@@ -15,7 +15,7 @@
       "name": "agent-foundation",
       "displayName": "Agent Foundation",
       "description": "Operating principles + design methodology + voice + autonomy playbook + brand SSOT precedence. Load these on every project. Together they make any AI tool act as an institutional agent rather than a chat toy: signal over noise, anti-sycophancy, on-brand voice, multi-disciplinary design discipline, strategic tool-fire decisions, brand canon precedence.",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "skills": [
         "dist/skills/institutional-ai-operating-principles",
         "dist/skills/design-methodology",
@@ -40,7 +40,7 @@
       "name": "ops-pipeline",
       "displayName": "Ops Pipeline",
       "description": "Inbound triage, calendar scheduling, pipeline reporting, competitive monitoring. Reads your CRM / calendar / inbox, drafts what humans should review, never auto-actions. Configure via brand-config.yml.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "skills": [
         "dist/skills/inbound-triage",
         "dist/skills/calendar-scheduler",
@@ -61,7 +61,7 @@
       "name": "agency-agents",
       "displayName": "Agency Agents (16 specialist sub-agents)",
       "description": "16 specialist sub-agents cherry-picked from msitarzewski/agency-agents (MIT). Auto-route on natural-language triggers via 'Use PROACTIVELY when...' phrases. Coverage: engineering (ai-engineer, sre, code-reviewer, incident-response-commander, database-optimizer, autonomous-optimization-architect), orchestration (agents-orchestrator, workflow-architect, agentic-identity-trust, identity-graph-operator), content (linkedin-content-creator, carousel-growth-engine, ai-citation-strategist, document-generator), visual + production gate (image-prompt-engineer, reality-checker). Voice-aware agents defer to project brand voice playbook via the brand-ssot-precedence skill.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "agents": [
         "agents/ai-engineer.md",
         "agents/autonomous-optimization-architect.md",
@@ -85,7 +85,7 @@
       "name": "prompt-engineering-expert",
       "displayName": "Prompt Engineering Expert",
       "description": "Auto-triggering prompt-engineering capability: design, improve, convert, debug, and operationalize prompts, system prompts, and agent instructions. Autonomous-first with an on-request interactive mode, a gap-detection engine that asks qualifying questions only when needed, self-grading, and a template + conversion-checklist library. Ships the skill, a sub-agent, and the /prompt-engineering-expert and /pe commands.",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "skills": [
         "dist/skills/prompt-engineering-expert"
       ],
@@ -95,6 +95,30 @@
       "commands": [
         "commands/prompt-engineering-expert.md",
         "commands/pe.md"
+      ]
+    },
+    {
+      "name": "agent-governance",
+      "displayName": "Agent Governance",
+      "description": "Vet third-party skills, plugins and MCP servers before they touch production work; route each task to the lowest-cost safe model; mirror agent memory into a versioned Obsidian vault; stamp the shared operating standard into a project. Configure via brand-config.yml where a skill asks for it.",
+      "version": "1.0.0",
+      "skills": [
+        "dist/skills/vetting-third-party-components",
+        "dist/skills/model-governor",
+        "dist/skills/memory-vault-mirror",
+        "dist/skills/project-init"
+      ]
+    },
+    {
+      "name": "quality-gates",
+      "displayName": "Quality Gates",
+      "description": "Final-phase gates that require real evidence before copy, code or UI is called done: brand-voice and factual review for content, tests and security review for engineering, functional and accessibility verification for visual work. Plus generative-ui for assistants that should answer with interactive components.",
+      "version": "1.0.0",
+      "skills": [
+        "dist/skills/content-quality-gate",
+        "dist/skills/engineering-quality-gate",
+        "dist/skills/visual-and-code-quality-gate",
+        "dist/skills/generative-ui"
       ]
     }
   ]

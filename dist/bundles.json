@@ -17,6 +17,19 @@
       "count": 6
     },
     {
+      "name": "agent-governance",
+      "display_name": "Agent Governance",
+      "description": "Third-party vetting, model and effort routing, memory mirroring, and project operating-standard setup.",
+      "recommended_for": "Teams running several AI tools who want one vetting log, one routing policy and durable memory.",
+      "skills": [
+        "vetting-third-party-components",
+        "model-governor",
+        "memory-vault-mirror",
+        "project-init"
+      ],
+      "count": 4
+    },
+    {
       "name": "agent-self-improvement",
       "display_name": "Agent Self-Improvement",
       "description": "A focused meta-review skill for improving project instructions from observed patterns and user corrections.",
@@ -157,6 +170,19 @@
         "lint-and-validate"
       ],
       "count": 7
+    },
+    {
+      "name": "quality-gates",
+      "display_name": "Quality Gates",
+      "description": "Evidence-based completion gates for content, engineering and visual work, plus generative UI guidance.",
+      "recommended_for": "Teams that want 'done' to mean verified, in every discipline.",
+      "skills": [
+        "content-quality-gate",
+        "engineering-quality-gate",
+        "visual-and-code-quality-gate",
+        "generative-ui"
+      ],
+      "count": 4
     },
     {
       "name": "release-safety",

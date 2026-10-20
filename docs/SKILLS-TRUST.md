@@ -10,17 +10,17 @@ The trust layer is intentionally conservative: imported skills can be useful whi
 |---|---:|---|
 | `imported-review-recommended` | 755 | Imported and contains content that matched risk-sensitive keywords; review before sensitive use. |
 | `imported` | 522 | Imported from an upstream source and schema/frontmatter validated here. |
-| `curated` | 23 | Created and maintained directly in this library. |
+| `curated` | 31 | Created and maintained directly in this library. |
 | `runtime` | 3 | Bundled with a local runtime and tracked here for portability. |
 
 ## Risk Flags
 
 | Risk flag | Count |
 |---|---:|
-| `shell-execution` | 575 |
-| `secrets-sensitive` | 461 |
-| `security-sensitive` | 363 |
-| `network-access` | 53 |
+| `shell-execution` | 578 |
+| `secrets-sensitive` | 467 |
+| `security-sensitive` | 369 |
+| `network-access` | 54 |
 | `destructive-system-ops` | 20 |
 
 ## Source Groups
@@ -28,8 +28,8 @@ The trust layer is intentionally conservative: imported skills can be useful whi
 | Source | Type | Trust posture | Skills |
 |---|---|---|---:|
 | [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) | `github` | Imported upstream; validate before sensitive use | 1242 |
+| Original New Minds Group | `original` | Curated in this repo | 31 |
 | [menkesu/awesome-pm-skills](https://github.com/menkesu/awesome-pm-skills) | `github` | Imported upstream; validate before sensitive use | 29 |
-| Original New Minds Group | `original` | Curated in this repo | 23 |
 | [mxyhi/ok-skills](https://github.com/mxyhi/ok-skills) | `github` | Imported upstream; validate before sensitive use | 4 |
 | OpenAI Codex bundled system skills | `runtime` | Runtime-provided | 3 |
 | [maigentic/stratarts](https://github.com/maigentic/stratarts) | `github` | Imported upstream; validate before sensitive use | 1 |

@@ -3,10 +3,12 @@ name: inbound-triage
 description: "Polls the user's email + CRM conversations for new inbound, classifies intent, drafts replies using the brand's response playbook templates, and saves drafts (never sends). Pings the review channel with a digest plus immediate alerts for HIGH-priority messages. Triggers on 'triage my inbox', 'process my unread email', 'classify and draft replies', or as a scheduled run every 4 hours."
 license: MIT
 metadata:
-  version: '2.0.0'
+  version: '2.1.0'
   author: New Minds Group
   sources: Field-tested inbound triage workflow; portable across email + CRM platforms via brand-config MCP prefixes
 ---
+
+<!-- Version-Timestamp: 2026-10-19 18:34:32 AST | computer=NMG-MBP-M5.local | tool=Claude Code 2.1.296 -->
 
 # Inbound Triage
 
@@ -19,6 +21,8 @@ You process the owner's inbound — email + CRM conversations + the website cont
 - Filter out `{{EXCLUDED_ENTITIES}}` from every reply.
 - For HIGH-priority messages, ping the review channel immediately. Don't wait for the digest.
 - Maintain a triage log so the owner can audit what was drafted and why.
+- **Scam gate first.** No message gets a draft until Step 2b has answered "no" to scam or phishing.
+- **Pricing hold.** A draft that mentions price, discount, refund, warranty or money back is saved with a `HOLD: pricing` flag for the owner's eyes; it is never the default template reply.
 
 ---
 
@@ -66,6 +70,25 @@ Skip messages that are clearly automated (no-reply senders, newsletter platforms
 
 ---
 
+## Step 2b · Scam and phishing gate (yes / no, before any draft)
+
+Ask one question per human-originated message: **is this a scam, phishing or fraud attempt?** Answer `yes`, `no` or `unsure`. Only `no` continues to Step 3.
+
+Signals that make it `yes` (any one is enough):
+- Display name or signature claims a known contact or client, but the sending domain or reply-to address differs from that contact's record in the CRM.
+- Urgency plus a request for money, credentials, a code, a gift card, a wire or a changed payment destination.
+- A link whose visible text differs from its target, or a lookalike domain (one letter off, extra hyphen, odd TLD).
+- An attachment that asks to enable macros or to "log in to view".
+- Invoice or payment details that differ from the vendor's last known details (see the invoice screen in Step 3).
+
+On `yes` or `unsure`:
+- No draft, no reply, no link opened, no attachment opened.
+- Log the message under **Suspected scam** with the signal that fired and `outcome: flagged-scam`.
+- Ping the review channel immediately when it impersonates a client, a vendor or the owner, or asks for money. Otherwise it goes in the digest.
+- Never move it to spam or delete it on the owner's behalf; the owner decides.
+
+---
+
 ## Step 3 · Classify each message
 
 Map each message to one of these intent categories. The brand's Response Playbook has a template per category.
@@ -86,6 +109,15 @@ Map each message to one of these intent categories. The brand's Response Playboo
 
 Brand-config can override this matrix in `inbound.intents:` if defined.
 
+**One label, one confidence.** Each message gets exactly one intent from the table plus a confidence of `high`, `medium` or `low`. Run this classification on the cheapest Claude model that holds accuracy for it (`model-governor` decides; Haiku-class is usually enough for labelling, drafting stays on the model the run uses). Anything below `high` takes the "flag for owner, no draft" path, with the two candidate intents named in the log. Confidence never rounds up to get a draft out.
+
+**Invoice screen (advisory only).** For an `Invoice / billing` message, add one label, `pay`, `file` or `check`, and one line of reason:
+- Compare the payment details in the message (account, IBAN, routing, payee name, remittance address) with the vendor's last known details in the CRM or the previous invoice. A difference is `check` with the flag `bank details changed`, and it also trips the Step 2b gate.
+- No vendor record, a first invoice, or an amount outside the agreed scope: `check`.
+- Matching details, known vendor, amount inside scope: `pay` with the reason.
+- Statements, receipts and confirmations with nothing to pay: `file`.
+The label is advice for the owner. This skill never pays, approves, schedules or confirms a payment, and never replies to the sender about payment details.
+
 ---
 
 ## Step 4 · Draft a reply per message
@@ -97,6 +129,7 @@ For each classified message, draft a reply using the template named in the table
 - No `{{EXCLUDED_ENTITIES}}` mentions
 - No invented facts — if the template has a `[BRACKET]`, fill it from the message context or leave the bracket and flag in the triage log
 - Keep replies short. The longer the draft, the more friction in the owner's review.
+- **Pricing hold.** If the draft, or the message it answers, mentions price, pricing, a quote amount, discount, refund, money back, credit, warranty or guarantee: still save the draft, but prefix its triage-log entry with `HOLD: pricing`, put the exact sentence in the editor flag, and never fill a number the template did not already carry. Test the keyword match against synonyms the owner uses ("money back" as well as "refund"). If sending is ever enabled for any skill, this hold must become a PreToolUse hook on the send tool (roadmap six-tricks-claude-07), not a prompt rule.
 
 Save the draft via the platform MCP:
 
@@ -112,7 +145,19 @@ CRM:   {{CRM_MCP_PREFIX}}create_conversation_draft
 
 ## Step 5 · Write the triage log
 
-Save to `drafts/replies/{YYYY-MM-DD}-triage-log.md`:
+**One ledger line per handled message**, appended to `drafts/replies/triage-ledger.jsonl` before the human-readable log is written. One JSON object per line, fixed keys, so a dashboard or the weekly review can read it without parsing prose:
+
+```json
+{"ts":"2026-10-19T09:02:11-04:00","source":"email","sender":"Jane Doe","subject":"Keynote inquiry","intent":"speaking","confidence":"high","scam_gate":"no","quoted":"15000 USD","hold":"pricing","outcome":"drafted","draft":"gmail-drafts"}
+```
+
+- `scam_gate`: `no`, `yes` or `unsure`.
+- `quoted`: the amount named in the draft or the message, or `none`.
+- `hold`: `pricing` or `none`.
+- `outcome`: `drafted`, `held`, `flagged-owner`, `flagged-scam`, `skipped-automated`, `error`.
+- Sender name and subject only, as in the log: no addresses, no message bodies, no account numbers.
+
+Then save the readable log to `drafts/replies/{YYYY-MM-DD}-triage-log.md`:
 
 ```markdown
 # Triage log — {YYYY-MM-DD}
@@ -124,12 +169,17 @@ Save to `drafts/replies/{YYYY-MM-DD}-triage-log.md`:
 - HIGH priority: {N}
 - Skipped (automated): {N}
 - Flagged for owner: {N}
+- Suspected scam: {N}
+- Held (pricing): {N}
+
+## Suspected scam
+[sender name, subject, the signal that fired; no draft]
 
 ## HIGH priority
 
 ### {sender name} — {subject}
 - Source: email | crm
-- Intent: {category}
+- Intent: {category} ({confidence})
 - Template: {template name}
 - Draft saved: ✅ Gmail Drafts / CRM conversation #{id}
 - One-line summary of message
@@ -192,7 +242,9 @@ If nothing was processed (zero new inbound), stay silent. No spam.
 - Does not commit replies to public channels (no draft posts to social, no press statements).
 - Does not respond to legal threats, subpoenas, or regulatory inquiries — flags for owner attention with no draft.
 - Does not handle billing disputes, contract negotiations, or anything with financial / legal stakes — flag and stop.
-- Does not commit secrets, tokens, OR PII to the triage log. Sender names + subjects only.
+- Does not commit secrets, tokens, OR PII to the triage log or the ledger. Sender names + subjects only.
+- Does not reply to, click inside, or file a suspected scam or phishing message. Flags it; the owner decides.
+- Does not pay, approve or confirm an invoice. The invoice screen is advice.
 
 ---
 

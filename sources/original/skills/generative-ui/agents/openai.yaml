@@ -1,0 +1,7 @@
+# Version-Timestamp: 2026-10-18 17:40:06 AST
+interface:
+  display_name: "Generative UI"
+  short_description: "Assess and integrate interactive assistant answers"
+  default_prompt: "Use $generative-ui to assess suitability and, only if it fits, outline a bounded read-only pilot."
+policy:
+  allow_implicit_invocation: true

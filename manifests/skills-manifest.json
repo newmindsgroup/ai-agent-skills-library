@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-09-15",
-  "total_skills": 1303,
+  "total_skills": 1311,
   "added_this_sync": 1499,
   "preserved_existing": 14,
   "duplicate_source_names": {
@@ -7131,6 +7131,25 @@
       "bundles": []
     },
     {
+      "name": "content-quality-gate",
+      "description": "Apply the canonical brand voice, remove AI tells and dash characters, and require factual and audience-specific editorial review before public or client-facing copy is considered ready.",
+      "category": "Uncategorized",
+      "path": "dist/skills/content-quality-gate/",
+      "canonical_path": "sources/original/skills/content-quality-gate/",
+      "source_repository": "Original New Minds Group",
+      "source_slug": "original",
+      "source_label": "Original New Minds Group",
+      "source_type": "original",
+      "source_note": "Skills created directly in this library.",
+      "trust_level": "curated",
+      "review_status": "maintained",
+      "trust_summary": "Created and maintained directly in this library.",
+      "risk_flags": [],
+      "bundles": [
+        "quality-gates"
+      ]
+    },
+    {
       "name": "content-strategy",
       "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" \"content planning,\" \"editorial calendar,\" \"content marketing,\" \"content roadmap,\" \"what content should I create,\" \"blog topics,\" \"content pillars,\" or \"I don't know what to write.\" Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social-content.",
       "category": "Automation, Integrations, Productivity",
@@ -9472,6 +9491,28 @@
       "bundles": []
     },
     {
+      "name": "engineering-quality-gate",
+      "description": "Require project-specific tests, static analysis, security review, changed-path acceptance evidence, and a proportionate release check before non-trivial code is considered complete.",
+      "category": "Uncategorized",
+      "path": "dist/skills/engineering-quality-gate/",
+      "canonical_path": "sources/original/skills/engineering-quality-gate/",
+      "source_repository": "Original New Minds Group",
+      "source_slug": "original",
+      "source_label": "Original New Minds Group",
+      "source_type": "original",
+      "source_note": "Skills created directly in this library.",
+      "trust_level": "curated",
+      "review_status": "maintained",
+      "trust_summary": "Created and maintained directly in this library.",
+      "risk_flags": [
+        "security-sensitive",
+        "secrets-sensitive"
+      ],
+      "bundles": [
+        "quality-gates"
+      ]
+    },
+    {
       "name": "enhance-prompt",
       "description": "Transforms vague UI ideas into polished, Stitch-optimized prompts. Enhances specificity, adds UI/UX keywords, injects design system context, and structures output for better generation results.",
       "category": "AI, Agents, LLMs, Data",
@@ -11156,6 +11197,28 @@
         "secrets-sensitive"
       ],
       "bundles": []
+    },
+    {
+      "name": "generative-ui",
+      "description": "Use when an AI assistant or copilot could answer with interactive forms, tables, charts, filters or cards, or when evaluating or integrating Thesys OpenUI. Ordinary static pages and fixed forms do not require this skill.",
+      "category": "Uncategorized",
+      "path": "dist/skills/generative-ui/",
+      "canonical_path": "sources/original/skills/generative-ui/",
+      "source_repository": "Original New Minds Group",
+      "source_slug": "original",
+      "source_label": "Original New Minds Group",
+      "source_type": "original",
+      "source_note": "Skills created directly in this library.",
+      "trust_level": "curated",
+      "review_status": "maintained",
+      "trust_summary": "Created and maintained directly in this library.",
+      "risk_flags": [
+        "security-sensitive",
+        "secrets-sensitive"
+      ],
+      "bundles": [
+        "quality-gates"
+      ]
     },
     {
       "name": "geo-fundamentals",
@@ -15052,6 +15115,29 @@
       "bundles": []
     },
     {
+      "name": "memory-vault-mirror",
+      "description": "Mirror an agent's memory store into a versioned, human-readable Obsidian vault. Use this whenever the user wants agent memory to be searchable, backed up, or visible outside the tool that wrote it - phrases like \"back up my memory\", \"mirror memory to Obsidian\", \"why isn't this in my vault\", \"make the agent's memory searchable\", \"sync memory to the repo\", \"our memory only lives on one machine\", or when setting up a new tenant/client agent that needs a durable memory surface. Also use when auditing an existing memory system for orphaned entries, stale paths, or missing backups, and when a memory store lives only on one disk.",
+      "category": "Uncategorized",
+      "path": "dist/skills/memory-vault-mirror/",
+      "canonical_path": "sources/original/skills/memory-vault-mirror/",
+      "source_repository": "Original New Minds Group",
+      "source_slug": "original",
+      "source_label": "Original New Minds Group",
+      "source_type": "original",
+      "source_note": "Skills created directly in this library.",
+      "trust_level": "curated",
+      "review_status": "maintained",
+      "trust_summary": "Created and maintained directly in this library.",
+      "risk_flags": [
+        "security-sensitive",
+        "shell-execution",
+        "secrets-sensitive"
+      ],
+      "bundles": [
+        "agent-governance"
+      ]
+    },
+    {
       "name": "mermaid-expert",
       "description": "Create Mermaid diagrams for flowcharts, sequences, ERDs, and architectures. Masters syntax for all diagram types and styling.",
       "category": "AI, Agents, LLMs, Data",
@@ -15351,6 +15437,29 @@
         "secrets-sensitive"
       ],
       "bundles": []
+    },
+    {
+      "name": "model-governor",
+      "description": "Select the lowest-cost safe model, effort, and speed for a substantive task using sensitivity, task shape, risk, urgency, and tool requirements. Use for model choice, token conservation, provider fallback, local versus subscription routing, or cross-project LLM policy.",
+      "category": "Uncategorized",
+      "path": "dist/skills/model-governor/",
+      "canonical_path": "sources/original/skills/model-governor/",
+      "source_repository": "Original New Minds Group",
+      "source_slug": "original",
+      "source_label": "Original New Minds Group",
+      "source_type": "original",
+      "source_note": "Skills created directly in this library.",
+      "trust_level": "curated",
+      "review_status": "maintained",
+      "trust_summary": "Created and maintained directly in this library.",
+      "risk_flags": [
+        "security-sensitive",
+        "shell-execution",
+        "secrets-sensitive"
+      ],
+      "bundles": [
+        "agent-governance"
+      ]
     },
     {
       "name": "modern-javascript-patterns",
@@ -18022,6 +18131,27 @@
         "secrets-sensitive"
       ],
       "bundles": []
+    },
+    {
+      "name": "project-init",
+      "description": "Stamp the shared operating standard (the four-pillar Engineering Mantra plus the full Working Style spine) into a project so every tool that enters the repo works under the same Security, Stability, Reliability, and Compliance lens. Use when starting a new project or repo, when onboarding an existing project that lacks an AGENTS.md, when the user says 'set up this project', 'apply our standard', 'add the operating standard here', 'make this project follow the four pillars', 'init this repo', or '/project-init'. Creates AGENTS.md if absent, merges the standard into an existing AGENTS.md without overwriting project-specific content, and offers a DESIGN.md scaffold for brand-facing projects. Idempotent and safe to re-run.",
+      "category": "Uncategorized",
+      "path": "dist/skills/project-init/",
+      "canonical_path": "sources/original/skills/project-init/",
+      "source_repository": "Original New Minds Group",
+      "source_slug": "original",
+      "source_label": "Original New Minds Group",
+      "source_type": "original",
+      "source_note": "Skills created directly in this library.",
+      "trust_level": "curated",
+      "review_status": "maintained",
+      "trust_summary": "Created and maintained directly in this library.",
+      "risk_flags": [
+        "shell-execution"
+      ],
+      "bundles": [
+        "agent-governance"
+      ]
     },
     {
       "name": "project-skill-audit",
@@ -23625,6 +23755,29 @@
       ]
     },
     {
+      "name": "vetting-third-party-components",
+      "description": "Vets third-party skills, agents, plugins, MCP connectors, extensions, and packages before they touch production work, client data, or credentials. Use this whenever the user wants to install, enable, connect, or try ANY third-party component — a skill from a marketplace or GitHub repo, an MCP server, a Claude Code mod, a Claude/Chrome/desktop extension, an npm/pip package for production use, or an agent collection — even if they don't say \"vet\" or \"security.\" Also use when the user asks \"is this safe,\" \"should we trust this,\" or before granting a connector access to CRM, email, files, or client systems. Produces a verdict (approve / approve with constraints / reject) and records it in the vetting log.",
+      "category": "Uncategorized",
+      "path": "dist/skills/vetting-third-party-components/",
+      "canonical_path": "sources/original/skills/vetting-third-party-components/",
+      "source_repository": "Original New Minds Group",
+      "source_slug": "original",
+      "source_label": "Original New Minds Group",
+      "source_type": "original",
+      "source_note": "Skills created directly in this library.",
+      "trust_level": "curated",
+      "review_status": "maintained",
+      "trust_summary": "Created and maintained directly in this library.",
+      "risk_flags": [
+        "security-sensitive",
+        "network-access",
+        "secrets-sensitive"
+      ],
+      "bundles": [
+        "agent-governance"
+      ]
+    },
+    {
       "name": "vexor",
       "description": "Vector-powered CLI for semantic file search with a Claude/Codex skill",
       "category": "AI, Agents, LLMs, Data",
@@ -23779,6 +23932,28 @@
       "trust_summary": "Imported from an upstream source; schema/frontmatter validated in this repo. Review source content before sensitive use.",
       "risk_flags": [],
       "bundles": []
+    },
+    {
+      "name": "visual-and-code-quality-gate",
+      "description": "Require proportionate functional, visual, accessibility, and source-of-truth verification before completing code, UI, UX, or design work.",
+      "category": "Uncategorized",
+      "path": "dist/skills/visual-and-code-quality-gate/",
+      "canonical_path": "sources/original/skills/visual-and-code-quality-gate/",
+      "source_repository": "Original New Minds Group",
+      "source_slug": "original",
+      "source_label": "Original New Minds Group",
+      "source_type": "original",
+      "source_note": "Skills created directly in this library.",
+      "trust_level": "curated",
+      "review_status": "maintained",
+      "trust_summary": "Created and maintained directly in this library.",
+      "risk_flags": [
+        "security-sensitive",
+        "secrets-sensitive"
+      ],
+      "bundles": [
+        "quality-gates"
+      ]
     },
     {
       "name": "visual-emotion-engineer",
@@ -24646,6 +24821,16 @@
       "license": "Apache-2.0, MIT"
     },
     {
+      "slug": "original",
+      "label": "Original New Minds Group",
+      "repository": "Original New Minds Group",
+      "url": null,
+      "type": "original",
+      "note": "Skills created directly in this library.",
+      "count": 31,
+      "license": "MIT"
+    },
+    {
       "slug": "menkesu-awesome-pm-skills",
       "label": "menkesu/awesome-pm-skills",
       "repository": "https://github.com/menkesu/awesome-pm-skills",
@@ -24653,16 +24838,6 @@
       "type": "github",
       "note": null,
       "count": 29,
-      "license": "MIT"
-    },
-    {
-      "slug": "original",
-      "label": "Original New Minds Group",
-      "repository": "Original New Minds Group",
-      "url": null,
-      "type": "original",
-      "note": "Skills created directly in this library.",
-      "count": 23,
       "license": "MIT"
     },
     {
@@ -24721,6 +24896,19 @@
         "brand-ssot-precedence"
       ],
       "count": 6
+    },
+    {
+      "name": "agent-governance",
+      "display_name": "Agent Governance",
+      "description": "Third-party vetting, model and effort routing, memory mirroring, and project operating-standard setup.",
+      "recommended_for": "Teams running several AI tools who want one vetting log, one routing policy and durable memory.",
+      "skills": [
+        "vetting-third-party-components",
+        "model-governor",
+        "memory-vault-mirror",
+        "project-init"
+      ],
+      "count": 4
     },
     {
       "name": "agent-self-improvement",
@@ -24863,6 +25051,19 @@
         "lint-and-validate"
       ],
       "count": 7
+    },
+    {
+      "name": "quality-gates",
+      "display_name": "Quality Gates",
+      "description": "Evidence-based completion gates for content, engineering and visual work, plus generative UI guidance.",
+      "recommended_for": "Teams that want 'done' to mean verified, in every discipline.",
+      "skills": [
+        "content-quality-gate",
+        "engineering-quality-gate",
+        "visual-and-code-quality-gate",
+        "generative-ui"
+      ],
+      "count": 4
     },
     {
       "name": "release-safety",
