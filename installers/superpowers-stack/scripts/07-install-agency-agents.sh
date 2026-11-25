@@ -10,7 +10,7 @@
 #   - Idempotent — re-running just refreshes from latest upstream + manifest
 #
 # What it provides:
-#   16 specialist sub-agents (engineering, marketing, design, testing) auto-
+#   7 specialist sub-agents (engineering, marketing, design, testing) auto-
 #   routed via "Use PROACTIVELY when..." trigger phrases in their description.
 #   The agent harness routes by description without the user having to know
 #   names.

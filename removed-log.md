@@ -1,6 +1,6 @@
 # Removed log
 
-Version-Timestamp: 2026-11-25 10:36:50 AST
+Version-Timestamp: 2026-11-25 10:43:18 AST
 
 Agents moved out of the shipped library into `archive/agents/`, unchanged. Nothing is deleted. To restore one, `git mv archive/agents/<name>.md agents/<name>.md` and add it back to `.claude-plugin/marketplace.json` and `installers/superpowers-stack/agency-agents-installer/manifest.json`.
 
@@ -24,4 +24,6 @@ Agents moved out of the shipped library into `archive/agents/`, unchanged. Nothi
 
 ## Not changed here (for a later decision)
 
-Prose that still names the archived agents as routing examples: `installers/superpowers-stack/config/CLAUDE.md.template`, `installers/superpowers-stack/config/client.example.env`, `runbooks/tool-leverage-heuristics.md`, `runbooks/context7-integration-pattern.md`, and the generated `dist/skills` copies of ai-engineer, code-reviewer and prompt-engineering-expert.
+Plugin versions were bumped (agency-agents 1.1.0, prompt-engineering-expert one minor up) so installed copies update.
+
+Prose that still names the archived agents as routing examples (left for Daniel: rewrite the routing or keep the agents shipped): `installers/superpowers-stack/config/CLAUDE.md.template`, `installers/superpowers-stack/config/client.example.env`, `runbooks/tool-leverage-heuristics.md`, `runbooks/context7-integration-pattern.md`, and the generated `dist/skills` copies of ai-engineer, code-reviewer and prompt-engineering-expert.

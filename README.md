@@ -31,7 +31,7 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 │   ├── agent-operating-principles.md
 │   └── tool-leverage-heuristics.md   ← when to fire which tool (the autonomy playbook)
 ├── installers/                        ← bootable kits
-│   └── superpowers-stack/             ← Superpowers + 5 official MCPs + agency-agents (16) + Firecrawl + Graphify
+│   └── superpowers-stack/             ← Superpowers + 5 official MCPs + agency-agents (7) + Firecrawl + Graphify
 ├── prompts/                           ← reusable system-prompt templates
 │   ├── voice-dna-template.md
 │   ├── agent-skills-spec-summary.md
@@ -84,7 +84,7 @@ The marketplace exposes five bundles:
 - **`content-engine`** — newsletter, social, brand-drift.
 - **`ops-pipeline`** — inbox triage, calendar, pipeline, competitive intel.
 - **`agent-self-improvement`** — weekly meta-review that improves your CLAUDE.md.
-- **`agency-agents`** — 16 specialist sub-agents (engineering, orchestration, content, visual). Auto-route on natural-language triggers. Tenant-agnostic when installed via this bundle (defers to `brand-ssot-precedence` for voice).
+- **`agency-agents`** — 7 specialist sub-agents (engineering, workflow mapping, content, visual). Auto-route on natural-language triggers. Tenant-agnostic when installed via this bundle (defers to `brand-ssot-precedence` for voice).
 
 For the full catalog with dependencies + install priority + decision tree, see [`docs/SKILLS-CATALOG.md`](docs/SKILLS-CATALOG.md).
 
@@ -237,7 +237,7 @@ See [`installers/README.md`](installers/README.md). Currently one: `superpowers-
 
 - **Superpowers plugin** (engineering rituals: planning, TDD, systematic debugging, verification, code review)
 - **5 official MCP servers** (Memory, Fetch, Filesystem, Playwright, Chroma) — Tier-1 always-on
-- **agency-agents cherry-pick** (16 sub-agents from [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) MIT) — auto-route via "Use PROACTIVELY when..." description triggers
+- **agency-agents cherry-pick** (7 sub-agents from [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) MIT) — auto-route via "Use PROACTIVELY when..." description triggers
 - **Firecrawl MCP** — 14 tools for web scraping, search, structured extract, persistent browser sessions
 - **Graphify** — turns any folder of code/docs/PDFs/images into a queryable knowledge graph (`/graphify` slash command)
 
