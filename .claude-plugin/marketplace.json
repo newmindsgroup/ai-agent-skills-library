@@ -63,18 +63,9 @@
       "description": "16 specialist sub-agents cherry-picked from msitarzewski/agency-agents (MIT). Auto-route on natural-language triggers via 'Use PROACTIVELY when...' phrases. Coverage: engineering (ai-engineer, sre, code-reviewer, incident-response-commander, database-optimizer, autonomous-optimization-architect), orchestration (agents-orchestrator, workflow-architect, agentic-identity-trust, identity-graph-operator), content (linkedin-content-creator, carousel-growth-engine, ai-citation-strategist, document-generator), visual + production gate (image-prompt-engineer, reality-checker). Voice-aware agents defer to project brand voice playbook via the brand-ssot-precedence skill.",
       "version": "1.0.0",
       "agents": [
-        "agents/ai-engineer.md",
-        "agents/autonomous-optimization-architect.md",
-        "agents/incident-response-commander.md",
-        "agents/sre.md",
-        "agents/code-reviewer.md",
         "agents/database-optimizer.md",
-        "agents/agents-orchestrator.md",
         "agents/workflow-architect.md",
-        "agents/agentic-identity-trust.md",
-        "agents/identity-graph-operator.md",
         "agents/linkedin-content-creator.md",
-        "agents/carousel-growth-engine.md",
         "agents/ai-citation-strategist.md",
         "agents/document-generator.md",
         "agents/image-prompt-engineer.md",
@@ -88,9 +79,6 @@
       "version": "1.2.0",
       "skills": [
         "dist/skills/prompt-engineering-expert"
-      ],
-      "agents": [
-        "agents/prompt-engineering-expert.md"
       ],
       "commands": [
         "commands/prompt-engineering-expert.md",

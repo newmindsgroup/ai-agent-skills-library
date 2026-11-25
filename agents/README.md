@@ -1,6 +1,6 @@
 # Sub-Agents
 
-This folder contains 16 specialist sub-agents cherry-picked from [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) (MIT). They are **portable, tenant-agnostic, project-agnostic** — drop them into any Claude Code, Cursor, or Cowork project's `~/.claude/agents/` (or equivalent) directory and they auto-route on natural-language triggers via "Use PROACTIVELY when..." phrases in their `description` frontmatter.
+This folder contains 7 specialist sub-agents cherry-picked from [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) (MIT). They are **portable, tenant-agnostic, project-agnostic** — drop them into any Claude Code, Cursor, or Cowork project's `~/.claude/agents/` (or equivalent) directory and they auto-route on natural-language triggers via "Use PROACTIVELY when..." phrases in their `description` frontmatter.
 
 > **Skills vs sub-agents.** Installable skills are exported from `dist/skills/` and load as system-prompt directives the agent reads on matching work. Sub-agents (here) are full specialist personas the harness can delegate to via the Task tool. Use sub-agents when work needs deep, domain-focused execution — not just guidance.
 
@@ -11,11 +11,11 @@ This folder contains 16 specialist sub-agents cherry-picked from [`msitarzewski/
 ### Claude Code
 
 ```bash
-# Install all 16
+# Install all 7
 cp agents/*.md ~/.claude/agents/
 
 # Or only specific agents
-cp agents/linkedin-content-creator.md agents/incident-response-commander.md ~/.claude/agents/
+cp agents/linkedin-content-creator.md agents/reality-checker.md ~/.claude/agents/
 ```
 
 After install, the agents are available in every Claude Code session — the harness reads their `description` triggers and auto-routes when matching language appears. No further configuration required.
@@ -34,34 +34,25 @@ The sub-agent format (markdown with frontmatter) is the cross-IDE convention pop
 
 ---
 
-## The 16 cherry-picked agents
+## The 7 cherry-picked agents
 
 ### Engineering / autonomous-stack
 
 | Agent | When to use |
 |---|---|
-| [`ai-engineer`](ai-engineer.md) | ML model selection, LLM integration, RAG, embeddings, vector DBs, autonomous-agent reliability |
-| [`autonomous-optimization-architect`](autonomous-optimization-architect.md) | LLM cost optimization, model routing, shadow testing, cost-per-task budgets, guardrails |
-| [`incident-response-commander`](incident-response-commander.md) | Production-down events, hotfix chains, recurring-crash debugging |
-| [`sre`](sre.md) | SLOs, error budgets, observability, alerting, capacity planning, toil reduction |
-| [`code-reviewer`](code-reviewer.md) | Pre-merge review, security checks, maintainability gates |
 | [`database-optimizer`](database-optimizer.md) | Slow queries, schema design, indexing, migration planning |
 
 ### Multi-agent / orchestration
 
 | Agent | When to use |
 |---|---|
-| [`agents-orchestrator`](agents-orchestrator.md) | Coordinating multi-agent workflows |
 | [`workflow-architect`](workflow-architect.md) | Mapping systems end-to-end before coding; documenting every path through a flow |
-| [`agentic-identity-trust`](agentic-identity-trust.md) | Agent authentication, multi-agent authorization, audit trails |
-| [`identity-graph-operator`](identity-graph-operator.md) | Entity deduplication across data sources (e.g., contact merge across CRMs) |
 
 ### Content production (voice-aware — defer to brand voice playbook)
 
 | Agent | When to use |
 |---|---|
 | [`linkedin-content-creator`](linkedin-content-creator.md) | LinkedIn posts, content calendars, thought leadership, personal brand presence |
-| [`carousel-growth-engine`](carousel-growth-engine.md) | IG/TikTok carousels, batch publish, slide narratives |
 | [`ai-citation-strategist`](ai-citation-strategist.md) | AEO/GEO, AI-search visibility audits, citation tracking across ChatGPT/Claude/Gemini/Perplexity |
 | [`document-generator`](document-generator.md) | PDF/PPTX/DOCX/XLSX generation from code (proposals, reports, decks, exports) |
 
@@ -83,10 +74,8 @@ Each agent's frontmatter includes a `description` field with explicit `Use PROAC
 You don't need to remember names. Examples:
 
 - *"Help me draft a LinkedIn post about…"* → `linkedin-content-creator` fires
-- *"Production is down, the watchdog keeps restarting"* → `incident-response-commander` fires
 - *"Generate a Midjourney prompt for our hero image"* → `image-prompt-engineer` fires
 - *"Is this branch ready to ship?"* → `reality-checker` fires
-- *"Optimize the LLM cost on our agent stack"* → `autonomous-optimization-architect` fires
 
 For the full trigger combo table, see [`runbooks/tool-leverage-heuristics.md`](../runbooks/tool-leverage-heuristics.md) or install the [`tool-leverage-heuristics`](../dist/skills/tool-leverage-heuristics/) skill so the agent applies it proactively.
 
@@ -94,7 +83,7 @@ For the full trigger combo table, see [`runbooks/tool-leverage-heuristics.md`](.
 
 ## Brand-voice integration
 
-The four content-producing agents (`linkedin-content-creator`, `carousel-growth-engine`, `ai-citation-strategist`, `document-generator`) are voice-aware — they expect a brand voice playbook to exist in the project and will read it before drafting.
+The three content-producing agents (`linkedin-content-creator`, `ai-citation-strategist`, `document-generator`) are voice-aware — they expect a brand voice playbook to exist in the project and will read it before drafting.
 
 **Two ways to wire up brand voice:**
 
@@ -108,7 +97,7 @@ For one-off or experimental projects, option 1 is enough. For production deploym
 
 ## Updating the cherry-pick
 
-The 16 agents here are a curated subset of the ~150 agents in the upstream `msitarzewski/agency-agents` repo. To customize the list:
+The 7 agents here are a curated subset of the ~150 agents in the upstream `msitarzewski/agency-agents` repo. To customize the list:
 
 1. Edit [`installers/superpowers-stack/agency-agents-installer/manifest.json`](../installers/superpowers-stack/agency-agents-installer/manifest.json) — add, remove, or change the `name` / `triggers` / `voice_aware` fields per agent.
 2. Re-run the portable installer: `python3 installers/superpowers-stack/agency-agents-installer/install.py --repo /path/to/agency-agents-clone --target ./agents --manifest installers/superpowers-stack/agency-agents-installer/manifest.json`
@@ -130,3 +119,5 @@ MIT — same as the upstream `msitarzewski/agency-agents` repo. Each agent file 
 - Cherry-pick rationale: see [`installers/superpowers-stack/agency-agents-installer/manifest.json`](../installers/superpowers-stack/agency-agents-installer/manifest.json) `_comment` field
 - Companion skills: [`tool-leverage-heuristics`](../dist/skills/tool-leverage-heuristics/), [`brand-ssot-precedence`](../dist/skills/brand-ssot-precedence/)
 - Companion runbook: [`runbooks/tool-leverage-heuristics.md`](../runbooks/tool-leverage-heuristics.md)
+
+Archived on 2026-11-25 (in `archive/agents/`, see `removed-log.md`): agentic-identity-trust, agents-orchestrator, ai-engineer, autonomous-optimization-architect, carousel-growth-engine, identity-graph-operator, incident-response-commander, sre, code-reviewer, and the agent copy of prompt-engineering-expert (its skill and commands stay).

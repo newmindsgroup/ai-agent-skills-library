@@ -13,8 +13,8 @@ AI models are commodity. The harness (skills, memory, runbooks, coordination) is
 ```
 .
 ├── .claude-plugin/marketplace.json   ← Claude Code plugin marketplace manifest
-├── agents/                            ← 16 sub-agents (cherry-picked from msitarzewski/agency-agents, MIT)
-│   ├── ai-engineer.md, sre.md, code-reviewer.md, incident-response-commander.md, ...
+├── agents/                            ← 7 sub-agents (cherry-picked from msitarzewski/agency-agents, MIT)
+│   ├── reality-checker.md, database-optimizer.md, workflow-architect.md, ...
 │   └── README.md                       ← install + auto-routing guide
 ├── sources/                           ← canonical source tree grouped by source repo
 │   ├── original/skills/               ← New Minds-created skills
