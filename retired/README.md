@@ -1,6 +1,6 @@
 # Retired plugins, skills and agents
 
-Version-Timestamp: 2026-11-25 11:16:04 AST
+Version-Timestamp: 2026-11-25 11:18:00 AST
 
 Everything listed here is archived, retired, or must not be installed again. Nothing is deleted: archived files sit in `skill-archive/` (ide-config-internal) or `archive/agents/` (ai-agent-skills-library) and come back with one `git mv`.
 
@@ -15,25 +15,25 @@ Everything listed here is archived, retired, or must not be installed again. Not
 
 | Name | Type | Where it lived | Date | Reason | Replaced by |
 |---|---|---|---|---|---|
-| Superpowers (synced copy) | plugin | claude.ai account sync | 2026-11-25 | Switched off by Daniel. The same plugin is also installed on the Mac at user scope from claude-plugins-official, so switching off the sync does not remove it | Nothing yet; decide whether the user-scope install stays |
-| Design Superpowers (`design-superpowers`) | plugin | claude.ai account sync | 2026-11-25 | Switched off by Daniel; overlaps frontend-design, design and visual-design-studio | frontend-design (Anthropic) and design (Anthropic) |
-| Design Drift (`design-drift`) | plugin | claude.ai account sync | 2026-11-25 | Switched off by Daniel; its hook errored on every file write in this setup | design:design-critique and visual-and-code-quality-gate |
-| Website Design (`website-design`) | plugin | claude.ai account sync | 2026-11-25 | Switched off by Daniel; overlaps frontend-design and design | frontend-design (Anthropic) and design (Anthropic) |
-| Figma, second copy (`figma~g2`) | plugin | claude.ai account sync | 2026-11-25 | Duplicate: declares the same name as the other synced Figma copy, so Claude Code already ignores it | The other synced Figma plugin |
+| Superpowers (synced copy) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25). The same plugin is also installed on the Mac at user scope from claude-plugins-official, so switching off the sync does not remove it. `~/.claude/CLAUDE.md` names its `verification-before-completion` and `superpowers:writing-skills`, and model-governor's `route-task.py` returns its `systematic-debugging` and `test-driven-development`, so removing it fully needs those updated first | Nothing yet; decide whether the user-scope install stays |
+| Design Superpowers (`design-superpowers`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25); overlaps frontend-design, design and visual-design-studio | frontend-design (Anthropic) and design (Anthropic) |
+| Design Drift (`design-drift`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25); its hook errored on every file write in this setup | design:design-critique and visual-and-code-quality-gate |
+| Website Design (`website-design`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25); overlaps frontend-design and design | frontend-design (Anthropic) and design (Anthropic) |
+| Figma, second copy (`figma~g2`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel. Duplicate: declares the same name as the other synced Figma copy, so Claude Code already ignores it | The other synced Figma plugin |
 | graphify 0.7.10 and 0.6.9, global skill and command | skill and tool | `~/.claude/skills/graphify`, global Python and uv installs | 2026-11-02 | Rejected by the vetting log: auto-triggered on codebase questions and ran outside its guards | A project's own vetted runtime when its docs name one; otherwise grep and file reads |
 
 ## Agents
 
 | Name | Type | Where it lived | Date | Reason | Replaced by |
 |---|---|---|---|---|---|
-| agentic-identity-trust | agent | `~/.claude/agents/agentic-identity-trust.md`; library `agents/agentic-identity-trust.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | Nothing direct; see the routing notes in removed-log.md |
-| agents-orchestrator | agent | `~/.claude/agents/agents-orchestrator.md`; library `agents/agents-orchestrator.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | Nothing direct; see the routing notes in removed-log.md |
-| ai-engineer | agent | `~/.claude/agents/ai-engineer.md`; library `agents/ai-engineer.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | Nothing direct; see the routing notes in removed-log.md |
-| autonomous-optimization-architect | agent | `~/.claude/agents/autonomous-optimization-architect.md`; library `agents/autonomous-optimization-architect.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | Nothing direct; see the routing notes in removed-log.md |
-| carousel-growth-engine | agent | `~/.claude/agents/carousel-growth-engine.md`; library `agents/carousel-growth-engine.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | Nothing direct; see the routing notes in removed-log.md |
-| identity-graph-operator | agent | `~/.claude/agents/identity-graph-operator.md`; library `agents/identity-graph-operator.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | Nothing direct; see the routing notes in removed-log.md |
-| incident-response-commander | agent | `~/.claude/agents/incident-response-commander.md`; library `agents/incident-response-commander.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | Nothing direct; see the routing notes in removed-log.md |
-| sre | agent | `~/.claude/agents/sre.md`; library `agents/sre.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | Nothing direct; see the routing notes in removed-log.md |
+| agentic-identity-trust | agent | `~/.claude/agents/agentic-identity-trust.md`; library `agents/agentic-identity-trust.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | None |
+| agents-orchestrator | agent | `~/.claude/agents/agents-orchestrator.md`; library `agents/agents-orchestrator.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | Parallel subagents through the Agent tool; `superpowers:dispatching-parallel-agents` in client projects |
+| ai-engineer | agent | `~/.claude/agents/ai-engineer.md`; library `agents/ai-engineer.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | None |
+| autonomous-optimization-architect | agent | `~/.claude/agents/autonomous-optimization-architect.md`; library `agents/autonomous-optimization-architect.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | `model-governor` skill |
+| carousel-growth-engine | agent | `~/.claude/agents/carousel-growth-engine.md`; library `agents/carousel-growth-engine.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | None |
+| identity-graph-operator | agent | `~/.claude/agents/identity-graph-operator.md`; library `agents/identity-graph-operator.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | None |
+| incident-response-commander | agent | `~/.claude/agents/incident-response-commander.md`; library `agents/incident-response-commander.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | `engineering:incident-response` (Claude); `superpowers:systematic-debugging` in client projects |
+| sre | agent | `~/.claude/agents/sre.md`; library `agents/sre.md` | 2026-11-25 | Retired 2026-10-19 for zero use in five months; never actually removed until 2026-11-25 | None |
 | code-reviewer | agent | `~/.claude/agents/code-reviewer.md`; library `agents/code-reviewer.md` | 2026-11-25 | Duplicate of the code-review plugin | code-review plugin and the built-in `/code-review`; `/security-review` for security |
 | prompt-engineering-expert | agent | `~/.claude/agents/prompt-engineering-expert.md`; library `agents/prompt-engineering-expert.md` | 2026-11-25 | Duplicate of the skill with the same name | The `prompt-engineering-expert` skill (kept) |
 
@@ -51,7 +51,7 @@ Everything listed here is archived, retired, or must not be installed again. Not
 | architecture | skill | `~/.claude/skills/architecture` | 2026-11-25 | Duplicate of engineering:architecture | `engineering:architecture` |
 | backend-architect | skill | `~/.claude/skills/backend-architect` | 2026-11-25 | Duplicate of engineering:system-design | `engineering:system-design` |
 | lint-and-validate | skill | `~/.claude/skills/lint-and-validate` | 2026-11-25 | Duplicate of engineering-quality-gate | `engineering-quality-gate` |
-| nmg-proposal (old skill copy) | skill | `~/.claude/skills/nmg-proposal` | 2026-09-01 | Outdated: superseded by the plugin version | The `nmg-proposal` plugin |
+| nmg-proposal (old skill copy) | skill | `skill-archive/nmg-proposal-DEPRECATED-20260901` | Deprecated 2026-09-01, archived 2026-10-19 | Outdated: superseded by the plugin version | The `nmg-proposal` plugin |
 
 ## Restore paths to watch
 
