@@ -1,8 +1,12 @@
 # Retired plugins, skills and agents
 
-Version-Timestamp: 2026-11-25 11:18:00 AST
+Version-Timestamp: 2026-11-25 13:43:10 AST
 
 Everything listed here is archived, retired, or must not be installed again. Nothing is deleted: archived files sit in `skill-archive/` (ide-config-internal) or `archive/agents/` (ai-agent-skills-library) and come back with one `git mv`.
+
+In this library, the agent moves into `archive/agents/` land with ai-agent-skills-library#14. Until #14 merges, the agents listed below are still in `agents/` and the installers still copy them.
+
+Paths that start with `~/` (for example `~/.claude/` and `~/src/agency-agents`) and `openai/` paths are on the maintainer's machine or in ide-config-internal, not in this repository.
 
 ## Before you install anything
 
@@ -19,7 +23,7 @@ Everything listed here is archived, retired, or must not be installed again. Not
 | Design Superpowers (`design-superpowers`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25); overlaps frontend-design, design and visual-design-studio | frontend-design (Anthropic) and design (Anthropic) |
 | Design Drift (`design-drift`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25); its hook errored on every file write in this setup | design:design-critique and visual-and-code-quality-gate |
 | Website Design (`website-design`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25); overlaps frontend-design and design | frontend-design (Anthropic) and design (Anthropic) |
-| Figma, second copy (`figma~g2`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel. Duplicate: declares the same name as the other synced Figma copy, so Claude Code already ignores it | The other synced Figma plugin |
+| Figma, second copy (`figma~g2`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25). Duplicate: declares the same name as the other synced Figma copy, so Claude Code already ignores it | The other synced Figma plugin |
 | graphify 0.7.10 and 0.6.9, global skill and command | skill and tool | `~/.claude/skills/graphify`, global Python and uv installs | 2026-11-02 | Rejected by the vetting log: auto-triggered on codebase questions and ran outside its guards | A project's own vetted runtime when its docs name one; otherwise grep and file reads |
 
 ## Agents
