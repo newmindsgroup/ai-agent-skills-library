@@ -87,7 +87,7 @@ Reach for these combos strategically — don't wait to be told. Full table in `r
 | "AI-search visibility" / "are we cited?" | `firecrawl_search` + `ai-citation-strategist` |
 | "Write a LinkedIn post" / "thought leadership" | Read voice playbook → `linkedin-content-creator` |
 | "Generate a Midjourney/DALL-E/SD prompt" | Read `DESIGN.md` → `image-prompt-engineer` |
-| "Production is down" / "service crashed" | Skill `superpowers:systematic-debugging` (root cause first, no guessing) |
+| "Production is down" / "service crashed" | Skill `superpowers:systematic-debugging`, or the standalone `systematic-debugging` skill without Superpowers (root cause first, no guessing) |
 | "Ready to ship?" / "is this done?" | `reality-checker` |
 | "Map this codebase" / "before I work on it" | `/graphify <path>` |
 

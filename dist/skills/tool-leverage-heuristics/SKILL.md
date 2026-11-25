@@ -24,13 +24,13 @@ You have access to multiple tools, MCP servers, and specialist sub-agents. Don't
 | "Write a LinkedIn post" / "thought leadership content" | Read voice playbook → sub-agent `linkedin-content-creator` |
 | "Generate a Midjourney/DALL-E/SD/Imagen prompt" | Read `DESIGN.md` → sub-agent `image-prompt-engineer` |
 | "Build a deck/report/proposal as PDF/PPTX/DOCX" | Sub-agent `document-generator` (auto-defers to voice playbook) |
-| "Production is down" / "service crashed" / "[stack] broke" | Skill `superpowers:systematic-debugging` (root cause first, no guessing) |
+| "Production is down" / "service crashed" / "[stack] broke" | Skill `superpowers:systematic-debugging`, or the standalone `systematic-debugging` skill without Superpowers (root cause first, no guessing) |
 | "Ready to ship?" / "is this done?" / "certify this" | Sub-agent `reality-checker` |
 | "Map this codebase" / "before I work on it" / "what's connected to X?" | `/graphify <path>` (build graph) → `graphify query` for traversal |
 | "Find/explain X in this repo" (large repo) | `graphify query` if `graphify-out/` exists, else grep |
-| "Multi-agent workflow" / "coordinate agents" / "orchestrate" | Skill `superpowers:dispatching-parallel-agents` |
+| "Multi-agent workflow" / "coordinate agents" / "orchestrate" | Skill `superpowers:dispatching-parallel-agents`, or the standalone `dispatching-parallel-agents` skill |
 | "Map every path through X" / "before we code" | Sub-agent `workflow-architect` |
-| "Run a security/compliance check before merge" | Built-in `/security-review`, then `/code-review` (or skill `superpowers:requesting-code-review`) |
+| "Run a security/compliance check before merge" | Built-in `/security-review`, then `/code-review` (or `superpowers:requesting-code-review` when Superpowers is installed) |
 | "This query is slow" / "schema for X" / "indexing" | Sub-agent `database-optimizer` |
 | "Research this prospect/company" / "competitive intel" | `firecrawl_*` tools + your project's research-agent |
 | "Scan recent content for brand drift" | Skill `voice-drift-scanner` |

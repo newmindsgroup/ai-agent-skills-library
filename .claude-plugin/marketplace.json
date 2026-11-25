@@ -15,7 +15,7 @@
       "name": "agent-foundation",
       "displayName": "Agent Foundation",
       "description": "Operating principles + design methodology + voice + autonomy playbook + brand SSOT precedence. Load these on every project. Together they make any AI tool act as an institutional agent rather than a chat toy: signal over noise, anti-sycophancy, on-brand voice, multi-disciplinary design discipline, strategic tool-fire decisions, brand canon precedence.",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "skills": [
         "dist/skills/institutional-ai-operating-principles",
         "dist/skills/design-methodology",

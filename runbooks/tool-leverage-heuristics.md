@@ -18,13 +18,13 @@ Map common natural-language triggers to the specific tools/agents that should fi
 | "Write a LinkedIn post" / "thought leadership content" | Read voice playbook → `linkedin-content-creator` |
 | "Generate a Midjourney/DALL-E/SD prompt" | Read `DESIGN.md` → `image-prompt-engineer` |
 | "Build a deck/report/proposal as PDF/PPTX/DOCX" | `document-generator` (auto-defers to voice playbook) |
-| "Production is down" / "service crashed" / "[your stack]'s broken" | `superpowers:systematic-debugging` (root cause first, no guessing) |
+| "Production is down" / "service crashed" / "[your stack]'s broken" | `superpowers:systematic-debugging`, or the standalone `systematic-debugging` skill without Superpowers (root cause first, no guessing) |
 | "Ready to ship?" / "is this done?" / "certify this" | `reality-checker` |
 | "Map this codebase" / "before I work on it" | `/graphify <path>` |
 | "Find/explain X in this repo" (large repo) | `graphify query` if `graphify-out/` exists, else grep |
-| "Multi-agent workflow" / "coordinate agents" | `superpowers:dispatching-parallel-agents` |
+| "Multi-agent workflow" / "coordinate agents" | `superpowers:dispatching-parallel-agents`, or the standalone `dispatching-parallel-agents` skill |
 | "Map every path through X" / "before we code" | `workflow-architect` |
-| "Run a security/compliance check before merge" | Built-in `/security-review`, then `/code-review` (or skill `superpowers:requesting-code-review`) |
+| "Run a security/compliance check before merge" | Built-in `/security-review`, then `/code-review` (or `superpowers:requesting-code-review` when Superpowers is installed) |
 | "This query is slow" / "schema for X" | `database-optimizer` |
 | "Research this prospect" / "competitive intel" | `firecrawl_*` + your `research-agent` skill |
 | "Scan recent content for brand drift" | `voice-drift-scanner` skill |
