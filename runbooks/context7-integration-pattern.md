@@ -82,7 +82,7 @@ Wire into `bootstrap-tenant.sh` step 6 so fresh deploys auto-run it.
 In the agency-agents installer (`agent-stack/agency-agents-installer/install.py`):
 - Add a `context7_aware` boolean flag (parallel to `voice_aware`).
 - Define a `context7_block()` function that injects a "**Library Docs — Context7 First**" header at the top of the sub-agent's system prompt.
-- Set `"context7_aware": true` in `manifest.json` for code-producing agents (recommended set: `ai-engineer`, `code-reviewer`, `database-optimizer`, `agentic-identity-trust`, `autonomous-optimization-architect`).
+- Set `"context7_aware": true` in `manifest.json` for code-producing agents (recommended set: `database-optimizer`, `workflow-architect`).
 
 This propagates the Context7-First rule into dispatched sub-agents, which otherwise inherit only their upstream system prompt without the agent's CLAUDE.md context.
 

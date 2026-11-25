@@ -48,14 +48,14 @@ Do NOT fire engineering rituals on:
 
 ### Sub-agents available (via agency-agents cherry-pick)
 
-16 specialist sub-agents from `msitarzewski/agency-agents` (MIT) installed in `~/.claude/agents/` by `07-install-agency-agents.sh`. They auto-route via "Use PROACTIVELY when..." triggers in their description — you don't need to remember names, just describe what's needed. Coverage:
+7 specialist sub-agents from `msitarzewski/agency-agents` (MIT) installed in `~/.claude/agents/` by `07-install-agency-agents.sh`. They auto-route via "Use PROACTIVELY when..." triggers in their description; you don't need to remember names, just describe what's needed. Coverage:
 
-- **Engineering / autonomous-stack:** ai-engineer, autonomous-optimization-architect, incident-response-commander, sre, code-reviewer, database-optimizer
-- **Multi-agent / orchestration:** agents-orchestrator, workflow-architect, agentic-identity-trust, identity-graph-operator
-- **Content production (voice-aware — defer to brand voice playbook):** linkedin-content-creator, carousel-growth-engine, ai-citation-strategist, document-generator
+- **Engineering:** database-optimizer
+- **Workflow mapping:** workflow-architect
+- **Content production (voice-aware, defer to brand voice playbook):** linkedin-content-creator, ai-citation-strategist, document-generator
 - **Visual / production gate:** image-prompt-engineer, reality-checker
 
-Five voice-aware agents have inline brand-voice-lock blocks at the top of their system prompt pointing at `BRAND_VOICE_PATHS_FILE` from `client.env`.
+Four voice-aware agents have inline brand-voice-lock blocks at the top of their system prompt pointing at `BRAND_VOICE_PATHS_FILE` from `client.env`.
 
 ### Knowledge-graph navigation
 
@@ -87,11 +87,9 @@ Reach for these combos strategically — don't wait to be told. Full table in `r
 | "AI-search visibility" / "are we cited?" | `firecrawl_search` + `ai-citation-strategist` |
 | "Write a LinkedIn post" / "thought leadership" | Read voice playbook → `linkedin-content-creator` |
 | "Generate a Midjourney/DALL-E/SD prompt" | Read `DESIGN.md` → `image-prompt-engineer` |
-| "Production is down" / "service crashed" | `incident-response-commander` |
+| "Production is down" / "service crashed" | Skill `superpowers:systematic-debugging` (root cause first, no guessing) |
 | "Ready to ship?" / "is this done?" | `reality-checker` |
 | "Map this codebase" / "before I work on it" | `/graphify <path>` |
-| "Optimize the agent stack costs" | `autonomous-optimization-architect` |
-| "Dedupe contacts" / "entity resolution" | `identity-graph-operator` |
 
 ### Project-specific quality bar
 

@@ -1,6 +1,6 @@
 # Removed log
 
-Version-Timestamp: 2026-11-25 10:43:18 AST
+Version-Timestamp: 2026-11-25 11:10:37 AST
 
 Agents moved out of the shipped library into `archive/agents/`, unchanged. Nothing is deleted. To restore one, `git mv archive/agents/<name>.md agents/<name>.md` and add it back to `.claude-plugin/marketplace.json` and `installers/superpowers-stack/agency-agents-installer/manifest.json`.
 
@@ -22,8 +22,21 @@ Agents moved out of the shipped library into `archive/agents/`, unchanged. Nothi
 - The 10 agents above, unless restored on purpose.
 - Synced plugins being turned off: Superpowers, Design Superpowers, Design Drift, Website Design, and the second Figma copy.
 
-## Not changed here (for a later decision)
+## Routing rewritten on 2026-11-25
 
-Plugin versions were bumped (agency-agents 1.1.0, prompt-engineering-expert one minor up) so installed copies update.
+The client template, the shipped skill and the runbooks now route to tools the superpowers-stack installs for every client, not to the archived agents:
 
-Prose that still names the archived agents as routing examples (left for Daniel: rewrite the routing or keep the agents shipped): `installers/superpowers-stack/config/CLAUDE.md.template`, `installers/superpowers-stack/config/client.example.env`, `runbooks/tool-leverage-heuristics.md`, `runbooks/context7-integration-pattern.md`, and the generated `dist/skills` copies of ai-engineer, code-reviewer and prompt-engineering-expert.
+| Request | Was | Now |
+|---|---|---|
+| Production is down, service crashed | `incident-response-commander` | `superpowers:systematic-debugging` |
+| Multi-agent workflow, orchestrate | `agents-orchestrator` | `superpowers:dispatching-parallel-agents` |
+| Security or compliance check before merge | `code-reviewer` | Built-in `/security-review`, then `/code-review` (or `superpowers:requesting-code-review`) |
+| LLM cost, model routing | `autonomous-optimization-architect` | Row removed (no shipped replacement) |
+| Dedupe contacts, entity resolution | `identity-graph-operator` | Row removed (no shipped replacement) |
+| SLOs, error budgets | `sre` | Row removed (no shipped replacement) |
+
+Files: `installers/superpowers-stack/config/CLAUDE.md.template`, `sources/original/skills/tool-leverage-heuristics/SKILL.md` (and its generated `dist/skills/tool-leverage-heuristics/SKILL.md`), `runbooks/tool-leverage-heuristics.md`, `runbooks/context7-integration-pattern.md` and `installers/superpowers-stack/config/client.example.env`. The archived agents stay in `archive/agents/`.
+
+## Not changed here
+
+The generated `dist/skills` copies of ai-engineer, code-reviewer and prompt-engineering-expert are separate skills vendored under `sources/`; they are not the archived agents and stay as they are.

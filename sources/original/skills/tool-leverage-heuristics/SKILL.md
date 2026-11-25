@@ -24,18 +24,15 @@ You have access to multiple tools, MCP servers, and specialist sub-agents. Don't
 | "Write a LinkedIn post" / "thought leadership content" | Read voice playbook → sub-agent `linkedin-content-creator` |
 | "Generate a Midjourney/DALL-E/SD/Imagen prompt" | Read `DESIGN.md` → sub-agent `image-prompt-engineer` |
 | "Build a deck/report/proposal as PDF/PPTX/DOCX" | Sub-agent `document-generator` (auto-defers to voice playbook) |
-| "Production is down" / "service crashed" / "[stack] broke" | Sub-agent `incident-response-commander` |
+| "Production is down" / "service crashed" / "[stack] broke" | Skill `superpowers:systematic-debugging` (root cause first, no guessing) |
 | "Ready to ship?" / "is this done?" / "certify this" | Sub-agent `reality-checker` |
 | "Map this codebase" / "before I work on it" / "what's connected to X?" | `/graphify <path>` (build graph) → `graphify query` for traversal |
 | "Find/explain X in this repo" (large repo) | `graphify query` if `graphify-out/` exists, else grep |
-| "Optimize the agent stack costs" / "LLM cost" / "model routing" | Sub-agent `autonomous-optimization-architect` |
-| "Multi-agent workflow" / "coordinate agents" / "orchestrate" | Sub-agent `agents-orchestrator` |
-| "Dedupe contacts" / "entity resolution" / "merge across data sources" | Sub-agent `identity-graph-operator` |
+| "Multi-agent workflow" / "coordinate agents" / "orchestrate" | Skill `superpowers:dispatching-parallel-agents` |
 | "Map every path through X" / "before we code" | Sub-agent `workflow-architect` |
-| "Run a security/compliance check before merge" | Sub-agent `code-reviewer` (security-focused review) |
+| "Run a security/compliance check before merge" | Built-in `/security-review`, then `/code-review` (or skill `superpowers:requesting-code-review`) |
 | "This query is slow" / "schema for X" / "indexing" | Sub-agent `database-optimizer` |
 | "Research this prospect/company" / "competitive intel" | `firecrawl_*` tools + your project's research-agent |
-| "Set SLOs" / "error budget" / "observability gap" | Sub-agent `sre` |
 | "Scan recent content for brand drift" | Skill `voice-drift-scanner` |
 
 This table is portable and editable. Add new triggers as you discover patterns.
@@ -72,11 +69,11 @@ The trigger table operates within "Specialized work." When the message matches a
 
 Sub-agents auto-route via "Use PROACTIVELY when..." trigger phrases in their `description` frontmatter. You don't need to remember names — describe what's needed and delegate via the Task tool.
 
-If the project installed sub-agents from [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) via the `installers/superpowers-stack/scripts/07-install-agency-agents.sh` script, the 16-agent cherry-pick is available in `~/.claude/agents/`. Coverage:
+If the project installed sub-agents from [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) via the `installers/superpowers-stack/scripts/07-install-agency-agents.sh` script, the 7-agent cherry-pick is available in `~/.claude/agents/`. Coverage:
 
-- **Engineering / autonomous-stack:** ai-engineer, autonomous-optimization-architect, incident-response-commander, sre, code-reviewer, database-optimizer
-- **Multi-agent / orchestration:** agents-orchestrator, workflow-architect, agentic-identity-trust, identity-graph-operator
-- **Content production (voice-aware):** linkedin-content-creator, carousel-growth-engine, ai-citation-strategist, document-generator
+- **Engineering:** database-optimizer
+- **Workflow mapping:** workflow-architect
+- **Content production (voice-aware):** linkedin-content-creator, ai-citation-strategist, document-generator
 - **Visual / production gate:** image-prompt-engineer, reality-checker
 
 Voice-aware sub-agents have inline brand-voice locks at the top of their system prompts pointing at the project's voice playbook. They will refuse drafts that violate banned phrases.
@@ -101,7 +98,7 @@ If you catch yourself doing any of these, the heuristics need tightening:
 - Using `fetch` for JS-heavy sites instead of `firecrawl_scrape`
 - Drafting copy without first reading the voice playbook
 - Generating image prompts without first reading DESIGN.md
-- Trying to debug a production crash from scratch instead of routing to `incident-response-commander`
+- Trying to debug a production crash from scratch instead of loading `superpowers:systematic-debugging`
 - Declaring work "done" without firing `reality-checker`
 
 When a missing pattern shows up, add it to section 1 and propagate to the project's CLAUDE.md.
@@ -130,9 +127,9 @@ If the agent isn't firing a tool combo it should:
 
 **User:** "Production is down again, the watchdog keeps restarting the service."
 
-**Agent (correct behavior):** Detects production-down trigger. Routes to `incident-response-commander` sub-agent immediately. Doesn't try to debug from scratch.
+**Agent (correct behavior):** Detects production-down trigger. Loads `superpowers:systematic-debugging` immediately and works from evidence to root cause. Doesn't guess.
 
-**Agent (wrong behavior):** Starts grepping logs and offering generic systemd advice without delegating to the specialist.
+**Agent (wrong behavior):** Starts grepping logs and offering generic systemd advice without a root-cause method.
 
 ---
 
