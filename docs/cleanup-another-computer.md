@@ -1,6 +1,6 @@
 # Repeat a Claude Code skills and plugins cleanup on another computer
 
-Version-Timestamp: 2026-11-26 10:26:42 AST
+Version-Timestamp: 2026-11-26 10:31:24 AST
 
 Status: draft for review. It has not been run on a second machine yet.
 
@@ -256,7 +256,7 @@ To restore one item, move it back: `mv ~/.claude/skill-archive/skills/<name> ~/.
    claude plugin install <plugin>@<marketplace> --scope user
    ```
 
-6. Switch off, in your claude.ai account, any synced plugin you have decided to drop. The script cannot do this. It only reports it.
+6. Switch off, in your claude.ai account, any synced plugin you have decided to drop. The script cannot do this. It only reports it. It reports a listed synced plugin only while Claude Code loads it: a synced plugin that `claude plugin list` shows as not loaded is skipped, so check the account itself for those.
 7. Do not run any installer from section 6 as part of this step.
 
 ### f. Verify
