@@ -1,10 +1,10 @@
 # Retired plugins, skills and agents
 
-Version-Timestamp: 2026-11-26 08:07:54 AST
+Version-Timestamp: 2026-11-26 08:08:53 AST
 
 Everything listed here is archived, retired, or must not be installed again. Nothing is deleted: archived files sit in `skill-archive/` (ide-config-internal) or `archive/agents/` (ai-agent-skills-library) and come back with one `git mv`.
 
-In this library, the agent moves into `archive/agents/` land with ai-agent-skills-library#14. Until #14 merges, the agents listed below are still in `agents/` and the installers still copy them.
+In this library, ai-agent-skills-library#14 moved the agents listed below into `archive/agents/` and took them out of the installer manifest.
 
 Paths that start with `~/` (for example `~/.claude/` and `~/src/agency-agents`) and `openai/` paths are on the maintainer's machine or in ide-config-internal, not in this repository.
 
@@ -56,12 +56,13 @@ The owner's account-level entries (plugins synced from the owner's claude.ai acc
 ## Restore paths to watch
 
 - **agency-agents installer:** `~/src/agency-agents/.local-install/manifest.json` still lists the 8 retired agents and code-reviewer. Running `install.py` copies them back into `~/.claude/agents/`. Remove them from that manifest, or delete them again after a run.
-- **ai-agent-skills-library superpowers-stack installer:** `07-install-agency-agents.sh` installs the agents its manifest lists; until ai-agent-skills-library#14 merges, that is all 16, including the retired ones. `01-install-superpowers.sh` installs Superpowers.
+- **ai-agent-skills-library superpowers-stack installer:** `07-install-agency-agents.sh` installs the agents its manifest lists. Since ai-agent-skills-library#14 that is 7; adding a retired agent back to the manifest restores it. `01-install-superpowers.sh` installs Superpowers.
 - **ai-agent-skills-library `install.sh` and `dist/skills`:** the library still exports skills named frontend-design, code-review-excellence, bug-hunter, architecture, backend-architect, lint-and-validate and ai-product. Installing them into `~/.claude/skills` brings the duplicates back.
 - **Codex copies:** `~/.codex/skills` holds its own copies of several archived skills (frontend-design, bug-hunter, architecture, backend-architect, lint-and-validate, ai-product, business-model-canvas, code-review-excellence). They affect Codex only; `openai/skills-curation/approved-skill-policy.json` still records the old `~/.claude` paths.
 - **graphify:** any global `pip install graphifyy` or `uv tool install` restores the rejected version. Use only a project's vetted runtime.
 
 ## Sources
 
+- [`removed-log.md`](../removed-log.md): this library's record of the archived agents and the routing rewrite.
 - `~/.claude/removed-log.md`: the 2026-11-25 moves and the routing changes.
 - `~/.claude/vetting-log.md`: the graphify retirement and plugin vetting.
