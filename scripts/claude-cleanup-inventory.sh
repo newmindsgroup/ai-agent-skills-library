@@ -20,8 +20,9 @@
 # not print settings.json, and MCP output is reduced to server names.
 #
 # Lists: the public defaults below match retired/README.md. To use your own
-# lists, put bash arrays in ~/.claude/cleanup-lists.conf (outside this
-# repository). See "Lists file" in docs/cleanup-another-computer.md.
+# lists, write a data file at ~/.claude/cleanup-lists.conf (outside this
+# repository). It is parsed line by line as data and never executed. See
+# "Lists file" in docs/cleanup-another-computer.md.
 #
 # Usage:
 #   scripts/claude-cleanup-inventory.sh [--list] [--mcp] [--project DIR]
@@ -41,6 +42,8 @@ set -euo pipefail
 #   kind: skill (a folder in ~/.claude/skills), agent (a file stem in
 #         ~/.claude/agents), or synced-plugin (report only; switch it off in
 #         your claude.ai account, the script cannot).
+#   name: for skill and agent, one plain name with no slash. Names are
+#         validated; a bad name stops the whole run before anything moves.
 # KEEP_PLUGINS entries: "plugin-id|version|commit|kind"
 #   official : install from claude-plugins-official at user scope.
 #   either   : the official plugin, or the claude.ai-synced copy of it
@@ -78,6 +81,8 @@ DEFAULT_KEEP_PLUGINS=(
   "typescript-lsp@claude-plugins-official|1.0.0|6985b2d88dc0|official"
   "claude-security@claude-plugins-official|0.13.0|6985b2d88dc0|official"
   "playground@claude-plugins-official|6985b2d88dc0|6985b2d88dc0|official"
+  "claude-md-management@claude-plugins-official|1.0.0|0fbfda5a91f4|official"
+  "session-report@claude-plugins-official|0fbfda5a91f4|0fbfda5a91f4|official"
   "security-guidance|2.0.21|none|either"
   "code-review|1.0.1|none|either"
 )
@@ -106,8 +111,8 @@ Default mode changes nothing.
   -h, --help       show this help
 
 Environment: CLAUDE_HOME (default ~/.claude), CODEX_SKILLS (default ~/.codex/skills)
-Lists: built-in defaults, or arrays in $CLAUDE_HOME/cleanup-lists.conf
-       (DO_NOT_REINSTALL, DUPLICATES, KEEP_PLUGINS).
+Lists: built-in defaults, or data lines in $CLAUDE_HOME/cleanup-lists.conf
+       (LIST|kind|name|note, LIST = DO_NOT_REINSTALL, DUPLICATES, KEEP_PLUGINS).
 USAGE
 }
 
@@ -131,8 +136,15 @@ LISTS_FILE="$CLAUDE_HOME/cleanup-lists.conf"
 TODAY="$(date '+%Y-%m-%d')"
 
 # ---------------------------------------------------------------------------
-# Lists: built-in defaults, optionally replaced per array by the lists file.
-# The file is plain bash and is sourced, so it must be yours and private.
+# Lists: built-in defaults, optionally replaced per list by the lists file.
+# The file is DATA. It is read line by line and never sourced or executed.
+# Line format:  LIST|kind|name|note
+#   LIST : DO_NOT_REINSTALL, DUPLICATES or KEEP_PLUGINS
+#   kind : as in the defaults above, or "none" (an empty list)
+#   name : the item name or plugin id
+#   note : replacement text; for KEEP_PLUGINS, "<version> <commit>"
+# Blank lines and lines starting with # are ignored. If a list appears in the
+# file at all, it replaces that list's defaults entirely.
 # ---------------------------------------------------------------------------
 
 DO_NOT_REINSTALL=("${DEFAULT_DO_NOT_REINSTALL[@]}")
@@ -140,51 +152,114 @@ DUPLICATES=("${DEFAULT_DUPLICATES[@]}")
 KEEP_PLUGINS=("${DEFAULT_KEEP_PLUGINS[@]}")
 LISTS_SOURCE="built-in defaults"
 
+NAME_RE='^[A-Za-z0-9][A-Za-z0-9._~@+ -]*$'
+
+bad_lists() {
+  echo "$1" >&2
+  exit 65
+}
+
+# A name must be one plain path component: no slash, no newline, not . or ..
+valid_name() {
+  local n="$1"
+  case "$n" in
+    "" | . | .. | */* | *$'\n'*) return 1 ;;
+  esac
+  [[ "$n" =~ $NAME_RE ]]
+}
+
+load_lists_file() {
+  local f="$1" line lineno=0 list kind name note ver commit
+  local dnr=() dup=() keep=()
+  local seen_dnr=0 seen_dup=0 seen_keep=0 pipes
+  while IFS= read -r line || [[ -n "$line" ]]; do
+    lineno=$((lineno + 1))
+    line="${line%$'\r'}"
+    if [[ -z "${line//[[:space:]]/}" || "$line" =~ ^[[:space:]]*# ]]; then
+      continue
+    fi
+    pipes="${line//[^|]/}"
+    if [[ "${#pipes}" -lt 3 ]]; then
+      bad_lists "$f line $lineno: expected LIST|kind|name|note"
+    fi
+    IFS='|' read -r list kind name note <<<"$line"
+    case "$list" in
+      DO_NOT_REINSTALL|DUPLICATES|KEEP_PLUGINS) ;;
+      *) bad_lists "$f line $lineno: unknown list '$list'" ;;
+    esac
+    case "$list" in
+      DO_NOT_REINSTALL) seen_dnr=1 ;;
+      DUPLICATES) seen_dup=1 ;;
+      KEEP_PLUGINS) seen_keep=1 ;;
+    esac
+    if [[ "$kind" == "none" ]]; then
+      continue
+    fi
+    if ! valid_name "$name"; then
+      bad_lists "$f line $lineno: invalid name '$name'"
+    fi
+    case "$list" in
+      DO_NOT_REINSTALL)
+        case "$kind" in skill|agent|synced-plugin) ;; *) bad_lists "$f line $lineno: bad kind '$kind'" ;; esac
+        dnr+=("$kind|$name|$note") ;;
+      DUPLICATES)
+        case "$kind" in skill|agent) ;; *) bad_lists "$f line $lineno: bad kind '$kind'" ;; esac
+        dup+=("$kind|$name|$note") ;;
+      KEEP_PLUGINS)
+        case "$kind" in official|either|custom) ;; *) bad_lists "$f line $lineno: bad kind '$kind'" ;; esac
+        ver="${note%% *}"
+        commit="none"
+        if [[ "$note" == *" "* ]]; then
+          commit="${note#* }"
+        fi
+        if [[ -z "$ver" ]]; then
+          ver="none"
+        fi
+        keep+=("$name|$ver|$commit|$kind") ;;
+    esac
+  done <"$f"
+  local from=""
+  if [[ "$seen_dnr" -eq 1 ]]; then
+    DO_NOT_REINSTALL=(${dnr[@]+"${dnr[@]}"})
+    from="$from DO_NOT_REINSTALL"
+  fi
+  if [[ "$seen_dup" -eq 1 ]]; then
+    DUPLICATES=(${dup[@]+"${dup[@]}"})
+    from="$from DUPLICATES"
+  fi
+  if [[ "$seen_keep" -eq 1 ]]; then
+    KEEP_PLUGINS=(${keep[@]+"${keep[@]}"})
+    from="$from KEEP_PLUGINS"
+  fi
+  LISTS_SOURCE="$f (from file:${from:- nothing}; the rest are defaults)"
+}
+
 if [[ -f "$LISTS_FILE" ]]; then
-  if [[ -n "$(find "$LISTS_FILE" -maxdepth 0 \( -perm -g+w -o -perm -o+w \) -print 2>/dev/null)" ]]; then
-    echo "Refusing to read $LISTS_FILE: it is writable by group or others. Run: chmod go-w \"$LISTS_FILE\"" >&2
-    exit 78
-  fi
-  unset DO_NOT_REINSTALL DUPLICATES KEEP_PLUGINS
-  # shellcheck source=/dev/null
-  source "$LISTS_FILE"
-  FROM_FILE=""
-  if declare -p DO_NOT_REINSTALL >/dev/null 2>&1; then
-    FROM_FILE="$FROM_FILE DO_NOT_REINSTALL"
-  else
-    DO_NOT_REINSTALL=("${DEFAULT_DO_NOT_REINSTALL[@]}")
-  fi
-  if declare -p DUPLICATES >/dev/null 2>&1; then
-    FROM_FILE="$FROM_FILE DUPLICATES"
-  else
-    DUPLICATES=("${DEFAULT_DUPLICATES[@]}")
-  fi
-  if declare -p KEEP_PLUGINS >/dev/null 2>&1; then
-    FROM_FILE="$FROM_FILE KEEP_PLUGINS"
-  else
-    KEEP_PLUGINS=("${DEFAULT_KEEP_PLUGINS[@]}")
-  fi
-  LISTS_SOURCE="$LISTS_FILE (from file:$FROM_FILE; the rest are defaults)"
+  load_lists_file "$LISTS_FILE"
 fi
 
-# Reject malformed entries early, so a typo cannot silently skip an item.
+# Validate every effective entry, defaults included, before anything runs.
+# A bad entry refuses the whole run.
 check_entries() {
-  # $1 array name, $2 pattern of allowed kinds, $3 expected field count, then entries
-  local label="$1" kinds="$2" fields="$3" entry n kind
+  # $1 list name, $2 allowed kinds, $3 expected field count, then entries
+  local label="$1" kinds="$2" fields="$3" entry pipes n kind name
   shift 3
   for entry in "$@"; do
-    n="$(awk -F'|' '{print NF}' <<<"$entry")"
-    kind="${entry%%|*}"
+    pipes="${entry//[^|]/}"
+    n=$((${#pipes} + 1))
     if [[ "$n" -ne "$fields" ]]; then
-      echo "Bad $label entry (expected $fields fields separated by |): $entry" >&2
-      exit 65
+      bad_lists "Bad $label entry (expected $fields fields separated by |): $entry"
     fi
     if [[ "$label" == "KEEP_PLUGINS" ]]; then
-      kind="${entry##*|}"
+      IFS='|' read -r name _ _ kind <<<"$entry"
+    else
+      IFS='|' read -r kind name _ <<<"$entry"
     fi
     if ! grep -Eq -- "^($kinds)\$" <<<"$kind"; then
-      echo "Bad $label entry (kind '$kind' is not one of: $kinds): $entry" >&2
-      exit 65
+      bad_lists "Bad $label entry (kind '$kind' is not one of: $kinds): $entry"
+    fi
+    if ! valid_name "$name"; then
+      bad_lists "Bad $label entry (invalid name '$name'): $entry"
     fi
   done
 }
@@ -233,22 +308,58 @@ names_in() {
 
 join_lines() { tr '\n' ' ' | sed 's/ *$//'; }
 
-# Plugin text: `claude plugin list` plus installed_plugins.json (ids only
-# matter; neither holds secrets). grep -F on a here-string avoids pipefail
-# false negatives from grep -q closing a pipe early.
+# Plugin records, one per installed plugin: id|version|scope|status.
+# They come from the parsed output of `claude plugin list`, so ids are compared
+# exactly. Note: `claude plugin list` reports the real Claude Code install and
+# ignores CLAUDE_HOME. If claude is not on PATH, the ids come from
+# installed_plugins.json instead and scope and status are unverified.
 CLAUDE_LIST=""
 HAVE_CLAUDE=0
 if command -v claude >/dev/null 2>&1; then
   HAVE_CLAUDE=1
   CLAUDE_LIST="$(claude plugin list 2>/dev/null || true)"
 fi
-PLUGIN_TEXT="$CLAUDE_LIST"
-if [[ -f "$CLAUDE_HOME/plugins/installed_plugins.json" ]]; then
-  PLUGIN_TEXT="$PLUGIN_TEXT
-$(cat "$CLAUDE_HOME/plugins/installed_plugins.json")"
+
+parse_plugin_list() {
+  awk '
+    NF == 2 && $1 !~ /^[A-Za-z0-9]/ && $2 ~ /^[A-Za-z0-9][A-Za-z0-9._~+-]*@[A-Za-z0-9._~+-]+$/ {
+      id = $2; v = "?"; s = ""; next
+    }
+    /^[[:space:]]+Version:/ { v = $2; next }
+    /^[[:space:]]+Scope:/ { s = $2; next }
+    /^[[:space:]]+Status:/ {
+      if (id != "") {
+        st = $0
+        sub(/^[[:space:]]+Status:[[:space:]]*/, "", st)
+        if (s == "") { if (id ~ /@synced$/) s = "synced"; else s = "?" }
+        printf "%s|%s|%s|%s\n", id, v, s, st
+        id = ""
+      }
+    }
+  '
+}
+
+PLUGIN_RECORDS=""
+if [[ "$HAVE_CLAUDE" -eq 1 ]]; then
+  PLUGIN_RECORDS="$(parse_plugin_list <<<"$CLAUDE_LIST")"
+elif [[ -f "$CLAUDE_HOME/plugins/installed_plugins.json" ]]; then
+  PLUGIN_RECORDS="$(
+    grep -oE '"[A-Za-z0-9][A-Za-z0-9._~+-]*@[A-Za-z0-9._~+-]+"[[:space:]]*:[[:space:]]*\[' \
+      "$CLAUDE_HOME/plugins/installed_plugins.json" 2>/dev/null \
+      | sed -E 's/^"([^"]+)".*/\1|?|user|enabled (unverified)/' || true
+  )"
 fi
 
-has_plugin() { grep -Fq -- "$1" <<<"$PLUGIN_TEXT"; }
+# Exact-id lookups over the records (a here-string avoids pipefail surprises).
+plugin_user_enabled() {
+  awk -F'|' -v id="$1" '$1 == id && $3 == "user" && $4 ~ /enabled/ { f = 1 } END { exit !f }' <<<"$PLUGIN_RECORDS"
+}
+plugin_synced_loaded() {
+  awk -F'|' -v id="$1" '$1 == id && $3 == "synced" && $4 ~ /loaded/ && $4 !~ /[Nn]ot loaded/ { f = 1 } END { exit !f }' <<<"$PLUGIN_RECORDS"
+}
+plugin_any() {
+  awk -F'|' -v id="$1" '$1 == id { f = 1 } END { exit !f }' <<<"$PLUGIN_RECORDS"
+}
 
 # ---------------------------------------------------------------------------
 # 1. Inventory
@@ -315,15 +426,14 @@ else
 fi
 
 if [[ "$HAVE_CLAUDE" -eq 1 ]]; then
-  note "plugins (id, version, scope):"
-  awk '
-    $2 ~ /@/ && $1 !~ /:/ { id=$2; v="?"; s=""; next }
-    /Version:/ { v=$2 }
-    /Scope:/   { s=$2 }
-    /Status:/  { if (id != "") { if (s == "") s="synced"; printf "    %s %s %s\n", id, v, s; id="" } }
-  ' <<<"$CLAUDE_LIST"
+  note "plugins (id, version, scope, status; claude plugin list ignores CLAUDE_HOME):"
 else
-  note "claude not on PATH: plugin ids come from installed_plugins.json only"
+  note "claude not on PATH: plugin ids come from installed_plugins.json, scope and status unverified"
+fi
+if [[ -n "$PLUGIN_RECORDS" ]]; then
+  while IFS='|' read -r pid pver pscope pstatus; do
+    note "  $pid $pver $pscope ($pstatus)"
+  done <<<"$PLUGIN_RECORDS"
 fi
 
 if [[ "$SHOW_MCP" -eq 1 ]]; then
@@ -347,16 +457,23 @@ TO_MOVE=()   # entries "kind|name|reason"
 
 collect() {
   # $1 label, then the list entries (kind|name|replacement)
-  local label="$1" entry kind name reason path
+  local label="$1" entry kind name reason base path real_parent real_base
   shift
   for entry in "$@"; do
     IFS='|' read -r kind name reason <<<"$entry"
     case "$kind" in
-      agent) path="$CLAUDE_HOME/agents/$name.md" ;;
-      skill) path="$CLAUDE_HOME/skills/$name" ;;
+      agent) base="$CLAUDE_HOME/agents"; path="$base/$name.md" ;;
+      skill) base="$CLAUDE_HOME/skills"; path="$base/$name" ;;
       *) continue ;;
     esac
     if [[ -e "$path" || -L "$path" ]]; then
+      # The entry must sit directly inside its folder. A symlink is moved as a
+      # link; its target is never followed.
+      real_parent="$(cd "$(dirname "$path")" && pwd -P)"
+      real_base="$(cd "$base" && pwd -P)"
+      if [[ "$real_parent" != "$real_base" ]]; then
+        bad_lists "Refusing '$name': it does not resolve to a direct entry of $base"
+      fi
       TO_MOVE+=("$kind|$name|$label; replacement: $reason")
     fi
   done
@@ -382,20 +499,26 @@ section "Keep-list plugins"
 MISSING=0
 for entry in ${KEEP_PLUGINS[@]+"${KEEP_PLUGINS[@]}"}; do
   IFS='|' read -r id ver sha kind <<<"$entry"
+  extra=""
+  case "$id" in claude-security@*) extra=" --config live_view=false" ;; esac
   case "$kind" in
     official)
-      if has_plugin "$id"; then
+      if plugin_user_enabled "$id"; then
         note "present  $id (reference $ver, commit $sha)"
+      elif plugin_any "$id"; then
+        MISSING=$((MISSING + 1))
+        note "MISSING  $id (reference $ver): installed, but not at user scope and enabled"
+        note "         claude plugin install $id --scope user$extra"
       else
         MISSING=$((MISSING + 1))
         note "MISSING  $id (reference $ver, commit $sha)"
-        note "         claude plugin install $id --scope user"
+        note "         claude plugin install $id --scope user$extra"
       fi
       ;;
     either)
-      if has_plugin "$id@claude-plugins-official"; then
+      if plugin_user_enabled "$id@claude-plugins-official"; then
         note "present  $id@claude-plugins-official (reference $ver)"
-      elif has_plugin "$id@synced"; then
+      elif plugin_synced_loaded "$id@synced"; then
         note "present  $id@synced via claude.ai sync (reference $ver); do not install a second copy"
       else
         MISSING=$((MISSING + 1))
@@ -404,8 +527,11 @@ for entry in ${KEEP_PLUGINS[@]+"${KEEP_PLUGINS[@]}"}; do
       fi
       ;;
     custom)
-      if has_plugin "$id"; then
+      if plugin_user_enabled "$id"; then
         note "present  $id (reference $ver, commit $sha)"
+      elif plugin_any "$id"; then
+        MISSING=$((MISSING + 1))
+        note "MISSING  $id (reference $ver): installed, but not at user scope and enabled"
       else
         MISSING=$((MISSING + 1))
         note "MISSING  $id (reference $ver, commit $sha); add its marketplace first, then:"
@@ -419,7 +545,7 @@ if [[ "$MISSING" -eq 0 ]]; then
 fi
 
 section "claude-security setting"
-if has_plugin "claude-security@claude-plugins-official"; then
+if plugin_user_enabled "claude-security@claude-plugins-official"; then
   if [[ -f "$CLAUDE_HOME/settings.json" ]] \
      && grep -Eq '"live_view"[[:space:]]*:[[:space:]]*("false"|false)' "$CLAUDE_HOME/settings.json"; then
     note "live_view is false in settings.json"
@@ -439,7 +565,7 @@ for entry in ${DO_NOT_REINSTALL[@]+"${DO_NOT_REINSTALL[@]}"}; do
     continue
   fi
   SYNC_LISTED=$((SYNC_LISTED + 1))
-  if grep -Fq -- "$name" <<<"$PLUGIN_TEXT"; then
+  if plugin_synced_loaded "$name"; then
     SYNC_LEFT=$((SYNC_LEFT + 1))
     note "still synced  $name ($reason)"
   fi
@@ -498,8 +624,17 @@ else
   mkdir -p "$PARTIAL"
   for part in skills agents commands; do
     if [[ -d "$CLAUDE_HOME/$part" ]]; then
-      cp -a "$CLAUDE_HOME/$part" "$PARTIAL/$part"
-      note "backed up $part"
+      # Copy the CONTENTS, so the backup is a real folder even when
+      # skills/ or agents/ is itself a symlink. Symlinks inside are kept as links.
+      mkdir "$PARTIAL/$part"
+      cp -a "$CLAUDE_HOME/$part/." "$PARTIAL/$part/"
+      src_n="$(find -H "$CLAUDE_HOME/$part" | wc -l | tr -d ' ')"
+      dst_n="$(find -H "$PARTIAL/$part" | wc -l | tr -d ' ')"
+      if [[ "$src_n" != "$dst_n" ]]; then
+        echo "Backup of $part is incomplete ($dst_n of $src_n entries). Nothing was moved. Partial copy left at $PARTIAL." >&2
+        exit 1
+      fi
+      note "backed up $part ($dst_n entries)"
     else
       note "no $part folder to back up"
     fi

@@ -1,6 +1,6 @@
 # Repeat a Claude Code skills and plugins cleanup on another computer
 
-Version-Timestamp: 2026-11-26 09:54:53 AST
+Version-Timestamp: 2026-11-26 10:26:42 AST
 
 Status: draft for review. It has not been run on a second machine yet.
 
@@ -93,15 +93,19 @@ Install these at user scope from `claude-plugins-official`. The reference versio
 | claude-security | 0.13.0 | Report-only security scans. Set `live_view` to false. |
 | security-guidance | 2.0.21 | Reviews diffs for security problems |
 | code-review | 1.0.1 | Replaces the archived code review skills and agent |
+| claude-md-management | 1.0.0 | Audits and updates `CLAUDE.md` files. It edits only after you approve. |
+| session-report | none; the commit `0fbfda5a91f4` is recorded as its version | Builds a local HTML report of session and token use from transcripts. Reports quote prompts and paths, so keep them local. |
 | playground | none; the commit `6985b2d88dc0` is recorded as its version | One skill and Markdown templates for single-file HTML playgrounds |
 
 Install commands:
 
 ```bash
 claude plugin install typescript-lsp@claude-plugins-official --scope user
-claude plugin install claude-security@claude-plugins-official --scope user
+claude plugin install claude-security@claude-plugins-official --scope user --config live_view=false
 claude plugin install security-guidance@claude-plugins-official --scope user
 claude plugin install code-review@claude-plugins-official --scope user
+claude plugin install claude-md-management@claude-plugins-official --scope user
+claude plugin install session-report@claude-plugins-official --scope user
 claude plugin install playground@claude-plugins-official --scope user
 ```
 
@@ -121,19 +125,16 @@ The installed commit for each plugin is in `~/.claude/plugins/installed_plugins.
 
 ### claude-security: turn off live view
 
-`live_view` would let the plugin read prompts, scanned files and settings inside Claude Code. Set it to false:
+`live_view` would let the plugin read prompts, scanned files and settings inside Claude Code. Set it to false at install time. The install command in the list above does this with `--config live_view=false`. The CLI documents `--config <key=value>` for options a plugin declares, and `claude plugin install --help` shows it.
+
+If the plugin is already installed, set the value afterwards:
 
 ```bash
 claude plugin configure claude-security@claude-plugins-official
-```
-
-This shows the plugin's options. Then save the value by piping JSON (single-line string values) to the same command:
-
-```bash
 echo '{"live_view":"false"}' | claude plugin configure claude-security@claude-plugins-official --values-stdin
 ```
 
-You can also use `/plugin configure` inside Claude Code. Confirm the result with the script. Its "claude-security setting" section reports `live_view is false`.
+The first command shows the plugin's options. The second saves a JSON object of single-line string values. You can also use `/plugin configure` inside Claude Code. Confirm the result with the script. Its "claude-security setting" section reports `live_view is false`.
 
 ### typescript-lsp: install the language server
 
@@ -179,14 +180,14 @@ Requirements: Claude Code, signed in to your claude.ai account (so synced plugin
 4. Compare the skill names with your own list of kept skills. This prints skills that are neither on your list nor retired:
 
    ```bash
-   ls ~/.claude/skills | sort | comm -23 - my-kept-skills.txt
+   comm -23 <(ls -1 ~/.claude/skills | sort) <(sort my-kept-skills.txt)
    ```
 
-   `my-kept-skills.txt` is a file you keep privately, one name per line. A `synced` folder in `~/.claude/skills/` is a cache, not a skill. Decide unknown skills by hand.
+   `my-kept-skills.txt` is a file you keep privately, one name per line. `comm` needs both inputs sorted and one name per line, so the example sorts both. A `synced` folder in `~/.claude/skills/` is a cache, not a skill. Decide unknown skills by hand.
 
 ### b. Back up everything first
 
-The script does this itself when you run `--apply`. Do it by hand if you want the backup before you run even a dry run. `cp -a` preserves the structure and symlinks.
+The script does this itself when you run `--apply`. Do it by hand if you want the backup before you run even a dry run. `cp -a src/. dst/` copies the contents, preserves the structure and symlinks, and works even when `skills/` or `agents/` is itself a symlink. It never creates a nested `skills/skills` on a rerun, because the destination folder is created fresh each time.
 
 ```bash
 BK=~/.claude/skill-archive/$(date +%Y-%m-%d)-backup
@@ -195,7 +196,10 @@ if [ -d "$BK" ]; then
 else
   mkdir -p "$BK.partial"
   for p in skills agents commands; do
-    if [ -d ~/.claude/$p ]; then cp -a ~/.claude/$p "$BK.partial/$p"; fi
+    if [ -d ~/.claude/$p ]; then
+      mkdir "$BK.partial/$p"
+      cp -a ~/.claude/$p/. "$BK.partial/$p/"
+    fi
   done
   claude plugin list > "$BK.partial/plugin-list.txt"
   mv "$BK.partial" "$BK"
@@ -204,7 +208,8 @@ fi
 
 Notes:
 
-- `cp -a` keeps symlinks as symlinks. It does not copy what they point to.
+- Symlinks inside the folders stay symlinks in the copy. What they point to is not copied.
+- If `skills/` or `agents/` is a symlink, the copy holds the real contents. The script compares entry counts and stops before moving anything if they differ.
 - Copy `~/.claude/plugins/installed_plugins.json` to the backup too if you want a rollback record.
 - Before you edit `settings.json`, copy it next to itself as `settings.json.bak-<date>`. It can hold secrets. Do not put it in the archive, do not commit it, and do not paste its contents anywhere.
 - If `~/.claude` is under git, add `skill-archive/*-backup/` to `.git/info/exclude`.
@@ -242,7 +247,7 @@ To restore one item, move it back: `mv ~/.claude/skill-archive/skills/<name> ~/.
 
 1. Run only the install commands the dry run printed for `MISSING` plugins (section 3).
 2. Wait for the claude.ai sync before you install `security-guidance` or `code-review`. If they still do not appear, install them from the official marketplace.
-3. Turn off claude-security's live view (section 3).
+3. Turn off claude-security's live view (section 3). Skip this if you installed it with `--config live_view=false`.
 4. Install the TypeScript language server (section 3).
 5. For plugins from your own marketplaces, add the marketplace first, then install:
 
@@ -290,48 +295,58 @@ Safety properties:
 - It reduces MCP output to server names.
 - It never installs a plugin. It prints the commands.
 - It never overwrites an archive target. It adds a numeric suffix.
-- It leaves `skills/synced`, symlinked skills and anything not on its lists alone.
+- It leaves anything not on its lists alone, including `skills/synced`. A listed symlink is moved as a link; its target is never touched.
 
 ### Lists file
 
 Built-in defaults match [`retired/README.md`](../retired/README.md) and the keep list in section 3. To use your own lists, create `~/.claude/cleanup-lists.conf` (or `$CLAUDE_HOME/cleanup-lists.conf`). Keep it outside any public repository.
 
-The file is plain bash. Define any of three arrays. An array in the file replaces that array's defaults entirely. An array you leave out keeps the defaults.
+The file is data, not code. The script reads it one line at a time and never runs it. A line like `APPLY=1` or a shell command is rejected, not executed.
 
-```bash
-# ~/.claude/cleanup-lists.conf
+Each line has four fields separated by `|`:
 
-# kind|name|replacement
-# kind: skill (a folder in ~/.claude/skills), agent (a file stem in ~/.claude/agents),
-#       synced-plugin (report only; you switch it off in your account)
-DO_NOT_REINSTALL=(
-  "agent|example-retired-agent|none"
-  "skill|example-retired-skill|a replacement"
-  "synced-plugin|example-plugin@synced|why it is switched off"
-)
-
-# kind|name|the kept item it duplicates   (kind: skill or agent)
-DUPLICATES=(
-  "skill|example-duplicate|example-kept-skill"
-)
-
-# plugin-id|reference version|reference commit|kind
-# kind: official (install from claude-plugins-official),
-#       either (official or the @synced copy; install only if neither exists),
-#       custom (your own marketplace; no install command is built)
-KEEP_PLUGINS=(
-  "typescript-lsp@claude-plugins-official|1.0.0|6985b2d88dc0|official"
-  "security-guidance|2.0.21|none|either"
-  "example-plugin@example-marketplace|0.1.0|none|custom"
-)
+```text
+LIST|kind|name|note
 ```
 
-Rules the script enforces:
+| Field | Meaning |
+|---|---|
+| `LIST` | `DO_NOT_REINSTALL`, `DUPLICATES` or `KEEP_PLUGINS` |
+| `kind` | For the first two lists: `skill` (a folder in `~/.claude/skills`), `agent` (a file stem in `~/.claude/agents`), or, for `DO_NOT_REINSTALL` only, `synced-plugin` (report only; you switch it off in your account). For `KEEP_PLUGINS`: `official` (install from claude-plugins-official), `either` (the official plugin or its `@synced` copy; install only if neither exists), or `custom` (your own marketplace; no install command is built). `none` gives an empty list. |
+| `name` | The skill folder, the agent file stem (no `.md`), or the plugin id |
+| `note` | The replacement, as free text. For `KEEP_PLUGINS`: `<version> <commit>`, separated by a space. |
 
-- The file is sourced by bash, so it runs as code. Keep it yours. The script refuses to read it if group or others can write to it, and tells you to run `chmod go-w`.
-- Each entry must have the right number of fields and a valid kind. A bad entry stops the run with exit code 65 before anything is read or moved.
-- Entries are moved or reported by name only. The file should hold no secrets, tokens or URLs with credentials.
-- The first lines of the output say which lists are in use.
+Blank lines and lines that start with `#` are ignored. If a list appears in the file at all, it replaces that list's defaults entirely. A list you leave out keeps the defaults.
+
+```text
+# ~/.claude/cleanup-lists.conf
+DO_NOT_REINSTALL|agent|example-retired-agent|none
+DO_NOT_REINSTALL|skill|example-retired-skill|a replacement
+DO_NOT_REINSTALL|synced-plugin|example-plugin@synced|why it is switched off
+DUPLICATES|skill|example-duplicate|example-kept-skill
+KEEP_PLUGINS|official|typescript-lsp@claude-plugins-official|1.0.0 6985b2d88dc0
+KEEP_PLUGINS|either|security-guidance|2.0.21
+KEEP_PLUGINS|custom|example-plugin@example-marketplace|0.1.0
+```
+
+Rules the script enforces before it reads, backs up or moves anything:
+
+- A `skill` or `agent` name must be one plain name. It must start with a letter or digit and use only letters, digits and `. _ ~ @ + -` and spaces. It cannot hold a slash or a newline, and it cannot be `.` or `..`. A path such as `../settings.json` is refused.
+- The same rules apply to the built-in defaults.
+- Any bad line or entry (wrong field count, unknown list, unknown kind, bad name) refuses the whole run with exit code 65. Nothing is moved, not even the good entries.
+- Before a move, the script resolves the final path and refuses anything that is not a direct entry of `~/.claude/skills` or `~/.claude/agents`.
+- A listed symlink is moved as a link. The script never follows it, so its target stays where it is.
+- The file should hold no secrets, tokens or URLs with credentials. The first lines of the output say which lists are in use.
+
+### Testing the script
+
+A regression test runs the script against throwaway folders with a fake `claude`. It covers path traversal, symlinks, the data-only lists file, backups, idempotence and plugin matching.
+
+```bash
+bash scripts/tests/claude-cleanup-inventory-test.sh
+```
+
+To try `--apply` by hand, point `CLAUDE_HOME` at a scratch copy. One thing does not follow `CLAUDE_HOME`: `claude plugin list` always reports the real Claude Code install. The plugin sections of the output therefore describe your real plugins, even in a scratch run. Plugin ids are compared exactly, and a keep-list plugin counts as present only when it is installed at user scope and enabled.
 
 ## 6. Vetting and the do-not-reinstall approach
 
