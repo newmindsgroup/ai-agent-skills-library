@@ -1,12 +1,14 @@
 # Retired plugins, skills and agents
 
-Version-Timestamp: 2026-11-25 13:43:10 AST
+Version-Timestamp: 2026-11-26 08:07:54 AST
 
 Everything listed here is archived, retired, or must not be installed again. Nothing is deleted: archived files sit in `skill-archive/` (ide-config-internal) or `archive/agents/` (ai-agent-skills-library) and come back with one `git mv`.
 
 In this library, the agent moves into `archive/agents/` land with ai-agent-skills-library#14. Until #14 merges, the agents listed below are still in `agents/` and the installers still copy them.
 
 Paths that start with `~/` (for example `~/.claude/` and `~/src/agency-agents`) and `openai/` paths are on the maintainer's machine or in ide-config-internal, not in this repository.
+
+The owner's account-level entries (plugins synced from the owner's claude.ai account, and the owner's internal skills) are kept only in the private register in ide-config-internal.
 
 ## Before you install anything
 
@@ -15,15 +17,10 @@ Paths that start with `~/` (for example `~/.claude/` and `~/src/agency-agents`) 
 3. Run the vetting checklist (`vetting-third-party-components`) and log the result in `~/.claude/vetting-log.md` before anything new touches client work.
 4. If you do restore an item on purpose, remove its row here in the same change and say why.
 
-## Plugins
+## Plugins and tools
 
 | Name | Type | Where it lived | Date | Reason | Replaced by |
 |---|---|---|---|---|---|
-| Superpowers (synced copy) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25). The same plugin is also installed on the Mac at user scope from claude-plugins-official, so switching off the sync does not remove it. `~/.claude/CLAUDE.md` names its `verification-before-completion` and `superpowers:writing-skills`, and model-governor's `route-task.py` returns its `systematic-debugging` and `test-driven-development`, so removing it fully needs those updated first | Nothing yet; decide whether the user-scope install stays |
-| Design Superpowers (`design-superpowers`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25); overlaps frontend-design, design and visual-design-studio | frontend-design (Anthropic) and design (Anthropic) |
-| Design Drift (`design-drift`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25); its hook errored on every file write in this setup | design:design-critique and visual-and-code-quality-gate |
-| Website Design (`website-design`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25); overlaps frontend-design and design | frontend-design (Anthropic) and design (Anthropic) |
-| Figma, second copy (`figma~g2`) | plugin | claude.ai account sync | 2026-11-25 | Being switched off by Daniel (still synced on 2026-11-25). Duplicate: declares the same name as the other synced Figma copy, so Claude Code already ignores it | The other synced Figma plugin |
 | graphify 0.7.10 and 0.6.9, global skill and command | skill and tool | `~/.claude/skills/graphify`, global Python and uv installs | 2026-11-02 | Rejected by the vetting log: auto-triggered on codebase questions and ran outside its guards | A project's own vetted runtime when its docs name one; otherwise grep and file reads |
 
 ## Agents
@@ -55,14 +52,12 @@ Paths that start with `~/` (for example `~/.claude/` and `~/src/agency-agents`) 
 | architecture | skill | `~/.claude/skills/architecture` | 2026-11-25 | Duplicate of engineering:architecture | `engineering:architecture` |
 | backend-architect | skill | `~/.claude/skills/backend-architect` | 2026-11-25 | Duplicate of engineering:system-design | `engineering:system-design` |
 | lint-and-validate | skill | `~/.claude/skills/lint-and-validate` | 2026-11-25 | Duplicate of engineering-quality-gate | `engineering-quality-gate` |
-| nmg-proposal (old skill copy) | skill | `skill-archive/nmg-proposal-DEPRECATED-20260901` | Deprecated 2026-09-01, archived 2026-10-19 | Outdated: superseded by the plugin version | The `nmg-proposal` plugin |
 
 ## Restore paths to watch
 
 - **agency-agents installer:** `~/src/agency-agents/.local-install/manifest.json` still lists the 8 retired agents and code-reviewer. Running `install.py` copies them back into `~/.claude/agents/`. Remove them from that manifest, or delete them again after a run.
 - **ai-agent-skills-library superpowers-stack installer:** `07-install-agency-agents.sh` installs the agents its manifest lists; until ai-agent-skills-library#14 merges, that is all 16, including the retired ones. `01-install-superpowers.sh` installs Superpowers.
 - **ai-agent-skills-library `install.sh` and `dist/skills`:** the library still exports skills named frontend-design, code-review-excellence, bug-hunter, architecture, backend-architect, lint-and-validate and ai-product. Installing them into `~/.claude/skills` brings the duplicates back.
-- **claude.ai sync:** switching a synced plugin back on in claude.ai restores it on every machine at the next sync.
 - **Codex copies:** `~/.codex/skills` holds its own copies of several archived skills (frontend-design, bug-hunter, architecture, backend-architect, lint-and-validate, ai-product, business-model-canvas, code-review-excellence). They affect Codex only; `openai/skills-curation/approved-skill-policy.json` still records the old `~/.claude` paths.
 - **graphify:** any global `pip install graphifyy` or `uv tool install` restores the rejected version. Use only a project's vetted runtime.
 
