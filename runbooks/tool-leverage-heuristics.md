@@ -18,18 +18,15 @@ Map common natural-language triggers to the specific tools/agents that should fi
 | "Write a LinkedIn post" / "thought leadership content" | Read voice playbook → `linkedin-content-creator` |
 | "Generate a Midjourney/DALL-E/SD prompt" | Read `DESIGN.md` → `image-prompt-engineer` |
 | "Build a deck/report/proposal as PDF/PPTX/DOCX" | `document-generator` (auto-defers to voice playbook) |
-| "Production is down" / "service crashed" / "[your stack]'s broken" | `incident-response-commander` |
+| "Production is down" / "service crashed" / "[your stack]'s broken" | `superpowers:systematic-debugging`, or the standalone `systematic-debugging` skill without Superpowers (root cause first, no guessing) |
 | "Ready to ship?" / "is this done?" / "certify this" | `reality-checker` |
 | "Map this codebase" / "before I work on it" | `/graphify <path>` |
 | "Find/explain X in this repo" (large repo) | `graphify query` if `graphify-out/` exists, else grep |
-| "Optimize the agent stack costs" / "LLM cost" / "model routing" | `autonomous-optimization-architect` |
-| "Multi-agent workflow" / "coordinate agents" | `agents-orchestrator` |
-| "Dedupe contacts" / "entity resolution" / "merge across data sources" | `identity-graph-operator` |
+| "Multi-agent workflow" / "coordinate agents" | `superpowers:dispatching-parallel-agents`, or the standalone `dispatching-parallel-agents` skill |
 | "Map every path through X" / "before we code" | `workflow-architect` |
-| "Run a security/compliance check before merge" | `code-reviewer` (security-focused review) |
+| "Run a security/compliance check before merge" | Built-in `/security-review`, then `/code-review` (or `superpowers:requesting-code-review` when Superpowers is installed) |
 | "This query is slow" / "schema for X" | `database-optimizer` |
 | "Research this prospect" / "competitive intel" | `firecrawl_*` + your `research-agent` skill |
-| "Set SLOs" / "error budget for X" / "observability gap" | `sre` |
 | "Scan recent content for brand drift" | `voice-drift-scanner` skill |
 
 ---
@@ -96,7 +93,7 @@ If you see the agent doing any of these, the heuristics need tightening:
 - Using `fetch` for JS-heavy sites instead of `firecrawl_scrape`
 - Drafting copy without first reading the voice playbook (banned phrases sneak through)
 - Generating image prompts without first reading DESIGN.md (palette + composition rules ignored)
-- Trying to debug a production crash from scratch instead of routing to `incident-response-commander`
+- Trying to debug a production crash from scratch instead of loading `superpowers:systematic-debugging`
 - Declaring work "done" without firing `reality-checker`
 
 Every one of these is a missing trigger in the heuristics table above. Add it, deploy, watch the agent get sharper over time.
