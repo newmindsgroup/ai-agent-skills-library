@@ -36,6 +36,9 @@ jobs:
       - name: Check local Markdown links
         run: ruby scripts/check-links.rb
 
+      - name: Test the cleanup inventory script
+        run: bash scripts/tests/claude-cleanup-inventory-test.sh
+
       - name: Smoke test Unix installer from commit archive
         env:
           TARBALL_URL: https://github.com/${{ github.repository }}/archive/${{ github.sha }}.tar.gz

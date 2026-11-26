@@ -66,6 +66,8 @@ Before installing into an environment with secrets, production access, or sensit
 - Prefer installing specific skills/packs over the whole library.
 - Report security concerns privately — see [`SECURITY.md`](SECURITY.md).
 
+Retired and duplicate skills, agents and plugins: see [`retired/README.md`](retired/README.md), and [`docs/cleanup-another-computer.md`](docs/cleanup-another-computer.md) to repeat the cleanup on another computer.
+
 Offensive-security and large-scale scraping/OSINT skills are dual-use and are **not** installed by default; they are gated behind the opt-in [`security-offensive`](docs/STARTER-PACKS.md) starter pack and require explicit authorization and lawful data handling before use. Licensing and attribution for every redistributed source are recorded in [`NOTICE.md`](NOTICE.md).
 
 ## Quick install

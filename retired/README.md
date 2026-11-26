@@ -10,6 +10,8 @@ Paths that start with `~/` (for example `~/.claude/` and `~/src/agency-agents`) 
 
 The owner's account-level entries (plugins synced from the owner's claude.ai account, and the owner's internal skills) are kept only in the private register in ide-config-internal.
 
+To repeat this cleanup on another computer, follow [`docs/cleanup-another-computer.md`](../docs/cleanup-another-computer.md) and run its dry-run script `scripts/claude-cleanup-inventory.sh`.
+
 ## Before you install anything
 
 1. Search this file for the name. If it is here, do not install it; use what the Replaced by column names.
